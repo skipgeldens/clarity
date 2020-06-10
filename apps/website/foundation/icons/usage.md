@@ -56,30 +56,38 @@ _All three methods above will produce this result:_
 
 You can flip icons horizontally or vertically through the use of the flip attribute.
 
-    <clr-icon shape="floppy"></clr-icon>
-    <clr-icon shape="floppy" flip="horizontal"></clr-icon>
-    <clr-icon shape="floppy" flip="vertical"></clr-icon>
+```html
+<clr-icon shape="floppy"></clr-icon>
+<clr-icon shape="floppy" flip="horizontal"></clr-icon>
+<clr-icon shape="floppy" flip="vertical"></clr-icon>
+```
 
 ### Make Icons Accessible:
 
 Add a custom title to your icon using the `title` attribute. Adding a title improves the accessibility of the icon, making it recognizable by screen readers. Title attribute also helps you to localize your Icon.
 
-    <clr-icon shape="copy" title="Copy Document"></clr-icon>
+```html
+<clr-icon shape="copy" title="Copy Document"></clr-icon>
+```
 
 ### Predefined Clarity color classes for icons:
 
 Clarity Icons also come with predefined color classes.
 
-    <clr-icon shape="info-circle"></clr-icon>
-    <clr-icon shape="info-circle" class="is-highlight"></clr-icon>
-    <clr-icon shape="info-circle" class="is-error"></clr-icon>
-    <clr-icon shape="info-circle" class="is-warning"></clr-icon>
-    <clr-icon shape="info-circle" class="is-success"></clr-icon>
-    <clr-icon shape="info-circle" class="is-info"></clr-icon>
+```html
+<clr-icon shape="info-circle"></clr-icon>
+<clr-icon shape="info-circle" class="is-highlight"></clr-icon>
+<clr-icon shape="info-circle" class="is-error"></clr-icon>
+<clr-icon shape="info-circle" class="is-warning"></clr-icon>
+<clr-icon shape="info-circle" class="is-success"></clr-icon>
+<clr-icon shape="info-circle" class="is-info"></clr-icon>
+```
 
 There is also `is-inverse` color class, which is suitable for icons used on darker backgrounds.
 
-    <clr-icon shape="info-circle" class="is-inverse"></clr-icon>
+```html
+<clr-icon shape="info-circle" class="is-inverse"></clr-icon>
+```
 
 ### Display variant icons:
 
@@ -120,13 +128,15 @@ Causes a small blue dot to appear in the top right corner of an icon that suppor
 
 Displaying an icon variant only requires adding a CSS class to your `clr-icon` element. Applicable classes are listed below.
 
-    <clr-icon shape="user"></clr-icon>
-    <clr-icon shape="user" class="has-alert"></clr-icon>
-    <clr-icon shape="user" class="has-badge"></clr-icon>
-    <clr-icon shape="user" class="is-solid"></clr-icon>
-    <clr-icon shape="user" class="is-solid has-alert"></clr-icon>
-    <clr-icon shape="user" class="is-solid has-badge"></clr-icon>
-    <clr-icon shape="user" class="is-solid has-badge--success"></clr-icon>
+```html
+<clr-icon shape="user"></clr-icon>
+<clr-icon shape="user" class="has-alert"></clr-icon>
+<clr-icon shape="user" class="has-badge"></clr-icon>
+<clr-icon shape="user" class="is-solid"></clr-icon>
+<clr-icon shape="user" class="is-solid has-alert"></clr-icon>
+<clr-icon shape="user" class="is-solid has-badge"></clr-icon>
+<clr-icon shape="user" class="is-solid has-badge--success"></clr-icon>
+```
 
 ### Manipulate the inline SVG graphic elements via CSS
 

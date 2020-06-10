@@ -1,105 +1,120 @@
 <template>
-  <div>
-    <div class="searchbar-container">
-      <div class="icon-search-wrapper">
-        <label for="search-icons-sticky" class="searchbar-label">
-          <cds-icon shape="search" size="20"></cds-icon> Search for an icon
-        </label>
-        <input ref="search" id="search-icons-sticky" type="text" class="searchbar-input" v-model="term" />
-        <button
-          aria-label="Clear search terms"
-          type="button"
-          class="close"
-          :style="{ display: term ? 'inline-block' : 'none' }"
-          @click="clear()"
-        >
-          <cds-icon shape="close" size="24"></cds-icon>
-        </button>
-        <div class="icon-preview-settings"></div>
+  <div class="all-icons-container">
+    <DocIconsSearch
+      v-on:search-input-change="
+        closeIconDetail();
+        searchInputChange($event);
+      "
+    ></DocIconsSearch>
+    <DocIconsPreviewSettings
+      v-on:is-solid-change="isSolidChange($event)"
+      v-on:variation-change="variationChange($event)"
+    ></DocIconsPreviewSettings>
+    <section v-for="iconSet in iconSets" v-if="filterIcons(iconSet.icons).length">
+      <h4 class="icon-set-name-header">{{ iconSet.setName }} Icons</h4>
+      <div class="clr-row">
+        <template v-for="icon in filterIcons(iconSet.icons)">
+          <DocIcon
+            :iconName="icon.iconName"
+            :isActive="icon.iconName === iconDetailFor"
+            v-on:show-icon-detail-at="openIconDetailAt($event)"
+          >
+            <cds-icon class="icon" :class="previewClasses" :shape="icon.iconName" size="24"></cds-icon>
+          </DocIcon>
+          <DocIconDetail :iconName="iconDetailFor" v-if="icon.iconName === iconDetailAt"></DocIconDetail>
+        </template>
       </div>
-    </div>
-
-    <template v-for="set in sets">
-      <template v-if="set.shapes.length">
-        <h3>{{ set.title }} Shapes</h3>
-        <div class="clr-row">
-          <DocIcon v-for="shape in set.shapes" :name="shape[0]"></DocIcon>
-        </div>
-      </template>
-    </template>
+    </section>
   </div>
 </template>
 
 <script>
-import {
-  chartCollectionIcons as chart,
-  coreCollectionIcons as core,
-  commerceCollectionIcons as commerce,
-  essentialCollectionIcons as essential,
-  mediaCollectionIcons as media,
-  socialCollectionIcons as social,
-  travelCollectionIcons as travel,
-  textEditCollectionIcons as textEdit,
-  technologyCollectionIcons as technology,
-} from '@clr/core/icon-shapes';
-
-function getIcons() {
-  return [
-    { title: 'Core', shapes: core },
-    { title: 'Chart', shapes: chart },
-    { title: 'Commerce', shapes: commerce },
-    { title: 'Essential', shapes: essential },
-    { title: 'Media', shapes: media },
-    { title: 'Social', shapes: social },
-    { title: 'Travel', shapes: travel },
-    { title: 'Text Edit', shapes: textEdit },
-    { title: 'Technology', shapes: technology },
-  ];
-}
+import IconInventory from '../../../data/icon-inventory.js';
+import TimerUtils from '../util/timer-utils.js';
 
 export default {
   name: 'DocIcons',
-  data: function () {
-    return {
-      term: '',
-    };
-  },
   computed: {
-    sets: function () {
-      const icons = getIcons();
-      if (this.term) {
-        return icons.map(set => {
-          set.shapes = set.shapes.filter(shape => shape[0].indexOf(this.term) > -1);
-          return set;
-        });
-      } else {
-        return icons;
-      }
+    iconSets: function () {
+      return IconInventory.allSets;
+    },
+    iconAliases: function () {
+      return IconInventory.allAliases;
     },
   },
+  data: function () {
+    return {
+      iconDetailAt: null, // Show detail at the given icon name
+      iconDetailFor: null,
+      filterValue: '',
+      previewClasses: {
+        'is-solid': false,
+        'has-badge': false,
+        'has-alert': false,
+      },
+    };
+  },
+  mounted() {
+    window.addEventListener('resize', this.closeIconDetail);
+  },
   methods: {
-    clear: function () {
-      this.term = '';
-      this.$refs.search.focus();
+    openIconDetailAt: function (iconDetailData) {
+      if (this.hasIconDetailOpen(iconDetailData)) {
+        // if the icon detail is requested on the same icon again,
+        // we hide the detail.
+        this.closeIconDetail();
+        return;
+      }
+      this.iconDetailAt = iconDetailData.iconDetailAt;
+      this.iconDetailFor = iconDetailData.iconDetailFor;
+    },
+    searchInputChange: TimerUtils.debounce(function (value) {
+      this.filterValue = value;
+    }, 250),
+    variationChange: function (value) {
+      if (value === 'none') {
+        this.previewClasses['has-badge'] = false;
+        this.previewClasses['has-alert'] = false;
+      } else if (value === 'alert') {
+        this.previewClasses['has-badge'] = false;
+        this.previewClasses['has-alert'] = true;
+      } else if (value === 'badge') {
+        this.previewClasses['has-badge'] = true;
+        this.previewClasses['has-alert'] = false;
+      }
+    },
+    isSolidChange: function (value) {
+      this.previewClasses['is-solid'] = value;
+    },
+    filterIcons: function (icons) {
+      return icons.filter(icon => {
+        const nameMatch = icon.iconName.indexOf(this.filterValue) > -1;
+        const aliasMatch =
+          this.iconAliases[icon.iconName] &&
+          this.iconAliases[icon.iconName].some(alias => alias.indexOf(this.filterValue) > -1);
+        return nameMatch || aliasMatch;
+      });
+    },
+    hasIconDetailOpen: function (iconDetailData) {
+      return (
+        iconDetailData &&
+        this.iconDetailAt === iconDetailData.iconDetailAt &&
+        this.iconDetailFor === iconDetailData.iconDetailFor
+      );
+    },
+    closeIconDetail: function () {
+      this.iconDetailAt = null;
+      this.iconDetailFor = null;
     },
   },
 };
 </script>
 
 <style scoped lang="scss">
-.icon-search-wrapper {
-  display: grid;
-  grid-template-columns: 160px auto 36px;
-
-  .searchbar-label {
-    line-height: 36px;
-  }
-
-  input {
-    border: 1px solid #999;
-    background: #fff;
-    padding: 5px 10px;
-    border-radius: 4px;
-  }
+.icon-set-name-header {
+  padding: 0.5rem 0;
+}
+.icon {
+  margin: 0 0.5rem;
 }
 </style>
