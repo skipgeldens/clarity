@@ -51,7 +51,7 @@ properties or methods for this class.
 #### Selector & Basic Usage
 
 ```html
-<clr-dg-action-bar><clr-dg-action-bar>
+<clr-dg-action-bar><clr-dg-action-bar></clr-dg-action-bar></clr-dg-action-bar>
 ```
 
 ### ClrDatagridActionOverflow
@@ -123,13 +123,14 @@ TODO: Add in docs for clr-dg-string-filter and clr-dg-numeric-filter
 #### Selector & Basic Usage
 
 ```html
-    <clr-dg-filter [clrDgFilter]="myFilter">
-        <my-reusable-filter></my-reusable-filter> <!-- encapsulated view -->
-    </clr-dg-filter>
+<clr-dg-filter [clrDgFilter]="myFilter">
+  <my-reusable-filter></my-reusable-filter>
+  <!-- encapsulated view -->
+</clr-dg-filter>
 
-    <clr-dg-filter [clrDgFilter]="myFilter">
-        <-- The HTML for custom view with myFilter -->
-    </clr-dg-filter>
+<clr-dg-filter [clrDgFilter]="myFilter">
+  <-- The HTML for custom view with myFilter -->
+</clr-dg-filter>
 ```
 
 #### Properties
@@ -155,7 +156,7 @@ TODO: Add in docs for clr-dg-string-filter and clr-dg-numeric-filter
 #### Selector & Basic Usage
 
 ```html
-<clr-dg-row ></clr-dg-row>
+<clr-dg-row></clr-dg-row>
 ```
 
 #### Properties
@@ -267,8 +268,7 @@ datagrid displays UI controls to hide and show the columns that have this direct
 #### Selector & Basic Usage
 
 ```html
-<clr-dg-column clrDgHideableColumn></clr-dg-column>
-<clr-dg-column clrDgHideableColumn="{hidden: true}"></clr-dg-column>
+<clr-dg-column clrDgHideableColumn></clr-dg-column> <clr-dg-column clrDgHideableColumn="{hidden: true}"></clr-dg-column>
 ```
 
 #### Properties

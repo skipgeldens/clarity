@@ -8,7 +8,7 @@ A `.card` can contain a `.card-header`, `.card-footer`, and one or more `.card-b
 
 <DocDemo>
 
-<<< ./components/card/_basic.html
+<<< ./components/card/\_basic.html
 
 </DocDemo>
 

@@ -30,11 +30,11 @@ If you can already build an Angular app, then you need to install Clarity onto y
 
 Clarity is published as three separate packages on NPM, as well as one dependency. You will need to install these into your project to have access to them at build time.
 
-* **@clr/icons.** The library that provides the custom element icons.
-* **@clr/ui.** Contains the static styles for building HTML components.
-* **@clr/core.** Contains a shared core library of web components.
-* **@clr/angular.** Contains the Angular components. This package depends on @clr/ui for styles.
-* **@webcomponents/webcomponentsjs.** A polyfill for webcomponents for older browsers, which Clarity depends upon.
+- **@clr/icons.** The library that provides the custom element icons.
+- **@clr/ui.** Contains the static styles for building HTML components.
+- **@clr/core.** Contains a shared core library of web components.
+- **@clr/angular.** Contains the Angular components. This package depends on @clr/ui for styles.
+- **@webcomponents/webcomponentsjs.** A polyfill for webcomponents for older browsers, which Clarity depends upon.
 
 Install them all by running the following command with `npm` or `yarn`.
 
@@ -67,8 +67,8 @@ We need to make the build system aware of some CSS and JavaScript files so it ca
 If you are not using the CLI, you'll need to add the files listed above to your build tooling or you could also put them in the head of the index.html file like:
 
 ```html
-<link rel="stylesheet" href="path/to/node_modules/@clr/ui/clr-ui.min.css">
-<link rel="stylesheet" href="path/to/node_modules/@clr/icons/clr-icons.min.css">
+<link rel="stylesheet" href="path/to/node_modules/@clr/ui/clr-ui.min.css" />
+<link rel="stylesheet" href="path/to/node_modules/@clr/icons/clr-icons.min.css" />
 <script src="path/to/node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"></script>
 <script src="path/to/node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
 <script src="path/to/node_modules/@clr/icons/clr-icons.min.js"></script>
@@ -103,11 +103,11 @@ If you'd like to see a Clarity component in action, you can add the following sn
 
 ```html
 <clr-alert [clrAlertAppLevel]="true">
-    <clr-alert-item>
-        <span class="alert-text">
-            Congratulations, you have installed Clarity!
-        </span>
-    </clr-alert-item>
+  <clr-alert-item>
+    <span class="alert-text">
+      Congratulations, you have installed Clarity!
+    </span>
+  </clr-alert-item>
 </clr-alert>
 ```
 

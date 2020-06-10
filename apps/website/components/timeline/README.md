@@ -4,8 +4,8 @@ title: Overview
 
 # Timeline
 
-* [Design Guidelines](/documentation/timeline#top)
-* [Code & Examples](/documentation/timeline#examples)
+- [Design Guidelines](/documentation/timeline#top)
+- [Code & Examples](/documentation/timeline#examples)
 
 ##### A timeline is a visual indicator that shows progress and might guide the user through specific processes or pre-defined steps while also showing current progress.
 
@@ -21,15 +21,15 @@ There are two types of layouts, horizontal and vertical.
 
 ###### Horizontal
 
-* Used when there are workflows of 3 - 5 steps
-* Used when all steps can be displayed without wrapping
+- Used when there are workflows of 3 - 5 steps
+- Used when all steps can be displayed without wrapping
 
 ![](assets/images/documentation/timeline/timeline-vertical-example.svg)
 
 ###### Vertical
 
-* Used when there are workflows greater than five steps
-* Used when timestamps are optional
+- Used when there are workflows greater than five steps
+- Used when timestamps are optional
 
 ### Timeline Step States
 
@@ -65,15 +65,15 @@ All steps are complete.
 
 ###### Error
 
-* Display the error message under the error icon if needed
-* Tooltips are not recommended because of low affordance
+- Display the error message under the error icon if needed
+- Tooltips are not recommended because of low affordance
 
 ![](assets/images/documentation/timeline/timeline-loading-state.svg)
 
 ###### Loading
 
-* When loading or taking action, display a spinner
-* Disable buttons when loading or make buttons contextual for the loading state (e.g CANCEL)
+- When loading or taking action, display a spinner
+- Disable buttons when loading or make buttons contextual for the loading state (e.g CANCEL)
 
 ### Step Description
 
@@ -97,14 +97,14 @@ Each timeline step can have three children elements:
 
 1.  An optional header (`.clr-timeline-step-header`) that appears above the timeline when its horizontal and to the left of the timeline when its vertical. In the demos they are populated with times. e.g 11:59am.
 2.  An icon shape that corresponds to the correct step state (note usage of `aria-label` for accessibility):
-    * : **Step complete** uses the `success-standard` shape
-    * : **Current step** uses the `dot-circle` shape
-    * : **Not started, available to start** uses the `circle` shape
-    * Loading... : **Processing user initiated action** uses the `spinner` shape
-    * : **Error completing step** uses the `error` shape
+    - : **Step complete** uses the `success-standard` shape
+    - : **Current step** uses the `dot-circle` shape
+    - : **Not started, available to start** uses the `circle` shape
+    - Loading... : **Processing user initiated action** uses the `spinner` shape
+    - : **Error completing step** uses the `error` shape
 3.  A container element for the `.clr-timeline-step-body` that contains two children elements:
-    * A `.clr-timeline-step-title` for calling out the step title below the step icon when horizontal and on the right at the top of the step when it is vertical
-    * A `.clr-timeline-step-description`
+    - A `.clr-timeline-step-title` for calling out the step title below the step icon when horizontal and on the right at the top of the step when it is vertical
+    - A `.clr-timeline-step-description`
       to put a longer description that wraps with the width of the step container. This is also where (optional) action buttons will be placed.
 
 #### CSS Classes (for Clarity UI static implementation)
@@ -200,9 +200,9 @@ For loading steps, notice that instead of a `clr-icon` element we use a ClrSpinn
 
 ### Full Demo
 
-* Clarity UI (Static Horizontal)
-* Clarity UI (Static Vertical)
-* Clarity Angular
+- Clarity UI (Static Horizontal)
+- Clarity UI (Static Vertical)
+- Clarity Angular
 
 #### ClrTimeline
 
@@ -210,25 +210,25 @@ For loading steps, notice that instead of a `clr-icon` element we use a ClrSpinn
 
 ##### Horizontal Timeline
 
-* 11:59 am
+- 11:59 am
 
   Add KMSRoot CA certificate requested.
 
-* 11:59 am
+- 11:59 am
 
   Add KMS Root CA certificate requested. Upload it to the KMS to complete the connection. Action
 
-* 11:59 am
+- 11:59 am
 
   Fetching data
 
   Make vCenter trust KMS Root CA certificate requested. Upload it to the KMS to complete the connection. Third sentence is very long and very long.
 
-* 11:59 am
+- 11:59 am
 
   Make KMS trust vCenterUpload it to the KMS to complete the connection. Third sentence. Action
 
-* 11:59 am
+- 11:59 am
 
   ConnectedNo. It's not connected.
 
@@ -248,9 +248,9 @@ For loading steps, notice that instead of a `clr-icon` element we use a ClrSpinn
     <div class="clr-timeline-step-body">
       <span class="clr-timeline-step-title">Add KMS</span>
       <span class="clr-timeline-step-description">
-    Root CA certificate requested. Upload it to the KMS to complete the connection.
-    <button class="btn btn-sm">Action</button>
-  </span>
+        Root CA certificate requested. Upload it to the KMS to complete the connection.
+        <button class="btn btn-sm">Action</button>
+      </span>
     </div>
   </li>
   <li class="clr-timeline-step">
@@ -259,9 +259,9 @@ For loading steps, notice that instead of a `clr-icon` element we use a ClrSpinn
     <div class="clr-timeline-step-body">
       <span class="clr-timeline-step-title">Make vCenter trust KMS</span>
       <span class="clr-timeline-step-description">
-    Root CA certificate requested. Upload it to the KMS to complete the connection. Third sentence is very long
-    and very long.
-  </span>
+        Root CA certificate requested. Upload it to the KMS to complete the connection. Third sentence is very long and
+        very long.
+      </span>
     </div>
   </li>
   <li class="clr-timeline-step">
@@ -269,10 +269,10 @@ For loading steps, notice that instead of a `clr-icon` element we use a ClrSpinn
     <clr-icon shape="success-standard" aria-label="Completed"></clr-icon>
     <div class="clr-timeline-step-body">
       <span class="clr-timeline-step-title">Make KMS trust vCenter</span>
-      <span class="clr-timeline-step-description">Upload it to the KMS to complete the connection. Third
-    sentence.
-    <button class="btn btn-sm btn-link">Action</button>
-  </span>
+      <span class="clr-timeline-step-description"
+        >Upload it to the KMS to complete the connection. Third sentence.
+        <button class="btn btn-sm btn-link">Action</button>
+      </span>
     </div>
   </li>
   <li class="clr-timeline-step">
@@ -283,5 +283,5 @@ For loading steps, notice that instead of a `clr-icon` element we use a ClrSpinn
       <span class="clr-timeline-step-description">No. It's not connected.</span>
     </div>
   </li>
-  </ul>
+</ul>
 ```

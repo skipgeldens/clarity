@@ -6,8 +6,8 @@ title: Overview
 
 ![HTML5](assets/images/bugs/badge_html5.svg 'HTML5')![CSS3](assets/images/bugs/badge_css3.svg 'CSS3')
 
-* [Examples & Code](/documentation/grid#top)
-* [Design Guidelines](/documentation/grid#guidelines)
+- [Examples & Code](/documentation/grid#top)
+- [Design Guidelines](/documentation/grid#guidelines)
 
 ##### A grid provides a structure of rows and columns for aligning content. Grids are useful because they help create a familiar and easily navigable structure for content.
 
@@ -80,9 +80,9 @@ Horizontal for extra-small. All other breakpoints are collapsed to start, then h
 
 **Common Properties**
 
-* Number of columns: 12
-* Gutter width: 24px (12px on the left and right of column)
-* All columns support nesting, offsets, and column order
+- Number of columns: 12
+- Gutter width: 24px (12px on the left and right of column)
+- All columns support nesting, offsets, and column order
 
 Extra small
 < 576px
@@ -125,15 +125,15 @@ The column classes specify the number of columns per row. The value appended to 
 
 ```html
 <div class="clr-row">
-    <div class="clr-col-4">
-        <span>4</span>
-    </div>
-    <div class="clr-col-6">
-        <span>6</span>
-    </div>
-    <div class="clr-col-2">
-        <span>2</span>
-    </div>
+  <div class="clr-col-4">
+    <span>4</span>
+  </div>
+  <div class="clr-col-6">
+    <span>6</span>
+  </div>
+  <div class="clr-col-2">
+    <span>2</span>
+  </div>
 </div>
 ```
 
@@ -177,15 +177,15 @@ clr-col-sm-12 clr-col-md-12
 
 ```html
 <div class="clr-row">
-    <div class="clr-col-sm-12 clr-col-md-6">
-        <span>clr-col-sm-12 clr-col-md-6</span>
-    </div>
-    <div class="clr-col-sm-12 clr-col-md-6">
-        <span>clr-col-sm-12 clr-col-md-6</span>
-    </div>
-    <div class="clr-col-sm-12 clr-col-md-12">
-        <span>clr-col-sm-12 clr-col-md-12</span>
-    </div>
+  <div class="clr-col-sm-12 clr-col-md-6">
+    <span>clr-col-sm-12 clr-col-md-6</span>
+  </div>
+  <div class="clr-col-sm-12 clr-col-md-6">
+    <span>clr-col-sm-12 clr-col-md-6</span>
+  </div>
+  <div class="clr-col-sm-12 clr-col-md-12">
+    <span>clr-col-sm-12 clr-col-md-12</span>
+  </div>
 </div>
 ```
 
@@ -199,12 +199,12 @@ clr-col-8
 
 ```html
 <div class="clr-row">
-    <div class="clr-col-6">
-        <span>clr-col-7</span>
-    </div>
-    <div class="clr-col-8">
-        <span>clr-col-8</span>
-    </div>
+  <div class="clr-col-6">
+    <span>clr-col-7</span>
+  </div>
+  <div class="clr-col-8">
+    <span>clr-col-8</span>
+  </div>
 </div>
 ```
 
@@ -232,32 +232,32 @@ Using the `.clr-col-*` class divides the row into equal width columns.
 
 ```html
 <div class="clr-row">
-    <div class="clr-col">
-        <span>1/5</span>
-    </div>
-    <div class="clr-col">
-        <span>1/5</span>
-    </div>
-    <div class="clr-col">
-        <span>1/5</span>
-    </div>
-    <div class="clr-col">
-        <span>1/5</span>
-    </div>
-    <div class="clr-col">
-        <span>1/5</span>
-    </div>
+  <div class="clr-col">
+    <span>1/5</span>
+  </div>
+  <div class="clr-col">
+    <span>1/5</span>
+  </div>
+  <div class="clr-col">
+    <span>1/5</span>
+  </div>
+  <div class="clr-col">
+    <span>1/5</span>
+  </div>
+  <div class="clr-col">
+    <span>1/5</span>
+  </div>
 </div>
 <div class="clr-row">
-    <div class="clr-col">
-        <span>1/3</span>
-    </div>
-    <div class="clr-col">
-        <span>1/3</span>
-    </div>
-    <div class="clr-col">
-        <span>1/3</span>
-    </div>
+  <div class="clr-col">
+    <span>1/3</span>
+  </div>
+  <div class="clr-col">
+    <span>1/3</span>
+  </div>
+  <div class="clr-col">
+    <span>1/3</span>
+  </div>
 </div>
 ```
 
@@ -271,12 +271,12 @@ Remaining
 
 ```html
 <div class="clr-row">
-    <div class="clr-col-4">
-        <span>1/3 (auto)</span>
-    </div>
-    <div class="clr-col">
-        <span>Remaining</span>
-    </div>
+  <div class="clr-col-4">
+    <span>1/3 (auto)</span>
+  </div>
+  <div class="clr-col">
+    <span>Remaining</span>
+  </div>
 </div>
 ```
 
@@ -288,15 +288,15 @@ Remaining
 
 ```html
 <div class="clr-row">
-    <div class="clr-col">
-        <span>1/4 (auto)</span>
-    </div>
-    <div class="clr-col-6">
-        <span>1/2 (fixed)</span>
-    </div>
-    <div class="clr-col">
-        <span>1/4 (auto)</span>
-    </div>
+  <div class="clr-col">
+    <span>1/4 (auto)</span>
+  </div>
+  <div class="clr-col-6">
+    <span>1/2 (fixed)</span>
+  </div>
+  <div class="clr-col">
+    <span>1/4 (auto)</span>
+  </div>
 </div>
 ```
 
@@ -318,26 +318,26 @@ Variable Width Content
 
 ```html
 <div class="clr-row">
-    <div class="clr-col clr-col-lg-2">
-        <span>1 of 3</span>
-    </div>
-    <div class="clr-col-lg-auto">
-        <span>Variable width content</span>
-    </div>
-    <div class="clr-col clr-col-lg-2">
-        <span>3 of 3</span>
-    </div>
+  <div class="clr-col clr-col-lg-2">
+    <span>1 of 3</span>
+  </div>
+  <div class="clr-col-lg-auto">
+    <span>Variable width content</span>
+  </div>
+  <div class="clr-col clr-col-lg-2">
+    <span>3 of 3</span>
+  </div>
 </div>
 <div class="clr-row">
-    <div class="clr-col">
-        <span>1 of 3</span>
-    </div>
-    <div class="clr-col-md-auto">
-        <span>Variable Width Content</span>
-    </div>
-    <div class="clr-col clr-col-lg-2">
-        <span>3 of 3</span>
-    </div>
+  <div class="clr-col">
+    <span>1 of 3</span>
+  </div>
+  <div class="clr-col-md-auto">
+    <span>Variable Width Content</span>
+  </div>
+  <div class="clr-col clr-col-lg-2">
+    <span>3 of 3</span>
+  </div>
 </div>
 ```
 
@@ -355,20 +355,19 @@ clr-col
 
 ```html
 <div class="clr-row">
-    <div class="clr-col">
-        <span>clr-col</span>
-    </div>
-    <div class="clr-col">
-        <span>clr-col</span>
-    </div>
-    <div class="clr-break-row">
-    </div>
-    <div class="clr-col">
-        <span>clr-col</span>
-    </div>
-    <div class="clr-col">
-        <span>clr-col</span>
-    </div>
+  <div class="clr-col">
+    <span>clr-col</span>
+  </div>
+  <div class="clr-col">
+    <span>clr-col</span>
+  </div>
+  <div class="clr-break-row"></div>
+  <div class="clr-col">
+    <span>clr-col</span>
+  </div>
+  <div class="clr-col">
+    <span>clr-col</span>
+  </div>
 </div>
 ```
 
@@ -382,12 +381,12 @@ clr-col-sm-6 clr-offset-sm-2
 
 ```html
 <div class="clr-row">
-    <div class="clr-col-sm-4">
-        <span>clr-col-sm-4</span>
-    </div>
-    <div class="clr-col-sm-6 clr-offset-sm-2">
-        <span>clr-col-sm-6 clr-offset-sm-2</span>
-    </div>
+  <div class="clr-col-sm-4">
+    <span>clr-col-sm-4</span>
+  </div>
+  <div class="clr-col-sm-6 clr-offset-sm-2">
+    <span>clr-col-sm-6 clr-offset-sm-2</span>
+  </div>
 </div>
 ```
 
@@ -407,15 +406,15 @@ The responsive `clr-order-*` class modifiers change the order of columns where `
 
 ```html
 <div class="clr-row">
-    <div class="clr-col">
-        <span>1st, Unordered</span>
-    </div>
-    <div class="clr-col clr-order-3">
-        <span>2nd, Order 3</span>
-    </div>
-    <div class="clr-col clr-order-2">
-        <span>3rd, Order 2</span>
-    </div>
+  <div class="clr-col">
+    <span>1st, Unordered</span>
+  </div>
+  <div class="clr-col clr-order-3">
+    <span>2nd, Order 3</span>
+  </div>
+  <div class="clr-col clr-order-2">
+    <span>3rd, Order 2</span>
+  </div>
 </div>
 ```
 
@@ -423,9 +422,9 @@ The responsive `clr-order-*` class modifiers change the order of columns where `
 
 Columns within a row can be vertically aligned using the following responsive classes:
 
-* `clr-align-items-*-start`
-* `clr-align-items-*-center`
-* `clr-align-items-*-end`
+- `clr-align-items-*-start`
+- `clr-align-items-*-center`
+- `clr-align-items-*-end`
 
 ###### Start
 
@@ -435,12 +434,12 @@ Columns within a row can be vertically aligned using the following responsive cl
 
 ```html
 <div class="clr-row clr-align-items-start">
-    <div class="clr-col">
-        <span>1/2</span>
-    </div>
-    <div class="clr-col">
-        <span>1/2</span>
-    </div>
+  <div class="clr-col">
+    <span>1/2</span>
+  </div>
+  <div class="clr-col">
+    <span>1/2</span>
+  </div>
 </div>
 ```
 
@@ -452,12 +451,12 @@ Columns within a row can be vertically aligned using the following responsive cl
 
 ```html
 <div class="clr-row clr-align-items-center">
-    <div class="clr-col">
-        <span>1/2</span>
-    </div>
-    <div class="clr-col">
-        <span>1/2</span>
-    </div>
+  <div class="clr-col">
+    <span>1/2</span>
+  </div>
+  <div class="clr-col">
+    <span>1/2</span>
+  </div>
 </div>
 ```
 
@@ -469,20 +468,20 @@ Columns within a row can be vertically aligned using the following responsive cl
 
 ```html
 <div class="clr-row clr-align-items-end">
-    <div class="clr-col">
-        <span>1/2</span>
-    </div>
-    <div class="clr-col">
-        <span>1/2</span>
-    </div>
+  <div class="clr-col">
+    <span>1/2</span>
+  </div>
+  <div class="clr-col">
+    <span>1/2</span>
+  </div>
 </div>
 ```
 
 A column can individually be vertically aligned in a row using the following responsive classes:
 
-* `clr-align-self-*-start`
-* `clr-align-self-*-center`
-* `clr-align-self-*-end`
+- `clr-align-self-*-start`
+- `clr-align-self-*-center`
+- `clr-align-self-*-end`
 
 1/3
 
@@ -492,15 +491,15 @@ A column can individually be vertically aligned in a row using the following res
 
 ```html
 <div class="clr-row">
-    <div class="clr-col clr-align-self-start">
-        <span>1/3</span>
-    </div>
-    <div class="clr-col clr-align-self-center">
-        <span>1/3</span>
-    </div>
-    <div class="clr-col clr-align-self-end">
-        <span>1/3</span>
-    </div>
+  <div class="clr-col clr-align-self-start">
+    <span>1/3</span>
+  </div>
+  <div class="clr-col clr-align-self-center">
+    <span>1/3</span>
+  </div>
+  <div class="clr-col clr-align-self-end">
+    <span>1/3</span>
+  </div>
 </div>
 ```
 
@@ -508,11 +507,11 @@ A column can individually be vertically aligned in a row using the following res
 
 To align columns horizontally within a row, extend the row with one of the following responsive classes:
 
-* `clr-justify-content-*-start`
-* `clr-justify-content-*-center`
-* `clr-justify-content-*-end`
-* `clr-justify-content-*-around`
-* `clr-justify-content-*-between`
+- `clr-justify-content-*-start`
+- `clr-justify-content-*-center`
+- `clr-justify-content-*-end`
+- `clr-justify-content-*-around`
+- `clr-justify-content-*-between`
 
 ###### Start
 
@@ -522,16 +521,16 @@ To align columns horizontally within a row, extend the row with one of the follo
 
 ```html
 <div class="clr-row clr-justify-content-start">
-    <div class="clr-col-4">
-        <span>
-            1/3
-        </span>
-    </div>
-    <div class="clr-col-4">
-        <span>
-            1/3
-        </span>
-    </div>
+  <div class="clr-col-4">
+    <span>
+      1/3
+    </span>
+  </div>
+  <div class="clr-col-4">
+    <span>
+      1/3
+    </span>
+  </div>
 </div>
 ```
 
@@ -543,16 +542,16 @@ To align columns horizontally within a row, extend the row with one of the follo
 
 ```html
 <div class="clr-row clr-justify-content-center">
-    <div class="clr-col-4">
-        <span>
-            1/3
-        </span>
-    </div>
-    <div class="clr-col-4">
-        <span>
-            1/3
-        </span>
-    </div>
+  <div class="clr-col-4">
+    <span>
+      1/3
+    </span>
+  </div>
+  <div class="clr-col-4">
+    <span>
+      1/3
+    </span>
+  </div>
 </div>
 ```
 
@@ -564,16 +563,16 @@ To align columns horizontally within a row, extend the row with one of the follo
 
 ```html
 <div class="clr-row clr-justify-content-end">
-    <div class="clr-col-4">
-        <span>
-            1/3
-        </span>
-    </div>
-    <div class="clr-col-4">
-        <span>
-            1/3
-        </span>
-    </div>
+  <div class="clr-col-4">
+    <span>
+      1/3
+    </span>
+  </div>
+  <div class="clr-col-4">
+    <span>
+      1/3
+    </span>
+  </div>
 </div>
 ```
 
@@ -585,16 +584,16 @@ To align columns horizontally within a row, extend the row with one of the follo
 
 ```html
 <div class="clr-row clr-justify-content-around">
-    <div class="clr-col-4">
-        <span>
-            1/3
-        </span>
-    </div>
-    <div class="clr-col-4">
-        <span>
-            1/3
-        </span>
-    </div>
+  <div class="clr-col-4">
+    <span>
+      1/3
+    </span>
+  </div>
+  <div class="clr-col-4">
+    <span>
+      1/3
+    </span>
+  </div>
 </div>
 ```
 
@@ -606,16 +605,16 @@ To align columns horizontally within a row, extend the row with one of the follo
 
 ```html
 <div class="clr-row clr-justify-content-between">
-    <div class="clr-col-4">
-        <span>
-            1/3
-        </span>
-    </div>
-    <div class="clr-col-4">
-        <span>
-            1/3
-        </span>
-    </div>
+  <div class="clr-col-4">
+    <span>
+      1/3
+    </span>
+  </div>
+  <div class="clr-col-4">
+    <span>
+      1/3
+    </span>
+  </div>
 </div>
 ```
 
@@ -631,20 +630,20 @@ To align columns horizontally within a row, extend the row with one of the follo
 
 ```html
 <div class="clr-row">
-    <div class="clr-col-9">
-        <span>9</span>
-        <div class="clr-row">
-            <div class="clr-col-3">
-                <span>3</span>
-            </div>
-            <div class="clr-col-9">
-                <span>9</span>
-            </div>
-        </div>
-    </div>
-    <div class="clr-col-3">
+  <div class="clr-col-9">
+    <span>9</span>
+    <div class="clr-row">
+      <div class="clr-col-3">
         <span>3</span>
+      </div>
+      <div class="clr-col-9">
+        <span>9</span>
+      </div>
     </div>
+  </div>
+  <div class="clr-col-3">
+    <span>3</span>
+  </div>
 </div>
 ```
 
@@ -652,10 +651,10 @@ To align columns horizontally within a row, extend the row with one of the follo
 
 Clarity recommends that your application layout stay on the grid. A grid-based approach:
 
-* Aligns content consistently
-* Establishes a foundation that can be easily built upon for future designs
-* Simplifies layout decisions required of a designer
-* Coordinates the efforts of multiple designers
+- Aligns content consistently
+- Establishes a foundation that can be easily built upon for future designs
+- Simplifies layout decisions required of a designer
+- Coordinates the efforts of multiple designers
 
 #### Applying the Grid
 

@@ -6,8 +6,8 @@ title: Overview
 
 ![HTML5](assets/images/bugs/badge_html5.svg 'HTML5')![CSS3](assets/images/bugs/badge_css3.svg 'CSS3')
 
-* [Examples & Code](/documentation/tables#top)
-* [Design Guidelines](/documentation/tables#guidelines)
+- [Examples & Code](/documentation/tables#top)
+- [Design Guidelines](/documentation/tables#guidelines)
 
 ##### Use the table styles wherever you need to present static data in a tabular format.
 
@@ -59,40 +59,40 @@ XV
 
 ```html
 <table class="table">
-    <thead>
-        <tr>
-            <th>Decimal</th>
-            <th>Hexadecimal</th>
-            <th>Binary</th>
-            <th>Roman Numeral</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>I</td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>5</td>
-            <td>101</td>
-            <td>V</td>
-        </tr>
-        <tr>
-            <td>10</td>
-            <td>A</td>
-            <td>1010</td>
-            <td>X</td>
-        </tr>
-        <tr>
-            <td>15</td>
-            <td>F</td>
-            <td>1111</td>
-            <td>XV</td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th>Decimal</th>
+      <th>Hexadecimal</th>
+      <th>Binary</th>
+      <th>Roman Numeral</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>I</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>5</td>
+      <td>101</td>
+      <td>V</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>A</td>
+      <td>1010</td>
+      <td>X</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>F</td>
+      <td>1111</td>
+      <td>XV</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -142,40 +142,40 @@ Solid maybe
 
 ```html
 <table class="table">
-    <thead>
-        <tr>
-            <th class="left">Wizard</th>
-            <th>Allegiance</th>
-            <th>Triwizard Champion?</th>
-            <th>Can Cast Fireball</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td class="left">Harry</td>
-            <td>Gryffindor</td>
-            <td>Yes</td>
-            <td>No</td>
-        </tr>
-        <tr>
-            <td class="left">Gandalf</td>
-            <td>Hobbits</td>
-            <td>Maybe?</td>
-            <td>I don&apos;t think so...</td>
-        </tr>
-        <tr>
-            <td class="left">Obi-Wan Kenobi</td>
-            <td>Republic/Rebellion</td>
-            <td>No</td>
-            <td>No</td>
-        </tr>
-        <tr>
-            <td class="left">Merlin</td>
-            <td>King Arthur</td>
-            <td>Probably invented the tournament</td>
-            <td>Solid maybe</td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th class="left">Wizard</th>
+      <th>Allegiance</th>
+      <th>Triwizard Champion?</th>
+      <th>Can Cast Fireball</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="left">Harry</td>
+      <td>Gryffindor</td>
+      <td>Yes</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td class="left">Gandalf</td>
+      <td>Hobbits</td>
+      <td>Maybe?</td>
+      <td>I don&apos;t think so...</td>
+    </tr>
+    <tr>
+      <td class="left">Obi-Wan Kenobi</td>
+      <td>Republic/Rebellion</td>
+      <td>No</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td class="left">Merlin</td>
+      <td>King Arthur</td>
+      <td>Probably invented the tournament</td>
+      <td>Solid maybe</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -209,30 +209,30 @@ Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercita
 
 ```html
 <table class="table">
-    <thead>
-        <tr>
-            <th class="left">Name</th>
-            <th>A/B</th>
-            <th class="left">Comment</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td class="left">Beetlejuice</td>
-            <td>B</td>
-            <td class="left">...</td>
-        </tr>
-        <tr>
-            <td class="left">Mytzlplk</td>
-            <td>A</td>
-            <td class="left">...</td>
-        </tr>
-        <tr>
-            <td class="left">Q</td>
-            <td>A</td>
-            <td class="left">...</td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th class="left">Name</th>
+      <th>A/B</th>
+      <th class="left">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="left">Beetlejuice</td>
+      <td>B</td>
+      <td class="left">...</td>
+    </tr>
+    <tr>
+      <td class="left">Mytzlplk</td>
+      <td>A</td>
+      <td class="left">...</td>
+    </tr>
+    <tr>
+      <td class="left">Q</td>
+      <td>A</td>
+      <td class="left">...</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -282,40 +282,40 @@ Only if you have no cookies
 
 ```html
 <table class="table table-noborder">
-    <thead>
-        <tr>
-            <th class="left">Monster</th>
-            <th>Home</th>
-            <th>Likes Cookies</th>
-            <th class="left">Fun to Play With</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td class="left">Wolfman</td>
-            <td>Nondisclosed countryside</td>
-            <td>Sometimes</td>
-            <td class="left">Not really</td>
-        </tr>
-        <tr>
-            <td class="left">Mothra</td>
-            <td>Tropical island</td>
-            <td>No</td>
-            <td class="left">Only if you have a flashlight</td>
-        </tr>
-        <tr>
-            <td class="left">Oscar the Grouch</td>
-            <td>Sesame Street</td>
-            <td>No</td>
-            <td class="left">No</td>
-        </tr>
-        <tr>
-            <td class="left">Cookie Monster</td>
-            <td>Sesame Street</td>
-            <td>Definitely yes</td>
-            <td class="left">Only if you have no cookies</td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th class="left">Monster</th>
+      <th>Home</th>
+      <th>Likes Cookies</th>
+      <th class="left">Fun to Play With</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="left">Wolfman</td>
+      <td>Nondisclosed countryside</td>
+      <td>Sometimes</td>
+      <td class="left">Not really</td>
+    </tr>
+    <tr>
+      <td class="left">Mothra</td>
+      <td>Tropical island</td>
+      <td>No</td>
+      <td class="left">Only if you have a flashlight</td>
+    </tr>
+    <tr>
+      <td class="left">Oscar the Grouch</td>
+      <td>Sesame Street</td>
+      <td>No</td>
+      <td class="left">No</td>
+    </tr>
+    <tr>
+      <td class="left">Cookie Monster</td>
+      <td>Sesame Street</td>
+      <td>Definitely yes</td>
+      <td class="left">Only if you have no cookies</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -365,40 +365,40 @@ Only if you have no cookies
 
 ```html
 <table class="table table-compact">
-    <thead>
-        <tr>
-            <th class="left">Monster</th>
-            <th>Home</th>
-            <th>Likes Cookies</th>
-            <th class="left">Fun to Play With</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td class="left">Wolfman</td>
-            <td>Nondisclosed countryside</td>
-            <td>Sometimes</td>
-            <td class="left">Not really</td>
-        </tr>
-        <tr>
-            <td class="left">Mothra</td>
-            <td>Tropical island</td>
-            <td>No</td>
-            <td class="left">Only if you have a flashlight</td>
-        </tr>
-        <tr>
-            <td class="left">Oscar the Grouch</td>
-            <td>Sesame Street</td>
-            <td>No</td>
-            <td class="left">No</td>
-        </tr>
-        <tr>
-            <td class="left">Cookie Monster</td>
-            <td>Sesame Street</td>
-            <td>Definitely yes</td>
-            <td class="left">Only if you have no cookies</td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th class="left">Monster</th>
+      <th>Home</th>
+      <th>Likes Cookies</th>
+      <th class="left">Fun to Play With</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="left">Wolfman</td>
+      <td>Nondisclosed countryside</td>
+      <td>Sometimes</td>
+      <td class="left">Not really</td>
+    </tr>
+    <tr>
+      <td class="left">Mothra</td>
+      <td>Tropical island</td>
+      <td>No</td>
+      <td class="left">Only if you have a flashlight</td>
+    </tr>
+    <tr>
+      <td class="left">Oscar the Grouch</td>
+      <td>Sesame Street</td>
+      <td>No</td>
+      <td class="left">No</td>
+    </tr>
+    <tr>
+      <td class="left">Cookie Monster</td>
+      <td>Sesame Street</td>
+      <td>Definitely yes</td>
+      <td class="left">Only if you have no cookies</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -448,40 +448,40 @@ Only if you have no cookies
 
 ```html
 <table class="table table-compact table-noborder">
-    <thead>
-        <tr>
-            <th class="left">Monster</th>
-            <th>Home</th>
-            <th>Likes Cookies</th>
-            <th class="left">Fun to Play With</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td class="left">Wolfman</td>
-            <td>Nondisclosed countryside</td>
-            <td>Sometimes</td>
-            <td class="left">Not really</td>
-        </tr>
-        <tr>
-            <td class="left">Mothra</td>
-            <td>Tropical island</td>
-            <td>No</td>
-            <td class="left">Only if you have a flashlight</td>
-        </tr>
-        <tr>
-            <td class="left">Oscar the Grouch</td>
-            <td>Sesame Street</td>
-            <td>No</td>
-            <td class="left">No</td>
-        </tr>
-        <tr>
-            <td class="left">Cookie Monster</td>
-            <td>Sesame Street</td>
-            <td>Definitely yes</td>
-            <td class="left">Only if you have no cookies</td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th class="left">Monster</th>
+      <th>Home</th>
+      <th>Likes Cookies</th>
+      <th class="left">Fun to Play With</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="left">Wolfman</td>
+      <td>Nondisclosed countryside</td>
+      <td>Sometimes</td>
+      <td class="left">Not really</td>
+    </tr>
+    <tr>
+      <td class="left">Mothra</td>
+      <td>Tropical island</td>
+      <td>No</td>
+      <td class="left">Only if you have a flashlight</td>
+    </tr>
+    <tr>
+      <td class="left">Oscar the Grouch</td>
+      <td>Sesame Street</td>
+      <td>No</td>
+      <td class="left">No</td>
+    </tr>
+    <tr>
+      <td class="left">Cookie Monster</td>
+      <td>Sesame Street</td>
+      <td>Definitely yes</td>
+      <td class="left">Only if you have no cookies</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -525,33 +525,33 @@ This classname removes the table header and applies table header styles to the l
 
 ```html
 <table class="table table-vertical">
-    <tbody>
-        <tr>
-            <th>Basic table</th>
-            <td>.table</td>
-            <td>...</td>
-        </tr>
-        <tr>
-            <th>Left-aligned table cells</th>
-            <td>.left</td>
-            <td>...</td>
-        </tr>
-        <tr>
-            <th>Tables without borders</th>
-            <td>.table-noborder</td>
-            <td>...</td>
-        </tr>
-        <tr>
-            <th>Compact tables</th>
-            <td>.table-compact</td>
-            <td>...</td>
-        </tr>
-        <tr>
-            <th>Vertical tables</th>
-            <td>.table-vertical</td>
-            <td>...</td>
-        </tr>
-    </tbody>
+  <tbody>
+    <tr>
+      <th>Basic table</th>
+      <td>.table</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>Left-aligned table cells</th>
+      <td>.left</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>Tables without borders</th>
+      <td>.table-noborder</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>Compact tables</th>
+      <td>.table-compact</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>Vertical tables</th>
+      <td>.table-vertical</td>
+      <td>...</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -591,33 +591,33 @@ This classname removes the table header and applies table header styles to the l
 
 ```html
 <table class="table table-vertical table-noborder table-compact">
-    <tbody>
-        <tr>
-            <th>Basic table</th>
-            <td>.table</td>
-            <td>...</td>
-        </tr>
-        <tr>
-            <th>Left-aligned table cells</th>
-            <td>.left</td>
-            <td>...</td>
-        </tr>
-        <tr>
-            <th>Tables without borders</th>
-            <td>.table-noborder</td>
-            <td>...</td>
-        </tr>
-        <tr>
-            <th>Compact tables</th>
-            <td>.table-compact</td>
-            <td>...</td>
-        </tr>
-        <tr>
-            <th>Vertical tables</th>
-            <td>.table-vertical</td>
-            <td>...</td>
-        </tr>
-    </tbody>
+  <tbody>
+    <tr>
+      <th>Basic table</th>
+      <td>.table</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>Left-aligned table cells</th>
+      <td>.left</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>Tables without borders</th>
+      <td>.table-noborder</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>Compact tables</th>
+      <td>.table-compact</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>Vertical tables</th>
+      <td>.table-vertical</td>
+      <td>...</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -707,93 +707,93 @@ Squirrels
 
 ```html
 <div class="clr-row">
-    <div class="clr-col-12 clr-col-lg-6 clr-col-xl-4">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th class="left">Language</th>
-                    <th>Foo</th>
-                    <th>Bar</th>
-                    <th>Baz</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="left">Pig Latin</td>
-                    <td>Oofay</td>
-                    <td>Arbay</td>
-                    <td>Azbay</td>
-                </tr>
-                <tr>
-                    <td class="left">Bizarro</td>
-                    <td>Bar</td>
-                    <td>Foo</td>
-                    <td>Bang</td>
-                </tr>
-                <tr>
-                    <td class="left">Hodor</td>
-                    <td>Hodor</td>
-                    <td>Hodor</td>
-                    <td>Hodor</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="clr-col-12 clr-col-lg-6 clr-col-xl-4">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th class="left">Color</th>
-                    <th>R</th>
-                    <th>G</th>
-                    <th>B</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="left">Black</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td class="left">New Black</td>
-                    <td>255</td>
-                    <td>165</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td class="left">Pantone 292</td>
-                    <td>98</td>
-                    <td>168</td>
-                    <td>229</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="clr-col-12 clr-col-lg-6 clr-col-xl-4">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th class="left">Name</th>
-                    <th class="left">Weakness</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="left">Frankenstein</td>
-                    <td class="left">Fire</td>
-                </tr>
-                <tr>
-                    <td class="left">Dracula</td>
-                    <td class="left">Garlic</td>
-                </tr>
-                <tr>
-                    <td class="left">Wolfman</td>
-                    <td class="left">Squirrels</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+  <div class="clr-col-12 clr-col-lg-6 clr-col-xl-4">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="left">Language</th>
+          <th>Foo</th>
+          <th>Bar</th>
+          <th>Baz</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="left">Pig Latin</td>
+          <td>Oofay</td>
+          <td>Arbay</td>
+          <td>Azbay</td>
+        </tr>
+        <tr>
+          <td class="left">Bizarro</td>
+          <td>Bar</td>
+          <td>Foo</td>
+          <td>Bang</td>
+        </tr>
+        <tr>
+          <td class="left">Hodor</td>
+          <td>Hodor</td>
+          <td>Hodor</td>
+          <td>Hodor</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="clr-col-12 clr-col-lg-6 clr-col-xl-4">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="left">Color</th>
+          <th>R</th>
+          <th>G</th>
+          <th>B</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="left">Black</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td class="left">New Black</td>
+          <td>255</td>
+          <td>165</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td class="left">Pantone 292</td>
+          <td>98</td>
+          <td>168</td>
+          <td>229</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="clr-col-12 clr-col-lg-6 clr-col-xl-4">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="left">Name</th>
+          <th class="left">Weakness</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="left">Frankenstein</td>
+          <td class="left">Fire</td>
+        </tr>
+        <tr>
+          <td class="left">Dracula</td>
+          <td class="left">Garlic</td>
+        </tr>
+        <tr>
+          <td class="left">Wolfman</td>
+          <td class="left">Squirrels</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 ```

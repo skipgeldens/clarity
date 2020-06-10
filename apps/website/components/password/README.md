@@ -6,8 +6,8 @@ title: Overview
 
 ![HTML5](assets/images/bugs/badge_html5.svg 'HTML5')![CSS3](assets/images/bugs/badge_css3.svg 'CSS3')![Angular](assets/images/bugs/badge_ng.svg 'Angular')
 
-* [Examples & Code](/documentation/password#top)
-* [Design Guidelines](/documentation/password#guidelines)
+- [Examples & Code](/documentation/password#top)
+- [Design Guidelines](/documentation/password#guidelines)
 
 ##### Password fields are a specialized input field with the ability to toggle between the masked field or to view the password in plain text. Clarity supports both a CSS only and Angular component. You may wish to review the general [forms](/documentation/forms) documentation about form controls.
 
@@ -58,14 +58,17 @@ Password
 
 Show
 
-Must contain at least 8 characters with at least one of them a special character like !@#$%^&\*)
+Must contain at least 8 characters with at least one of them a special character like !@#\$%^&\*)
 
 ```html
 <form clrForm>
   <clr-password-container>
     <label>Password</label>
     <input placeholder="Password" clrPassword [(ngModel)]="exampleThree" name="password" required minlength="10" />
-    <clr-control-helper>Must contain at least 8 characters with at least one of them a special character like !@#$%^&*)</clr-control-helper>
+    <clr-control-helper
+      >Must contain at least 8 characters with at least one of them a special character like
+      !@#$%^&*)</clr-control-helper
+    >
     <clr-control-error *clrIfError="'required'">This field is required!</clr-control-error>
     <clr-control-error *clrIfError="'minlength'">It must be at least 8 characters!</clr-control-error>
   </clr-password-container>
@@ -82,7 +85,7 @@ It is possible to display the password input by simply having the input as a sta
 
 ```html
 <form class="clr-form">
-  <input type="password" id="basic" placeholder="Password please!" class="clr-input">
+  <input type="password" id="basic" placeholder="Password please!" class="clr-input" />
 </form>
 ```
 
@@ -100,7 +103,7 @@ Helper Text
     <label for="basic" class="clr-control-label">Password</label>
     <div class="clr-control-container">
       <div class="clr-input-wrapper">
-        <input type="password" id="basic" placeholder="Password please!" class="clr-input">
+        <input type="password" id="basic" placeholder="Password please!" class="clr-input" />
         <clr-icon class="clr-validate-icon" shape="exclamation-circle"></clr-icon>
       </div>
       <span class="clr-subtext">Helper Text</span>
@@ -123,7 +126,7 @@ Helper Text
     <label for="example" class="clr-control-label">Password</label>
     <div class="clr-control-container">
       <div class="clr-input-wrapper">
-        <input type="password" id="example" placeholder="Password please!" class="clr-input">
+        <input type="password" id="example" placeholder="Password please!" class="clr-input" />
         <clr-icon class="clr-validate-icon" shape="exclamation-circle"></clr-icon>
       </div>
       <span class="clr-subtext">Error message</span>

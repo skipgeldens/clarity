@@ -4,8 +4,8 @@ title: Overview
 
 # Datalist
 
-* [Design Guidelines](/documentation/datalist#top)
-* [Code & Examples](/documentation/datalist#examples)
+- [Design Guidelines](/documentation/datalist#top)
+- [Code & Examples](/documentation/datalist#examples)
 
 ##### The datalist element offers a flexible input when users need to filter and select from a large list of pre-defined options. Or, they need to input a custom value (not provided in the pre-defined list) for the input.
 
@@ -35,17 +35,17 @@ As with other Clarity form controls, the datalist and its associated input belon
 
 ### Basic Example
 
-* basic.html
-* basic.ts
+- basic.html
+- basic.ts
 
 ```html
 <form clrForm>
-    <clr-datalist-container>
-        <input clrDatalistInput [(ngModel)]="vertical" placeholder="No label" name="Option"/>
-        <datalist>
-            <option *ngFor="let item of items" [value]="item"></option>
-        </datalist>
-    </clr-datalist-container>
+  <clr-datalist-container>
+    <input clrDatalistInput [(ngModel)]="vertical" placeholder="No label" name="Option" />
+    <datalist>
+      <option *ngFor="let item of items" [value]="item"></option>
+    </datalist>
+  </clr-datalist-container>
 </form>
 ```
 
@@ -59,21 +59,20 @@ Helper text
 
 Submit
 
-* template.html
-* template.ts
+- template.html
+- template.ts
 
 ```html
 <form clrForm>
-    <clr-datalist-container>
-        <label>Template Datalist</label>
-        <input minlength="4" name="Option" required
-               clrDatalistInput [disabled]="disabled" [(ngModel)]="vertical"/>
-        <datalist>
-            <option *ngFor="let item of items" [value]="item"></option>
-        </datalist>
-        <clr-control-helper>Helper text</clr-control-helper>
-        <clr-control-error>There was an error</clr-control-error>
-    </clr-datalist-container>
+  <clr-datalist-container>
+    <label>Template Datalist</label>
+    <input minlength="4" name="Option" required clrDatalistInput [disabled]="disabled" [(ngModel)]="vertical" />
+    <datalist>
+      <option *ngFor="let item of items" [value]="item"></option>
+    </datalist>
+    <clr-control-helper>Helper text</clr-control-helper>
+    <clr-control-error>There was an error</clr-control-error>
+  </clr-datalist-container>
 </form>
 ```
 
@@ -85,20 +84,20 @@ Helper text
 
 Submit
 
-* reactive.html
-* reactive.ts
+- reactive.html
+- reactive.ts
 
 ```html
 <form clrForm [formGroup]="model">
-    <clr-datalist-container>
-        <label>Reactive Datalist</label>
-        <input clrDatalistInput placeholder="Option" name="Option" formControlName="item" />
-        <datalist id="clr-custom-datalistid-1">
-            <option *ngFor="let item of items" [value]="item + ' dl 1'"></option>
-        </datalist>
-    </clr-datalist-container>
-    <button class="btn btn-primary" type="submit" [disabled]="model.invalid" (click)="submit()">
-        Submit
-    </button>
+  <clr-datalist-container>
+    <label>Reactive Datalist</label>
+    <input clrDatalistInput placeholder="Option" name="Option" formControlName="item" />
+    <datalist id="clr-custom-datalistid-1">
+      <option *ngFor="let item of items" [value]="item + ' dl 1'"></option>
+    </datalist>
+  </clr-datalist-container>
+  <button class="btn btn-primary" type="submit" [disabled]="model.invalid" (click)="submit()">
+    Submit
+  </button>
 </form>
 ```

@@ -4,8 +4,8 @@ title: Overview
 
 # Stepper
 
-* [Design Guidelines](/documentation/stepper#top)
-* [Code & Examples](/documentation/stepper#examples)
+- [Design Guidelines](/documentation/stepper#top)
+- [Code & Examples](/documentation/stepper#examples)
 
 ##### A stepper structures multi-step processes into 2 or more expanding panels that break up complex workflows.
 
@@ -15,10 +15,10 @@ Each panel representing each step will contain a title and a description that de
 
 #### Here is when you might want to use a stepper over normal forms or wizards:
 
-* Complex and long work processes that may not fit in one viewport
-* When the user would need to see the forms in-line with the rest of the page content
-* If users need more detail than step titles to understand the process.
-* If summaries of previous steps are helpful in informing next steps.
+- Complex and long work processes that may not fit in one viewport
+- When the user would need to see the forms in-line with the rest of the page content
+- If users need more detail than step titles to understand the process.
+- If summaries of previous steps are helpful in informing next steps.
 
 ### Style
 

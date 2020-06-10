@@ -1,10 +1,11 @@
 ---
 title: Overview
 ---
+
 # Badges
 
-* [Design Guidelines](/documentation/badges#top)
-* [Code & Examples](/documentation/badges#examples)
+- [Design Guidelines](/documentation/badges#top)
+- [Code & Examples](/documentation/badges#examples)
 
 ##### Badges provide a method to highlight a count of an element either next to it or inside the element itself.
 

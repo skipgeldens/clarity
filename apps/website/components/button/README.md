@@ -129,8 +129,8 @@ Clarity buttons have a border radius of 3px.
 
 Clarity offers two button sizes:
 
-* Default height of 36px
-* Compact height of 24px
+- Default height of 36px
+- Compact height of 24px
 
 Compact is used in content areas where smaller buttons are needed to de-emphasize calls to action. This is especially true when multiple actions of equal importance are available.
 

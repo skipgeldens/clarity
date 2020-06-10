@@ -4,8 +4,8 @@ title: Overview
 
 # Header
 
-* [Design Guidelines](/documentation/header#top)
-* [Code & Examples](/documentation/header#examples)
+- [Design Guidelines](/documentation/header#top)
+- [Code & Examples](/documentation/header#examples)
 
 ##### Headers provide branding, navigation, search, and access to global application actions such as settings and notifications.
 
@@ -99,10 +99,10 @@ The header and subnav support app-level information and navigation links.
 
 `.header` is a wrapper around the following four sections:
 
-* Branding
-* Navigation
-* Search
-* Settings
+- Branding
+- Navigation
+- Search
+- Settings
 
 ###### .branding
 
@@ -118,18 +118,18 @@ The header and subnav support app-level information and navigation links.
 
 ```html
 <header class="header-6">
-    <div class="branding">
-        ...
-    </div>
-    <div class="header-nav">
-        <a href="javascript://" class="active nav-link nav-text">Dashboard</a>
-        <a href="javascript://" class="nav-link nav-text">Interactive Analytics</a>
-    </div>
-    <div class="header-actions">
-        <a href="javascript://" class="nav-link nav-icon" aria-label="settings">
-            <clr-icon shape="cog"></clr-icon>
-        </a>
-    </div>
+  <div class="branding">
+    ...
+  </div>
+  <div class="header-nav">
+    <a href="javascript://" class="active nav-link nav-text">Dashboard</a>
+    <a href="javascript://" class="nav-link nav-text">Interactive Analytics</a>
+  </div>
+  <div class="header-actions">
+    <a href="javascript://" class="nav-link nav-icon" aria-label="settings">
+      <clr-icon shape="cog"></clr-icon>
+    </a>
+  </div>
 </header>
 ```
 
@@ -169,112 +169,112 @@ john.doe@vmware.com
 
 ```html
 <header class="header-6">
-    <div class="branding">
-        <a href="..." class="nav-link">
-            <clr-icon shape="vm-bug"></clr-icon>
-            <span class="title">Project Clarity</span>
-        </a>
-    </div>
-    <div class="header-nav">
-        <a href="..." class="active nav-link"><span class="nav-text">Dashboard</span></a>
-        <a href="..." class="nav-link"><span class="nav-text">Interactive Analytics</span></a>
-    </div>
-    <div class="header-actions">
-        <a href="..." class="nav-link nav-icon" aria-label="settings">
-            <clr-icon shape="cog"></clr-icon>
-        </a>
-    </div>
+  <div class="branding">
+    <a href="..." class="nav-link">
+      <clr-icon shape="vm-bug"></clr-icon>
+      <span class="title">Project Clarity</span>
+    </a>
+  </div>
+  <div class="header-nav">
+    <a href="..." class="active nav-link"><span class="nav-text">Dashboard</span></a>
+    <a href="..." class="nav-link"><span class="nav-text">Interactive Analytics</span></a>
+  </div>
+  <div class="header-actions">
+    <a href="..." class="nav-link nav-icon" aria-label="settings">
+      <clr-icon shape="cog"></clr-icon>
+    </a>
+  </div>
 </header>
 
 <header class="header-6">
-    <div class="branding">
-        <a href="..." class="nav-link">
-            <clr-icon shape="vm-bug"></clr-icon>
-            <span class="title">Project Clarity</span>
-        </a>
-    </div>
-    <form class="search">
-        <label for="search_input">
-            <input id="search_input" type="text" placeholder="Search for keywords...">
-        </label>
-    </form>
-    <div class="header-actions">
-        <a href="..." class="nav-link nav-icon" aria-label="settings">
-            <clr-icon shape="cog"></clr-icon>
-        </a>
-    </div>
+  <div class="branding">
+    <a href="..." class="nav-link">
+      <clr-icon shape="vm-bug"></clr-icon>
+      <span class="title">Project Clarity</span>
+    </a>
+  </div>
+  <form class="search">
+    <label for="search_input">
+      <input id="search_input" type="text" placeholder="Search for keywords..." />
+    </label>
+  </form>
+  <div class="header-actions">
+    <a href="..." class="nav-link nav-icon" aria-label="settings">
+      <clr-icon shape="cog"></clr-icon>
+    </a>
+  </div>
 </header>
 
 <header class="header-6">
-    <div class="branding">
-        <a href="..." class="nav-link">
-            <clr-icon shape="vm-bug"></clr-icon>
-            <span class="title">Project Clarity</span>
-        </a>
-    </div>
-    <div class="header-actions">
-        <clr-dropdown>
-            <button class="nav-icon" clrDropdownTrigger aria-label="toggle settings menu">
-                <clr-icon shape="cog"></clr-icon>
-                <clr-icon shape="caret down"></clr-icon>
-            </button>
-            <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
-                <a href="..." clrDropdownItem>About</a>
-                <a href="..." clrDropdownItem>Preferences</a>
-                <a href="..." clrDropdownItem>Log out</a>
-            </clr-dropdown-menu>
-        </clr-dropdown>
-    </div>
+  <div class="branding">
+    <a href="..." class="nav-link">
+      <clr-icon shape="vm-bug"></clr-icon>
+      <span class="title">Project Clarity</span>
+    </a>
+  </div>
+  <div class="header-actions">
+    <clr-dropdown>
+      <button class="nav-icon" clrDropdownTrigger aria-label="toggle settings menu">
+        <clr-icon shape="cog"></clr-icon>
+        <clr-icon shape="caret down"></clr-icon>
+      </button>
+      <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
+        <a href="..." clrDropdownItem>About</a>
+        <a href="..." clrDropdownItem>Preferences</a>
+        <a href="..." clrDropdownItem>Log out</a>
+      </clr-dropdown-menu>
+    </clr-dropdown>
+  </div>
 </header>
 
 <header class="header-6">
-    <div class="branding">
-        <a href="..." class="nav-link">
-            <clr-icon shape="vm-bug"></clr-icon>
-            <span class="title">Project Clarity</span>
-        </a>
-    </div>
-    <div class="header-actions">
-        <a href="..." class="nav-link nav-text">
-            Log Out
-        </a>
-    </div>
+  <div class="branding">
+    <a href="..." class="nav-link">
+      <clr-icon shape="vm-bug"></clr-icon>
+      <span class="title">Project Clarity</span>
+    </a>
+  </div>
+  <div class="header-actions">
+    <a href="..." class="nav-link nav-text">
+      Log Out
+    </a>
+  </div>
 </header>
 
 <header class="header-6">
-    <div class="branding">
-        <a href="..." class="nav-link">
-            <clr-icon shape="vm-bug"></clr-icon>
-            <span class="title">Project Clarity</span>
-        </a>
-    </div>
-    <div class="header-actions">
-        <clr-dropdown>
-            <button class="nav-text" clrDropdownTrigger aria-label="open user profile">
-                john.doe@vmware.com
-                <clr-icon shape="caret down"></clr-icon>
-            </button>
-            <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
-                <a href="..." clrDropdownItem>Preferences</a>
-                <a href="..." clrDropdownItem>Log out</a>
-            </clr-dropdown-menu>
-        </clr-dropdown>
-    </div>
+  <div class="branding">
+    <a href="..." class="nav-link">
+      <clr-icon shape="vm-bug"></clr-icon>
+      <span class="title">Project Clarity</span>
+    </a>
+  </div>
+  <div class="header-actions">
+    <clr-dropdown>
+      <button class="nav-text" clrDropdownTrigger aria-label="open user profile">
+        john.doe@vmware.com
+        <clr-icon shape="caret down"></clr-icon>
+      </button>
+      <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
+        <a href="..." clrDropdownItem>Preferences</a>
+        <a href="..." clrDropdownItem>Log out</a>
+      </clr-dropdown-menu>
+    </clr-dropdown>
+  </div>
 </header>
 
 <header class="header-6">
-    <div class="branding">
-        <a href="javascript://" class="nav-link">
-            <clr-icon shape="vm-bug"></clr-icon>
-            <span class="title">Project Clarity</span>
-        </a>
-    </div>
-    <div class="header-actions">
-        <a href="javascript://" class="nav-link nav-icon-text">
-            <clr-icon shape="user"></clr-icon>
-            <span class="nav-text">username</span>
-        </a>
-    </div>
+  <div class="branding">
+    <a href="javascript://" class="nav-link">
+      <clr-icon shape="vm-bug"></clr-icon>
+      <span class="title">Project Clarity</span>
+    </a>
+  </div>
+  <div class="header-actions">
+    <a href="javascript://" class="nav-link nav-icon-text">
+      <clr-icon shape="user"></clr-icon>
+      <span class="nav-text">username</span>
+    </a>
+  </div>
 </header>
 ```
 
@@ -296,31 +296,31 @@ john.doe@vmware.com
 
 ```html
 <header class="header header-1">
-    ...
+  ...
 </header>
 
 <header class="header header-2">
-    ...
+  ...
 </header>
 
 <header class="header header-3">
-    ...
+  ...
 </header>
 
 <header class="header header-4">
-    ...
+  ...
 </header>
 
 <header class="header header-5">
-    ...
+  ...
 </header>
 
 <header class="header header-6">
-    ...
+  ...
 </header>
 
 <header class="header header-7">
-    ...
+  ...
 </header>
 ```
 
@@ -330,10 +330,10 @@ john.doe@vmware.com
 
 [Project Clarity](javascript://)
 
-* [Dashboard](javascript://)
-* [Management](javascript://)
-* [Cloud](javascript://)
-* [Tenants](javascript://)
+- [Dashboard](javascript://)
+- [Management](javascript://)
+- [Cloud](javascript://)
+- [Tenants](javascript://)
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non enim praesent elementum facilisis leo vel fringilla. Euismod elementum nisi quis eleifend quam adipiscing vitae proin. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus mauris. Dolor magna eget est lorem ipsum dolor sit amet consectetur. Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Volutpat commodo sed egestas egestas. Pharetra sit amet aliquam id diam maecenas ultricies mi. Pulvinar etiam non quam lacus suspendisse faucibus interdum posuere. Viverra nibh cras pulvinar mattis nunc sed blandit libero volutpat. Enim nunc faucibus a pellentesque sit amet porttitor eget dolor. Quis viverra nibh cras pulvinar mattis nunc. Donec ac odio tempor orci. Tortor consequat id porta nibh. Risus ultricies tristique nulla aliquet enim tortor. A scelerisque purus semper eget duis at tellus at. Arcu non sodales neque sodales ut. Egestas integer eget aliquet nibh praesent tristique.
 
@@ -341,22 +341,22 @@ Leo integer malesuada nunc vel risus commodo viverra. Lectus sit amet est placer
 
 ```html
 <header>
-    ...
+  ...
 </header>
 <nav class="subnav">
-    <ul class="nav">
-        <li class="nav-item">
-            <a class="nav-link active" href="#">Dashboard</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Management</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Cloud</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Tenants</a>
-        </li>
-    </ul>
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Dashboard</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Management</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Cloud</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Tenants</a>
+    </li>
+  </ul>
 </nav>
 ```

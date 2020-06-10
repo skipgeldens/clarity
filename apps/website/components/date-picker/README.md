@@ -4,8 +4,8 @@ title: Overview
 
 # Date Picker
 
-* [Design Guidelines](/documentation/datepicker#top)
-* [Code & Examples](/documentation/datepicker#examples)
+- [Design Guidelines](/documentation/datepicker#top)
+- [Code & Examples](/documentation/datepicker#examples)
 
 ##### Date Picker is a popover control for picking a date value for a date input. It's also sometimes referred to as Datepicker.
 
@@ -53,9 +53,9 @@ Clarity Date Picker is shown at screen width `768px` and above.
 
 ### Important Notes about User Input
 
-* Every time the user changes the value in the input field, the value is validated against the placeholder to check if a valid date is entered or not. If a valid date is entered, the date picker opens with the entered date selected. If an invalid date is entered, the date picker opens with the focus on today's date.
-* Selecting a date from the date picker overrides the value in the input field.
-* Date picker ideally requires a 4 digit year but can convert a 2 digit year input by the user to a 4 digit year. For eg: a 2 digit year 20 will convert to 2020. If the 4 digit conversion is 20 more than the current year, we subtract 100 from it. If the current year is 2018 and the year input is 99, then the converted year is 1999. Anything other than a 4 digit or 2 digit year is considered invalid.
+- Every time the user changes the value in the input field, the value is validated against the placeholder to check if a valid date is entered or not. If a valid date is entered, the date picker opens with the entered date selected. If an invalid date is entered, the date picker opens with the focus on today's date.
+- Selecting a date from the date picker overrides the value in the input field.
+- Date picker ideally requires a 4 digit year but can convert a 2 digit year input by the user to a 4 digit year. For eg: a 2 digit year 20 will convert to 2020. If the 4 digit conversion is 20 more than the current year, we subtract 100 from it. If the current year is 2018 and the year input is 99, then the converted year is 1999. Anything other than a 4 digit or 2 digit year is considered invalid.
 
 ## Accessibility
 
@@ -78,10 +78,10 @@ Basic Demo
 
 ```html
 <form clrForm>
-    <clr-date-container>
-        <label>Basic Demo</label>
-        <input type="date" clrDate name="demo" [(ngModel)]="demo">
-    </clr-date-container>
+  <clr-date-container>
+    <label>Basic Demo</label>
+    <input type="date" clrDate name="demo" [(ngModel)]="demo" />
+  </clr-date-container>
 </form>
 ```
 
@@ -101,7 +101,7 @@ Min date: 2019-11-17
 <form clrForm>
   <clr-date-container>
     <label>Min date: 2019-11-17</label>
-    <input type="date" clrDate name="demo" [(ngModel)]="demo" min="2019-11-17">
+    <input type="date" clrDate name="demo" [(ngModel)]="demo" min="2019-11-17" />
   </clr-date-container>
 </form>
 ```
@@ -114,7 +114,7 @@ Max date: 2019-11-19
 <form clrForm>
   <clr-date-container>
     <label>Max date: 2019-11-19</label>
-    <input type="date" clrDate name="demo" [(ngModel)]="demo" max="2019-11-19">
+    <input type="date" clrDate name="demo" [(ngModel)]="demo" max="2019-11-19" />
   </clr-date-container>
 </form>
 ```
@@ -127,7 +127,7 @@ Min date: 2019-11-17 AND Max date: 2019-11-19
 <form clrForm>
   <clr-date-container>
     <label>Min date: 2019-11-17 AND Max date: 2019-11-19</label>
-    <input type="date" clrDate name="demo" [(ngModel)]="demo" min="2019-11-17" max="2019-11-19">
+    <input type="date" clrDate name="demo" [(ngModel)]="demo" min="2019-11-17" max="2019-11-19" />
   </clr-date-container>
 </form>
 ```
@@ -209,18 +209,14 @@ By default, Angular uses the `en-US` locale but you can set your application's l
 Changing the locale requires its data to be registered first.
 
 ```html
-import { registerLocaleData } from '@angular/common';
-import localeFr from '@angular/common/locales/fr';
-
+import { registerLocaleData } from '@angular/common'; import localeFr from '@angular/common/locales/fr';
 registerLocaleData(localeFr);
 ```
 
 Afterwards you can simply provide the locale in any Module or Component by the `LOCALE_ID` token.
 
 ```html
-providers: [
-    {provide: LOCALE_ID, useValue: 'fr'}
-]
+providers: [ {provide: LOCALE_ID, useValue: 'fr'} ]
 ```
 
 For more information on setting the locale parameter and loading the locale data, please read the Angular [internationalization](https://angular.io/guide/i18n) documentation.
@@ -243,7 +239,7 @@ Date Object
 <form clrForm clrLayout="vertical">
   <clr-date-container>
     <label>Date Object</label>
-    <input type="date" [(clrDate)]="date">
+    <input type="date" [(clrDate)]="date" />
   </clr-date-container>
 </form>
 ```
@@ -268,11 +264,11 @@ Enter Date
 
 ```html
 <form clrForm #simpleForm="ngForm">
-    <h4>Template Driven Form Demo</h4>
-    <clr-date-container>
-        <label>Enter Date</label>
-        <input type="date" name="date" [(ngModel)]="date" clrDate>
-    </clr-date-container>
+  <h4>Template Driven Form Demo</h4>
+  <clr-date-container>
+    <label>Enter Date</label>
+    <input type="date" name="date" [(ngModel)]="date" clrDate />
+  </clr-date-container>
 </form>
 <pre class="datepicker-output">
 {{simpleForm.value | json}}
@@ -303,11 +299,11 @@ Date
 
 ```html
 <form clrForm [formGroup]="dateForm" novalidate>
-    <h4>Reactive Form Demo</h4>
-    <clr-date-container>
-        <label>Date</label>
-        <input type="date" clrDate formControlName="date"/>
-    </clr-date-container>
+  <h4>Reactive Form Demo</h4>
+  <clr-date-container>
+    <label>Date</label>
+    <input type="date" clrDate formControlName="date" />
+  </clr-date-container>
 </form>
 <pre class="datepicker-output">
     {{dateForm.value | json}}

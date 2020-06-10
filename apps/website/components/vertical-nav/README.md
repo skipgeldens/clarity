@@ -4,8 +4,8 @@ title: Overview
 
 # Vertical Nav
 
-* [Design Guidelines](/documentation/vertical-nav#top)
-* [Code & Examples](/documentation/vertical-nav#examples)
+- [Design Guidelines](/documentation/vertical-nav#top)
+- [Code & Examples](/documentation/vertical-nav#examples)
 
 ##### This is a vertically-aligned navigational component.
 
@@ -25,10 +25,10 @@ Jigglypuff is a round, pink ball with pointed ears and large, blue eyes. It has 
 
 Use the vertical navigation when you need:
 
-* to collapse and expand the navigation to free up space for the content area
-* a hierarchical navigation or nested navigation
-* many links in the navigation across a top level of navigation
-* icons to describe navigation items which is helpful when the navigation is collapsed
+- to collapse and expand the navigation to free up space for the content area
+- a hierarchical navigation or nested navigation
+- many links in the navigation across a top level of navigation
+- icons to describe navigation items which is helpful when the navigation is collapsed
 
 [Project Pokémon](javascript://)
 
@@ -40,10 +40,10 @@ Use vertical navigation with a header.
 
 [Project Pokémon](javascript://)
 
-* [Pokédex](javascript://)
-* [Movies](javascript://)
-* [Games](javascript://)
-* [Events](javascript://)
+- [Pokédex](javascript://)
+- [Movies](javascript://)
+- [Games](javascript://)
+- [Events](javascript://)
 
 [Snorlax](javascript://)[Jigglypuff](javascript://)[Ditto](javascript://)[Charizard](javascript://)[Arcanine](javascript://)[Blastoise](javascript://)[Gyrados](javascript://)[Jolteon](javascript://)[Raichu](javascript://)
 
@@ -445,11 +445,11 @@ We have introduced `clrFocusOnViewInit` in Clarity v2.1.2, thus make sure you ar
 
 We have 5 Vertical Nav demos. Starting with the basics, each demo shows you one or more of the advanced Vertical Nav features.
 
-* [Basic Structure](/documentation/vertical-nav/basic-structure)
-* [Icon Links](/documentation/vertical-nav/icon-links)
-* [Collapsible Navigation](/documentation/vertical-nav/collapsible-nav)
-* [Vertical Nav Groups](/documentation/vertical-nav/nav-groups)
-* [Lazy Loading Nav Links in Nav Groups](/documentation/vertical-nav/lazy-loading-nav-links)
+- [Basic Structure](/documentation/vertical-nav/basic-structure)
+- [Icon Links](/documentation/vertical-nav/icon-links)
+- [Collapsible Navigation](/documentation/vertical-nav/collapsible-nav)
+- [Vertical Nav Groups](/documentation/vertical-nav/nav-groups)
+- [Lazy Loading Nav Links in Nav Groups](/documentation/vertical-nav/lazy-loading-nav-links)
 
 #### Basic Structure
 
@@ -470,30 +470,29 @@ _The template preview of the router component:_
 ```html
 <h4 clrFocusOnViewInit>Charmander</h4>
 <p>
-  The flame that burns at the tip of its tail is an indication of its emotions.
-  The flame wavers when Charmander is enjoying itself.
-  If the Pokémon becomes enraged, the flame burns fiercely.
+  The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when Charmander is
+  enjoying itself. If the Pokémon becomes enraged, the flame burns fiercely.
 </p>
 ```
 
 ```html
 <div class="main-container">
-    <header class="header">
-        ...
-    </header>
-    <div class="content-container">
-        <clr-vertical-nav>
-            <a clrVerticalNavLink routerLink="./charmander" routerLinkActive="active">Charmander</a>
-            <a clrVerticalNavLink routerLink="./jigglypuff" routerLinkActive="active">Jigglypuff</a>
-            <a clrVerticalNavLink routerLink="./pikachu" routerLinkActive="active">Pikachu</a>
-            <a clrVerticalNavLink routerLink="./raichu" routerLinkActive="active">Raichu</a>
-            <a clrVerticalNavLink routerLink="./snorlax" routerLinkActive="active">Snorlax</a>
-            <div class="nav-divider"></div>
-            <a clrVerticalNavLink routerLink="./credit" routerLinkActive="active">Credit</a>
-        </clr-vertical-nav>
-        <div class="content-area">
-            <router-outlet></router-outlet>
-        </div>
+  <header class="header">
+    ...
+  </header>
+  <div class="content-container">
+    <clr-vertical-nav>
+      <a clrVerticalNavLink routerLink="./charmander" routerLinkActive="active">Charmander</a>
+      <a clrVerticalNavLink routerLink="./jigglypuff" routerLinkActive="active">Jigglypuff</a>
+      <a clrVerticalNavLink routerLink="./pikachu" routerLinkActive="active">Pikachu</a>
+      <a clrVerticalNavLink routerLink="./raichu" routerLinkActive="active">Raichu</a>
+      <a clrVerticalNavLink routerLink="./snorlax" routerLinkActive="active">Snorlax</a>
+      <div class="nav-divider"></div>
+      <a clrVerticalNavLink routerLink="./credit" routerLinkActive="active">Credit</a>
+    </clr-vertical-nav>
+    <div class="content-area">
+      <router-outlet></router-outlet>
     </div>
+  </div>
 </div>
 ```

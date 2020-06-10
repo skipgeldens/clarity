@@ -6,8 +6,8 @@ title: Overview
 
 ![HTML5](assets/images/bugs/badge_html5.svg 'HTML5')![CSS3](assets/images/bugs/badge_css3.svg 'CSS3')![Angular](assets/images/bugs/badge_ng.svg 'Angular')
 
-* [Examples & Code](/documentation/input#top)
-* [Design Guidelines](/documentation/input#guidelines)
+- [Examples & Code](/documentation/input#top)
+- [Design Guidelines](/documentation/input#guidelines)
 
 ##### Inputs are the most commonly used form control, and Clarity supports both a CSS only and Angular component. You may wish to review the general [forms](/documentation/forms) documentation about form controls.
 
@@ -73,7 +73,7 @@ It is possible to display the input by simply having the input as a standalone e
 
 ```html
 <form class="clr-form">
-  <input type="text" id="basic" placeholder="Enter value here" class="clr-input">
+  <input type="text" id="basic" placeholder="Enter value here" class="clr-input" />
 </form>
 ```
 
@@ -91,7 +91,7 @@ Helper Text
     <label for="basic" class="clr-control-label">Basic input</label>
     <div class="clr-control-container">
       <div class="clr-input-wrapper">
-        <input type="text" id="basic" placeholder="Enter value here" class="clr-input">
+        <input type="text" id="basic" placeholder="Enter value here" class="clr-input" />
         <clr-icon class="clr-validate-icon" shape="exclamation-circle"></clr-icon>
       </div>
       <span class="clr-subtext">Helper Text</span>
@@ -114,7 +114,7 @@ Helper Text
     <label for="example" class="clr-control-label">Label</label>
     <div class="clr-control-container clr-error">
       <div class="clr-input-wrapper">
-        <input type="text" id="example" placeholder="Example Input" class="clr-input">
+        <input type="text" id="example" placeholder="Example Input" class="clr-input" />
         <clr-icon class="clr-validate-icon" shape="exclamation-circle"></clr-icon>
       </div>
       <span class="clr-subtext">Error message</span>

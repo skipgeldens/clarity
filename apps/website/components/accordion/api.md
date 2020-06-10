@@ -16,9 +16,11 @@ An accordion allows generic content to be collapsed and allows users to expand t
 ```
 
 #### Properties
+
 <DocComponentApi component="ClrAccordion" item="bindings" />
 
 ### ClrAccordionContent
+
 ClrAccordionContent is a child of [ClrAccordionPanel](./api.md#clraccordionpanel)
 
 #### Selector & Basic Usage
@@ -32,7 +34,9 @@ ClrAccordionContent is a child of [ClrAccordionPanel](./api.md#clraccordionpanel
 ```
 
 ### ClrAccordionDescription
+
 ClrAccordionDescription is a child of [ClrAccordionPanel](./api.md#clraccordionpanel)
+
 #### Selector & Basic Usage
 
 ```html
@@ -58,12 +62,12 @@ ClrAccordionPanel is a child of [ClrAccordion](./api.md#clraccordion)
 </clr-accordion>
 ```
 
-
 #### Bindings
 
 <DocComponentApi component="ClrAccordionPanel" item="bindings" />
 
 #### Methods
+
 <DocComponentApi component="ClrAccordionPanel" item="methods" />
 
 ### ClrAccordionTitle

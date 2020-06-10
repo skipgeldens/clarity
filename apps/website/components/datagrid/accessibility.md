@@ -12,4 +12,4 @@ Applications are responsible for implementing these features for themselves:
 
 The following general guidelines apply to the design and development of the Datagrid.
 
-* tbd
+- tbd

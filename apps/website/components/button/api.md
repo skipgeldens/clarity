@@ -9,9 +9,9 @@ toc: true
 
 Clarity defines three button styles:
 
-* **Solid.** A solid background with light text. These buttons are prominent on the page.
-* **Outline.** A transparent background with colored border and text. On hover, the button fills with color.
-* **Flat.** Text in Action Blue, used to indicate an action.
+- **Solid.** A solid background with light text. These buttons are prominent on the page.
+- **Outline.** A transparent background with colored border and text. On hover, the button fills with color.
+- **Flat.** Text in Action Blue, used to indicate an action.
 
 #### Solid Buttons
 
@@ -85,8 +85,7 @@ Clarity defines three button styles:
 <button class="btn btn-link" disabled>Disabled</button>
 
 ```html
-<button class="btn btn-link">Tertiary</button>
-<button class="btn btn-link" disabled>Disabled</button>
+<button class="btn btn-link">Tertiary</button> <button class="btn btn-link" disabled>Disabled</button>
 ```
 
 ### States
@@ -159,8 +158,7 @@ Clarity defines three button styles:
 <button class="btn btn-link" disabled>Flat Disabled</button>
 
 ```html
-<button class="btn btn-link">Flat Regular</button>
-<button class="btn btn-link" disabled>Flat Disabled</button>
+<button class="btn btn-link">Flat Regular</button> <button class="btn btn-link" disabled>Flat Disabled</button>
 ```
 
 #### Small Flat Buttons
@@ -179,8 +177,7 @@ Clarity defines three button styles:
 <button class="btn btn-success btn-block">Success</button>
 
 ```html
-<button class="btn btn-primary btn-block">Primary</button>
-<button class="btn btn-success btn-block">Success</button>
+<button class="btn btn-primary btn-block">Primary</button> <button class="btn btn-success btn-block">Success</button>
 ```
 
 ### Inverse
@@ -191,8 +188,7 @@ Clarity defines three button styles:
 <button class="btn btn-inverse" disabled>Disabled Inverse</button>
 
 ```html
-<button class="btn btn-inverse">Inverse</button>
-<button class="btn btn-inverse" disabled>Disabled Inverse</button>
+<button class="btn btn-inverse">Inverse</button> <button class="btn btn-inverse" disabled>Disabled Inverse</button>
 ```
 
 ### Icon Buttons
@@ -220,22 +216,22 @@ Use the `.btn-icon` class to create Icon Buttons. Make sure to set an appropriat
 
 ```html
 <button type="button" class="btn btn-icon" aria-label="home">
-    <clr-icon shape="home"></clr-icon>
+  <clr-icon shape="home"></clr-icon>
 </button>
 <button type="button" class="btn btn-icon btn-primary" aria-label="settings">
-    <clr-icon shape="cog"></clr-icon>
+  <clr-icon shape="cog"></clr-icon>
 </button>
 <button type="button" class="btn btn-icon btn-warning" aria-label="warning">
-    <clr-icon shape="warning-standard"></clr-icon>
+  <clr-icon shape="warning-standard"></clr-icon>
 </button>
 <button type="button" class="btn btn-icon btn-danger" aria-label="error">
-    <clr-icon shape="error-standard"></clr-icon>
+  <clr-icon shape="error-standard"></clr-icon>
 </button>
 <button type="button" class="btn btn-icon btn-success" aria-label="done">
-    <clr-icon shape="check"></clr-icon>
+  <clr-icon shape="check"></clr-icon>
 </button>
 <button type="button" class="btn btn-icon" disabled aria-label="home">
-    <clr-icon shape="home"></clr-icon>
+  <clr-icon shape="home"></clr-icon>
 </button>
 ```
 
@@ -243,15 +239,17 @@ Use the `.btn-icon` class to create Icon Buttons. Make sure to set an appropriat
 
 Use the `clrLoading` directive to change the state of the spinner button. The directive can be set to one of the following values:
 
-* `ClrLoadingState.DEFAULT`: the default state of the button.
-* `ClrLoadingState.LOADING`: replaces the button text with a spinner.
-* `ClrLoadingState.SUCCESS`: briefly shows a check mark, and automatically transition back to the `ClrLoadingState.DEFAULT` state.
+- `ClrLoadingState.DEFAULT`: the default state of the button.
+- `ClrLoadingState.LOADING`: replaces the button text with a spinner.
+- `ClrLoadingState.SUCCESS`: briefly shows a check mark, and automatically transition back to the `ClrLoadingState.DEFAULT` state.
 
 ValidateSubmit
 
 ```html
 <button [clrLoading]="validateBtnState" class="btn btn-info-outline" (click)="validateDemo()">Validate</button>
-<button [clrLoading]="submitBtnState" type="submit" class="btn btn-success-outline" (click)="submitDemo()">Submit</button>
+<button [clrLoading]="submitBtnState" type="submit" class="btn btn-success-outline" (click)="submitDemo()">
+  Submit
+</button>
 ```
 
 ```typescript

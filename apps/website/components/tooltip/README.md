@@ -6,8 +6,8 @@ title: Overview
 
 ![HTML5](assets/images/bugs/badge_html5.svg 'HTML5')![CSS3](assets/images/bugs/badge_css3.svg 'CSS3')![Angular](assets/images/bugs/badge_ng.svg 'Angular')
 
-* [Examples & Code](/documentation/tooltips#top)
-* [Design Guidelines](/documentation/tooltips#guidelines)
+- [Examples & Code](/documentation/tooltips#top)
+- [Design Guidelines](/documentation/tooltips#guidelines)
 
 ##### A tooltip provides a short description of a UI element.
 
@@ -23,10 +23,10 @@ This class contains the text that will be shown when the tooltip is visible.
 
 Tooltips support four sizes, defined by using one of the following classes with the `.tooltip` class:
 
-* .tooltip-xs
-* .tooltip-sm
-* .tooltip-md
-* .tooltip-lg
+- .tooltip-xs
+- .tooltip-sm
+- .tooltip-md
+- .tooltip-lg
 
 ###### Extra Small
 
@@ -34,8 +34,8 @@ Tooltips support four sizes, defined by using one of the following classes with 
 
 ```html
 <a href="..." role="tooltip" aria-haspopup="true" class="tooltip tooltip-xs">
-    <clr-icon shape="info-circle" size="24"></clr-icon>
-    <span class="tooltip-content">Lorem</span>
+  <clr-icon shape="info-circle" size="24"></clr-icon>
+  <span class="tooltip-content">Lorem</span>
 </a>
 ```
 
@@ -45,8 +45,8 @@ Tooltips support four sizes, defined by using one of the following classes with 
 
 ```html
 <a href="..." role="tooltip" aria-haspopup="true" class="tooltip tooltip-sm">
-    <clr-icon shape="info-circle" size="24"></clr-icon>
-    <span class="tooltip-content">Lorem</span>
+  <clr-icon shape="info-circle" size="24"></clr-icon>
+  <span class="tooltip-content">Lorem</span>
 </a>
 ```
 
@@ -56,8 +56,8 @@ Tooltips support four sizes, defined by using one of the following classes with 
 
 ```html
 <a href="..." role="tooltip" aria-haspopup="true" class="tooltip tooltip-md">
-    <clr-icon shape="info-circle" size="24"></clr-icon>
-    <span class="tooltip-content">Lorem</span>
+  <clr-icon shape="info-circle" size="24"></clr-icon>
+  <span class="tooltip-content">Lorem</span>
 </a>
 ```
 
@@ -67,8 +67,8 @@ Tooltips support four sizes, defined by using one of the following classes with 
 
 ```html
 <a href="..." role="tooltip" aria-haspopup="true" class="tooltip tooltip-lg">
-    <clr-icon shape="info-circle" size="24"></clr-icon>
-    <span class="tooltip-content">Lorem</span>
+  <clr-icon shape="info-circle" size="24"></clr-icon>
+  <span class="tooltip-content">Lorem</span>
 </a>
 ```
 
@@ -76,12 +76,12 @@ Tooltips support four sizes, defined by using one of the following classes with 
 
 Tooltips support six directions, defined by using one of the following classes with the `.tooltip` class:
 
-* .tooltip-top-right
-* .tooltip-top-left
-* .tooltip-bottom-right
-* .tooltip-bottom-left
-* .tooltip-right
-* .tooltip-left
+- .tooltip-top-right
+- .tooltip-top-left
+- .tooltip-bottom-right
+- .tooltip-bottom-left
+- .tooltip-right
+- .tooltip-left
 
 ###### Top-Right
 
@@ -89,8 +89,8 @@ Tooltips support six directions, defined by using one of the following classes w
 
 ```html
 <a href="..." role="tooltip" aria-haspopup="true" class="tooltip tooltip-sm tooltip-top-right">
-    <clr-icon shape="info-circle" size="24"></clr-icon>
-    <span class="tooltip-content">Lorem ipsum sit</span>
+  <clr-icon shape="info-circle" size="24"></clr-icon>
+  <span class="tooltip-content">Lorem ipsum sit</span>
 </a>
 ```
 
@@ -100,8 +100,8 @@ Tooltips support six directions, defined by using one of the following classes w
 
 ```html
 <a href="..." role="tooltip" aria-haspopup="true" class="tooltip tooltip-sm tooltip-top-left">
-    <clr-icon shape="info-circle" size="24"></clr-icon>
-    <span class="tooltip-content">Lorem ipsum sit</span>
+  <clr-icon shape="info-circle" size="24"></clr-icon>
+  <span class="tooltip-content">Lorem ipsum sit</span>
 </a>
 ```
 
@@ -111,8 +111,8 @@ Tooltips support six directions, defined by using one of the following classes w
 
 ```html
 <a href="..." role="tooltip" aria-haspopup="true" class="tooltip tooltip-md tooltip-bottom-right">
-    <clr-icon shape="info-circle" size="24"></clr-icon>
-    <span class="tooltip-content">Lorem ipsum dolor sit amet, ipsum</span>
+  <clr-icon shape="info-circle" size="24"></clr-icon>
+  <span class="tooltip-content">Lorem ipsum dolor sit amet, ipsum</span>
 </a>
 ```
 
@@ -122,8 +122,8 @@ Tooltips support six directions, defined by using one of the following classes w
 
 ```html
 <a href="..." role="tooltip" aria-haspopup="true" class="tooltip tooltip-lg tooltip-bottom-left">
-    <clr-icon shape="info-circle" size="24"></clr-icon>
-    <span class="tooltip-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit</span>
+  <clr-icon shape="info-circle" size="24"></clr-icon>
+  <span class="tooltip-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit</span>
 </a>
 ```
 
@@ -133,8 +133,8 @@ Tooltips support six directions, defined by using one of the following classes w
 
 ```html
 <a href="..." role="tooltip" aria-haspopup="true" class="tooltip tooltip-right">
-    <clr-icon shape="info-circle" size="24"></clr-icon>
-    <span class="tooltip-content">Lorem ipsum dolor sit amet, ipsum</span>
+  <clr-icon shape="info-circle" size="24"></clr-icon>
+  <span class="tooltip-content">Lorem ipsum dolor sit amet, ipsum</span>
 </a>
 ```
 
@@ -144,8 +144,8 @@ Tooltips support six directions, defined by using one of the following classes w
 
 ```html
 <a href="..." role="tooltip" aria-haspopup="true" class="tooltip tooltip-sm tooltip-left">
-    <clr-icon shape="info-circle" size="24"></clr-icon>
-    <span class="tooltip-content">Lorem ipsum sit</span>
+  <clr-icon shape="info-circle" size="24"></clr-icon>
+  <span class="tooltip-content">Lorem ipsum sit</span>
 </a>
 ```
 
@@ -155,9 +155,9 @@ Use tooltips for actionable icons that do not have text labels, such as the icon
 
 Don’t use a tooltip on:
 
-* **Components.** Provide a descriptive label and use inline or signpost help for more information.
-* **Static images.** Use the HTML alt tag to provide information about the image.
-* **Textual links.** Ensure that the link describes its destination and is not truncated.
+- **Components.** Provide a descriptive label and use inline or signpost help for more information.
+- **Static images.** Use the HTML alt tag to provide information about the image.
+- **Textual links.** Ensure that the link describes its destination and is not truncated.
 
 Don’t rely on tooltips to meet accessibility requirements. Rather, ensure that your underlying content is well-structured for accessibility, for example, by using ARIA roles.
 
@@ -167,11 +167,11 @@ Choose a tooltip position that ensures the entire tooltip is visible on the scre
 
 Other positions are:
 
-* Top left
-* Bottom right
-* Bottom left
-* Side left
-* Side right
+- Top left
+- Bottom right
+- Bottom left
+- Side left
+- Side right
 
 #### Size
 
@@ -179,10 +179,10 @@ Set a width that accommodates the text string. The default is 240 px. Other choi
 
 #### Text
 
-* Use a verb phrase to describe the action on the icon, for example, “Edit settings.”
-* Use only plain text and be concise. Tooltips can be a sentence fragment.
-* If more detailed information is required, use another form of help.
-* Use sentence-style caps and no ending punctuation.
+- Use a verb phrase to describe the action on the icon, for example, “Edit settings.”
+- Use only plain text and be concise. Tooltips can be a sentence fragment.
+- If more detailed information is required, use another form of help.
+- Use sentence-style caps and no ending punctuation.
 
 ## Angular Component
 
@@ -251,10 +251,10 @@ Below are tooltip examples using various directions and sizes.
 
 ```html
 <clr-tooltip>
-    <clr-icon clrTooltipTrigger shape="info-circle" size="24" aria-label="Uniq tooltip 1"></clr-icon>
-    <clr-tooltip-content clrPosition="top-right" clrSize="xs" *clrIfOpen>
-        <span>Lorem</span>
-    </clr-tooltip-content>
+  <clr-icon clrTooltipTrigger shape="info-circle" size="24" aria-label="Uniq tooltip 1"></clr-icon>
+  <clr-tooltip-content clrPosition="top-right" clrSize="xs" *clrIfOpen>
+    <span>Lorem</span>
+  </clr-tooltip-content>
 </clr-tooltip>
 ```
 
@@ -262,10 +262,10 @@ Below are tooltip examples using various directions and sizes.
 
 ```html
 <clr-tooltip>
-    <clr-icon clrTooltipTrigger shape="info-circle" size="24" aria-label="Uniq tooltip 2"></clr-icon>
-    <clr-tooltip-content clrPosition="top-left" clrSize="sm" *clrIfOpen>
-        <span>Lorem ipsum</span>
-    </clr-tooltip-content>
+  <clr-icon clrTooltipTrigger shape="info-circle" size="24" aria-label="Uniq tooltip 2"></clr-icon>
+  <clr-tooltip-content clrPosition="top-left" clrSize="sm" *clrIfOpen>
+    <span>Lorem ipsum</span>
+  </clr-tooltip-content>
 </clr-tooltip>
 ```
 
@@ -273,10 +273,10 @@ Below are tooltip examples using various directions and sizes.
 
 ```html
 <clr-tooltip>
-    <clr-icon clrTooltipTrigger shape="info-circle" size="24" aria-label="Uniq tooltip 3"></clr-icon>
-    <clr-tooltip-content clrPosition="bottom-right" clrSize="md" *clrIfOpen>
-        <span>Lorem ipsum sit</span>
-    </clr-tooltip-content>
+  <clr-icon clrTooltipTrigger shape="info-circle" size="24" aria-label="Uniq tooltip 3"></clr-icon>
+  <clr-tooltip-content clrPosition="bottom-right" clrSize="md" *clrIfOpen>
+    <span>Lorem ipsum sit</span>
+  </clr-tooltip-content>
 </clr-tooltip>
 ```
 
@@ -284,10 +284,10 @@ Below are tooltip examples using various directions and sizes.
 
 ```html
 <clr-tooltip>
-    <clr-icon clrTooltipTrigger shape="info-circle" size="24" aria-label="Uniq tooltip 4"></clr-icon>
-    <clr-tooltip-content clrPosition="bottom-left" clrSize="lg" *clrIfOpen>
-        <span>Lorem ipsum sit</span>
-    </clr-tooltip-content>
+  <clr-icon clrTooltipTrigger shape="info-circle" size="24" aria-label="Uniq tooltip 4"></clr-icon>
+  <clr-tooltip-content clrPosition="bottom-left" clrSize="lg" *clrIfOpen>
+    <span>Lorem ipsum sit</span>
+  </clr-tooltip-content>
 </clr-tooltip>
 ```
 
@@ -295,10 +295,10 @@ Below are tooltip examples using various directions and sizes.
 
 ```html
 <clr-tooltip>
-    <clr-icon clrTooltipTrigger shape="info-circle" size="24" aria-label="Uniq tooltip 5"></clr-icon>
-    <clr-tooltip-content *clrIfOpen>
-        <span>Lorem ipsum sit</span>
-    </clr-tooltip-content>
+  <clr-icon clrTooltipTrigger shape="info-circle" size="24" aria-label="Uniq tooltip 5"></clr-icon>
+  <clr-tooltip-content *clrIfOpen>
+    <span>Lorem ipsum sit</span>
+  </clr-tooltip-content>
 </clr-tooltip>
 ```
 
@@ -306,9 +306,9 @@ Below are tooltip examples using various directions and sizes.
 
 ```html
 <clr-tooltip>
-    <clr-icon clrTooltipTrigger shape="info-circle" size="24" aria-label="Uniq tooltip 6"></clr-icon>
-    <clr-tooltip-content clrPosition="left" clrSize="sm" *clrIfOpen>
-        <span>Lorem ipsum sit</span>
-    </clr-tooltip-content>
+  <clr-icon clrTooltipTrigger shape="info-circle" size="24" aria-label="Uniq tooltip 6"></clr-icon>
+  <clr-tooltip-content clrPosition="left" clrSize="sm" *clrIfOpen>
+    <span>Lorem ipsum sit</span>
+  </clr-tooltip-content>
 </clr-tooltip>
 ```

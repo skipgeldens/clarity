@@ -1,7 +1,7 @@
 # Application Layout
 
-* [Design Guidelines](/documentation/app-layout#top)
-* [Code & Examples](/documentation/app-layout#examples)
+- [Design Guidelines](/documentation/app-layout#top)
+- [Code & Examples](/documentation/app-layout#examples)
 
 ##### A properly structured layout enforces an optimal, consistent experience across applications.
 
@@ -11,10 +11,10 @@
 
 The `.main-container` is a vertical flexbox which wraps the following components:
 
-* [App-Level Alert](/documentation/alerts)
-* [Header](/documentation/header)
-* [Subnav](/documentation/header)
-* Content Container
+- [App-Level Alert](/documentation/alerts)
+- [Header](/documentation/header)
+- [Subnav](/documentation/header)
+- Content Container
 
 **Note:** Although Clarity does not have a footer component, a custom footer can be added in the main-container.
 
@@ -22,8 +22,8 @@ The `.main-container` is a vertical flexbox which wraps the following components
 
 The `.content-container` is a horizontal flexbox which wraps the following components:
 
-* Content Area
-* [Sidenav](/documentation/sidenav)
+- Content Area
+- [Sidenav](/documentation/sidenav)
 
 App Level Alert
 
@@ -31,11 +31,11 @@ Action
 
 [Project Clarity](#)
 
-* [Subnav Link 1](javascript://)
-* [Subnav Link 2](javascript://)
-* [Subnav Link 3](javascript://)
-* [Subnav Link 4](javascript://)
-* [Subnav Link 5](javascript://)
+- [Subnav Link 1](javascript://)
+- [Subnav Link 2](javascript://)
+- [Subnav Link 3](javascript://)
+- [Subnav Link 4](javascript://)
+- [Subnav Link 5](javascript://)
 
 Content Area
 
@@ -43,32 +43,32 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu odio nisi. V
 
 Sidenav
 
-* Link 1
-* Link 2
-* Link 3
-* Link 4
-* Link 5
-* Link 6
+- Link 1
+- Link 2
+- Link 3
+- Link 4
+- Link 5
+- Link 6
 
 ```html
 <div class="main-container">
-    <div class="alert alert-app-level">
-        ...
+  <div class="alert alert-app-level">
+    ...
+  </div>
+  <header class="header header-6">
+    ...
+  </header>
+  <nav class="subnav">
+    ...
+  </nav>
+  <div class="content-container">
+    <div class="content-area">
+      ...
     </div>
-    <header class="header header-6">
-        ...
-    </header>
-    <nav class="subnav">
-        ...
+    <nav class="sidenav">
+      ...
     </nav>
-    <div class="content-container">
-        <div class="content-area">
-            ...
-        </div>
-        <nav class="sidenav">
-            ...
-        </nav>
-    </div>
+  </div>
 </div>
 ```
 
@@ -90,11 +90,11 @@ The content area is where users focus their attention most of the time, gatherin
 
 Your layout should reflect the information or workflow of the selected [navigation](/documentation/navigation). When laying out the content, keep the following in mind:
 
-* The flow of content–how to create a hierarchy and layout that draws attention to the areas of importance
-* The importance of designing to the [grid](/documentation/grid)
-* How to aid users in completing their tasks
-* How to handle large amounts of data
-* Responsive design (if that is part of your product’s goals)
+- The flow of content–how to create a hierarchy and layout that draws attention to the areas of importance
+- The importance of designing to the [grid](/documentation/grid)
+- How to aid users in completing their tasks
+- How to handle large amounts of data
+- Responsive design (if that is part of your product’s goals)
 
 ##### Common Layout Patterns
 
@@ -108,9 +108,9 @@ Content can consist of any of the [Clarity components](/documentation), or no co
 
 Benefits of using cards include:
 
-* Ability to see data in a collection
-* Facilitates scanning of information
-* Works well across platforms
+- Ability to see data in a collection
+- Facilitates scanning of information
+- Works well across platforms
 
 ###### Tables and Datagrids
 
@@ -166,8 +166,8 @@ Vertical rhythm is the repetition of spatial relationships in a design. A consis
 
 All elements in Clarity are _designed_ with a 24px baseline:
 
-* The visual height of all components and text elements is in multiples of 24px.
-* The vertical white space between elements is also in multiples of 24px.
+- The visual height of all components and text elements is in multiples of 24px.
+- The vertical white space between elements is also in multiples of 24px.
 
 ![24px Baseline](assets/images/documentation/app-layout/24_baseline.png?1481674789140619000)
 
@@ -187,8 +187,8 @@ Why the difference?
 
 In its underlying code, the Clarity styles had to move away from a root font-size of 24px for a couple of reasons:
 
-* 24px was not a clean multiple of many common sizes. 1px, for example, had to be derived from 0.04166667rem. 16px, likewise, had a measurement of 0.6666667rem. The lack of clean multiples left us at the mercy of browsers rounding out our values. This introduced inconsistency across browsers and sloppy line rendering in many cases.
-* Early styling decisions before Clarity 1.0 broke expected browser sizing preferences and negatively impacted the accessibility of Clarity for some users.
+- 24px was not a clean multiple of many common sizes. 1px, for example, had to be derived from 0.04166667rem. 16px, likewise, had a measurement of 0.6666667rem. The lack of clean multiples left us at the mercy of browsers rounding out our values. This introduced inconsistency across browsers and sloppy line rendering in many cases.
+- Early styling decisions before Clarity 1.0 broke expected browser sizing preferences and negatively impacted the accessibility of Clarity for some users.
 
 The changes to "rem" sizing in Clarity addresses both of those concerns. But there are a few caveats to keep in mind.
 
@@ -212,10 +212,10 @@ If you are already setting hard pixel values outside of Clarity, no change is ne
 
 If you are using rem values outside of Clarity, you can update them by either:
 
-* multiplying them by 1.2 – so a value of `1.4rem` in a SASS file becomes `1.2 * 1.4rem`
-* doing the math upfront and updating rem values in place – so that `1.4rem` becomes `1.68rem`
+- multiplying them by 1.2 – so a value of `1.4rem` in a SASS file becomes `1.2 * 1.4rem`
+- doing the math upfront and updating rem values in place – so that `1.4rem` becomes `1.68rem`
 
-###### Use Clarity's $clrBaselineRem\_\* variables (Recommended)
+###### Use Clarity's \$clrBaselineRem\_\* variables (Recommended)
 
 [Clarity has a number of size variables that you can use in your applications](//github.com/vmware/clarity/blob/master/src/clr-core/styles/variables/_variables.global.scss). It is recommended that you update your application to make use of them. This is the safest course of action going forward and will result in the least amount of rework in the future.
 
@@ -230,44 +230,16 @@ Clarity implemented this workaround to make the transition to 3.0 easier on our 
 Clarity uses [rem units](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units) for its whitespace and sizing. If the 24px vertical baseline is too large or too small for your needs, you can edit this globally across a Clarity application by changing the `font-size` style of the `html` element, as in the example below.
 
 ```html
-html {
-    /*
-     * the following line of CSS would change pre-3.0 Clarity to a 20px vertical rhythm with a
-     * 5px grid in 2.0 and * earlier
-     */
-    font-size: 20px;
-
-    /* for 3.0 and later versions, divide the preferred root value by 1.2 to get a pixel
-     * equivalency
-     */
-    font-size: calc(20px/1.2);
-
-    /* ...or do the math yourself so you don't need calc()! */
-    font-size: 16.666667px;
-
-    /*
-     * It's recommended, however, that percentage units be used to allow for accessible browser text
-     * resizing.  Given that our current 24px baseline lives on top of a 20px (125%) root font size, we
-     * would need to divide our preferred baseline by 0.192 to get the percentage we need.
-     *
-     * So the following percentage would produce a UI that follows a design with a 20px vertical rhythm
-     * and 5px grid – 20 ÷ 0.192 = 104.166667.
-     */
-    font-size: 104.1667%;
-
-    /*
-     * The following percentage would produce a UI that follows a design with a 28px vertical rhythm
-     * and 7px grid.
-     * 28 ÷ 0.192 = 145.83333
-     */
-    font-size: 145.83333%;
-
-    /*
-     * The following percentage would produce a UI that follows a design with a 32px vertical rhythm
-     * and 8px grid – 32 ÷ 0.192 = 166.66667.
-     */
-    font-size: 166.66667%;
-}
+html { /* * the following line of CSS would change pre-3.0 Clarity to a 20px vertical rhythm with a * 5px grid in 2.0
+and * earlier */ font-size: 20px; /* for 3.0 and later versions, divide the preferred root value by 1.2 to get a pixel *
+equivalency */ font-size: calc(20px/1.2); /* ...or do the math yourself so you don't need calc()! */ font-size:
+16.666667px; /* * It's recommended, however, that percentage units be used to allow for accessible browser text *
+resizing. Given that our current 24px baseline lives on top of a 20px (125%) root font size, we * would need to divide
+our preferred baseline by 0.192 to get the percentage we need. * * So the following percentage would produce a UI that
+follows a design with a 20px vertical rhythm * and 5px grid – 20 ÷ 0.192 = 104.166667. */ font-size: 104.1667%; /* * The
+following percentage would produce a UI that follows a design with a 28px vertical rhythm * and 7px grid. * 28 ÷ 0.192 =
+145.83333 */ font-size: 145.83333%; /* * The following percentage would produce a UI that follows a design with a 32px
+vertical rhythm * and 8px grid – 32 ÷ 0.192 = 166.66667. */ font-size: 166.66667%; }
 ```
 
 Note that the declaration on the `html` selector needs to happen _after_ the Clarity CSS has been loaded. Also note that the "grid" for Clarity layouts and components is equal to one-fourth of the baseline. So instead of a 6px grid, the example above will put your application on a 5px grid.

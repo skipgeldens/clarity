@@ -4,8 +4,8 @@ title: Overview
 
 # Wizards
 
-* [Design Guidelines](/documentation/wizards#top)
-* [Code & Examples](/documentation/wizards#examples)
+- [Design Guidelines](/documentation/wizards#top)
+- [Code & Examples](/documentation/wizards#examples)
 
 ##### Wizards provide a way to go through a sequence of steps that form an end to end workflow..
 
@@ -17,9 +17,9 @@ Wizards should have at least 2 steps. If your wizard exceeds 10 steps, consider 
 
 Here is when you might want to use a wizard over just a normal form:
 
-* if the user is **not familiar with the domain knowledge** needed to complete a process
-* if the user needs to accomplish a goal that has **many steps** in it
-* if steps must be completed in a **specific sequence**
+- if the user is **not familiar with the domain knowledge** needed to complete a process
+- if the user needs to accomplish a goal that has **many steps** in it
+- if steps must be completed in a **specific sequence**
 
 ### Style
 
@@ -113,8 +113,8 @@ Launch
 
 ### Step Indicators
 
-* Current step is indicated by a row-selected blue background
-* Complete steps are indicated by a green bar to the left
+- Current step is indicated by a row-selected blue background
+- Complete steps are indicated by a green bar to the left
 
 ![Completed steps are highlighted with a green bar to the left](assets/images/documentation/wizards/wizard-steps.png)
 
@@ -134,8 +134,8 @@ Conditional wizards change step content or the number of steps based on the entr
 
 ### Dismissing Wizard
 
-* A user needs to actively dismiss a wizard. A wizard should not disappear on its own
-* Completing all of the steps or cancelling should dismiss the wizard
+- A user needs to actively dismiss a wizard. A wizard should not disappear on its own
+- Completing all of the steps or cancelling should dismiss the wizard
 
 Clarity Wizards are not dismissed when clicking on the background overlay. This prevents losing information or data. An option to override this is available.
 
@@ -149,15 +149,15 @@ Enhancement to the wizard component to add an error state to the wizard step sta
 
 ###### Wizard step states:
 
-* Inactive
-* Active
-* Complete
-* Error
+- Inactive
+- Active
+- Complete
+- Error
 
 ###### Use Cases Under Consideration
 
-* When selections in a later step in the wizard invalidate entries in earlier steps
-* When the user resolves an error/errors in the current step
+- When selections in a later step in the wizard invalidate entries in earlier steps
+- When the user resolves an error/errors in the current step
 
 ###### Error Reported
 
@@ -206,75 +206,75 @@ export class WizardBasic {
 
 ```html
 <clr-wizard #wizardmd [(clrWizardOpen)]="mdOpen" clrWizardSize="md">
-    <clr-wizard-title>Medium-Sized Wizard</clr-wizard-title>
+  <clr-wizard-title>Medium-Sized Wizard</clr-wizard-title>
 
-    <clr-wizard-button [type]="'cancel'">Cancel</clr-wizard-button>
-    <clr-wizard-button [type]="'previous'">Back</clr-wizard-button>
-    <clr-wizard-button [type]="'next'">Next</clr-wizard-button>
-    <clr-wizard-button [type]="'finish'">Finish</clr-wizard-button>
+  <clr-wizard-button [type]="'cancel'">Cancel</clr-wizard-button>
+  <clr-wizard-button [type]="'previous'">Back</clr-wizard-button>
+  <clr-wizard-button [type]="'next'">Next</clr-wizard-button>
+  <clr-wizard-button [type]="'finish'">Finish</clr-wizard-button>
 
-    <clr-wizard-page>
-        <ng-template clrPageTitle>Page 1</ng-template>
-        ...
-    </clr-wizard-page>
+  <clr-wizard-page>
+    <ng-template clrPageTitle>Page 1</ng-template>
+    ...
+  </clr-wizard-page>
 
-    <clr-wizard-page>
-        <ng-template clrPageTitle>Page 2</ng-template>
-        ...
-    </clr-wizard-page>
+  <clr-wizard-page>
+    <ng-template clrPageTitle>Page 2</ng-template>
+    ...
+  </clr-wizard-page>
 
-    <clr-wizard-page>
-        <ng-template clrPageTitle>Page 3</ng-template>
-        ...
-    </clr-wizard-page>
+  <clr-wizard-page>
+    <ng-template clrPageTitle>Page 3</ng-template>
+    ...
+  </clr-wizard-page>
 </clr-wizard>
 
 <clr-wizard #wizardlg [(clrWizardOpen)]="lgOpen" clrWizardSize="lg">
-    <clr-wizard-title>Large-Sized Wizard</clr-wizard-title>
+  <clr-wizard-title>Large-Sized Wizard</clr-wizard-title>
 
-    <clr-wizard-button [type]="'cancel'">Cancel</clr-wizard-button>
-    <clr-wizard-button [type]="'previous'">Back</clr-wizard-button>
-    <clr-wizard-button [type]="'next'">Next</clr-wizard-button>
-    <clr-wizard-button [type]="'finish'">Finish</clr-wizard-button>
+  <clr-wizard-button [type]="'cancel'">Cancel</clr-wizard-button>
+  <clr-wizard-button [type]="'previous'">Back</clr-wizard-button>
+  <clr-wizard-button [type]="'next'">Next</clr-wizard-button>
+  <clr-wizard-button [type]="'finish'">Finish</clr-wizard-button>
 
-    <clr-wizard-page>
-        <ng-template clrPageTitle>Page 1</ng-template>
-        ...
-    </clr-wizard-page>
+  <clr-wizard-page>
+    <ng-template clrPageTitle>Page 1</ng-template>
+    ...
+  </clr-wizard-page>
 
-    <clr-wizard-page>
-        <ng-template clrPageTitle>Page 2</ng-template>
-        ...
-    </clr-wizard-page>
+  <clr-wizard-page>
+    <ng-template clrPageTitle>Page 2</ng-template>
+    ...
+  </clr-wizard-page>
 
-    <clr-wizard-page>
-        <ng-template clrPageTitle>Page 3</ng-template>
-        ...
-    </clr-wizard-page>
+  <clr-wizard-page>
+    <ng-template clrPageTitle>Page 3</ng-template>
+    ...
+  </clr-wizard-page>
 </clr-wizard>
 
 <clr-wizard #wizardxl [(clrWizardOpen)]="xlOpen">
-    <clr-wizard-title>XL Wizard (Default)</clr-wizard-title>
+  <clr-wizard-title>XL Wizard (Default)</clr-wizard-title>
 
-    <clr-wizard-button [type]="'cancel'">Cancel</clr-wizard-button>
-    <clr-wizard-button [type]="'previous'">Back</clr-wizard-button>
-    <clr-wizard-button [type]="'next'">Next</clr-wizard-button>
-    <clr-wizard-button [type]="'finish'">Finish</clr-wizard-button>
+  <clr-wizard-button [type]="'cancel'">Cancel</clr-wizard-button>
+  <clr-wizard-button [type]="'previous'">Back</clr-wizard-button>
+  <clr-wizard-button [type]="'next'">Next</clr-wizard-button>
+  <clr-wizard-button [type]="'finish'">Finish</clr-wizard-button>
 
-    <clr-wizard-page>
-        <ng-template clrPageTitle>Page 1</ng-template>
-        ...
-    </clr-wizard-page>
+  <clr-wizard-page>
+    <ng-template clrPageTitle>Page 1</ng-template>
+    ...
+  </clr-wizard-page>
 
-    <clr-wizard-page>
-        <ng-template clrPageTitle>Page 2</ng-template>
-        ...
-    </clr-wizard-page>
+  <clr-wizard-page>
+    <ng-template clrPageTitle>Page 2</ng-template>
+    ...
+  </clr-wizard-page>
 
-    <clr-wizard-page>
-        <ng-template clrPageTitle>Page 3</ng-template>
-        ...
-    </clr-wizard-page>
+  <clr-wizard-page>
+    <ng-template clrPageTitle>Page 3</ng-template>
+    ...
+  </clr-wizard-page>
 </clr-wizard>
 ```
 
@@ -305,37 +305,37 @@ export class WizardSimple {
 
 ```html
 <clr-wizard #wizard [(clrWizardOpen)]="_open">
-    <clr-wizard-title>Skipping Page Two</clr-wizard-title>
+  <clr-wizard-title>Skipping Page Two</clr-wizard-title>
 
-    <clr-wizard-button [type]="'cancel'">Cancel</clr-wizard-button>
-    <clr-wizard-button [type]="'previous'">Back</clr-wizard-button>
-    <clr-wizard-button [type]="'next'">Next</clr-wizard-button>
-    <clr-wizard-button [type]="'finish'">Finish</clr-wizard-button>
+  <clr-wizard-button [type]="'cancel'">Cancel</clr-wizard-button>
+  <clr-wizard-button [type]="'previous'">Back</clr-wizard-button>
+  <clr-wizard-button [type]="'next'">Next</clr-wizard-button>
+  <clr-wizard-button [type]="'finish'">Finish</clr-wizard-button>
 
-    <clr-wizard-page>
-        <ng-template clrPageTitle>Title for page 1</ng-template>
-        <ng-template clrPageNavTitle>Step 1</ng-template>
-        ...
-        <p>
-            <button class="btn btn-secondary" (click)="wizard.toggleStepTwo()">
-                <span *ngIf="skipStepTwo">Show Page 2</span>
-                <span *ngIf="!skipStepTwo">Hide Page 2</span>
-            </button>
-        </p>
-    </clr-wizard-page>
+  <clr-wizard-page>
+    <ng-template clrPageTitle>Title for page 1</ng-template>
+    <ng-template clrPageNavTitle>Step 1</ng-template>
+    ...
+    <p>
+      <button class="btn btn-secondary" (click)="wizard.toggleStepTwo()">
+        <span *ngIf="skipStepTwo">Show Page 2</span>
+        <span *ngIf="!skipStepTwo">Hide Page 2</span>
+      </button>
+    </p>
+  </clr-wizard-page>
 
-    <clr-wizard-page *ngIf="!skipStepTwo">
-        <ng-template clrPageTitle>Title for page 2</ng-template>
-        <ng-template clrPageNavTitle>Step 2</ng-template>
-        ...
-    </clr-wizard-page>
+  <clr-wizard-page *ngIf="!skipStepTwo">
+    <ng-template clrPageTitle>Title for page 2</ng-template>
+    <ng-template clrPageNavTitle>Step 2</ng-template>
+    ...
+  </clr-wizard-page>
 
-    <clr-wizard-page>
-        <ng-template clrPageTitle>Title for page 3</ng-template>
-        <ng-template clrPageNavTitle>Step 3</ng-template>
-        <p *ngIf="skipStepTwo">Page 3 is the last page because we skipped page 2.</p>
-        <p *ngIf="!skipStepTwo">Now our wizard has three pages/steps.</p>
-    </clr-wizard-page>
+  <clr-wizard-page>
+    <ng-template clrPageTitle>Title for page 3</ng-template>
+    <ng-template clrPageNavTitle>Step 3</ng-template>
+    <p *ngIf="skipStepTwo">Page 3 is the last page because we skipped page 2.</p>
+    <p *ngIf="!skipStepTwo">Now our wizard has three pages/steps.</p>
+  </clr-wizard-page>
 </clr-wizard>
 ```
 
@@ -349,21 +349,21 @@ Alternatively, you could add and remove elements from the array of pages you are
 
 ```html
 <clr-wizard #wizard [(clrWizardOpen)]="open">
-    <clr-wizard-title>Wizard Title</clr-wizard-title>
+  <clr-wizard-title>Wizard Title</clr-wizard-title>
 
-    <clr-wizard-button type="cancel">Cancel</clr-wizard-button>
-    <clr-wizard-button type="previous">Back</clr-wizard-button>
-    <clr-wizard-button type="next">Next</clr-wizard-button>
-    <clr-wizard-button type="finish">Finish</clr-wizard-button>
+  <clr-wizard-button type="cancel">Cancel</clr-wizard-button>
+  <clr-wizard-button type="previous">Back</clr-wizard-button>
+  <clr-wizard-button type="next">Next</clr-wizard-button>
+  <clr-wizard-button type="finish">Finish</clr-wizard-button>
 
-    <ng-container *ngFor="let page of pages; let i=index">
-        <clr-wizard-page *ngIf="!page.skipped">
-            <ng-template clrPageTitle>
-                Page {{index}}
-            </ng-template>
-            Content for page {{index}}
-        </clr-wizard-page>
-    </ng-container>
+  <ng-container *ngFor="let page of pages; let i=index">
+    <clr-wizard-page *ngIf="!page.skipped">
+      <ng-template clrPageTitle>
+        Page {{index}}
+      </ng-template>
+      Content for page {{index}}
+    </clr-wizard-page>
+  </ng-container>
 </clr-wizard>
 ```
 
@@ -408,37 +408,37 @@ export class WizardJumpToDemo {
 
 ```html
 <clr-wizard #wizard [(clrWizardOpen)]="open" [clrWizardSize]="'md'">
-    <clr-wizard-title>Jump-To Wizard</clr-wizard-title>
+  <clr-wizard-title>Jump-To Wizard</clr-wizard-title>
 
-    <clr-wizard-button [type]="'cancel'">Cancel</clr-wizard-button>
-    <clr-wizard-button [type]="'previous'">Back</clr-wizard-button>
-    <clr-wizard-button [type]="'next'">Next</clr-wizard-button>
-    <clr-wizard-button [type]="'finish'">Done</clr-wizard-button>
+  <clr-wizard-button [type]="'cancel'">Cancel</clr-wizard-button>
+  <clr-wizard-button [type]="'previous'">Back</clr-wizard-button>
+  <clr-wizard-button [type]="'next'">Next</clr-wizard-button>
+  <clr-wizard-button [type]="'finish'">Done</clr-wizard-button>
 
-    <clr-wizard-page>
-        <ng-template clrPageTitle>Page 1</ng-template>
-        ...
-    </clr-wizard-page>
+  <clr-wizard-page>
+    <ng-template clrPageTitle>Page 1</ng-template>
+    ...
+  </clr-wizard-page>
 
-    <clr-wizard-page>
-        <ng-template clrPageTitle>Page 2</ng-template>
-        ...
-    </clr-wizard-page>
+  <clr-wizard-page>
+    <ng-template clrPageTitle>Page 2</ng-template>
+    ...
+  </clr-wizard-page>
 
-    <clr-wizard-page #pageThree>
-        <ng-template clrPageTitle>Page 3</ng-template>
-        ...
-    </clr-wizard-page>
+  <clr-wizard-page #pageThree>
+    <ng-template clrPageTitle>Page 3</ng-template>
+    ...
+  </clr-wizard-page>
 
-    <clr-wizard-page>
-        <ng-template clrPageTitle>Page 4</ng-template>
-        ...
-    </clr-wizard-page>
+  <clr-wizard-page>
+    <ng-template clrPageTitle>Page 4</ng-template>
+    ...
+  </clr-wizard-page>
 
-    <clr-wizard-page #pageFive>
-        <ng-template clrPageTitle>Page 5</ng-template>
-        ...
-    </clr-wizard-page>
+  <clr-wizard-page #pageFive>
+    <ng-template clrPageTitle>Page 5</ng-template>
+    ...
+  </clr-wizard-page>
 </clr-wizard>
 ```
 
@@ -454,36 +454,36 @@ As with any Angular content, you can also use projection to change the titles in
 
 ```html
 <clr-wizard #wizard [(clrWizardOpen)]="open">
-    <clr-wizard-title>Wizard Title</clr-wizard-title>
+  <clr-wizard-title>Wizard Title</clr-wizard-title>
 
-    <clr-wizard-button type="cancel">Cancel</clr-wizard-button>
-    <clr-wizard-button type="previous">Back</clr-wizard-button>
-    <clr-wizard-button type="next">Next</clr-wizard-button>
-    <clr-wizard-button type="finish">Finish</clr-wizard-button>
+  <clr-wizard-button type="cancel">Cancel</clr-wizard-button>
+  <clr-wizard-button type="previous">Back</clr-wizard-button>
+  <clr-wizard-button type="next">Next</clr-wizard-button>
+  <clr-wizard-button type="finish">Finish</clr-wizard-button>
 
-    <clr-wizard-page>
-        <ng-template clrPageTitle>
-            This title will appear in the content area and the sidebar
-        </ng-template>
-        Content for page 1
-    </clr-wizard-page>
+  <clr-wizard-page>
+    <ng-template clrPageTitle>
+      This title will appear in the content area and the sidebar
+    </ng-template>
+    Content for page 1
+  </clr-wizard-page>
 
-    <clr-wizard-page>
-        <ng-template clrPageTitle>
-            This title will appear in the content area
-        </ng-template>
-        <ng-template clrPageNavTitle>
-            This title in the sidebar
-        </ng-template>
-        Content for page 2
-    </clr-wizard-page>
+  <clr-wizard-page>
+    <ng-template clrPageTitle>
+      This title will appear in the content area
+    </ng-template>
+    <ng-template clrPageNavTitle>
+      This title in the sidebar
+    </ng-template>
+    Content for page 2
+  </clr-wizard-page>
 
-    <clr-wizard-page>
-        <ng-template clrPageTitle>
-            {{projectedTitle}}
-        </ng-template>
-        Content for page 3
-    </clr-wizard-page>
+  <clr-wizard-page>
+    <ng-template clrPageTitle>
+      {{projectedTitle}}
+    </ng-template>
+    Content for page 3
+  </clr-wizard-page>
 </clr-wizard>
 ```
 
@@ -493,18 +493,18 @@ As part of creating a wizard, you need to include a set of default buttons of ty
 
 ```html
 <clr-wizard #wizard [(clrWizardOpen)]="open">
-    <clr-wizard-title>Wizard Title</clr-wizard-title>
+  <clr-wizard-title>Wizard Title</clr-wizard-title>
 
-    <clr-wizard-button type="cancel">Cancel</clr-wizard-button>
-    <clr-wizard-button type="previous">Back</clr-wizard-button>
-    <clr-wizard-button type="next">Next</clr-wizard-button>
-    <clr-wizard-button type="finish">Finish</clr-wizard-button>
+  <clr-wizard-button type="cancel">Cancel</clr-wizard-button>
+  <clr-wizard-button type="previous">Back</clr-wizard-button>
+  <clr-wizard-button type="next">Next</clr-wizard-button>
+  <clr-wizard-button type="finish">Finish</clr-wizard-button>
 
-    <clr-wizard-page>
-        ...
-    </clr-wizard-page>
-
+  <clr-wizard-page>
     ...
+  </clr-wizard-page>
+
+  ...
 </clr-wizard>
 ```
 
@@ -558,59 +558,57 @@ export class WizardCustomButtonsDemo {
 
 ```html
 <clr-wizard #wizard [(clrWizardOpen)]="open" [clrWizardSize]="'lg'">
+  <clr-wizard-title>Custom and default buttons</clr-wizard-title>
 
-    <clr-wizard-title>Custom and default buttons</clr-wizard-title>
+  <clr-wizard-button [type]="'cancel'">Default</clr-wizard-button>
+  <clr-wizard-button [type]="'previous'">Default</clr-wizard-button>
+  <clr-wizard-button [type]="'next'">Default</clr-wizard-button>
+  <clr-wizard-button [type]="'finish'">Default</clr-wizard-button>
 
-    <clr-wizard-button [type]="'cancel'">Default</clr-wizard-button>
-    <clr-wizard-button [type]="'previous'">Default</clr-wizard-button>
-    <clr-wizard-button [type]="'next'">Default</clr-wizard-button>
-    <clr-wizard-button [type]="'finish'">Default</clr-wizard-button>
+  <clr-wizard-page>
+    <ng-template clrPageTitle>Page 1 with default buttons</ng-template>
+    <ng-template clrPageNavTitle>Default buttons</ng-template>
+    ...
+  </clr-wizard-page>
 
-    <clr-wizard-page>
-        <ng-template clrPageTitle>Page 1 with default buttons</ng-template>
-        <ng-template clrPageNavTitle>Default buttons</ng-template>
-        ...
-    </clr-wizard-page>
+  <clr-wizard-page (clrWizardPageCustomButton)="doCustomClick($event)">
+    <ng-template clrPageTitle>Page 2 with custom buttons</ng-template>
+    <ng-template clrPageNavTitle>Custom buttons</ng-template>
+    ...
 
-    <clr-wizard-page (clrWizardPageCustomButton)="doCustomClick($event)">
+    <ng-template clrPageButtons>
+      <clr-wizard-button [type]="'cancel'">Page Override</clr-wizard-button>
+      <clr-wizard-button [type]="'custom-previous'">Custom</clr-wizard-button>
+      <clr-wizard-button [type]="'custom-next'">Custom</clr-wizard-button>
+    </ng-template>
+  </clr-wizard-page>
 
-        <ng-template clrPageTitle>Page 2 with custom buttons</ng-template>
-        <ng-template clrPageNavTitle>Custom buttons</ng-template>
-        ...
+  <clr-wizard-page>
+    <ng-template clrPageTitle>Page 3 with default buttons</ng-template>
+    <ng-template clrPageNavTitle>Default buttons</ng-template>
+    ...
+  </clr-wizard-page>
 
-        <ng-template clrPageButtons>
-            <clr-wizard-button [type]="'cancel'">Page Override</clr-wizard-button>
-            <clr-wizard-button [type]="'custom-previous'">Custom</clr-wizard-button>
-            <clr-wizard-button [type]="'custom-next'">Custom</clr-wizard-button>
-        </ng-template>
-    </clr-wizard-page>
+  <clr-wizard-page (clrWizardPageCustomButton)="doCustomClick($event)">
+    <ng-template clrPageTitle>Page 4 with custom finish</ng-template>
+    <ng-template clrPageNavTitle>Custom buttons</ng-template>
 
-    <clr-wizard-page>
-        <ng-template clrPageTitle>Page 3 with default buttons</ng-template>
-        <ng-template clrPageNavTitle>Default buttons</ng-template>
-        ...
-    </clr-wizard-page>
+    <p *ngIf="!showWarning">
+      ...
+    </p>
 
-    <clr-wizard-page (clrWizardPageCustomButton)="doCustomClick($event)">
-        <ng-template clrPageTitle>Page 4 with custom finish</ng-template>
-        <ng-template clrPageNavTitle>Custom buttons</ng-template>
+    <p *ngIf="showWarning">
+      <button type="submit" class="btn btn-danger" (click)="handleDangerClick()">
+        Click here if you are sure
+      </button>
+    </p>
 
-        <p *ngIf="!showWarning">
-            ...
-        </p>
-
-        <p *ngIf="showWarning">
-            <button type="submit" class="btn btn-danger" (click)="handleDangerClick()">
-                Click here if you are sure
-            </button>
-        </p>
-
-        <ng-template clrPageButtons>
-            <clr-wizard-button [type]="'cancel'">Page Override</clr-wizard-button>
-            <clr-wizard-button [type]="'previous'">Page Override</clr-wizard-button>
-            <clr-wizard-button [type]="'custom-danger'">Custom</clr-wizard-button>
-        </ng-template>
-    </clr-wizard-page>
+    <ng-template clrPageButtons>
+      <clr-wizard-button [type]="'cancel'">Page Override</clr-wizard-button>
+      <clr-wizard-button [type]="'previous'">Page Override</clr-wizard-button>
+      <clr-wizard-button [type]="'custom-danger'">Custom</clr-wizard-button>
+    </ng-template>
+  </clr-wizard-page>
 </clr-wizard>
 ```
 
@@ -651,70 +649,74 @@ export class WizardFormValidation {
   <clr-wizard-button [type]="'finish'">Done</clr-wizard-button>
 
   <clr-wizard-page [clrWizardPageNextDisabled]="name.pristine || !formPageOne.valid">
-      <ng-template clrPageTitle>Form with validation</ng-template> <!-- mandatory -->
+    <ng-template clrPageTitle>Form with validation</ng-template>
+    <!-- mandatory -->
 
-      <form clrForm #formPageOne="ngForm">
-        <clr-input-container>
-          <label>Name</label>
-          <input clrInput required [(ngModel)]="model.name" name="name" #name="ngModel" />
-          <clr-control-error>This field is required!</clr-control-error>
-        </clr-input-container>
+    <form clrForm #formPageOne="ngForm">
+      <clr-input-container>
+        <label>Name</label>
+        <input clrInput required [(ngModel)]="model.name" name="name" #name="ngModel" />
+        <clr-control-error>This field is required!</clr-control-error>
+      </clr-input-container>
 
-        <clr-input-container>
-          <label>Favorite food</label>
-          <input clrInput [(ngModel)]="model.favorite" name="favorite" />
-        </clr-input-container>
-      </form>
+      <clr-input-container>
+        <label>Favorite food</label>
+        <input clrInput [(ngModel)]="model.favorite" name="favorite" />
+      </clr-input-container>
+    </form>
   </clr-wizard-page>
 
   <clr-wizard-page [clrWizardPageNextDisabled]="number.pristine || !formPageTwo.valid">
-      <ng-template clrPageTitle>We need a number</ng-template> <!-- mandatory -->
-      <ng-template clrPageNavTitle>Enter a number</ng-template> <!-- optional -->
+    <ng-template clrPageTitle>We need a number</ng-template>
+    <!-- mandatory -->
+    <ng-template clrPageNavTitle>Enter a number</ng-template>
+    <!-- optional -->
 
-      <form #formPageTwo="ngForm">
-        <label>Please your lucky number!</label>
-        <clr-input-container>
-          <label>Your number</label>
-          <input clrInput required type="number" [(ngModel)]="model.number" name="number" #number="ngModel" />
-          <clr-control-error>This field is required!</clr-control-error>
-        </clr-input-container>
-      </form>
+    <form #formPageTwo="ngForm">
+      <label>Please your lucky number!</label>
+      <clr-input-container>
+        <label>Your number</label>
+        <input clrInput required type="number" [(ngModel)]="model.number" name="number" #number="ngModel" />
+        <clr-control-error>This field is required!</clr-control-error>
+      </clr-input-container>
+    </form>
   </clr-wizard-page>
 
   <clr-wizard-page [clrWizardPageNextDisabled]="!formPageOne.valid || !formPageTwo.valid">
-      <ng-template clrPageTitle>Title for page 3</ng-template> <!-- mandatory -->
-      <ng-template clrPageNavTitle>
-          <span *ngIf="formPageOne.valid && formPageTwo.valid">
-              Ready to go!
-          </span>
-          <span *ngIf="!formPageOne.valid || !formPageTwo.valid">
-              Not ready yet
-          </span>
-      </ng-template> <!-- optional -->
+    <ng-template clrPageTitle>Title for page 3</ng-template>
+    <!-- mandatory -->
+    <ng-template clrPageNavTitle>
+      <span *ngIf="formPageOne.valid && formPageTwo.valid">
+        Ready to go!
+      </span>
+      <span *ngIf="!formPageOne.valid || !formPageTwo.valid">
+        Not ready yet
+      </span>
+    </ng-template>
+    <!-- optional -->
 
-      <div *ngIf="formPageOne.valid && formPageTwo.valid">
-          <p>Congratulations! You are done with this wizard.</p>
-          <label>Your information</label>
-          <section>
-            <p>
-              <label>Your name:</label>
-              <span>{{ this.model.name }}</span>
-            </p>
-            <p>
-              <label>Your favorite food:</label>
-              <span>{{ this.model.favorite }}</span>
-            </p>
-            <p>
-              <label>Your lucky number:</label>
-              <span>{{ this.model.number }}</span>
-            </p>
-          </section>
-      </div>
+    <div *ngIf="formPageOne.valid && formPageTwo.valid">
+      <p>Congratulations! You are done with this wizard.</p>
+      <label>Your information</label>
+      <section>
+        <p>
+          <label>Your name:</label>
+          <span>{{ this.model.name }}</span>
+        </p>
+        <p>
+          <label>Your favorite food:</label>
+          <span>{{ this.model.favorite }}</span>
+        </p>
+        <p>
+          <label>Your lucky number:</label>
+          <span>{{ this.model.number }}</span>
+        </p>
+      </section>
+    </div>
 
-      <div *ngIf="!formPageOne.valid || !formPageTwo.valid">
-          <p>Not quite there yet.</p>
-      </div>
-
+    <div *ngIf="!formPageOne.valid || !formPageTwo.valid">
+      <p>Not quite there yet.</p>
+    </div>
   </clr-wizard-page>
 </clr-wizard>
 ```
@@ -773,33 +775,37 @@ export class WizardAsyncValidation {
   <clr-wizard-button [type]="'finish'">Finish</clr-wizard-button>
 
   <clr-wizard-page
-      clrWizardPagePreventDefault="true"
-      (clrWizardPageOnCommit)="onCommit()"
-      (clrWizardPageOnCancel)="doCancel()">
-      <ng-template clrPageTitle>Form with async validation</ng-template> <!-- mandatory -->
+    clrWizardPagePreventDefault="true"
+    (clrWizardPageOnCommit)="onCommit()"
+    (clrWizardPageOnCancel)="doCancel()"
+  >
+    <ng-template clrPageTitle>Form with async validation</ng-template>
+    <!-- mandatory -->
 
-      <clr-spinner *ngIf="loadingFlag">
-          Loading
-      </clr-spinner>
-      <clr-alert [clrAlertType]="'alert-info'" [clrAlertClosable]="false" [clrCloseButtonAriaLabel]="'Close Wiki alert'">
-          <clr-alert-item>
-              This&nbsp;<a
-                  href="https://en.wikipedia.org/wiki/42_(number)#The_Hitchhiker.27s_Guide_to_the_Galaxy"
-                  target="_blank">wiki article</a>&nbsp;might help you answer the question.
-          </clr-alert-item>
-      </clr-alert>
-      <clr-alert *ngIf="errorFlag" [clrAlertType]="'alert-danger'" [clrCloseButtonAriaLabel]="'Close Answer alert'">
-          <clr-alert-item>
-              Your answer is incorrect.
-          </clr-alert-item>
-      </clr-alert>
+    <clr-spinner *ngIf="loadingFlag">
+      Loading
+    </clr-spinner>
+    <clr-alert [clrAlertType]="'alert-info'" [clrAlertClosable]="false" [clrCloseButtonAriaLabel]="'Close Wiki alert'">
+      <clr-alert-item>
+        This&nbsp;<a
+          href="https://en.wikipedia.org/wiki/42_(number)#The_Hitchhiker.27s_Guide_to_the_Galaxy"
+          target="_blank"
+          >wiki article</a
+        >&nbsp;might help you answer the question.
+      </clr-alert-item>
+    </clr-alert>
+    <clr-alert *ngIf="errorFlag" [clrAlertType]="'alert-danger'" [clrCloseButtonAriaLabel]="'Close Answer alert'">
+      <clr-alert-item>
+        Your answer is incorrect.
+      </clr-alert-item>
+    </clr-alert>
 
-      <form clrForm #myForm="ngForm" [class.hide]="loadingFlag">
-        <clr-input-container>
-          <label>The answer to life, the universe and everything</label>
-          <input clrInput [(ngModel)]="answer" name="answer" />
-        </clr-input-container>
-      </form>
+    <form clrForm #myForm="ngForm" [class.hide]="loadingFlag">
+      <clr-input-container>
+        <label>The answer to life, the universe and everything</label>
+        <input clrInput [(ngModel)]="answer" name="answer" />
+      </clr-input-container>
+    </form>
   </clr-wizard-page>
   <clr-wizard-page>
     ...
@@ -885,55 +891,63 @@ export class WizardAsyncCompletion {
 
 ```html
 <clr-wizard #wizard [(clrWizardOpen)]="open" (clrWizardCurrentPageChanged)="resetFinalPage()">
-    <clr-wizard-title>Async validation on completion</clr-wizard-title>
+  <clr-wizard-title>Async validation on completion</clr-wizard-title>
 
-    <clr-wizard-button [type]="'cancel'">Cancel</clr-wizard-button>
-    <clr-wizard-button [type]="'previous'">Back</clr-wizard-button>
-    <clr-wizard-button [type]="'next'">Next</clr-wizard-button>
-    <clr-wizard-button [type]="'finish'">
-      {{ finished ? "Done" : "Check Form" }}
-    </clr-wizard-button>
+  <clr-wizard-button [type]="'cancel'">Cancel</clr-wizard-button>
+  <clr-wizard-button [type]="'previous'">Back</clr-wizard-button>
+  <clr-wizard-button [type]="'next'">Next</clr-wizard-button>
+  <clr-wizard-button [type]="'finish'">
+    {{ finished ? "Done" : "Check Form" }}
+  </clr-wizard-button>
 
-    <clr-wizard-page>
-        <ng-template clrPageTitle>Form question</ng-template> <!-- mandatory -->
+  <clr-wizard-page>
+    <ng-template clrPageTitle>Form question</ng-template>
+    <!-- mandatory -->
 
-        <clr-alert [clrAlertType]="'alert-info'" [clrAlertClosable]="false" [clrCloseButtonAriaLabel]="'Close Wiki alert'">
-            <div class="alert-item">
-                This&nbsp;<a
-                    href="https://en.wikipedia.org/wiki/42_(number)#The_Hitchhiker.27s_Guide_to_the_Galaxy"
-                    target="_blank">wiki article</a>&nbsp;might help you answer the question.
-            </div>
-        </clr-alert>
-        <form clrForm #myForm="ngForm">
-          <clr-input-container>
-            <label>The answer to life, the universe and everything</label>
-            <input clrInput [(ngModel)]="answer" name="answer" />
-          </clr-input-container>
-        </form>
-    </clr-wizard-page>
-    <clr-wizard-page #myFinishPage
-        clrWizardPagePreventDefault="true"
-        (clrWizardPageOnCommit)="onCommit()"
-        (clrWizardPageOnCancel)="doCancel()"
-        (clrWizardPagePrevious)="goBack()">
-        <ng-template clrPageTitle>Async validation on finish</ng-template> <!-- mandatory -->
+    <clr-alert [clrAlertType]="'alert-info'" [clrAlertClosable]="false" [clrCloseButtonAriaLabel]="'Close Wiki alert'">
+      <div class="alert-item">
+        This&nbsp;<a
+          href="https://en.wikipedia.org/wiki/42_(number)#The_Hitchhiker.27s_Guide_to_the_Galaxy"
+          target="_blank"
+          >wiki article</a
+        >&nbsp;might help you answer the question.
+      </div>
+    </clr-alert>
+    <form clrForm #myForm="ngForm">
+      <clr-input-container>
+        <label>The answer to life, the universe and everything</label>
+        <input clrInput [(ngModel)]="answer" name="answer" />
+      </clr-input-container>
+    </form>
+  </clr-wizard-page>
+  <clr-wizard-page
+    #myFinishPage
+    clrWizardPagePreventDefault="true"
+    (clrWizardPageOnCommit)="onCommit()"
+    (clrWizardPageOnCancel)="doCancel()"
+    (clrWizardPagePrevious)="goBack()"
+  >
+    <ng-template clrPageTitle>Async validation on finish</ng-template>
+    <!-- mandatory -->
 
-        <clr-alert *ngIf="errorFlag" [clrAlertType]="'alert-danger'" [clrCloseButtonAriaLabel]="'Close Answer alert'">
-            <div class="alert-item">
-                Your answer is incorrect.
-            </div>
-        </clr-alert>
+    <clr-alert *ngIf="errorFlag" [clrAlertType]="'alert-danger'" [clrCloseButtonAriaLabel]="'Close Answer alert'">
+      <div class="alert-item">
+        Your answer is incorrect.
+      </div>
+    </clr-alert>
 
-        <clr-spinner *ngIf="loadingFlag">
-            Loading
-        </clr-spinner>
+    <clr-spinner *ngIf="loadingFlag">
+      Loading
+    </clr-spinner>
 
-        <p *ngIf="errorFlag && !loadingFlag">Go back and try again!</p>
+    <p *ngIf="errorFlag && !loadingFlag">Go back and try again!</p>
 
-        <p *ngIf="showCongrats && !loadingFlag">Congratulations! Now you know the answer to life, the universe and everything!</p>
+    <p *ngIf="showCongrats && !loadingFlag">
+      Congratulations! Now you know the answer to life, the universe and everything!
+    </p>
 
-        <p *ngIf="!checked && !loadingFlag">Click finish to see if you got the answer right.</p>
-    </clr-wizard-page>
+    <p *ngIf="!checked && !loadingFlag">Click finish to see if you got the answer right.</p>
+  </clr-wizard-page>
 </clr-wizard>
 ```
 
@@ -1011,76 +1025,80 @@ export class WizardStopNavigation {
 ```
 
 ```html
-<clr-wizard #wizard [(clrWizardOpen)]="open" [clrWizardSize]="'lg'"
-    [clrWizardPreventNavigation]="loading"
-    [clrWizardDisableStepnav]="readyToFinish"
-    [clrWizardPreventDefaultCancel]="true"
-    (clrWizardOnCancel)="doCancel()"
-    [clrWizardClosable]="!readyToFinish">
-    <clr-wizard-title>Wizard stops navigating while validating</clr-wizard-title>
+<clr-wizard
+  #wizard
+  [(clrWizardOpen)]="open"
+  [clrWizardSize]="'lg'"
+  [clrWizardPreventNavigation]="loading"
+  [clrWizardDisableStepnav]="readyToFinish"
+  [clrWizardPreventDefaultCancel]="true"
+  (clrWizardOnCancel)="doCancel()"
+  [clrWizardClosable]="!readyToFinish"
+>
+  <clr-wizard-title>Wizard stops navigating while validating</clr-wizard-title>
 
-    <clr-wizard-button type="cancel" *ngIf="!readyToFinish">Cancel</clr-wizard-button>
-    <clr-wizard-button type="previous" *ngIf="!readyToFinish">Back</clr-wizard-button>
-    <clr-wizard-button type="next">Next</clr-wizard-button>
-    <clr-wizard-button type="finish">
-        <span *ngIf="untouched && !loading">Validate</span>
-        <span *ngIf="loading">Please wait...</span>
-        <span *ngIf="readyToFinish">OK</span>
-    </clr-wizard-button>
+  <clr-wizard-button type="cancel" *ngIf="!readyToFinish">Cancel</clr-wizard-button>
+  <clr-wizard-button type="previous" *ngIf="!readyToFinish">Back</clr-wizard-button>
+  <clr-wizard-button type="next">Next</clr-wizard-button>
+  <clr-wizard-button type="finish">
+    <span *ngIf="untouched && !loading">Validate</span>
+    <span *ngIf="loading">Please wait...</span>
+    <span *ngIf="readyToFinish">OK</span>
+  </clr-wizard-button>
 
-    <clr-wizard-page
-        [clrWizardPageNextDisabled]="(name.pristine && quest.pristine && velocity.pristine) || !formPage.valid">
-        <ng-template clrPageTitle>Form to submit</ng-template> <!-- mandatory -->
+  <clr-wizard-page
+    [clrWizardPageNextDisabled]="(name.pristine && quest.pristine && velocity.pristine) || !formPage.valid"
+  >
+    <ng-template clrPageTitle>Form to submit</ng-template>
+    <!-- mandatory -->
 
-        <form clrForm #formPage="ngForm">
-          <label>To proceed, you must answer these three questions...</label>
-          <clr-input-container>
-            <label>What is your name?</label>
-            <input clrInput name="name" required [(ngModel)]="model.won" #name="ngModel" />
-            <clr-control-error>This field is required!</clr-control-error>
-          </clr-input-container>
+    <form clrForm #formPage="ngForm">
+      <label>To proceed, you must answer these three questions...</label>
+      <clr-input-container>
+        <label>What is your name?</label>
+        <input clrInput name="name" required [(ngModel)]="model.won" #name="ngModel" />
+        <clr-control-error>This field is required!</clr-control-error>
+      </clr-input-container>
 
-          <clr-input-container>
-            <label>What is your quest?</label>
-            <input clrInput name="quest" required [(ngModel)]="model.too" #quest="ngModel" />
-            <clr-control-error>This field is required!</clr-control-error>
-          </clr-input-container>
+      <clr-input-container>
+        <label>What is your quest?</label>
+        <input clrInput name="quest" required [(ngModel)]="model.too" #quest="ngModel" />
+        <clr-control-error>This field is required!</clr-control-error>
+      </clr-input-container>
 
-          <clr-input-container>
-            <label>What is the air-speed velocity of an unladen swallow?</label>
-            <input clrInput name="velocity" required [(ngModel)]="model.tree" #velocity="ngModel" />
-            <clr-control-error>This field is required!</clr-control-error>
-          </clr-input-container>
-        </form>
-    </clr-wizard-page>
-    <clr-wizard-page
-        [clrWizardPagePreventDefaultNext]="true"
-        (clrWizardPageOnCommit)="onCommit()">
-        <ng-template clrPageTitle>
-            Validate your information
-        </ng-template>
-        <ng-template clrPageNavTitle>
-            <span *ngIf="!readyToFinish">Validate Info</span>
-            <span *ngIf="readyToFinish">Ready to Go!</span>
-        </ng-template>
+      <clr-input-container>
+        <label>What is the air-speed velocity of an unladen swallow?</label>
+        <input clrInput name="velocity" required [(ngModel)]="model.tree" #velocity="ngModel" />
+        <clr-control-error>This field is required!</clr-control-error>
+      </clr-input-container>
+    </form>
+  </clr-wizard-page>
+  <clr-wizard-page [clrWizardPagePreventDefaultNext]="true" (clrWizardPageOnCommit)="onCommit()">
+    <ng-template clrPageTitle>
+      Validate your information
+    </ng-template>
+    <ng-template clrPageNavTitle>
+      <span *ngIf="!readyToFinish">Validate Info</span>
+      <span *ngIf="readyToFinish">Ready to Go!</span>
+    </ng-template>
 
-        <p *ngIf="untouched && !loading">
-            Click the Validate button to kick off a timed routine. While the validation is running,
-            try clicking buttons and stepnav items. Note that they don't do anything while the
-            validation is running. The validation is just an exercise. It will not fail.
-        </p>
+    <p *ngIf="untouched && !loading">
+      Click the Validate button to kick off a timed routine. While the validation is running, try clicking buttons and
+      stepnav items. Note that they don't do anything while the validation is running. The validation is just an
+      exercise. It will not fail.
+    </p>
 
-        <ng-container *ngIf="loading">
-            <p>Loading...</p>
-            <div class="progress">
-                <progress [value]="progress" max="100" [attr.data-displayval]="progress + '%'"></progress>
-            </div>
-        </ng-container>
+    <ng-container *ngIf="loading">
+      <p>Loading...</p>
+      <div class="progress">
+        <progress [value]="progress" max="100" [attr.data-displayval]="progress + '%'"></progress>
+      </div>
+    </ng-container>
 
-        <p *ngIf="readyToFinish">
-            Click on the OK button to close the wizard.
-        </p>
-    </clr-wizard-page>
+    <p *ngIf="readyToFinish">
+      Click on the OK button to close the wizard.
+    </p>
+  </clr-wizard-page>
 </clr-wizard>
 ```
 
@@ -1138,14 +1156,15 @@ export class WizardResetDemo implements OnInit {
 ```
 
 ```html
-<clr-wizard #wizard
+<clr-wizard
+  #wizard
   [(clrWizardOpen)]="open"
   [clrWizardSize]="'md'"
   (clrWizardOnFinish)="doFinish()"
-  (clrWizardOnCancel)="doFinish()">
-
+  (clrWizardOnCancel)="doFinish()"
+>
   <clr-wizard-title>
-      {{ model.forceReset ? "Wizard resets" : "Wizard doesn't reset" }}
+    {{ model.forceReset ? "Wizard resets" : "Wizard doesn't reset" }}
   </clr-wizard-title>
 
   <clr-wizard-button [type]="'cancel'">Cancel</clr-wizard-button>
@@ -1154,38 +1173,42 @@ export class WizardResetDemo implements OnInit {
   <clr-wizard-button [type]="'finish'">OK</clr-wizard-button>
 
   <clr-wizard-page>
-      <ng-template clrPageTitle>Page 1</ng-template> <!-- mandatory -->
+    <ng-template clrPageTitle>Page 1</ng-template>
+    <!-- mandatory -->
 
-      <p>Check below if you want the wizard to reset when it finishes or closes.</p>
+    <p>Check below if you want the wizard to reset when it finishes or closes.</p>
 
-      <clr-checkbox-wrapper>
-        <input #forceReset type="checkbox" clrCheckbox name="forceReset" [(ngModel)]="model.forceReset" />
-        <label>Force reset on close</label>
-      </clr-checkbox-wrapper>
+    <clr-checkbox-wrapper>
+      <input #forceReset type="checkbox" clrCheckbox name="forceReset" [(ngModel)]="model.forceReset" />
+      <label>Force reset on close</label>
+    </clr-checkbox-wrapper>
   </clr-wizard-page>
 
   <clr-wizard-page>
-      <ng-template clrPageTitle>Page 2</ng-template> <!-- mandatory -->
-      <clr-input-container>
-        <label>What is your favorite color?</label>
-        <input clrInput placeholder="Color?" #stepTwoInput [(ngModel)]="model.favoriteColor" />
-      </clr-input-container>
+    <ng-template clrPageTitle>Page 2</ng-template>
+    <!-- mandatory -->
+    <clr-input-container>
+      <label>What is your favorite color?</label>
+      <input clrInput placeholder="Color?" #stepTwoInput [(ngModel)]="model.favoriteColor" />
+    </clr-input-container>
   </clr-wizard-page>
 
   <clr-wizard-page>
-      <ng-template clrPageTitle>Page 3</ng-template> <!-- mandatory -->
-      <clr-input-container>
-        <label>What is your favorite ice cream?</label>
-        <input clrInput placeholder="Flavor?" #stepThreeInput [(ngModel)]="model.flavorOfIceCream" />
-      </clr-input-container>
+    <ng-template clrPageTitle>Page 3</ng-template>
+    <!-- mandatory -->
+    <clr-input-container>
+      <label>What is your favorite ice cream?</label>
+      <input clrInput placeholder="Flavor?" #stepThreeInput [(ngModel)]="model.flavorOfIceCream" />
+    </clr-input-container>
   </clr-wizard-page>
 
   <clr-wizard-page>
-      <ng-template clrPageTitle>Page 4</ng-template> <!-- mandatory -->
-      <clr-input-container>
-        <label>What is your lucky number?</label>
-        <input clrInput placeholder="Lucky number?" #stepFourInput type="number" [(ngModel)]="model.luckyNumber" />
-      </clr-input-container>
+    <ng-template clrPageTitle>Page 4</ng-template>
+    <!-- mandatory -->
+    <clr-input-container>
+      <label>What is your lucky number?</label>
+      <input clrInput placeholder="Lucky number?" #stepFourInput type="number" [(ngModel)]="model.luckyNumber" />
+    </clr-input-container>
   </clr-wizard-page>
 </clr-wizard>
 ```
@@ -1222,17 +1245,17 @@ export class WizardForceForwardDemo {
 
 ```html
 <clr-wizard #wizard [(clrWizardOpen)]="_open" [clrWizardForceForwardNavigation]="true">
-    <clr-wizard-title>Wizard, Only Forward Navigation</clr-wizard-title>
+  <clr-wizard-title>Wizard, Only Forward Navigation</clr-wizard-title>
 
-    <clr-wizard-button [type]="'cancel'">Cancel</clr-wizard-button>
-    <clr-wizard-button [type]="'previous'">Back</clr-wizard-button>
-    <clr-wizard-button [type]="'next'">Next</clr-wizard-button>
-    <clr-wizard-button [type]="'finish'">Finish</clr-wizard-button>
+  <clr-wizard-button [type]="'cancel'">Cancel</clr-wizard-button>
+  <clr-wizard-button [type]="'previous'">Back</clr-wizard-button>
+  <clr-wizard-button [type]="'next'">Next</clr-wizard-button>
+  <clr-wizard-button [type]="'finish'">Finish</clr-wizard-button>
 
-    <clr-wizard-page *ngFor="let page of [1, 2, 3, 4]">
-        <ng-template clrPageTitle>Title for page {{ page }}</ng-template>
-        <p>Content for page {{ page }}.</p>
-    </clr-wizard-page>
+  <clr-wizard-page *ngFor="let page of [1, 2, 3, 4]">
+    <ng-template clrPageTitle>Title for page {{ page }}</ng-template>
+    <p>Content for page {{ page }}.</p>
+  </clr-wizard-page>
 </clr-wizard>
 ```
 
@@ -1280,20 +1303,20 @@ export class WizardAltCancelDemo {
 
 ```html
 <clr-wizard #wizard [(clrWizardOpen)]="open" (clrWizardOnCancel)="doCancel()" [clrWizardPreventDefaultCancel]="true">
-    <clr-wizard-title>Wizard with alternate cancel</clr-wizard-title>
+  <clr-wizard-title>Wizard with alternate cancel</clr-wizard-title>
 
-    <clr-wizard-button [type]="'cancel'">Cancel</clr-wizard-button>
-    <clr-wizard-button [type]="'previous'">Back</clr-wizard-button>
-    <clr-wizard-button [type]="'next'">Next</clr-wizard-button>
-    <clr-wizard-button [type]="'finish'">Finish</clr-wizard-button>
+  <clr-wizard-button [type]="'cancel'">Cancel</clr-wizard-button>
+  <clr-wizard-button [type]="'previous'">Back</clr-wizard-button>
+  <clr-wizard-button [type]="'next'">Next</clr-wizard-button>
+  <clr-wizard-button [type]="'finish'">Finish</clr-wizard-button>
 
-    <clr-wizard-page>
-        ...
-    </clr-wizard-page>
+  <clr-wizard-page>
+    ...
+  </clr-wizard-page>
 
-    <clr-wizard-page (clrWizardPageOnCancel)="pageCustomCancel()" [clrWizardPagePreventDefaultCancel]="true">
-        ...
-    </clr-wizard-page>
+  <clr-wizard-page (clrWizardPageOnCancel)="pageCustomCancel()" [clrWizardPagePreventDefaultCancel]="true">
+    ...
+  </clr-wizard-page>
 </clr-wizard>
 ```
 
@@ -1326,23 +1349,27 @@ export class WizardNoCancel {
 ```
 
 ```html
-<clr-wizard #wizard [(clrWizardOpen)]="open"
-    [clrWizardClosable]="false"
-    [clrWizardSize]="'md'"
-    (clrWizardOnFinish)="reset()">
-    <clr-wizard-title>Wizard that you can't close</clr-wizard-title>
+<clr-wizard
+  #wizard
+  [(clrWizardOpen)]="open"
+  [clrWizardClosable]="false"
+  [clrWizardSize]="'md'"
+  (clrWizardOnFinish)="reset()"
+>
+  <clr-wizard-title>Wizard that you can't close</clr-wizard-title>
 
-    <clr-wizard-button type="previous">Back</clr-wizard-button>
-    <clr-wizard-button type="next">Next</clr-wizard-button>
+  <clr-wizard-button type="previous">Back</clr-wizard-button>
+  <clr-wizard-button type="next">Next</clr-wizard-button>
 
-    <clr-wizard-page *ngFor="let page of pageArray">
-        <ng-template clrPageTitle>Page {{page}}</ng-template> <!-- mandatory -->
-        <p>Page {{ page }} of {{ pageArray.length }}</p>
+  <clr-wizard-page *ngFor="let page of pageArray">
+    <ng-template clrPageTitle>Page {{page}}</ng-template>
+    <!-- mandatory -->
+    <p>Page {{ page }} of {{ pageArray.length }}</p>
 
-        <ng-template clrPageButtons *ngIf="page === '3'">
-            <clr-wizard-button type="finish">YAY</clr-wizard-button>
-        </ng-template>
-    </clr-wizard-page>
+    <ng-template clrPageButtons *ngIf="page === '3'">
+      <clr-wizard-button type="finish">YAY</clr-wizard-button>
+    </ng-template>
+  </clr-wizard-page>
 </clr-wizard>
 ```
 
@@ -1428,71 +1455,71 @@ export class WizardAltNextDemo implements OnInit {
 ```
 
 ```html
-<clr-wizard #wizard
-    [(clrWizardOpen)]="open"
-    [clrWizardSize]="'lg'"
-    (clrWizardOnNext)="doNext()"
-    (clrWizardOnFinish)="doFinish()"
-    [clrWizardPreventDefaultNext]="true"
-    >
-    <clr-wizard-title>Wizard with alternate next flows</clr-wizard-title>
+<clr-wizard
+  #wizard
+  [(clrWizardOpen)]="open"
+  [clrWizardSize]="'lg'"
+  (clrWizardOnNext)="doNext()"
+  (clrWizardOnFinish)="doFinish()"
+  [clrWizardPreventDefaultNext]="true"
+>
+  <clr-wizard-title>Wizard with alternate next flows</clr-wizard-title>
 
-    <clr-wizard-button [type]="'cancel'">Cancel</clr-wizard-button>
-    <clr-wizard-button [type]="'previous'">Back</clr-wizard-button>
-    <clr-wizard-button [type]="'next'">Next</clr-wizard-button>
-    <clr-wizard-button [type]="'finish'">Finish</clr-wizard-button>
+  <clr-wizard-button [type]="'cancel'">Cancel</clr-wizard-button>
+  <clr-wizard-button [type]="'previous'">Back</clr-wizard-button>
+  <clr-wizard-button [type]="'next'">Next</clr-wizard-button>
+  <clr-wizard-button [type]="'finish'">Finish</clr-wizard-button>
 
-    <clr-wizard-page>
-        <ng-template clrPageTitle>Wizard level alt-next</ng-template>
-        <p [class.stress]="stressText">Alt-Next means you manually move users to the next page.</p>
-        <p></p>
-        <label>
-            <input #allowNext type="checkbox" name="allowNext" [(ngModel)]="model.allowNext">
-            Check the box if you want to go to the next page
-        </label>
-    </clr-wizard-page>
+  <clr-wizard-page>
+    <ng-template clrPageTitle>Wizard level alt-next</ng-template>
+    <p [class.stress]="stressText">Alt-Next means you manually move users to the next page.</p>
+    <p></p>
+    <label>
+      <input #allowNext type="checkbox" name="allowNext" [(ngModel)]="model.allowNext" />
+      Check the box if you want to go to the next page
+    </label>
+  </clr-wizard-page>
 
-    <clr-wizard-page (clrWizardPageNext)="pageCustomNext()"
-        [clrWizardPagePreventDefaultNext]="true">
-        <ng-template clrPageTitle>Page level alt-next</ng-template>
-        <p *ngIf="showCancelConfirm">Complete this fibonacci sequence</p>
+  <clr-wizard-page (clrWizardPageNext)="pageCustomNext()" [clrWizardPagePreventDefaultNext]="true">
+    <ng-template clrPageTitle>Page level alt-next</ng-template>
+    <p *ngIf="showCancelConfirm">Complete this fibonacci sequence</p>
 
-        <p>1, 2...</p>
+    <p>1, 2...</p>
 
-        <form clrForm>
-          <clr-input-container>
-            <label>What comes after 2?</label>
-            <input clrInput type="number" name="number" placeholder="Enter a number" [(ngModel)]="model.sequenceOne" />
-          </clr-input-container>
+    <form clrForm>
+      <clr-input-container>
+        <label>What comes after 2?</label>
+        <input clrInput type="number" name="number" placeholder="Enter a number" [(ngModel)]="model.sequenceOne" />
+      </clr-input-container>
 
-          <clr-input-container>
-            <label>What is the next number in the sequence?</label>
-            <input clrInput type="number" name="number2" placeholder="Enter a number" [(ngModel)]="model.sequenceTwo" />
-          </clr-input-container>
+      <clr-input-container>
+        <label>What is the next number in the sequence?</label>
+        <input clrInput type="number" name="number2" placeholder="Enter a number" [(ngModel)]="model.sequenceTwo" />
+      </clr-input-container>
 
-          <clr-input-container>
-            <label>What is the next number in the sequence?</label>
-            <input clrInput type="number" name="number3" placeholder="Enter a number" [(ngModel)]="model.sequenceThree" />
-          </clr-input-container>
-        </form>
-    </clr-wizard-page>
+      <clr-input-container>
+        <label>What is the next number in the sequence?</label>
+        <input clrInput type="number" name="number3" placeholder="Enter a number" [(ngModel)]="model.sequenceThree" />
+      </clr-input-container>
+    </form>
+  </clr-wizard-page>
 
-    <clr-wizard-page>
-        <ng-template clrPageTitle>Wizard level alt-next and the finish button</ng-template>
-        <clr-alert *ngIf="errorFlag" clrAlertType="alert-danger">
-            <div class="alert-item">
-                Your sequence should be 1, 2, 3, 5, 8.
-            </div>
-        </clr-alert>
+  <clr-wizard-page>
+    <ng-template clrPageTitle>Wizard level alt-next and the finish button</ng-template>
+    <clr-alert *ngIf="errorFlag" clrAlertType="alert-danger">
+      <div class="alert-item">
+        Your sequence should be 1, 2, 3, 5, 8.
+      </div>
+    </clr-alert>
 
-        <ng-container *ngIf="!errorFlag">
-            <p>Alt-next at the wizard level also affects the finish button!</p>
-            <p>So make sure to call through to finish when you use it.</p>
-            <p>Click the finish button to test your answers.</p>
-        </ng-container>
+    <ng-container *ngIf="!errorFlag">
+      <p>Alt-next at the wizard level also affects the finish button!</p>
+      <p>So make sure to call through to finish when you use it.</p>
+      <p>Click the finish button to test your answers.</p>
+    </ng-container>
 
-        <p *ngIf="errorFlag">Click back to the previous page to change your answers.</p>
-    </clr-wizard-page>
+    <p *ngIf="errorFlag">Click back to the previous page to change your answers.</p>
+  </clr-wizard-page>
 </clr-wizard>
 ```
 
@@ -1517,22 +1544,22 @@ export class WizardNotClosableDemo {
 
 ```html
 <clr-wizard #wizard [(clrWizardOpen)]="open" [clrWizardClosable]="false">
-    <clr-wizard-title>Wizard, not closable</clr-wizard-title>
+  <clr-wizard-title>Wizard, not closable</clr-wizard-title>
 
-    <clr-wizard-button [type]="'cancel'">Cancel</clr-wizard-button>
-    <clr-wizard-button [type]="'previous'">Back</clr-wizard-button>
-    <clr-wizard-button [type]="'next'">Next</clr-wizard-button>
-    <clr-wizard-button [type]="'finish'">Finish</clr-wizard-button>
+  <clr-wizard-button [type]="'cancel'">Cancel</clr-wizard-button>
+  <clr-wizard-button [type]="'previous'">Back</clr-wizard-button>
+  <clr-wizard-button [type]="'next'">Next</clr-wizard-button>
+  <clr-wizard-button [type]="'finish'">Finish</clr-wizard-button>
 
-    <clr-wizard-page>
-        <ng-template clrPageTitle>Page 1</ng-template>
-        ...
-    </clr-wizard-page>
+  <clr-wizard-page>
+    <ng-template clrPageTitle>Page 1</ng-template>
+    ...
+  </clr-wizard-page>
 
-    <clr-wizard-page>
-        <ng-template clrPageTitle>Page 2</ng-template>
-        ...
-    </clr-wizard-page>
+  <clr-wizard-page>
+    <ng-template clrPageTitle>Page 2</ng-template>
+    ...
+  </clr-wizard-page>
 </clr-wizard>
 ```
 
@@ -1561,9 +1588,10 @@ export class WizardJumpToDemo {
 
 ```html
 <clr-wizard #ohai [(clrWizardOpen)]="open">
-    <!-- the '#wizard' up there creates the reference that your ViewChild property looks for -->
-    <clr-wizard-title>Your Wizard</clr-wizard-title>
-    ...
+  <!-- the '#wizard' up there creates the reference that your ViewChild property looks for -->
+  <clr-wizard-title>Your Wizard</clr-wizard-title>
+  ...</clr-wizard
+>
 ```
 
 Because the wizard’s functionality involves mostly monitoring the state and managing communications with child components, the wizard expects some subcomponents to be declared in order for it to avoid an existential crisis.
@@ -1574,39 +1602,39 @@ As a convenience, wizards give you hooks to all of their services. If you have a
 
 ###### Inputs of note
 
-* `clrWizardSize` (string) sets the size of the wizard. Acceptable values are `md`, `lg`, and `xl` representing medium, large, and extra-large wizards. `xl` is default.
-* `clrWizardClosable` (boolean) hides or reveals the close “X” in the top right. If false, the close “X” will not be present. The property defaults to true.
-* `clrWizardOpen` (boolean) hides or shows the wizard, in the same way that `clrModalOpen` hides or shows a modal.
-* `clrWizardPreventDefaultCancel` (boolean) prevents a user’s cancel action from closing the wizard. Defaults to false.
-* `clrWizardForceForwardNavigation` (boolean) sets pages to incomplete when they are skipped over because a user navigates backwards using the stepnav. Most useful when validation is occurring on a page-by-page basis when the next button is clicked.
-* When set to true, `clrWizardPreventNavigation` (boolean) disables the buttons in the footer, the links in the stepnav to the left, and the close "X" in the top right of the wizard if present.
-* `clrWizardDisableStepnav` (boolean) disables the links in the stepnav when set to true.
+- `clrWizardSize` (string) sets the size of the wizard. Acceptable values are `md`, `lg`, and `xl` representing medium, large, and extra-large wizards. `xl` is default.
+- `clrWizardClosable` (boolean) hides or reveals the close “X” in the top right. If false, the close “X” will not be present. The property defaults to true.
+- `clrWizardOpen` (boolean) hides or shows the wizard, in the same way that `clrModalOpen` hides or shows a modal.
+- `clrWizardPreventDefaultCancel` (boolean) prevents a user’s cancel action from closing the wizard. Defaults to false.
+- `clrWizardForceForwardNavigation` (boolean) sets pages to incomplete when they are skipped over because a user navigates backwards using the stepnav. Most useful when validation is occurring on a page-by-page basis when the next button is clicked.
+- When set to true, `clrWizardPreventNavigation` (boolean) disables the buttons in the footer, the links in the stepnav to the left, and the close "X" in the top right of the wizard if present.
+- `clrWizardDisableStepnav` (boolean) disables the links in the stepnav when set to true.
 
 ###### Outputs of note
 
-* `clrWizardOpenChange` is an output that fires an event after the wizard has opened.
-* `clrWizardOnCancel` fires an event after the wizard has been canceled and, in most cases, closed. This output can be used with the `clrWizardPreventDefaultCancel` input to implement custom functionality when a user wants to close or cancel a wizard.
-* `clrWizardOnFinish` emits an event after a wizard has been completed — once the finish button on the last page has been clicked. If you wanted to reset the wizard after it was finished, this would be a good output to consider.
-* `clrWizardOnReset` emits an event after the wizard has reset all of its pages to incomplete and also reset its navigation to make the first page in the step nav current.
-* `clrWizardCurrentPageChanged` is fired after the current page of the wizard has been changed.
+- `clrWizardOpenChange` is an output that fires an event after the wizard has opened.
+- `clrWizardOnCancel` fires an event after the wizard has been canceled and, in most cases, closed. This output can be used with the `clrWizardPreventDefaultCancel` input to implement custom functionality when a user wants to close or cancel a wizard.
+- `clrWizardOnFinish` emits an event after a wizard has been completed — once the finish button on the last page has been clicked. If you wanted to reset the wizard after it was finished, this would be a good output to consider.
+- `clrWizardOnReset` emits an event after the wizard has reset all of its pages to incomplete and also reset its navigation to make the first page in the step nav current.
+- `clrWizardCurrentPageChanged` is fired after the current page of the wizard has been changed.
 
 ###### Useful properties on the wizard
 
-* `wizard.currentPage` will retrieve the current page object (`WizardPage`) of the wizard.
-* `wizard.isLast` returns a boolean telling you if the current page is the last page in the wizard.
-* `wizard.isFirst` will also return a boolean, but this one will tell you if the current page is the first page in the wizard.
+- `wizard.currentPage` will retrieve the current page object (`WizardPage`) of the wizard.
+- `wizard.isLast` returns a boolean telling you if the current page is the last page in the wizard.
+- `wizard.isFirst` will also return a boolean, but this one will tell you if the current page is the first page in the wizard.
 
 ###### Useful methods on the wizard
 
-* `wizard.open()` opens the wizard.
-* `wizard.close()` just closes the wizard but bypasses event emitters associated with finish and cancel. Use this method on the wizard to implement custom cancel or finish methods in your host component to avoid any circular event emission.
-* You can pass a boolean to `wizard.toggle()` to hide or show the wizard. `wizard.toggle(false)` will hide the wizard and `wizard.toggle(true)` will show it.
-* `wizard.previous()` will try to move the wizard to the page immediately before the current page — if it can. It will fail silently if the current page has no previous page to which it can move.
-* `wizard.next()` will try to move the wizard to the page immediately after the current page. It will also fail silently if the current page has no page that follows it.
-* `wizard.finish()` will initiate the routines associated with completing the wizard, as if a finish button had been clicked on the last page. You can use `wizard.finish()` in your code if you are using a custom finish or danger button on the last page in your wizard.
-* `wizard.cancel()` will invoke the cancel routines for the wizard as if the close “X” or cancel button had been clicked. This should probably only be used if you have a custom cancel button that you need to wire up or if you want to cancel the wizard programmatically. If you are trying to circumvent the wizard’s cancel routine altogether, you would be better off using `wizard.close()`.
-* `wizard.goTo()` accepts a string representing the id of the page you want the wizard to make current as a parameter. If you have references to your pages in your host component, the page id can be retrieved with `wizardpage.id` and can be passed into `wizard.goTo()` — `this.wizard.goTo(this.wizardpage.id)`. Note that `wizard.goTo()` checks to see if preceding pages have been completed before navigating to the specified page. If they have not been, it doesn’t do anything.
-* `wizard.reset()` resets all pages' completed states to false and makes the first page in the wizard the current page — as if the wizard had never been opened before. See the demo below for a more extensive example and explanation.
+- `wizard.open()` opens the wizard.
+- `wizard.close()` just closes the wizard but bypasses event emitters associated with finish and cancel. Use this method on the wizard to implement custom cancel or finish methods in your host component to avoid any circular event emission.
+- You can pass a boolean to `wizard.toggle()` to hide or show the wizard. `wizard.toggle(false)` will hide the wizard and `wizard.toggle(true)` will show it.
+- `wizard.previous()` will try to move the wizard to the page immediately before the current page — if it can. It will fail silently if the current page has no previous page to which it can move.
+- `wizard.next()` will try to move the wizard to the page immediately after the current page. It will also fail silently if the current page has no page that follows it.
+- `wizard.finish()` will initiate the routines associated with completing the wizard, as if a finish button had been clicked on the last page. You can use `wizard.finish()` in your code if you are using a custom finish or danger button on the last page in your wizard.
+- `wizard.cancel()` will invoke the cancel routines for the wizard as if the close “X” or cancel button had been clicked. This should probably only be used if you have a custom cancel button that you need to wire up or if you want to cancel the wizard programmatically. If you are trying to circumvent the wizard’s cancel routine altogether, you would be better off using `wizard.close()`.
+- `wizard.goTo()` accepts a string representing the id of the page you want the wizard to make current as a parameter. If you have references to your pages in your host component, the page id can be retrieved with `wizardpage.id` and can be passed into `wizard.goTo()` — `this.wizard.goTo(this.wizardpage.id)`. Note that `wizard.goTo()` checks to see if preceding pages have been completed before navigating to the specified page. If they have not been, it doesn’t do anything.
+- `wizard.reset()` resets all pages' completed states to false and makes the first page in the wizard the current page — as if the wizard had never been opened before. See the demo below for a more extensive example and explanation.
 
 ##### The wizard page
 
@@ -1633,40 +1661,41 @@ export class WizardJumpToDemo {
 
 ```html
 <clr-wizard [(clrWizardOpen)]="open">
-    <clr-wizard-title>Your Wizard</clr-wizard-title>
-    <clr-wizard-page #firstPage>
-        ...
-    </clr-wizard-page>
-    <clr-wizard-page #secondPage>
-        ...
-    </clr-wizard-page>
+  <clr-wizard-title>Your Wizard</clr-wizard-title>
+  <clr-wizard-page #firstPage>
     ...
+  </clr-wizard-page>
+  <clr-wizard-page #secondPage>
+    ...
+  </clr-wizard-page>
+  ...</clr-wizard
+>
 ```
 
 ###### Inputs of note
 
-* `clrWizardPageNextDisabled` is a boolean that disables the next button. It can be used to force validation on the current page before allowing users to move to the next page or finish a wizard. This is `false` by default.
-* `clrWizardPagePreventDefault` is a boolean that circumvents all actions (cancel, finish, next, and previous) when the page is current. This can be used in combination with the outputs below to write your own wizard navigation procedures. This input is `false` by default.
-* Most users, however, only want to monitor or circumvent the cancellation of the wizard. `clrWizardPagePreventDefaultCancel` does that. It is a boolean input that, if set to true, prevents the cancel action from firing when the page is current. Also `false` by default.
-* `clrWizardPageHasError` is a boolean that applies the error style on the page. This input is `false` by default.
+- `clrWizardPageNextDisabled` is a boolean that disables the next button. It can be used to force validation on the current page before allowing users to move to the next page or finish a wizard. This is `false` by default.
+- `clrWizardPagePreventDefault` is a boolean that circumvents all actions (cancel, finish, next, and previous) when the page is current. This can be used in combination with the outputs below to write your own wizard navigation procedures. This input is `false` by default.
+- Most users, however, only want to monitor or circumvent the cancellation of the wizard. `clrWizardPagePreventDefaultCancel` does that. It is a boolean input that, if set to true, prevents the cancel action from firing when the page is current. Also `false` by default.
+- `clrWizardPageHasError` is a boolean that applies the error style on the page. This input is `false` by default.
 
 ###### Outputs of note
 
-* `clrWizardPageOnCommit` is an output that emits after a page is marked completed by user action. Generally, this happens after danger, finish, or next buttons are clicked. It will not be fired if the page is marked completed programmatically.
-* `clrWizardPageOnLoad` is emitted after a page is made the current page. It cannot circumvent making a page current but it will notify you when a page has been made current and it delivers the page’s id as a string.
-* `clrWizardPageOnCancel` is an output that fires when a user's action on a page initiates the wizard’s cancel routine. This output, combined with the `clrWizardPagePreventDefaultCancel` or `clrWizardPagePreventDefault` inputs, allows you to customize or rewrite the cancellation of a wizard from a page level.
-* Wizard pages also have a set of outputs that emit when different buttons are clicked in the wizard. Note that these events are only emitted for the page when the page is current. These outputs include: `clrWizardPageFinish` when the finish button is clicked, `clrWizardPagePrevious` when the previous button is clicked, `clrWizardPageNext` when the next button is clicked, `clrWizardPageDanger` when a danger button is clicked, `clrWizardPagePrimary` when a next/finish/danger button is clicked, and `clrWizardPageCustomButton` when any custom button is clicked. All of these outputs (and `clrWizardPageOnCancel`) can be combined with the `clrWizardPagePreventDefault` input to create a unique, page-based behavior. More examples are available in the demos below.
+- `clrWizardPageOnCommit` is an output that emits after a page is marked completed by user action. Generally, this happens after danger, finish, or next buttons are clicked. It will not be fired if the page is marked completed programmatically.
+- `clrWizardPageOnLoad` is emitted after a page is made the current page. It cannot circumvent making a page current but it will notify you when a page has been made current and it delivers the page’s id as a string.
+- `clrWizardPageOnCancel` is an output that fires when a user's action on a page initiates the wizard’s cancel routine. This output, combined with the `clrWizardPagePreventDefaultCancel` or `clrWizardPagePreventDefault` inputs, allows you to customize or rewrite the cancellation of a wizard from a page level.
+- Wizard pages also have a set of outputs that emit when different buttons are clicked in the wizard. Note that these events are only emitted for the page when the page is current. These outputs include: `clrWizardPageFinish` when the finish button is clicked, `clrWizardPagePrevious` when the previous button is clicked, `clrWizardPageNext` when the next button is clicked, `clrWizardPageDanger` when a danger button is clicked, `clrWizardPagePrimary` when a next/finish/danger button is clicked, and `clrWizardPageCustomButton` when any custom button is clicked. All of these outputs (and `clrWizardPageOnCancel`) can be combined with the `clrWizardPagePreventDefault` input to create a unique, page-based behavior. More examples are available in the demos below.
 
 ###### Useful properties of the wizard page
 
-* `wizardpage.id` returns the id of the page as a string.
-* `wizardpage.completed` is a boolean that tells you if the page has been completed or not. If `true`, the page has been completed. If `false`, it has not.
-* `wizardpage.current` is a boolean tells you if the page is the current page or not.
-* `wizardpage.hasError` is a boolean that tells you if the page has an error or not.
+- `wizardpage.id` returns the id of the page as a string.
+- `wizardpage.completed` is a boolean that tells you if the page has been completed or not. If `true`, the page has been completed. If `false`, it has not.
+- `wizardpage.current` is a boolean tells you if the page is the current page or not.
+- `wizardpage.hasError` is a boolean that tells you if the page has an error or not.
 
 ###### Useful methods of the wizard page
 
-* `wizardpage.makeCurrent()` tells the nav service to make `wizardpage` the current page. This method circumvents checks to see if the page can be made current. Use `wizard.goTo()` if you want to nav service to validate whether the specified page can be made current or not.
+- `wizardpage.makeCurrent()` tells the nav service to make `wizardpage` the current page. This method circumvents checks to see if the page can be made current. Use `wizard.goTo()` if you want to nav service to validate whether the specified page can be made current or not.
 
 ##### Providers (Services)
 
@@ -1680,8 +1709,8 @@ It may have seemed, initially, that the wizard was super-helpful and doing lots 
 
 Because much of what the nav service does is behind-the-scenes, there is really only a couple of methods and properties on the nav service that may interest you:
 
-* `wizard.navService.currentPage` is a getter/setter That will return the current page is called on its own or set the current page to any WizardPage object that is passed to it. This bypasses most of the checks involved with setting the current page but still emits a `pageOnLoad` event.
-* `wizard.navService.goTo()` takes either the id of a page or the page object itself and checks to see if it can make the page current. This is slightly more flexible than `wizard.goTo()` which only takes a page id.
+- `wizard.navService.currentPage` is a getter/setter That will return the current page is called on its own or set the current page to any WizardPage object that is passed to it. This bypasses most of the checks involved with setting the current page but still emits a `pageOnLoad` event.
+- `wizard.navService.goTo()` takes either the id of a page or the page object itself and checks to see if it can make the page current. This is slightly more flexible than `wizard.goTo()` which only takes a page id.
 
 ###### PageCollectionService
 
@@ -1689,14 +1718,14 @@ The `PageCollectionService` — or “page collection” — groups all of the p
 
 **Properties**
 
-* `wizard.pageCollection.pages` is a `QueryList` of all the pages in a wizard.
-* `wizard.pageCollection.pagesAsArray` is a convenient getter that returns `wizard.pageCollection.pages` as an array of page objects.
+- `wizard.pageCollection.pages` is a `QueryList` of all the pages in a wizard.
+- `wizard.pageCollection.pagesAsArray` is a convenient getter that returns `wizard.pageCollection.pages` as an array of page objects.
 
 **Methods**
 
-* If you know a page’s id, you can pass it as a string parameter to `wizard.pageCollection.getPageById()` and it will return the page if it exists in the page collection.
-* Alternatively, you can pass the page’s index in the list of pages as a number parameter to `wizard.pageCollection.getPageByIndex()` to get the page returned back to you.
-* If you have a page and you need to know where it is in the list of pages, you can pass the page object as a parameter to `wizard.pageCollection.getPageIndex()` and it will return the page’s numeric index.
-* Passing a page object to `wizard.pageCollection.getPreviousPage()` as a parameter will return you the page before it in the collection or null if your page object is the first page in the collection.
-* Continuing the trend, you can pass a page object as a parameter to `wizard.pageCollection.getNextPage()` and it will return the page after your page object in the collection or null if your page object is the last page in the collection.
-* `wizard.pageCollection.updateCompletedStates()` is a function that cleans up the page collection by figuring out the first page marked as incomplete and the collection and then marking every page after it incomplete as well. This is a useful method if you handle a lot of page state programmatically.
+- If you know a page’s id, you can pass it as a string parameter to `wizard.pageCollection.getPageById()` and it will return the page if it exists in the page collection.
+- Alternatively, you can pass the page’s index in the list of pages as a number parameter to `wizard.pageCollection.getPageByIndex()` to get the page returned back to you.
+- If you have a page and you need to know where it is in the list of pages, you can pass the page object as a parameter to `wizard.pageCollection.getPageIndex()` and it will return the page’s numeric index.
+- Passing a page object to `wizard.pageCollection.getPreviousPage()` as a parameter will return you the page before it in the collection or null if your page object is the first page in the collection.
+- Continuing the trend, you can pass a page object as a parameter to `wizard.pageCollection.getNextPage()` and it will return the page after your page object in the collection or null if your page object is the last page in the collection.
+- `wizard.pageCollection.updateCompletedStates()` is a function that cleans up the page collection by figuring out the first page marked as incomplete and the collection and then marking every page after it incomplete as well. This is a useful method if you handle a lot of page state programmatically.

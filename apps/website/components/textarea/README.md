@@ -6,8 +6,8 @@ title: Overview
 
 ![HTML5](assets/images/bugs/badge_html5.svg 'HTML5')![CSS3](assets/images/bugs/badge_css3.svg 'CSS3')![Angular](assets/images/bugs/badge_ng.svg 'Angular')
 
-* [Examples & Code](/documentation/textarea#top)
-* [Design Guidelines](/documentation/textarea#guidelines)
+- [Examples & Code](/documentation/textarea#top)
+- [Design Guidelines](/documentation/textarea#guidelines)
 
 ##### Textareas are a popular form control for long form text input, and Clarity supports both a CSS only and Angular component. You may wish to review the general [forms](/documentation/forms) documentation about form controls.
 

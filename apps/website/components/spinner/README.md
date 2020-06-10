@@ -6,15 +6,15 @@ title: Overview
 
 ![HTML5](assets/images/bugs/badge_html5.svg 'HTML5')![CSS3](assets/images/bugs/badge_css3.svg 'CSS3')![Angular](assets/images/bugs/badge_ng.svg 'Angular')
 
-* [Examples & Code](/documentation/spinners#top)
-* [Design Guidelines](/documentation/spinners#guidelines)
+- [Examples & Code](/documentation/spinners#top)
+- [Design Guidelines](/documentation/spinners#guidelines)
 
 ##### A spinner is visual indicator of an ongoing, user-initiated process.
 
 Clarity has two types of spinners:
 
-* **Page Spinners:** For tracking the progress of an operation related to an entire page.
-* **Inline Spinners:** For tracking the progress of an operation related to a specific component.
+- **Page Spinners:** For tracking the progress of an operation related to an entire page.
+- **Inline Spinners:** For tracking the progress of an operation related to a specific component.
 
 ###### .spinner
 
@@ -36,7 +36,7 @@ Loading...
 
 ```html
 <span class="spinner">
-    Loading...
+  Loading...
 </span>
 ```
 
@@ -46,10 +46,10 @@ Loading... Loading...
 
 ```html
 <span class="spinner spinner-inline">
-    Loading...
+  Loading...
 </span>
 <span>
-    Loading...
+  Loading...
 </span>
 ```
 
@@ -59,7 +59,7 @@ Loading...
 
 ```html
 <span class="spinner spinner-inverse">
-    Loading...
+  Loading...
 </span>
 ```
 
@@ -67,9 +67,9 @@ Loading...
 
 Clarity spinners can be displayed in three sizes:
 
-* **Small:** This is the required sizing for inline spinners (see above). It measures 18x18 pixels.
-* **Medium:** Medium spinners measure 36x36 pixels.
-* **Large:** This is the default size for page spinners (see above).
+- **Small:** This is the required sizing for inline spinners (see above). It measures 18x18 pixels.
+- **Medium:** Medium spinners measure 36x36 pixels.
+- **Large:** This is the default size for page spinners (see above).
 
 ###### Spinner sizes classnames
 
@@ -83,7 +83,7 @@ Loading...
 
 ```html
 <span class="spinner spinner-sm">
-    Loading...
+  Loading...
 </span>
 ```
 
@@ -93,7 +93,7 @@ Loading...
 
 ```html
 <span class="spinner spinner-md">
-    Loading...
+  Loading...
 </span>
 ```
 
@@ -103,7 +103,7 @@ Loading...
 
 ```html
 <span class="spinner spinner-lg">
-    Loading...
+  Loading...
 </span>
 ```
 
@@ -229,7 +229,7 @@ Download file
     Downloading
   </clr-spinner>
   <span>
-      Downloading
+    Downloading
   </span>
 </div>
 ```

@@ -4,8 +4,8 @@ title: Overview
 
 # Modals
 
-* [Design Guidelines](/documentation/modals#top)
-* [Code & Examples](/documentation/modals#examples)
+- [Design Guidelines](/documentation/modals#top)
+- [Code & Examples](/documentation/modals#examples)
 
 ##### Modals provide information or help a user complete a task. They require the user to take an action to dismiss them.
 
@@ -111,8 +111,8 @@ Modals shouldn’t launch other modals. Stacking modals makes it hard to dismiss
 
 If you see a need to stack modals, you should:
 
-* Seek alternatives to the second modal such as inline expansion within the first one.
-* Seek alternatives to the use of modals in that scenario and explore alternatives such as inline task completion.
+- Seek alternatives to the second modal such as inline expansion within the first one.
+- Seek alternatives to the use of modals in that scenario and explore alternatives such as inline task completion.
 
 ![Don't stack modals on top of each other](assets/images/documentation/modals/stacking.png)
 
@@ -126,8 +126,8 @@ Scrolling makes it hard for a user to go through the content of your modal or co
 
 If your modals scroll, make sure:
 
-* You’re using the right modal size based on your content and supported screen sizes.
-* Consider alternative components to using modal if the content is too long or too complex within a modal.
+- You’re using the right modal size based on your content and supported screen sizes.
+- Consider alternative components to using modal if the content is too long or too complex within a modal.
 
 ### Code & Examples
 
@@ -143,23 +143,23 @@ CancelOk
 
 ```html
 <div class="modal">
-    <div class="modal-dialog" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button aria-label="Close" class="close" type="button">
-                    <clr-icon aria-hidden="true" shape="close"></clr-icon>
-                </button>
-                <h3 class="modal-title">I have a nice title</h3>
-            </div>
-            <div class="modal-body">
-                <p>But not much to say...</p>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-outline" type="button">Cancel</button>
-                <button class="btn btn-primary" type="button">Ok</button>
-            </div>
-        </div>
+  <div class="modal-dialog" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button aria-label="Close" class="close" type="button">
+          <clr-icon aria-hidden="true" shape="close"></clr-icon>
+        </button>
+        <h3 class="modal-title">I have a nice title</h3>
+      </div>
+      <div class="modal-body">
+        <p>But not much to say...</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline" type="button">Cancel</button>
+        <button class="btn btn-primary" type="button">Ok</button>
+      </div>
     </div>
+  </div>
 </div>
 <div class="modal-backdrop" aria-hidden="true"></div>
 ```
@@ -178,11 +178,11 @@ Ok
 
 ```html
 <div class="modal">
-    <div class="modal-dialog modal-sm" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            ...
-        </div>
+  <div class="modal-dialog modal-sm" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+      ...
     </div>
+  </div>
 </div>
 <div class="modal-backdrop" aria-hidden="true"></div>
 ```
@@ -197,11 +197,11 @@ CancelOk
 
 ```html
 <div class="modal">
-    <div class="modal-dialog modal-lg" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            ...
-        </div>
+  <div class="modal-dialog modal-lg" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+      ...
     </div>
+  </div>
 </div>
 <div class="modal-backdrop" aria-hidden="true"></div>
 ```
@@ -216,11 +216,11 @@ CancelOk
 
 ```html
 <div class="modal">
-    <div class="modal-dialog modal-xl" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            ...
-        </div>
+  <div class="modal-dialog modal-xl" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+      ...
     </div>
+  </div>
 </div>
 <div class="modal-backdrop" aria-hidden="true"></div>
 ```
@@ -248,11 +248,11 @@ CancelOk
 
 ```html
 <div class="modal">
-    <div class="modal-dialog fadeDown in" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            ...
-        </div>
+  <div class="modal-dialog fadeDown in" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+      ...
     </div>
+  </div>
 </div>
 <div class="modal-backdrop fade in" aria-hidden="true"></div>
 ```
@@ -324,14 +324,14 @@ Try it live: Show modal
 
 ```html
 <clr-modal [(clrModalOpen)]="basic">
-    <h3 class="modal-title">I have a nice title</h3>
-    <div class="modal-body">
-        <p>But not much to say...</p>
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-outline" (click)="basic = false">Cancel</button>
-        <button type="button" class="btn btn-primary" (click)="basic = false">Ok</button>
-    </div>
+  <h3 class="modal-title">I have a nice title</h3>
+  <div class="modal-body">
+    <p>But not much to say...</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline" (click)="basic = false">Cancel</button>
+    <button type="button" class="btn btn-primary" (click)="basic = false">Ok</button>
+  </div>
 </clr-modal>
 ```
 
@@ -343,15 +343,15 @@ Small modalLarge modalExtra large modal
 
 ```html
 <clr-modal [(clrModalOpen)]="opened" [clrModalSize]="'sm'">
-...
+  ...
 </clr-modal>
 
 <clr-modal [(clrModalOpen)]="opened" [clrModalSize]="'lg'">
-...
+  ...
 </clr-modal>
 
 <clr-modal [(clrModalOpen)]="opened" [clrModalSize]="'xl'">
-...
+  ...
 </clr-modal>
 ```
 
@@ -363,15 +363,15 @@ Show modal
 
 ```html
 <clr-modal [(clrModalOpen)]="opened" [clrModalClosable]="false">
-    <h3 class="modal-title">No "x" in the top-right corner</h3>
-    <div class="modal-body">
-        <p>Clicking on the backdrop doesn't do anything.</p>
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-primary" (click)="opened = false">
-            I'm the only way to close the modal!
-        </button>
-    </div>
+  <h3 class="modal-title">No "x" in the top-right corner</h3>
+  <div class="modal-body">
+    <p>Clicking on the backdrop doesn't do anything.</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-primary" (click)="opened = false">
+      I'm the only way to close the modal!
+    </button>
+  </div>
 </clr-modal>
 ```
 
@@ -383,7 +383,7 @@ Show modal
 
 ```html
 <clr-modal [(clrModalOpen)]="opened" [clrModalStaticBackdrop]="false">
-    ...
+  ...
 </clr-modal>
 ```
 

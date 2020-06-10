@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016-2019 VMware, Inc. All Rights Reserved.
+ * Copyright (c) 2016-2020 VMware, Inc. All Rights Reserved.
  * This software is released under MIT license.
  * The full license information can be found in LICENSE in the root directory of this project.
  */
@@ -37,7 +37,6 @@ import { ClrAccordionDescription } from './accordion-description';
   animations: panelAnimation,
   providers: [IfExpandService, UNIQUE_ID_PROVIDER],
 })
-
 export class ClrAccordionPanel implements OnInit, OnChanges {
   @Input('clrAccordionPanelDisabled') disabled = false;
   @Input('clrAccordionPanelOpen') panelOpen = false;

@@ -6,8 +6,8 @@ title: Overview
 
 ![HTML5](assets/images/bugs/badge_html5.svg 'HTML5')![CSS3](assets/images/bugs/badge_css3.svg 'CSS3')
 
-* [Examples & Code](/documentation/login#top)
-* [Design Guidelines](/documentation/login#guidelines)
+- [Examples & Code](/documentation/login#top)
+- [Design Guidelines](/documentation/login#guidelines)
 
 ##### The login page is a predefined form for applications that require authentication.
 
@@ -55,39 +55,39 @@ NEXT[Sign up for a Company ID](javascript://)
 
 ```html
 <div class="login-wrapper">
-    <form class="login">
-        <section class="title">
-            <h3 class="welcome">Welcome to</h3>
-            Company Product Name
-            <h5 class="hint">Use your Company ID to sign in or create one now</h5>
-        </section>
-        <div class="login-group">
-            <clr-select-container>
-                <label class="clr-sr-only">User Role</label>
-                <select clrSelect name="type" [(ngModel)]="form.type">
-                    <option value="local">Local Users</option>
-                    <option value="admin">Administrator</option>
-                </select>
-            </clr-select-container>
-            <clr-input-container>
-                <label class="clr-sr-only">Username</label>
-                <input type="text" name="username" clrInput placeholder="Username" [(ngModel)]="form.username"/>
-            </clr-input-container>
-            <clr-password-container>
-                <label class="clr-sr-only">Password</label>
-                <input type="password" name="password" clrPassword placeholder="Password" [(ngModel)]="form.password"/>
-            </clr-password-container>
-            <clr-checkbox-wrapper>
-                <label>Remember me</label>
-                <input type="checkbox" name="rememberMe" clrCheckbox [(ngModel)]="form.rememberMe"/>
-            </clr-checkbox-wrapper>
-            <div class="error active">
-                Invalid user name or password
-            </div>
-            <button type="submit" class="btn btn-primary">NEXT</button>
-            <a href="javascript://" class="signup">Sign up for a Company ID</a>
-        </div>
-    </form>
+  <form class="login">
+    <section class="title">
+      <h3 class="welcome">Welcome to</h3>
+      Company Product Name
+      <h5 class="hint">Use your Company ID to sign in or create one now</h5>
+    </section>
+    <div class="login-group">
+      <clr-select-container>
+        <label class="clr-sr-only">User Role</label>
+        <select clrSelect name="type" [(ngModel)]="form.type">
+          <option value="local">Local Users</option>
+          <option value="admin">Administrator</option>
+        </select>
+      </clr-select-container>
+      <clr-input-container>
+        <label class="clr-sr-only">Username</label>
+        <input type="text" name="username" clrInput placeholder="Username" [(ngModel)]="form.username" />
+      </clr-input-container>
+      <clr-password-container>
+        <label class="clr-sr-only">Password</label>
+        <input type="password" name="password" clrPassword placeholder="Password" [(ngModel)]="form.password" />
+      </clr-password-container>
+      <clr-checkbox-wrapper>
+        <label>Remember me</label>
+        <input type="checkbox" name="rememberMe" clrCheckbox [(ngModel)]="form.rememberMe" />
+      </clr-checkbox-wrapper>
+      <div class="error active">
+        Invalid user name or password
+      </div>
+      <button type="submit" class="btn btn-primary">NEXT</button>
+      <a href="javascript://" class="signup">Sign up for a Company ID</a>
+    </div>
+  </form>
 </div>
 ```
 

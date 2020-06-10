@@ -4,8 +4,8 @@ title: Overview
 
 # Button Group
 
-* [Design Guidelines](/documentation/button-group#top)
-* [Code & Examples](/documentation/button-group#examples)
+- [Design Guidelines](/documentation/button-group#top)
+- [Code & Examples](/documentation/button-group#examples)
 
 ##### Button groups are for creating collections of similar type action buttons.
 
@@ -91,15 +91,15 @@ If your icon button has no text, we recommend adding the `title=""` attribute to
 
 ```html
 <div class="btn-group btn-primary btn-icon">
-    <button class="btn">
-        <clr-icon shape="check" title="Check"></clr-icon>
-    </button>
-    <button class="btn">
-        <clr-icon shape="home" title="home"></clr-icon>
-    </button>
-    <button class="btn">
-        <clr-icon shape="user" title="user"></clr-icon>
-    </button>
+  <button class="btn">
+    <clr-icon shape="check" title="Check"></clr-icon>
+  </button>
+  <button class="btn">
+    <clr-icon shape="home" title="home"></clr-icon>
+  </button>
+  <button class="btn">
+    <clr-icon shape="user" title="user"></clr-icon>
+  </button>
 </div>
 ```
 
@@ -109,8 +109,8 @@ Overflow is used when the button group is larger than its containing space, or u
 
 ##### Interaction
 
-* Overflow button is shown below as an ellipsis button in the button group and is the last position to the right
-* Clicking on the ellipsis will show the overflow dropdown menu
+- Overflow button is shown below as an ellipsis button in the button group and is the last position to the right
+- Clicking on the ellipsis will show the overflow dropdown menu
 
 Create Favorite
 
@@ -120,8 +120,8 @@ DownloadDelete
 
 ##### Icons
 
-* Button groups with text and icons, or just icons, will have text show in the dropdown menu
-* Text for each action icon is needed for overflow to work properly
+- Button groups with text and icons, or just icons, will have text show in the dropdown menu
+- Text for each action icon is needed for overflow to work properly
 
 Add Add Folder Folder
 
@@ -159,9 +159,9 @@ Lead with **secondary** actions followed by **primary** actions.
 
 Use when a small list of options can be selected from, similar to the [Checkbox](/documentation/checkboxes) component
 
-* blue indicates an option is selected, white (outline) indicates an unselected option
-* user can click the button to select, and click again to deselect
-* can be configured with preselected options
+- blue indicates an option is selected, white (outline) indicates an unselected option
+- user can click the button to select, and click again to deselect
+- can be configured with preselected options
 
 Apples
 
@@ -185,9 +185,9 @@ Use option labels that are long or more than 3 words.
 
 Use when selecting one option from a small list of options, similar to the [Radio](/documentation/radios) component
 
-* blue indicates an option is selected, white (outline) indicates an unselected option
-* user can click the button to select, and click again to deselect
-* can be configured with preselected options
+- blue indicates an option is selected, white (outline) indicates an unselected option
+- user can click the button to select, and click again to deselect
+- can be configured with preselected options
 
 Pears
 
@@ -211,9 +211,9 @@ Use option labels that are long or more than 3 words.
 
 Clarity defines three button group types:
 
-* **Solid**. A solid background with light text. These buttons are prominent on the page.
-* **Outline.** A transparent background with colored border and text. On hover, the button fills with color.
-* **Flat.** Text in Action Blue, used to indicate an action.
+- **Solid**. A solid background with light text. These buttons are prominent on the page.
+- **Outline.** A transparent background with colored border and text. On hover, the button fills with color.
+- **Flat.** Text in Action Blue, used to indicate an action.
 
 #### Basic Structure
 
@@ -221,10 +221,10 @@ AddEditDownloadDelete
 
 ```html
 <div class="btn-group btn-primary">
-    <button class="btn">Add</button>
-    <button class="btn">Edit</button>
-    <button class="btn">Download</button>
-    <button class="btn">Delete</button>
+  <button class="btn">Add</button>
+  <button class="btn">Edit</button>
+  <button class="btn">Download</button>
+  <button class="btn">Delete</button>
 </div>
 ```
 
@@ -236,17 +236,17 @@ DownloadDelete
 
 ```html
 <div class="btn-group btn-primary">
-    <button class="btn">Add</button>
-    <button class="btn">Edit</button>
-    <div class="btn-group-overflow open">
-        <button class="btn dropdown-toggle">
-            <clr-icon shape="ellipsis-horizontal"></clr-icon>
-        </button>
-        <div class="dropdown-menu">
-            <button class="btn">Download</button>
-            <button class="btn">Delete</button>
-        </div>
+  <button class="btn">Add</button>
+  <button class="btn">Edit</button>
+  <div class="btn-group-overflow open">
+    <button class="btn dropdown-toggle">
+      <clr-icon shape="ellipsis-horizontal"></clr-icon>
+    </button>
+    <div class="dropdown-menu">
+      <button class="btn">Download</button>
+      <button class="btn">Delete</button>
     </div>
+  </div>
 </div>
 ```
 
@@ -260,10 +260,10 @@ AddEditDownloadDelete
 
 ```html
 <div class="btn-group btn-primary">
-    <button class="btn">Add</button>
-    <button class="btn">Edit</button>
-    <button class="btn">Download</button>
-    <button class="btn">Delete</button>
+  <button class="btn">Add</button>
+  <button class="btn">Edit</button>
+  <button class="btn">Download</button>
+  <button class="btn">Delete</button>
 </div>
 ```
 
@@ -273,10 +273,10 @@ AddEditDownloadDelete
 
 ```html
 <div class="btn-group">
-    <button class="btn">Add</button>
-    <button class="btn">Edit</button>
-    <button class="btn">Download</button>
-    <button class="btn">Delete</button>
+  <button class="btn">Add</button>
+  <button class="btn">Edit</button>
+  <button class="btn">Download</button>
+  <button class="btn">Delete</button>
 </div>
 ```
 
@@ -286,10 +286,10 @@ AddEditDownloadDelete
 
 ```html
 <div class="btn-group btn-link">
-    <button class="btn">Add</button>
-    <button class="btn">Edit</button>
-    <button class="btn">Download</button>
-    <button class="btn">Delete</button>
+  <button class="btn">Add</button>
+  <button class="btn">Edit</button>
+  <button class="btn">Download</button>
+  <button class="btn">Delete</button>
 </div>
 ```
 
@@ -299,10 +299,10 @@ AddEditDownloadDelete
 
 ```html
 <div class="btn-group btn-outline-primary btn-sm">
-    <button class="btn">Add</button>
-    <button class="btn">Edit</button>
-    <button class="btn">Download</button>
-    <button class="btn">Delete</button>
+  <button class="btn">Add</button>
+  <button class="btn">Edit</button>
+  <button class="btn">Download</button>
+  <button class="btn">Delete</button>
 </div>
 ```
 
@@ -314,9 +314,9 @@ FavoriteAddDelete
 
 ```html
 <div class="btn-group btn-primary">
-    <button class="btn">Favorite</button>
-    <button class="btn btn-success">Add</button>
-    <button class="btn btn-danger">Delete</button>
+  <button class="btn">Favorite</button>
+  <button class="btn btn-success">Add</button>
+  <button class="btn btn-danger">Delete</button>
 </div>
 ```
 
@@ -330,29 +330,29 @@ User Cloud
 
 ```html
 <div class="btn-group btn-primary btn-icon">
-    <button class="btn">
-        <clr-icon shape="home"></clr-icon>
-        <span class="clr-icon-title">Home</span>
+  <button class="btn">
+    <clr-icon shape="home"></clr-icon>
+    <span class="clr-icon-title">Home</span>
+  </button>
+  <button class="btn">
+    <clr-icon shape="cog"></clr-icon>
+    <span class="clr-icon-title">Settings</span>
+  </button>
+  <div class="btn-group-overflow open">
+    <button class="btn dropdown-toggle">
+      <clr-icon shape="ellipsis-horizontal"></clr-icon>
     </button>
-    <button class="btn">
-        <clr-icon shape="cog"></clr-icon>
-        <span class="clr-icon-title">Settings</span>
-    </button>
-    <div class="btn-group-overflow open">
-        <button class="btn dropdown-toggle">
-            <clr-icon shape="ellipsis-horizontal"></clr-icon>
-        </button>
-        <div class="dropdown-menu">
-            <button class="btn">
-                <clr-icon shape="user"></clr-icon>
-                <span class="clr-icon-title">User</span>
-            </button>
-            <button class="btn">
-                <clr-icon shape="cloud"></clr-icon>
-                <span class="clr-icon-title">Cloud</span>
-            </button>
-        </div>
+    <div class="dropdown-menu">
+      <button class="btn">
+        <clr-icon shape="user"></clr-icon>
+        <span class="clr-icon-title">User</span>
+      </button>
+      <button class="btn">
+        <clr-icon shape="cloud"></clr-icon>
+        <span class="clr-icon-title">Cloud</span>
+      </button>
     </div>
+  </div>
 </div>
 ```
 
@@ -364,29 +364,29 @@ User Cloud
 
 ```html
 <div class="btn-group btn-primary">
-    <button class="btn">
-        <clr-icon shape="home"></clr-icon>
-        Home
+  <button class="btn">
+    <clr-icon shape="home"></clr-icon>
+    Home
+  </button>
+  <button class="btn">
+    <clr-icon shape="cog"></clr-icon>
+    Settings
+  </button>
+  <div class="btn-group-overflow open">
+    <button class="btn dropdown-toggle">
+      <clr-icon shape="ellipsis-horizontal"></clr-icon>
     </button>
-    <button class="btn">
-        <clr-icon shape="cog"></clr-icon>
-        Settings
-    </button>
-    <div class="btn-group-overflow open">
-        <button class="btn dropdown-toggle">
-            <clr-icon shape="ellipsis-horizontal"></clr-icon>
-        </button>
-        <div class="dropdown-menu">
-            <button class="btn">
-                <clr-icon shape="user"></clr-icon>
-                User
-            </button>
-            <button class="btn">
-                <clr-icon shape="cloud"></clr-icon>
-                Cloud
-            </button>
-        </div>
+    <div class="dropdown-menu">
+      <button class="btn">
+        <clr-icon shape="user"></clr-icon>
+        User
+      </button>
+      <button class="btn">
+        <clr-icon shape="cloud"></clr-icon>
+        Cloud
+      </button>
     </div>
+  </div>
 </div>
 ```
 
@@ -402,22 +402,22 @@ Pears
 
 ```html
 <div class="btn-group">
-    <div class="checkbox btn">
-        <input type="checkbox" id="btn-demo-check-1">
-        <label for="btn-demo-check-1">Apples</label>
-    </div>
-    <div class="checkbox btn">
-        <input type="checkbox" id="btn-demo-check-2" checked>
-        <label for="btn-demo-check-2">Oranges</label>
-    </div>
-    <div class="checkbox btn">
-        <input type="checkbox" id="btn-demo-check-3">
-        <label for="btn-demo-check-3">Kiwis</label>
-    </div>
-    <div class="checkbox btn">
-        <input type="checkbox" id="btn-demo-check-4 checked">
-        <label for="btn-demo-check-4">Pears</label>
-    </div>
+  <div class="checkbox btn">
+    <input type="checkbox" id="btn-demo-check-1" />
+    <label for="btn-demo-check-1">Apples</label>
+  </div>
+  <div class="checkbox btn">
+    <input type="checkbox" id="btn-demo-check-2" checked />
+    <label for="btn-demo-check-2">Oranges</label>
+  </div>
+  <div class="checkbox btn">
+    <input type="checkbox" id="btn-demo-check-3" />
+    <label for="btn-demo-check-3">Kiwis</label>
+  </div>
+  <div class="checkbox btn">
+    <input type="checkbox" id="btn-demo-check-4 checked" />
+    <label for="btn-demo-check-4">Pears</label>
+  </div>
 </div>
 ```
 
@@ -433,22 +433,22 @@ Pears
 
 ```html
 <div class="btn-group">
-    <div class="radio btn">
-        <input type="radio" name="btn-group-demo-radios" id="btn-demo-radio-1">
-        <label for="btn-demo-radio-1">Apples</label>
-    </div>
-    <div class="radio btn">
-        <input type="radio" name="btn-group-demo-radios" id="btn-demo-radio-2">
-        <label for="btn-demo-radio-2">Oranges</label>
-    </div>
-    <div class="radio btn">
-        <input type="radio" name="btn-group-demo-radios" id="btn-demo-radio-3">
-        <label for="btn-demo-radio-3">Kiwis</label>
-    </div>
-    <div class="radio btn">
-        <input type="radio" name="btn-group-demo-radios" id="btn-demo-radio-4" checked>
-        <label for="btn-demo-radio-4">Pears</label>
-    </div>
+  <div class="radio btn">
+    <input type="radio" name="btn-group-demo-radios" id="btn-demo-radio-1" />
+    <label for="btn-demo-radio-1">Apples</label>
+  </div>
+  <div class="radio btn">
+    <input type="radio" name="btn-group-demo-radios" id="btn-demo-radio-2" />
+    <label for="btn-demo-radio-2">Oranges</label>
+  </div>
+  <div class="radio btn">
+    <input type="radio" name="btn-group-demo-radios" id="btn-demo-radio-3" />
+    <label for="btn-demo-radio-3">Kiwis</label>
+  </div>
+  <div class="radio btn">
+    <input type="radio" name="btn-group-demo-radios" id="btn-demo-radio-4" checked />
+    <label for="btn-demo-radio-4">Pears</label>
+  </div>
 </div>
 ```
 
@@ -536,11 +536,11 @@ More
 
 ```html
 <clr-button-group class="btn-primary">
-    <clr-button>Create</clr-button>
-    <clr-button>Favorite</clr-button>
-    <clr-button [clrInMenu]="true">Assign</clr-button>
-    <clr-button [clrInMenu]="true">Download</clr-button>
-    <clr-button [clrInMenu]="true">Delete</clr-button>
+  <clr-button>Create</clr-button>
+  <clr-button>Favorite</clr-button>
+  <clr-button [clrInMenu]="true">Assign</clr-button>
+  <clr-button [clrInMenu]="true">Download</clr-button>
+  <clr-button [clrInMenu]="true">Delete</clr-button>
 </clr-button-group>
 ```
 
@@ -552,11 +552,11 @@ More
 
 ```html
 <clr-button-group [clrMenuPosition]="'bottom-right'">
-    <clr-button class="btn">Add</clr-button>
-    <clr-button class="btn">Edit</clr-button>
-    <clr-button class="btn">Download</clr-button>
-    <clr-button class="btn" [clrInMenu]="true">Assign</clr-button>
-    <clr-button class="btn" [clrInMenu]="true">Move</clr-button>
-    <clr-button class="btn" [clrInMenu]="true">Delete</clr-button>
+  <clr-button class="btn">Add</clr-button>
+  <clr-button class="btn">Edit</clr-button>
+  <clr-button class="btn">Download</clr-button>
+  <clr-button class="btn" [clrInMenu]="true">Assign</clr-button>
+  <clr-button class="btn" [clrInMenu]="true">Move</clr-button>
+  <clr-button class="btn" [clrInMenu]="true">Delete</clr-button>
 </clr-button-group>
 ```

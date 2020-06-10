@@ -10,8 +10,8 @@ Applications are responsible for any content inside of the Accordion that may be
 
 The following general guidelines apply to the design and development of the Accordion.
 
-* Generic
-* Content specific
-* Form
-* Interactive
-* Container
+- Generic
+- Content specific
+- Form
+- Interactive
+- Container

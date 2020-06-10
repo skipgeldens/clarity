@@ -4,8 +4,8 @@ title: Overview
 
 # Signposts
 
-* [Design Guidelines](/documentation/signposts#top)
-* [Code & Examples](/documentation/signposts#examples)
+- [Design Guidelines](/documentation/signposts#top)
+- [Code & Examples](/documentation/signposts#examples)
 
 ##### The signpost is a convenient, lightweight way to show contextual help of information without taking the user out of the current context.
 
@@ -19,16 +19,16 @@ A signpost displays contextual help or information in a popover dialog. Like a t
 
 ##### Size
 
-* Min-width 216px; Min-height 84px
-* Max-width 360px; Max-height 504px
+- Min-width 216px; Min-height 84px
+- Max-width 360px; Max-height 504px
 
 ### Usage
 
 Signposts should be used when you want to show a small amount of contextual help of information without taking the user out of the current context. Use sparingly as a supplemental element and not as a primary method of adding detail.
 
-* When the amount of content won't fit in a tooltip
-* When you want to include a header, image or text/image links in the content
-* When the information presented needs to stay in view at length (Unlike tooltips, signposts stay in view until the user interacts with another element)
+- When the amount of content won't fit in a tooltip
+- When you want to include a header, image or text/image links in the content
+- When the information presented needs to stay in view at length (Unlike tooltips, signposts stay in view until the user interacts with another element)
 
 ### Interaction
 
@@ -52,11 +52,11 @@ In tables, the icons may be aligned in a column
 
 #### Recommendations
 
-* The popover should not be so large that it dominates the screen
-* Make sure that the popover doesn't obstruct other important information on the screen
-* With the exception of text/image links, don't insert any actionable components, such as buttons, in the dialog
-* Don't rely on signposts as a primary method of displaying additional information - i.e. as a way to save space on a page
-* Use sparingly as a device to add immediate, relevant information
+- The popover should not be so large that it dominates the screen
+- Make sure that the popover doesn't obstruct other important information on the screen
+- With the exception of text/image links, don't insert any actionable components, such as buttons, in the dialog
+- Don't rely on signposts as a primary method of displaying additional information - i.e. as a way to save space on a page
+- Use sparingly as a device to add immediate, relevant information
 
 ### Code & Examples
 
@@ -70,25 +70,25 @@ Info
 
 ```html
 <clr-signpost>
-    <clr-signpost-content *clrIfOpen>
-        <h3>Default Signpost</h3>
-        <p>Position: <code class="clr-code">right-middle</code></p>
-    </clr-signpost-content>
+  <clr-signpost-content *clrIfOpen>
+    <h3>Default Signpost</h3>
+    <p>Position: <code class="clr-code">right-middle</code></p>
+  </clr-signpost-content>
 </clr-signpost>
 ```
 
 Signposts should be used when you want to show a small amount of contextual help of information without taking the user out of the current context. Use sparingly as a supplemental element and not as a primary method of adding detail. Info
 
 ```html
-<p>Signposts should be used when you want to show a small amount of contextual help
-    of information without taking the user out of the current context.
-     Use sparingly as a supplemental element and not as a primary method of adding detail.
-    <clr-signpost>
-        <clr-signpost-content *clrIfOpen="openState">
-            <h3 style="margin-top: 0">Inline signpost</h3>
-            <p>Position: <code class="clr-code">right-middle</code></p>
-        </clr-signpost-content>
-    </clr-signpost>
+<p>
+  Signposts should be used when you want to show a small amount of contextual help of information without taking the
+  user out of the current context. Use sparingly as a supplemental element and not as a primary method of adding detail.
+  <clr-signpost>
+    <clr-signpost-content *clrIfOpen="openState">
+      <h3 style="margin-top: 0">Inline signpost</h3>
+      <p>Position: <code class="clr-code">right-middle</code></p>
+    </clr-signpost-content>
+  </clr-signpost>
 </p>
 ```
 
@@ -109,10 +109,10 @@ export class MyClass {
 
 There are twelve signpost positions to help place the popover in an appropriate position when shown. You control the position and direction by declaring a position that orients your that Signpost content as you see fit. On a `clr-signpost-content` component add the input `[clrPosition]="'position'"` where position is one of the following:
 
-* `top-X:` the arrow will point down and the popover will be above the trigger in the X position where X = left, middle or right
-* `bottom-X:` the arrow will point up and the popover will be below the trigger in the X position where X = left, middle or right
-* `left-X:` the arrow will point right and the popover will be left of the trigger in the X position where X = top, middle or bottom
-* `right-X:` the arrow will point left and the popover will be right of the trigger in the X position where X = top, middle or bottom
+- `top-X:` the arrow will point down and the popover will be above the trigger in the X position where X = left, middle or right
+- `bottom-X:` the arrow will point up and the popover will be below the trigger in the X position where X = left, middle or right
+- `left-X:` the arrow will point right and the popover will be left of the trigger in the X position where X = top, middle or bottom
+- `right-X:` the arrow will point left and the popover will be right of the trigger in the X position where X = top, middle or bottom
 
 Select a position:
 
@@ -164,49 +164,44 @@ Button Link
 
 ```html
 <div class="signpost-triggers-wrapper">
-    <div class="signpost-trigger-demo">
-        <div class="signpost-item">
-            <h6>Clarity Icon</h6>
-            <clr-signpost>
-                <clr-icon shape="avatar"
-                          class="is-solid has-badge-info"
-                          clrSignpostTrigger>
-                </clr-icon>
-                <clr-signpost-content [clrPosition]="'bottom-middle'" *clrIfOpen>
-                    Lorem ipsum...
-                </clr-signpost-content>
-            </clr-signpost>
-        </div>
-        <div class="signpost-item">
-            <h6>Button Link</h6>
-            <div class="trigger-item">
-                <clr-signpost>
-                    <button class="btn btn-link"
-                            clrSignpostTrigger>
-                                Button Link Trigger
-                    </button>
-                    <clr-signpost-content [clrPosition]="'top-middle'" *clrIfOpen>
-                        Lorem ipsum...
-                    </clr-signpost-content>
-                </clr-signpost>
-            </div>
-        </div>
-        <div class="signpost-item">
-            <h6>Button Link w/ Clarity Icon</h6>
-            <div class="trigger-item">
-                <clr-signpost>
-                    <button class="btn btn-link"
-                            clrSignpostTrigger>
-                                Button Link
-                                <clr-icon shape="help-info"></clr-icon>
-                    </button>
-                    <clr-signpost-content [clrPosition]="'bottom-middle'" *clrIfOpen>
-                        Lorem ipsum...
-                    </clr-signpost-content>
-                </clr-signpost>
-            </div>
-        </div>
+  <div class="signpost-trigger-demo">
+    <div class="signpost-item">
+      <h6>Clarity Icon</h6>
+      <clr-signpost>
+        <clr-icon shape="avatar" class="is-solid has-badge-info" clrSignpostTrigger> </clr-icon>
+        <clr-signpost-content [clrPosition]="'bottom-middle'" *clrIfOpen>
+          Lorem ipsum...
+        </clr-signpost-content>
+      </clr-signpost>
     </div>
+    <div class="signpost-item">
+      <h6>Button Link</h6>
+      <div class="trigger-item">
+        <clr-signpost>
+          <button class="btn btn-link" clrSignpostTrigger>
+            Button Link Trigger
+          </button>
+          <clr-signpost-content [clrPosition]="'top-middle'" *clrIfOpen>
+            Lorem ipsum...
+          </clr-signpost-content>
+        </clr-signpost>
+      </div>
+    </div>
+    <div class="signpost-item">
+      <h6>Button Link w/ Clarity Icon</h6>
+      <div class="trigger-item">
+        <clr-signpost>
+          <button class="btn btn-link" clrSignpostTrigger>
+            Button Link
+            <clr-icon shape="help-info"></clr-icon>
+          </button>
+          <clr-signpost-content [clrPosition]="'bottom-middle'" *clrIfOpen>
+            Lorem ipsum...
+          </clr-signpost-content>
+        </clr-signpost>
+      </div>
+    </div>
+  </div>
 </div>
 ```
 

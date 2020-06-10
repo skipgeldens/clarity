@@ -6,8 +6,8 @@ title: Overview
 
 ![HTML5](assets/images/bugs/badge_html5.svg 'HTML5')![CSS3](assets/images/bugs/badge_css3.svg 'CSS3')
 
-* [Examples & Code](/documentation/toggle-switches#top)
-* [Design Guidelines](/documentation/toggle-switches#guidelines)
+- [Examples & Code](/documentation/toggle-switches#top)
+- [Design Guidelines](/documentation/toggle-switches#guidelines)
 
 ##### With toggle switches, users can select the on or off state of an option.
 
@@ -135,7 +135,7 @@ My choice
 <div class="clr-form-control">
   <div class="clr-control-container">
     <div class="clr-toggle-wrapper">
-      <input type="checkbox" id="toggle1" name="toggle-basic" value="option1" class="clr-toggle">
+      <input type="checkbox" id="toggle1" name="toggle-basic" value="option1" class="clr-toggle" />
       <label for="toggle1">My choice</label>
     </div>
   </div>
@@ -161,15 +161,15 @@ Helper Text
   <label class="clr-control-label">Full toggle switch</label>
   <div class="clr-control-container">
     <div class="clr-toggle-wrapper">
-      <input type="checkbox" id="toggle1" name="toggle-full" value="option1" class="clr-toggle">
+      <input type="checkbox" id="toggle1" name="toggle-full" value="option1" class="clr-toggle" />
       <label for="toggle1" class="clr-control-label">option 1</label>
     </div>
     <div class="clr-toggle-wrapper">
-      <input type="checkbox" id="toggle2" name="toggle-full" value="option2" class="clr-toggle">
+      <input type="checkbox" id="toggle2" name="toggle-full" value="option2" class="clr-toggle" />
       <label for="toggle2" class="clr-control-label">option 2</label>
     </div>
     <div class="clr-toggle-wrapper">
-      <input type="checkbox" id="toggle3" name="toggle-full" value="option3" class="clr-toggle">
+      <input type="checkbox" id="toggle3" name="toggle-full" value="option3" class="clr-toggle" />
       <label for="toggle3" class="clr-control-label">option 3</label>
     </div>
     <div class="clr-subtext-wrapper">
@@ -199,15 +199,15 @@ Error message
   <label class="clr-control-label">Basic toggle switch</label>
   <div class="clr-control-container clr-error">
     <div class="clr-toggle-wrapper">
-      <input type="checkbox" id="toggle1" name="toggle-error" value="option1" class="clr-toggle">
+      <input type="checkbox" id="toggle1" name="toggle-error" value="option1" class="clr-toggle" />
       <label for="toggle1" class="clr-control-label">option 1</label>
     </div>
     <div class="clr-toggle-wrapper">
-      <input type="checkbox" id="toggle2" name="toggle-error" value="option2" class="clr-toggle">
+      <input type="checkbox" id="toggle2" name="toggle-error" value="option2" class="clr-toggle" />
       <label for="toggle2" class="clr-control-label">option 2</label>
     </div>
     <div class="clr-toggle-wrapper">
-      <input type="checkbox" id="toggle3" name="toggle-error" value="option3" class="clr-toggle">
+      <input type="checkbox" id="toggle3" name="toggle-error" value="option3" class="clr-toggle" />
       <label for="toggle3" class="clr-control-label">option 3</label>
     </div>
     <div class="clr-subtext-wrapper">
@@ -239,15 +239,15 @@ Helper text
   <label class="clr-control-label">Inline toggle switches example</label>
   <div class="clr-control-container clr-control-inline">
     <div class="clr-toggle-wrapper">
-      <input type="checkbox" id="toggle1" name="toggle-full" value="option1" class="clr-toggle">
+      <input type="checkbox" id="toggle1" name="toggle-full" value="option1" class="clr-toggle" />
       <label for="toggle1" class="clr-control-label">option 1</label>
     </div>
     <div class="clr-toggle-wrapper">
-      <input type="checkbox" id="toggle2" name="toggle-full" value="option2" class="clr-toggle">
+      <input type="checkbox" id="toggle2" name="toggle-full" value="option2" class="clr-toggle" />
       <label for="toggle2" class="clr-control-label">option 2</label>
     </div>
     <div class="clr-toggle-wrapper">
-      <input type="checkbox" id="toggle3" name="toggle-full" value="option3" class="clr-toggle">
+      <input type="checkbox" id="toggle3" name="toggle-full" value="option3" class="clr-toggle" />
       <label for="toggle3" class="clr-control-label">option 3</label>
     </div>
     <div class="clr-subtext-wrapper">
@@ -277,15 +277,15 @@ Helper text
   <label class="clr-control-label">Disabled toggle switches example</label>
   <div class="clr-control-container">
     <div class="clr-toggle-wrapper">
-      <input type="checkbox" id="toggle1" name="toggle-disabled" value="option1" class="clr-toggle" disabled>
+      <input type="checkbox" id="toggle1" name="toggle-disabled" value="option1" class="clr-toggle" disabled />
       <label for="toggle1" class="clr-control-label">option 1</label>
     </div>
     <div class="clr-toggle-wrapper">
-      <input type="checkbox" id="toggle2" name="toggle-disabled" value="option2" class="clr-toggle" disabled>
+      <input type="checkbox" id="toggle2" name="toggle-disabled" value="option2" class="clr-toggle" disabled />
       <label for="toggle2" class="clr-control-label">option 2</label>
     </div>
     <div class="clr-toggle-wrapper">
-      <input type="checkbox" id="toggle3" name="toggle-disabled" value="option3" class="clr-toggle" disabled>
+      <input type="checkbox" id="toggle3" name="toggle-disabled" value="option3" class="clr-toggle" disabled />
       <label for="toggle3" class="clr-control-label">option 3</label>
     </div>
     <div class="clr-subtext-wrapper">

@@ -6,8 +6,8 @@ title: Overview
 
 ![HTML5](assets/images/bugs/badge_html5.svg 'HTML5')![CSS3](assets/images/bugs/badge_css3.svg 'CSS3')![Angular](assets/images/bugs/badge_ng.svg 'Angular')
 
-* [Examples & Code](/documentation/checkboxes#top)
-* [Design Guidelines](/documentation/checkboxes#guidelines)
+- [Examples & Code](/documentation/checkboxes#top)
+- [Design Guidelines](/documentation/checkboxes#guidelines)
 
 ##### With checkboxes, users can select multiple options in a list of options.
 
@@ -141,7 +141,15 @@ Reset indeterminate state
 <clr-checkbox-container>
   <label>Indeterminate checkbox example</label>
   <clr-checkbox-wrapper>
-    <input type="checkbox" clrCheckbox name="test6" value="option1" (change)="indeterminateState = false" [(ngModel)]="options.option1" [indeterminate]="indeterminateState" />
+    <input
+      type="checkbox"
+      clrCheckbox
+      name="test6"
+      value="option1"
+      (change)="indeterminateState = false"
+      [(ngModel)]="options.option1"
+      [indeterminate]="indeterminateState"
+    />
     <label>Option 1</label>
   </clr-checkbox-wrapper>
   <clr-control-helper>Helper text</clr-control-helper>
@@ -164,7 +172,7 @@ My Choice
 <div class="clr-form-control">
   <div class="clr-control-container ">
     <div class="clr-checkbox-wrapper">
-      <input clrcheckbox="" name="test2" type="checkbox" value="option1" id="clr-form-control-1">
+      <input clrcheckbox="" name="test2" type="checkbox" value="option1" id="clr-form-control-1" />
       <label class="clr-control-label" for="clr-form-control-1">My Choice</label>
     </div>
   </div>
@@ -190,15 +198,15 @@ Helper Text
   <label class="clr-control-label">Full checkbox</label>
   <div class="clr-control-container">
     <div class="clr-checkbox-wrapper">
-      <input type="checkbox" id="vertical-checkbox1" name="checkbox-full" value="option1" class="clr-checkbox">
+      <input type="checkbox" id="vertical-checkbox1" name="checkbox-full" value="option1" class="clr-checkbox" />
       <label for="vertical-checkbox1" class="clr-control-label">option 1</label>
     </div>
     <div class="clr-checkbox-wrapper">
-      <input type="checkbox" id="vertical-checkbox2" name="checkbox-full" value="option2" class="clr-checkbox">
+      <input type="checkbox" id="vertical-checkbox2" name="checkbox-full" value="option2" class="clr-checkbox" />
       <label for="vertical-checkbox2" class="clr-control-label">option 2</label>
     </div>
     <div class="clr-checkbox-wrapper">
-      <input type="checkbox" id="vertical-checkbox3" name="checkbox-full" value="option3" class="clr-checkbox">
+      <input type="checkbox" id="vertical-checkbox3" name="checkbox-full" value="option3" class="clr-checkbox" />
       <label for="vertical-checkbox3" class="clr-control-label">option 3</label>
     </div>
     <div class="clr-subtext-wrapper">
@@ -228,15 +236,15 @@ Error message
   <label class="clr-control-label">Basic checkbox</label>
   <div class="clr-control-container clr-error">
     <div class="clr-checkbox-wrapper">
-      <input type="checkbox" id="vertical-checkbox1" name="checkbox-error" value="option1" class="clr-checkbox">
+      <input type="checkbox" id="vertical-checkbox1" name="checkbox-error" value="option1" class="clr-checkbox" />
       <label for="vertical-checkbox1" class="clr-control-label">option 1</label>
     </div>
     <div class="clr-checkbox-wrapper">
-      <input type="checkbox" id="vertical-checkbox2" name="checkbox-error" value="option2" class="clr-checkbox">
+      <input type="checkbox" id="vertical-checkbox2" name="checkbox-error" value="option2" class="clr-checkbox" />
       <label for="vertical-checkbox2" class="clr-control-label">option 2</label>
     </div>
     <div class="clr-checkbox-wrapper">
-      <input type="checkbox" id="vertical-checkbox3" name="checkbox-error" value="option3" class="clr-checkbox">
+      <input type="checkbox" id="vertical-checkbox3" name="checkbox-error" value="option3" class="clr-checkbox" />
       <label for="vertical-checkbox3" class="clr-control-label">option 3</label>
     </div>
     <div class="clr-subtext-wrapper">
@@ -268,15 +276,15 @@ Helper text
   <label class="clr-control-label">Inline checkbox example</label>
   <div class="clr-control-container clr-control-inline">
     <div class="clr-checkbox-wrapper">
-      <input type="checkbox" id="vertical-checkbox1" name="checkbox-full" value="option1" class="clr-checkbox">
+      <input type="checkbox" id="vertical-checkbox1" name="checkbox-full" value="option1" class="clr-checkbox" />
       <label for="vertical-checkbox1" class="clr-control-label">option 1</label>
     </div>
     <div class="clr-checkbox-wrapper">
-      <input type="checkbox" id="vertical-checkbox2" name="checkbox-full" value="option2" class="clr-checkbox">
+      <input type="checkbox" id="vertical-checkbox2" name="checkbox-full" value="option2" class="clr-checkbox" />
       <label for="vertical-checkbox2" class="clr-control-label">option 2</label>
     </div>
     <div class="clr-checkbox-wrapper">
-      <input type="checkbox" id="vertical-checkbox3" name="checkbox-full" value="option3" class="clr-checkbox">
+      <input type="checkbox" id="vertical-checkbox3" name="checkbox-full" value="option3" class="clr-checkbox" />
       <label for="vertical-checkbox3" class="clr-control-label">option 3</label>
     </div>
     <div class="clr-subtext-wrapper">
@@ -306,15 +314,15 @@ Helper text
   <label class="clr-control-label">Disabled checkbox example</label>
   <div class="clr-control-container">
     <div class="clr-checkbox-wrapper">
-      <input type="checkbox" id="checkbox10" name="checkbox-disabled" value="option1" class="clr-checkbox" disabled>
+      <input type="checkbox" id="checkbox10" name="checkbox-disabled" value="option1" class="clr-checkbox" disabled />
       <label for="checkbox10" class="clr-control-label">option 1</label>
     </div>
     <div class="clr-checkbox-wrapper">
-      <input type="checkbox" id="checkbox11" name="checkbox-disabled" value="option2" class="clr-checkbox" disabled>
+      <input type="checkbox" id="checkbox11" name="checkbox-disabled" value="option2" class="clr-checkbox" disabled />
       <label for="checkbox11" class="clr-control-label">option 2</label>
     </div>
     <div class="clr-checkbox-wrapper">
-      <input type="checkbox" id="checkbox12" name="checkbox-disabled" value="option3" class="clr-checkbox" disabled>
+      <input type="checkbox" id="checkbox12" name="checkbox-disabled" value="option3" class="clr-checkbox" disabled />
       <label for="checkbox12" class="clr-control-label">option 3</label>
     </div>
     <div class="clr-subtext-wrapper">
@@ -329,8 +337,8 @@ Helper text
 
 Use a checkbox for yes or no choices, for example "Remember me" on the [login page](/documentation/login). For on and off options, use a [toggle switch](/documentation/toggle-switches).
 
-* Checkboxes are best for seven or fewer options.
-* For readability, keep the checkbox label to a single line.
+- Checkboxes are best for seven or fewer options.
+- For readability, keep the checkbox label to a single line.
 
 ## Accessibility
 

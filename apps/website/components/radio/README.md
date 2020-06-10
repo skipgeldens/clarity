@@ -6,8 +6,8 @@ title: Overview
 
 ![HTML5](assets/images/bugs/badge_html5.svg 'HTML5')![CSS3](assets/images/bugs/badge_css3.svg 'CSS3')
 
-* [Examples & Code](/documentation/radio#top)
-* [Design Guidelines](/documentation/radio#guidelines)
+- [Examples & Code](/documentation/radio#top)
+- [Design Guidelines](/documentation/radio#guidelines)
 
 ##### Using radio buttons, users can select one option from a group of options.
 
@@ -131,7 +131,7 @@ My choice
 
 ```html
 <div class="clr-radio-wrapper">
-  <input type="radio" id="radio1" name="radio-basic" value="option1" class="clr-radio">
+  <input type="radio" id="radio1" name="radio-basic" value="option1" class="clr-radio" />
   <label for="radio1">My choice</label>
 </div>
 ```
@@ -155,15 +155,15 @@ Helper Text
   <label class="clr-control-label">Full radio</label>
   <div class="clr-control-container">
     <div class="clr-radio-wrapper">
-      <input type="radio" id="vertical-radio1" name="radio-full" value="option1" class="clr-radio">
+      <input type="radio" id="vertical-radio1" name="radio-full" value="option1" class="clr-radio" />
       <label for="vertical-radio1" class="clr-control-label">option 1</label>
     </div>
     <div class="clr-radio-wrapper">
-      <input type="radio" id="vertical-radio2" name="radio-full" value="option2" class="clr-radio">
+      <input type="radio" id="vertical-radio2" name="radio-full" value="option2" class="clr-radio" />
       <label for="vertical-radio2" class="clr-control-label">option 2</label>
     </div>
     <div class="clr-radio-wrapper">
-      <input type="radio" id="vertical-radio3" name="radio-full" value="option3" class="clr-radio">
+      <input type="radio" id="vertical-radio3" name="radio-full" value="option3" class="clr-radio" />
       <label for="vertical-radio3" class="clr-control-label">option 3</label>
     </div>
     <div class="clr-subtext-wrapper">
@@ -193,15 +193,15 @@ Error message
   <label class="clr-control-label">Basic radio</label>
   <div class="clr-control-container clr-error">
     <div class="clr-radio-wrapper">
-      <input type="radio" id="vertical-radio1" name="radio-error" value="option1" class="clr-radio">
+      <input type="radio" id="vertical-radio1" name="radio-error" value="option1" class="clr-radio" />
       <label for="vertical-radio1" class="clr-control-label">option 1</label>
     </div>
     <div class="clr-radio-wrapper">
-      <input type="radio" id="vertical-radio2" name="radio-error" value="option2" class="clr-radio">
+      <input type="radio" id="vertical-radio2" name="radio-error" value="option2" class="clr-radio" />
       <label for="vertical-radio2" class="clr-control-label">option 2</label>
     </div>
     <div class="clr-radio-wrapper">
-      <input type="radio" id="vertical-radio3" name="radio-error" value="option3" class="clr-radio">
+      <input type="radio" id="vertical-radio3" name="radio-error" value="option3" class="clr-radio" />
       <label for="vertical-radio3" class="clr-control-label">option 3</label>
     </div>
     <div class="clr-subtext-wrapper">
@@ -233,15 +233,15 @@ Helper text
   <label class="clr-control-label">Inline radio example</label>
   <div class="clr-control-container clr-control-inline">
     <div class="clr-radio-wrapper">
-      <input type="radio" id="vertical-radio1" name="radio-full" value="option1" class="clr-radio">
+      <input type="radio" id="vertical-radio1" name="radio-full" value="option1" class="clr-radio" />
       <label for="vertical-radio1" class="clr-control-label">option 1</label>
     </div>
     <div class="clr-radio-wrapper">
-      <input type="radio" id="vertical-radio2" name="radio-full" value="option2" class="clr-radio">
+      <input type="radio" id="vertical-radio2" name="radio-full" value="option2" class="clr-radio" />
       <label for="vertical-radio2" class="clr-control-label">option 2</label>
     </div>
     <div class="clr-radio-wrapper">
-      <input type="radio" id="vertical-radio3" name="radio-full" value="option3" class="clr-radio">
+      <input type="radio" id="vertical-radio3" name="radio-full" value="option3" class="clr-radio" />
       <label for="vertical-radio3" class="clr-control-label">option 3</label>
     </div>
     <div class="clr-subtext-wrapper">
@@ -271,15 +271,15 @@ Helper text
   <label class="clr-control-label">Disabled radio example</label>
   <div class="clr-control-container">
     <div class="radio">
-      <input type="radio" id="radio10" name="radio-error" value="option1" class="clr-radio" disabled>
+      <input type="radio" id="radio10" name="radio-error" value="option1" class="clr-radio" disabled />
       <label for="radio10" class="clr-control-label">option 1</label>
     </div>
     <div class="clr-radio-wrapper">
-      <input type="radio" id="radio11" name="radio-error" value="option2" class="clr-radio" disabled>
+      <input type="radio" id="radio11" name="radio-error" value="option2" class="clr-radio" disabled />
       <label for="radio11" class="clr-control-label">option 2</label>
     </div>
     <div class="clr-radio-wrapper">
-      <input type="radio" id="radio12" name="radio-error" value="option3" class="clr-radio" disabled>
+      <input type="radio" id="radio12" name="radio-error" value="option3" class="clr-radio" disabled />
       <label for="radio12" class="clr-control-label">option 3</label>
     </div>
     <div class="clr-subtext-wrapper">
@@ -294,8 +294,8 @@ Helper text
 
 Use radio buttons when you want users to see all available options and the list of options is small. For mutually exclusive options, consider a [checkbox](/documentation/checkboxes) or [toggle switch](/documentation/toggle-switches).
 
-* Radio buttons are best for six or fewer options.
-* For more than six options, consider a [select box](/documentation/select-boxes), which prompts users to disclose the options.
+- Radio buttons are best for six or fewer options.
+- For more than six options, consider a [select box](/documentation/select-boxes), which prompts users to disclose the options.
 
 ## Accessibility
 

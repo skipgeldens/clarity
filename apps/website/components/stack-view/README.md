@@ -6,8 +6,8 @@ title: Overview
 
 ![HTML5](assets/images/bugs/badge_html5.svg 'HTML5')![CSS3](assets/images/bugs/badge_css3.svg 'CSS3')![Angular](assets/images/bugs/badge_ng.svg 'Angular')
 
-* [Examples & Code](/documentation/stack-view#top)
-* [Design Guidelines](/documentation/stack-view#guidelines)
+- [Examples & Code](/documentation/stack-view#top)
+- [Design Guidelines](/documentation/stack-view#guidelines)
 
 ##### A stack view displays key/value pairs, which users can expand to show more detail.
 
@@ -43,39 +43,39 @@ Content 3
 
 ```html
 <h4 class="stack-header">
-    <span class="stack-title">Static stack view</span>
-    <span class="stack-actions">
-        <button class="stack-action btn btn-sm btn-link" type="button">Edit</button>
-    </span>
+  <span class="stack-title">Static stack view</span>
+  <span class="stack-actions">
+    <button class="stack-action btn btn-sm btn-link" type="button">Edit</button>
+  </span>
 </h4>
 <dl class="stack-view">
-    <div class="stack-block">
-        <dt class="stack-block-label" aria-level="1" aria-posinset="1" aria-setsize="3">Label 1</dt>
-        <dd class="stack-block-content">Content 1</dd>
+  <div class="stack-block">
+    <dt class="stack-block-label" aria-level="1" aria-posinset="1" aria-setsize="3">Label 1</dt>
+    <dd class="stack-block-content">Content 1</dd>
+  </div>
+  <div class="stack-block stack-block-expandable stack-block-expanded">
+    <dt class="stack-block-label" aria-level="1" aria-posinset="2" aria-setsize="3">Label 2</dt>
+    <dd class="stack-block-content">Content 2</dd>
+    <div class="stack-children">
+      <div class="stack-block">
+        <dt class="stack-block-label" aria-level="2" aria-posinset="1" aria-setsize="3">Sub-label 1</dt>
+        <dd class="stack-block-content">Sub-content 1</dd>
+      </div>
+      <div class="stack-block">
+        <dt class="stack-block-label" aria-level="2" aria-posinset="2" aria-setsize="3">Sub-label 2</dt>
+        <dd class="stack-block-content">Sub-content 2</dd>
+      </div>
+      <div class="stack-block">
+        <dt class="stack-block-label" aria-level="2" aria-posinset="3" aria-setsize="3">Sub-label 3</dt>
+        <dd class="stack-block-content">Sub-content 3</dd>
+      </div>
     </div>
-    <div class="stack-block stack-block-expandable stack-block-expanded">
-        <dt class="stack-block-label" aria-level="1" aria-posinset="2" aria-setsize="3">Label 2</dt>
-        <dd class="stack-block-content">Content 2</dd>
-        <div class="stack-children">
-            <div class="stack-block">
-                <dt class="stack-block-label" aria-level="2" aria-posinset="1" aria-setsize="3">Sub-label 1</dt>
-                <dd class="stack-block-content">Sub-content 1</dd>
-            </div>
-            <div class="stack-block">
-                <dt class="stack-block-label" aria-level="2" aria-posinset="2" aria-setsize="3">Sub-label 2</dt>
-                <dd class="stack-block-content">Sub-content 2</dd>
-            </div>
-            <div class="stack-block">
-                <dt class="stack-block-label" aria-level="2" aria-posinset="3" aria-setsize="3">Sub-label 3</dt>
-                <dd class="stack-block-content">Sub-content 3</dd>
-            </div>
-        </div>
-    </div>
-    <div class="stack-block stack-block-expandable">
-        <dt class="stack-block-label" aria-level="1" aria-posinset="3" aria-setsize="3">Label 3</dt>
-        <dd class="stack-block-content">Content 3</dd>
-        <div class="stack-children"></div>
-    </div>
+  </div>
+  <div class="stack-block stack-block-expandable">
+    <dt class="stack-block-label" aria-level="1" aria-posinset="3" aria-setsize="3">Label 3</dt>
+    <dd class="stack-block-content">Content 3</dd>
+    <div class="stack-children"></div>
+  </div>
 </dl>
 ```
 
@@ -121,42 +121,42 @@ Sub-content 5
 
 ```html
 <clr-stack-view>
-    <clr-stack-header>Angular stack view</clr-stack-header>
+  <clr-stack-header>Angular stack view</clr-stack-header>
 
-    <clr-stack-block [clrStackViewLevel]="1" [clrStackViewSetsize]="3" [clrStackViewPosinset]="1">
-        <clr-stack-label>Label 1</clr-stack-label>
-        <clr-stack-content>Content 1</clr-stack-content>
-    </clr-stack-block>
+  <clr-stack-block [clrStackViewLevel]="1" [clrStackViewSetsize]="3" [clrStackViewPosinset]="1">
+    <clr-stack-label>Label 1</clr-stack-label>
+    <clr-stack-content>Content 1</clr-stack-content>
+  </clr-stack-block>
 
-    <clr-stack-block [clrStackViewLevel]="1" [clrStackViewSetsize]="3" [clrStackViewPosinset]="2">
-        <clr-stack-label>Label 2</clr-stack-label>
-        <clr-stack-content>Content 2</clr-stack-content>
-        <clr-stack-block [clrStackViewLevel]="2" [clrStackViewSetsize]="3" [clrStackViewPosinset]="1">
-            <clr-stack-label>Sub-label 1</clr-stack-label>
-            <clr-stack-content>Sub-content 1</clr-stack-content>
-        </clr-stack-block>
-        <clr-stack-block [clrStackViewLevel]="2" [clrStackViewSetsize]="3" [clrStackViewPosinset]="2">
-            <clr-stack-label>Sub-label 2</clr-stack-label>
-            <clr-stack-content>Sub-content 2</clr-stack-content>
-        </clr-stack-block>
-        <clr-stack-block [clrStackViewLevel]="2" [clrStackViewSetsize]="3" [clrStackViewPosinset]="3">
-            <clr-stack-label>Sub-label 3</clr-stack-label>
-            <clr-stack-content>Sub-content 3</clr-stack-content>
-        </clr-stack-block>
+  <clr-stack-block [clrStackViewLevel]="1" [clrStackViewSetsize]="3" [clrStackViewPosinset]="2">
+    <clr-stack-label>Label 2</clr-stack-label>
+    <clr-stack-content>Content 2</clr-stack-content>
+    <clr-stack-block [clrStackViewLevel]="2" [clrStackViewSetsize]="3" [clrStackViewPosinset]="1">
+      <clr-stack-label>Sub-label 1</clr-stack-label>
+      <clr-stack-content>Sub-content 1</clr-stack-content>
     </clr-stack-block>
+    <clr-stack-block [clrStackViewLevel]="2" [clrStackViewSetsize]="3" [clrStackViewPosinset]="2">
+      <clr-stack-label>Sub-label 2</clr-stack-label>
+      <clr-stack-content>Sub-content 2</clr-stack-content>
+    </clr-stack-block>
+    <clr-stack-block [clrStackViewLevel]="2" [clrStackViewSetsize]="3" [clrStackViewPosinset]="3">
+      <clr-stack-label>Sub-label 3</clr-stack-label>
+      <clr-stack-content>Sub-content 3</clr-stack-content>
+    </clr-stack-block>
+  </clr-stack-block>
 
-    <clr-stack-block [clrStackViewLevel]="1" [clrStackViewSetsize]="3" [clrStackViewPosinset]="3">
-        <clr-stack-label>Label 3</clr-stack-label>
-        <clr-stack-content>Content 3</clr-stack-content>
-        <clr-stack-block>
-            <clr-stack-label>Sub-label 4</clr-stack-label>
-            <clr-stack-content>Sub-content 4</clr-stack-content>
-        </clr-stack-block>
-        <clr-stack-block>
-            <clr-stack-label>Sub-label 5</clr-stack-label>
-            <clr-stack-content>Sub-content 5</clr-stack-content>
-        </clr-stack-block>
+  <clr-stack-block [clrStackViewLevel]="1" [clrStackViewSetsize]="3" [clrStackViewPosinset]="3">
+    <clr-stack-label>Label 3</clr-stack-label>
+    <clr-stack-content>Content 3</clr-stack-content>
+    <clr-stack-block>
+      <clr-stack-label>Sub-label 4</clr-stack-label>
+      <clr-stack-content>Sub-content 4</clr-stack-content>
     </clr-stack-block>
+    <clr-stack-block>
+      <clr-stack-label>Sub-label 5</clr-stack-label>
+      <clr-stack-content>Sub-content 5</clr-stack-content>
+    </clr-stack-block>
+  </clr-stack-block>
 </clr-stack-view>
 ```
 
@@ -192,69 +192,66 @@ Content 3
 
 ```html
 <clr-stack-view>
-    <clr-stack-header>
-        Modal editor
-        <button
-            class="stack-action btn btn-sm btn-link"
-            (click)="editModal = true"
-            type="button">Edit</button>
-    </clr-stack-header>
+  <clr-stack-header>
+    Modal editor
+    <button class="stack-action btn btn-sm btn-link" (click)="editModal = true" type="button">Edit</button>
+  </clr-stack-header>
+
+  <clr-stack-block
+    *ngFor="let block of blocks; let i = index"
+    [clrStackViewLevel]="1"
+    [clrStackViewSetsize]="blocks.length"
+    [clrStackViewPosinset]="i"
+  >
+    <clr-stack-label>{{block.title}}</clr-stack-label>
+    <clr-stack-content>{{block.content}}</clr-stack-content>
 
     <clr-stack-block
-        *ngFor="let block of blocks; let i = index"
-        [clrStackViewLevel]="1"
-        [clrStackViewSetsize]="blocks.length"
-        [clrStackViewPosinset]="i"
-        >
-        <clr-stack-label>{{block.title}}</clr-stack-label>
-        <clr-stack-content>{{block.content}}</clr-stack-content>
-
-        <clr-stack-block
-            *ngFor="let child of block.children; let j = index"
-            [clrStackViewLevel]="2"
-            [clrStackViewSetsize]="block.children.length"
-            [clrStackViewPosinset]="j"
-            >
-            <clr-stack-label>{{child.title}}</clr-stack-label>
-            <clr-stack-content>{{child.content}}</clr-stack-content>
-        </clr-stack-block>
+      *ngFor="let child of block.children; let j = index"
+      [clrStackViewLevel]="2"
+      [clrStackViewSetsize]="block.children.length"
+      [clrStackViewPosinset]="j"
+    >
+      <clr-stack-label>{{child.title}}</clr-stack-label>
+      <clr-stack-content>{{child.content}}</clr-stack-content>
     </clr-stack-block>
+  </clr-stack-block>
 </clr-stack-view>
 
 <clr-modal [(clrModalOpen)]="editModal">
-    <h3 class="modal-title">Edit mode</h3>
-    <div class="modal-body">
-        <clr-stack-view>
-            <clr-stack-block
-                *ngFor="let block of blocks; let blockIndex = index"
-                [clrSbNotifyChange]="block.content!=='Content '+ (blockIndex)"
-                [clrStackViewLevel]="1"
-                [clrStackViewSetsize]="blocks.length"
-                [clrStackViewPosinset]="blockIndex + 1"
-                >
-                <clr-stack-label>{{block.title}}</clr-stack-label>
-                <clr-stack-content>
-                    <input type="text" [(ngModel)]="block.content" class="clr-input"/>
-                </clr-stack-content>
+  <h3 class="modal-title">Edit mode</h3>
+  <div class="modal-body">
+    <clr-stack-view>
+      <clr-stack-block
+        *ngFor="let block of blocks; let blockIndex = index"
+        [clrSbNotifyChange]="block.content!=='Content '+ (blockIndex)"
+        [clrStackViewLevel]="1"
+        [clrStackViewSetsize]="blocks.length"
+        [clrStackViewPosinset]="blockIndex + 1"
+      >
+        <clr-stack-label>{{block.title}}</clr-stack-label>
+        <clr-stack-content>
+          <input type="text" [(ngModel)]="block.content" class="clr-input" />
+        </clr-stack-content>
 
-                <clr-stack-block
-                    *ngFor="let child of block.children; let blockChildIndex = index"
-                    [clrSbNotifyChange]="child.content!=='Sub-content '+ (blockChildIndex)"
-                    [clrStackViewLevel]="2"
-                    [clrStackViewSetsize]="block.children.length"
-                    [clrStackViewPosinset]="blockChildIndex + 1"
-                    >
-                    <clr-stack-label>{{child.title}}</clr-stack-label>
-                    <clr-stack-content>
-                        <input type="text" [(ngModel)]="child.content" class="clr-input"/>
-                    </clr-stack-content>
-                </clr-stack-block>
-            </clr-stack-block>
-        </clr-stack-view>
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-primary" (click)="editModal = false">Done</button>
-    </div>
+        <clr-stack-block
+          *ngFor="let child of block.children; let blockChildIndex = index"
+          [clrSbNotifyChange]="child.content!=='Sub-content '+ (blockChildIndex)"
+          [clrStackViewLevel]="2"
+          [clrStackViewSetsize]="block.children.length"
+          [clrStackViewPosinset]="blockChildIndex + 1"
+        >
+          <clr-stack-label>{{child.title}}</clr-stack-label>
+          <clr-stack-content>
+            <input type="text" [(ngModel)]="child.content" class="clr-input" />
+          </clr-stack-content>
+        </clr-stack-block>
+      </clr-stack-block>
+    </clr-stack-view>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-primary" (click)="editModal = false">Done</button>
+  </div>
 </clr-modal>
 ```
 
@@ -278,43 +275,48 @@ Content 2
 
 ```html
 <clr-stack-view>
-    <clr-stack-header>
-        Lazily loaded children
-        <button class="stack-action btn btn-sm btn-link" (click)="resetChildren()" type="button">Reset</button>
-    </clr-stack-header>
+  <clr-stack-header>
+    Lazily loaded children
+    <button class="stack-action btn btn-sm btn-link" (click)="resetChildren()" type="button">Reset</button>
+  </clr-stack-header>
+
+  <clr-stack-block
+    #lazyBlock
+    [clrSbExpandable]="true"
+    (clrSbExpandedChange)="fetchChildren()"
+    [clrStackViewLevel]="1"
+    [clrStackViewSetsize]="2"
+    [clrStackViewPosinset]="1"
+  >
+    <clr-stack-label>Label 1</clr-stack-label>
+    <clr-stack-content>Content 1</clr-stack-content>
 
     <clr-stack-block
-      #lazyBlock
-      [clrSbExpandable]="true"
-      (clrSbExpandedChange)="fetchChildren()"
-      [clrStackViewLevel]="1"
-      [clrStackViewSetsize]="2"
+      *ngIf="children.length == 0"
+      [clrStackViewLevel]="2"
+      [clrStackViewSetsize]="0"
       [clrStackViewPosinset]="1"
-      >
-        <clr-stack-label>Label 1</clr-stack-label>
-        <clr-stack-content>Content 1</clr-stack-content>
-
-        <clr-stack-block *ngIf="children.length == 0" [clrStackViewLevel]="2" [clrStackViewSetsize]="0" [clrStackViewPosinset]="1">
-            <clr-spinner clrAssertive clrInline>
-              Loading...
-            </clr-spinner>
-        </clr-stack-block>
-
-        <clr-stack-block
-          *ngFor="let child of children; let i = index"
-          [clrStackViewLevel]="2"
-          [clrStackViewSetsize]="children.length"
-          [clrStackViewPosinset]="i + 1"
-          >
-            <clr-stack-label>{{child.title}}</clr-stack-label>
-            <clr-stack-content>{{child.content}}</clr-stack-content>
-        </clr-stack-block>
+    >
+      <clr-spinner clrAssertive clrInline>
+        Loading...
+      </clr-spinner>
     </clr-stack-block>
 
-    <clr-stack-block [clrStackViewLevel]="1" [clrStackViewSetsize]="2" [clrStackViewPosinset]="2">
-        <clr-stack-label>Label 2</clr-stack-label>
-        <clr-stack-content>Content 2</clr-stack-content>
+    <clr-stack-block
+      *ngFor="let child of children; let i = index"
+      [clrStackViewLevel]="2"
+      [clrStackViewSetsize]="children.length"
+      [clrStackViewPosinset]="i + 1"
+    >
+      <clr-stack-label>{{child.title}}</clr-stack-label>
+      <clr-stack-content>{{child.content}}</clr-stack-content>
     </clr-stack-block>
+  </clr-stack-block>
+
+  <clr-stack-block [clrStackViewLevel]="1" [clrStackViewSetsize]="2" [clrStackViewPosinset]="2">
+    <clr-stack-label>Label 2</clr-stack-label>
+    <clr-stack-content>Content 2</clr-stack-content>
+  </clr-stack-block>
 </clr-stack-view>
 ```
 
@@ -399,8 +401,8 @@ None
 
 Stack views are designed for use in the main content area and modals. Use a stack view when you want to:
 
-* Display related key/value pairs, for example, an object’s settings.
-* Progressively disclose data. This is useful when the set of key/value pairs is large or you want to enable users to reveal more complex or less frequently used data as necessary.
+- Display related key/value pairs, for example, an object’s settings.
+- Progressively disclose data. This is useful when the set of key/value pairs is large or you want to enable users to reveal more complex or less frequently used data as necessary.
 
 #### Enabling Value Editing
 
@@ -408,9 +410,9 @@ In this pattern, the component includes an Edit button on the top right, which o
 
 #### Labels
 
-* Provide terse labels that let users know what is under the label. Try to keep the label to one line.
-* Use noun phrases, sentence-style capitalization, and no ending punctuation.
-* Avoid using icons.
+- Provide terse labels that let users know what is under the label. Try to keep the label to one line.
+- Use noun phrases, sentence-style capitalization, and no ending punctuation.
+- Avoid using icons.
 
 #### Highlights and Horizontal lines
 

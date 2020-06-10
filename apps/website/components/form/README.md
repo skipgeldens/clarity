@@ -4,8 +4,8 @@ title: Overview
 
 # Forms
 
-* [Design Guidelines](/documentation/forms#top)
-* [Code & Examples](/documentation/forms#examples)
+- [Design Guidelines](/documentation/forms#top)
+- [Code & Examples](/documentation/forms#examples)
 
 ##### Forms are a grouping of input controls that allow a user to submit information to your application.
 
@@ -171,7 +171,7 @@ Then declare a form start by adding the `clrForm` directive to the form element.
 
 ```html
 <form clrForm>
-    ... form controls
+  ... form controls
 </form>
 ```
 
@@ -181,7 +181,7 @@ If you wish to have a different layout, then you can use the `clrLayout` directi
 
 ```html
 <form clrForm clrLayout="horizontal">
-    ... form controls
+  ... form controls
 </form>
 ```
 
@@ -191,14 +191,14 @@ When you start to fill in your form controls, each will should be wrapped in a c
 
 ```html
 <form clrForm>
-    <clr-input-container>
-        <label>Field 1 label</label>
-        <input clrInput type="text" [(ngModel)]="model" name="example" />
-    </clr-input-container>
-    <clr-input-container>
-        <label>Field 2 label</label>
-        <input clrInput type="text" [(ngModel)]="model" name="example" />
-    </clr-input-container>
+  <clr-input-container>
+    <label>Field 1 label</label>
+    <input clrInput type="text" [(ngModel)]="model" name="example" />
+  </clr-input-container>
+  <clr-input-container>
+    <label>Field 2 label</label>
+    <input clrInput type="text" [(ngModel)]="model" name="example" />
+  </clr-input-container>
 </form>
 ```
 
@@ -208,12 +208,12 @@ These Angular components also support built in helper text and validation with e
 
 ```html
 <form clrForm>
-    <clr-input-container>
-        <label>Field 1 label</label>
-        <input clrInput type="text" [(ngModel)]="model" name="example" required />
-        <clr-control-helper>Helper text that shows while it is pristine and valid</clr-control-helper>
-        <clr-control-error>Error message that appears after focus is lost and control is invalid</clr-control-error>
-    </clr-input-container>
+  <clr-input-container>
+    <label>Field 1 label</label>
+    <input clrInput type="text" [(ngModel)]="model" name="example" required />
+    <clr-control-helper>Helper text that shows while it is pristine and valid</clr-control-helper>
+    <clr-control-error>Error message that appears after focus is lost and control is invalid</clr-control-error>
+  </clr-input-container>
 </form>
 ```
 
@@ -225,21 +225,21 @@ For screen reader accessibility, forms with validation messages should provide a
 
 ```html
 <form clrForm>
-    <span class="clr-sr-only">Tabbing through form inputs will trigger validation messages to be read aloud.</span>
-    <clr-input-container>
-        <label>First name</label>
-        <input clrInput type="text" [(ngModel)]="firstName" name="firstName" required />
-        <clr-control-error>We need your first name for legal compliance</clr-control-error>
-    </clr-input-container>
-    <clr-input-container>
-        <label>Middle name (Optional)</label>
-        <input clrInput type="text" [(ngModel)]="midleName" name="midleName" />
-    </clr-input-container>
-    <clr-input-container>
-        <label>Last name</label>
-        <input clrInput type="text" [(ngModel)]="lastName" name="lastName" required />
-        <clr-control-error>We need your last name for legal compliance</clr-control-error>
-    </clr-input-container>
+  <span class="clr-sr-only">Tabbing through form inputs will trigger validation messages to be read aloud.</span>
+  <clr-input-container>
+    <label>First name</label>
+    <input clrInput type="text" [(ngModel)]="firstName" name="firstName" required />
+    <clr-control-error>We need your first name for legal compliance</clr-control-error>
+  </clr-input-container>
+  <clr-input-container>
+    <label>Middle name (Optional)</label>
+    <input clrInput type="text" [(ngModel)]="midleName" name="midleName" />
+  </clr-input-container>
+  <clr-input-container>
+    <label>Last name</label>
+    <input clrInput type="text" [(ngModel)]="lastName" name="lastName" required />
+    <clr-control-error>We need your last name for legal compliance</clr-control-error>
+  </clr-input-container>
 </form>
 ```
 
@@ -260,14 +260,14 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 @Component({
   template: `
     <form clrForm [formGroup]="exampleForm">
-        <clr-input-container>
-            <label>Sample Text</label>
-            <input clrInput formControlName="sample" />
-            <button class="btn btn-primary" type="submit" (click)="submit()">Submit</button>
-            <button class="btn" type="button" (click)="resetForm()">Reset</button>
-        </clr-input-container>
+      <clr-input-container>
+        <label>Sample Text</label>
+        <input clrInput formControlName="sample" />
+        <button class="btn btn-primary" type="submit" (click)="submit()">Submit</button>
+        <button class="btn" type="button" (click)="resetForm()">Reset</button>
+      </clr-input-container>
     </form>
-    `,
+  `,
 })
 export class ReactiveFormsDemo {
   exampleForm = new FormGroup({
@@ -293,12 +293,12 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 @Component({
   template: `
     <form clrForm [formGroup]="exampleForm">
-        <clr-input-container>
-            <input clrInput formControlName="sample" />
-            <button class="btn btn-primary" type="submit" (click)="submit()">Submit</button>
-        </clr-input-container>
+      <clr-input-container>
+        <input clrInput formControlName="sample" />
+        <button class="btn btn-primary" type="submit" (click)="submit()">Submit</button>
+      </clr-input-container>
     </form>
-    `,
+  `,
 })
 export class ReactiveFormsDemo {
   @ViewChild(ClrForm, { static: true })
@@ -324,11 +324,11 @@ You can use the `clrLabelSize` directive to configure the label width for an ent
 
 ```html
 <form clrForm clrLayout="horizontal" clrLabelSize="4">
-    <clr-input-container>
-        <label>First name</label>
-        <input clrInput type="text" [(ngModel)]="firstName" name="firstName" required />
-        <clr-control-error>We need your first name for legal compliance</clr-control-error>
-    </clr-input-container>
+  <clr-input-container>
+    <label>First name</label>
+    <input clrInput type="text" [(ngModel)]="firstName" name="firstName" required />
+    <clr-control-error>We need your first name for legal compliance</clr-control-error>
+  </clr-input-container>
 </form>
 ```
 
@@ -338,12 +338,12 @@ For horizontal layouts, you can override the default widths for labels (2 column
 
 ```html
 <form clrForm>
-    <clr-input-container>
-        <label class="clr-col-12 clr-col-md-4">Field 1 label</label>
-        <input class="clr-col-12 clr-col-md-8" clrInput type="text" [(ngModel)]="model" name="example" required />
-        <clr-control-helper>Helper text that shows while it is pristine and valid</clr-control-helper>
-        <clr-control-error>Error message that appears after focus is lost and control is invalid</clr-control-error>
-    </clr-input-container>
+  <clr-input-container>
+    <label class="clr-col-12 clr-col-md-4">Field 1 label</label>
+    <input class="clr-col-12 clr-col-md-8" clrInput type="text" [(ngModel)]="model" name="example" required />
+    <clr-control-helper>Helper text that shows while it is pristine and valid</clr-control-helper>
+    <clr-control-error>Error message that appears after focus is lost and control is invalid</clr-control-error>
+  </clr-input-container>
 </form>
 ```
 
@@ -367,12 +367,12 @@ export class ReactiveFormsDemo {
 
 ```html
 <form clrForm [formGroup]="exampleForm">
-    <clr-input-container>
-        <label>Field 1 label</label>
-        <input clrInput type="text" formControlName="sample" />
-        <clr-control-helper>Helper text that shows while it is pristine and valid</clr-control-helper>
-        <clr-control-error>Error message that appears after focus is lost and control is invalid</clr-control-error>
-    </clr-input-container>
+  <clr-input-container>
+    <label>Field 1 label</label>
+    <input clrInput type="text" formControlName="sample" />
+    <clr-control-helper>Helper text that shows while it is pristine and valid</clr-control-helper>
+    <clr-control-error>Error message that appears after focus is lost and control is invalid</clr-control-error>
+  </clr-input-container>
 </form>
 ```
 
@@ -424,7 +424,14 @@ export class FormsGenericContainerDemo {
 
   <clr-control-container>
     <label>Required</label>
-    <input clrControl placeholder="Input control" name="required" [(ngModel)]="model.required" pattern="asdfasdf" required minlength="5"
+    <input
+      clrControl
+      placeholder="Input control"
+      name="required"
+      [(ngModel)]="model.required"
+      pattern="asdfasdf"
+      required
+      minlength="5"
     />
     <clr-control-helper>Helper text</clr-control-helper>
     <clr-control-error *clrIfError="'required'">This is a required field</clr-control-error>
@@ -484,7 +491,7 @@ A Clarity form first must include the `.clr-form` class, typically on the form e
 
 ```html
 <form class="clr-form">
-    ... form controls inside
+  ... form controls inside
 </form>
 ```
 
@@ -493,9 +500,12 @@ A Clarity form first must include the `.clr-form` class, typically on the form e
 Forms support three layout options, horizontal, vertical (used if no classes are provided), and compact. You can change the layout by simply applying an additional class to the form.
 
 ```html
-<form class="clr-form"></form> // Vertical, class not necessary
-<form class="clr-form clr-form-horizontal"></form> // Horizontal
-<form class="clr-form clr-form-compact"></form> // Compact
+<form class="clr-form"></form>
+// Vertical, class not necessary
+<form class="clr-form clr-form-horizontal"></form>
+// Horizontal
+<form class="clr-form clr-form-compact"></form>
+// Compact
 ```
 
 #### Basic structure
@@ -504,16 +514,16 @@ Each control that you add inside has a similar structure, and they are each cove
 
 ```html
 <form class="clr-form">
-    <div class="clr-form-control">
-        <label for="example" class="clr-control-label">Label</label>
-        <div class="clr-control-container">
-            <div class="clr-input-wrapper">
-                <input type="text" id="example" placeholder="Example Input" class="clr-input">
-                <clr-icon class="clr-validate-icon" shape="exclamation-circle"></clr-icon>
-            </div>
-            <span class="clr-subtext">Helper Text</span>
-        </div>
+  <div class="clr-form-control">
+    <label for="example" class="clr-control-label">Label</label>
+    <div class="clr-control-container">
+      <div class="clr-input-wrapper">
+        <input type="text" id="example" placeholder="Example Input" class="clr-input" />
+        <clr-icon class="clr-validate-icon" shape="exclamation-circle"></clr-icon>
+      </div>
+      <span class="clr-subtext">Helper Text</span>
     </div>
+  </div>
 </form>
 ```
 
@@ -523,16 +533,16 @@ If you choose to use a layout other than vertical, you should also provide the c
 
 ```html
 <form class="clr-form clr-form-compact">
-    <div class="clr-form-control clr-row">
-        <label for="example" class="clr-control-label clr-col-12 clr-col-md-2">Label</label>
-        <div class="clr-control-container clr-col-12 clr-col-md-10">
-            <div class="clr-input-wrapper">
-                <input type="text" id="example" placeholder="Example Input" class="clr-input">
-                <clr-icon class="clr-validate-icon" shape="exclamation-circle"></clr-icon>
-            </div>
-            <span class="clr-subtext">Helper Text</span>
-        </div>
+  <div class="clr-form-control clr-row">
+    <label for="example" class="clr-control-label clr-col-12 clr-col-md-2">Label</label>
+    <div class="clr-control-container clr-col-12 clr-col-md-10">
+      <div class="clr-input-wrapper">
+        <input type="text" id="example" placeholder="Example Input" class="clr-input" />
+        <clr-icon class="clr-validate-icon" shape="exclamation-circle"></clr-icon>
+      </div>
+      <span class="clr-subtext">Helper Text</span>
     </div>
+  </div>
 </form>
 ```
 
@@ -542,16 +552,16 @@ For error states, you simply need to add the `clr-error` class to the `clr-contr
 
 ```html
 <form class="clr-form clr-form-compact">
-    <div class="clr-form-control clr-row">
-        <label for="example" class="clr-control-label clr-col-12 clr-col-md-2">Label</label>
-        <div class="clr-control-container clr-col-12 clr-col-md-10">
-            <div class="clr-input-wrapper">
-                <input type="text" id="example" placeholder="Example Input" class="clr-input">
-                <clr-icon class="clr-validate-icon" shape="exclamation-circle"></clr-icon>
-            </div>
-            <span class="clr-subtext">Helper Text</span>
-        </div>
+  <div class="clr-form-control clr-row">
+    <label for="example" class="clr-control-label clr-col-12 clr-col-md-2">Label</label>
+    <div class="clr-control-container clr-col-12 clr-col-md-10">
+      <div class="clr-input-wrapper">
+        <input type="text" id="example" placeholder="Example Input" class="clr-input" />
+        <clr-icon class="clr-validate-icon" shape="exclamation-circle"></clr-icon>
+      </div>
+      <span class="clr-subtext">Helper Text</span>
     </div>
+  </div>
 </form>
 ```
 

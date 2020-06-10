@@ -1,5 +1,4 @@
 [
-
   {
     "version": "3.0.0",
     "bugs": [
@@ -72,9 +71,7 @@
       "fix(button): only toggle overflow when button is in overflow menu\n     (#4281)",
       "fix(datagrid): change ordere of datagrid filtere, sorting buttons\n     (#4296)"
     ],
-    "breaking": [
-      "fix(a11y): change how wizard use h1, h2 and h3 tags for accessibility\n     (#4283)"
-    ],
+    "breaking": ["fix(a11y): change how wizard use h1, h2 and h3 tags for accessibility\n     (#4283)"],
     "enhancements": []
   },
   {
@@ -125,10 +122,7 @@
       "fix(vertical-nav): style issues in vertical nav\n         (#4139)"
     ],
     "breaking": [],
-    "enhancements": [
-      "Range (Slider) form input (#112)",
-      "Datalist form input (#3813)"
-    ]
+    "enhancements": ["Range (Slider) form input (#112)", "Datalist form input (#3813)"]
   },
   {
     "version": "3.0.0-next.5",
@@ -169,9 +163,7 @@
       "Sticky row actions in Datagrid (#3926)\n    This is a visually breaking change. Row controls for actions like master/detail or select row have been moved into a sticky column and will remain visible when columns scroll horizontally.",
       "Updated Color Palette (#3995)\n    The Clarity color palette has been updated to use adjusted hsl values. This is a visually breaking change that will affect hues in the palette that are used in Clarity components. You can view the new color palettes here."
     ],
-    "enhancements": [
-      "Volume 16 Icons\n    Volume 16 icons include: more social icons and technology icons."
-    ]
+    "enhancements": ["Volume 16 Icons\n    Volume 16 icons include: more social icons and technology icons."]
   },
   {
     "version": "3.0.0-next.2",
@@ -188,10 +180,7 @@
   },
   {
     "version": "3.0.0-next.1",
-    "bugs": [
-      "Improved accessibility of vertical nav (#3860)",
-      "Improved accessibility of forms (#3830)"
-    ],
+    "bugs": ["Improved accessibility of vertical nav (#3860)", "Improved accessibility of forms (#3830)"],
     "breaking": ["Removed the max-height from pre element (#3875)"],
     "enhancements": ["Datagrid Detail Pane (#3797)"]
   }

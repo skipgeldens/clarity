@@ -6,8 +6,8 @@ title: Overview
 
 ![HTML5](assets/images/bugs/badge_html5.svg 'HTML5')![CSS3](assets/images/bugs/badge_css3.svg 'CSS3')
 
-* [Examples & Code](/documentation/select#top)
-* [Design Guidelines](/documentation/select#guidelines)
+- [Examples & Code](/documentation/select#top)
+- [Design Guidelines](/documentation/select#guidelines)
 
 ##### With a select box, users can select one item from a list of values. The selected item is visible when the select box is closed.
 

@@ -2,41 +2,41 @@
 
 ![HTML5](assets/images/bugs/badge_html5.svg 'HTML5')![CSS3](assets/images/bugs/badge_css3.svg 'CSS3')![Angular](assets/images/bugs/badge_ng.svg 'Angular')
 
-* [Examples & Code](/documentation/datagrid#top)
-* [Design Guidelines](/documentation/datagrid#guidelines)
+- [Examples & Code](/documentation/datagrid#top)
+- [Design Guidelines](/documentation/datagrid#guidelines)
 
 ##### Datagrids are for organizing large volumes of data that users can scan, compare, and perform actions on.
 
 We have 21 datagrid demos. Starting with the basics, each demo shows you one or more of the advanced Datagrid features.
 
-* [Basic Structure](/documentation/datagrid/structure)
-* [Custom Cell Rendering](/documentation/datagrid/custom-rendering)
-* [Smart Iterator](/documentation/datagrid/smart-iterator)
-* [Binding Properties](/documentation/datagrid/binding-properties)
-* [Custom Sorting](/documentation/datagrid/custom-sorting)
-* [Custom Filtering](/documentation/datagrid/custom-filtering)
-* [Built-in Filters](/documentation/datagrid/built-in-filters)
-* [Pagination](/documentation/datagrid/pagination)
-* [Selection](/documentation/datagrid/selection)
-* [Single Selection](/documentation/datagrid/selection-single)
-* [Batch Action](/documentation/datagrid/batch-action)
-* [Single Action](/documentation/datagrid/single-action)
-* [Server Driven](/documentation/datagrid/server-driven)
-* [Placeholder](/documentation/datagrid/placeholder)
-* [Detail Pane](/documentation/datagrid/detail-pane)
-* [Expandable Rows](/documentation/datagrid/expandable-rows)
-* [Compact](/documentation/datagrid/compact)
-* [Hide/Show](/documentation/datagrid/hide-show)
-* [Fixed Height](/documentation/datagrid/fixed-height)
-* [Full Demo](/documentation/datagrid/full)
-* [Usage](/documentation/datagrid/usage)
+- [Basic Structure](/documentation/datagrid/structure)
+- [Custom Cell Rendering](/documentation/datagrid/custom-rendering)
+- [Smart Iterator](/documentation/datagrid/smart-iterator)
+- [Binding Properties](/documentation/datagrid/binding-properties)
+- [Custom Sorting](/documentation/datagrid/custom-sorting)
+- [Custom Filtering](/documentation/datagrid/custom-filtering)
+- [Built-in Filters](/documentation/datagrid/built-in-filters)
+- [Pagination](/documentation/datagrid/pagination)
+- [Selection](/documentation/datagrid/selection)
+- [Single Selection](/documentation/datagrid/selection-single)
+- [Batch Action](/documentation/datagrid/batch-action)
+- [Single Action](/documentation/datagrid/single-action)
+- [Server Driven](/documentation/datagrid/server-driven)
+- [Placeholder](/documentation/datagrid/placeholder)
+- [Detail Pane](/documentation/datagrid/detail-pane)
+- [Expandable Rows](/documentation/datagrid/expandable-rows)
+- [Compact](/documentation/datagrid/compact)
+- [Hide/Show](/documentation/datagrid/hide-show)
+- [Fixed Height](/documentation/datagrid/fixed-height)
+- [Full Demo](/documentation/datagrid/full)
+- [Usage](/documentation/datagrid/usage)
 
 ## Selection
 
 To allow actions on multiple items at once, we provide the ability for the user to select rows in the datagrid. To make rows selectable in your datagrid, you need to do the following:
 
-* Add a `[clrDgItem]` input on each `<clr-dg-row>` component to tell us what model the user is actually selecting. Most of the time, this will simply be the current data object in the iteration.
-* Add a `[(clrDgSelected)]` two-way binding on the datagrid itself, to have access to the list of currently selected items. Note that by adding items to this list yourself, you can dynamically select elements if you need to.
+- Add a `[clrDgItem]` input on each `<clr-dg-row>` component to tell us what model the user is actually selecting. Most of the time, this will simply be the current data object in the iteration.
+- Add a `[(clrDgSelected)]` two-way binding on the datagrid itself, to have access to the list of currently selected items. Note that by adding items to this list yourself, you can dynamically select elements if you need to.
 
 In addition to a checkbox for each row to select individual rows, there will be a checkbox in the header row that will select all of the currently visible rows.
 
@@ -76,11 +76,11 @@ Favorite color
 
 ```html
 <clr-datagrid [(clrDgSelected)]="selected">
+  <-- ... -->
+  <clr-dg-row *clrDgItems="let user of users" [clrDgItem]="user">
     <-- ... -->
-    <clr-dg-row *clrDgItems="let user of users" [clrDgItem]="user">
-        <-- ... -->
-    </clr-dg-row>
-   <-- ... -->
+  </clr-dg-row>
+  <-- ... -->
 </clr-datagrid>
 
 Selected users: <span *ngFor="let user of selected">{{user.name}}</span>
@@ -122,13 +122,13 @@ Favorite color
 
 ```html
 <clr-datagrid [(clrDgSelected)]="rowSelected" [clrDgRowSelection]="true">
-    <clr-dg-column>User ID</clr-dg-column>
+  <clr-dg-column>User ID</clr-dg-column>
+  <-- ... -->
+  <clr-dg-row *clrDgItems="let user of users" [clrDgItem]="user">
+    <clr-dg-cell>{{user.id}}</clr-dg-cell>
     <-- ... -->
-    <clr-dg-row *clrDgItems="let user of users" [clrDgItem]="user">
-        <clr-dg-cell>{{user.id}}</clr-dg-cell>
-        <-- ... -->
-    </clr-dg-row>
-    <clr-dg-footer>{{users.length}} users</clr-dg-footer>
+  </clr-dg-row>
+  <clr-dg-footer>{{users.length}} users</clr-dg-footer>
 </clr-datagrid>
 ```
 
@@ -140,16 +140,15 @@ If you need an easier access to the selected state of a row, without having to g
 
 ```html
 <clr-dg-row *clrDgItems="let item of items" [clrDgItem]="item" [(clrDgSelected)]="item.selected">
-    <-- ... -->
+  <-- ... -->
 </clr-dg-row>
 ```
 
 If you need to listen to when the selection changes, you can use Angular's [two way binding](https://angular.io/guide/template-syntax) to listen to the `(clrDgSelectedChange)` event:
 
 ```html
-<clr-datagrid [clrDgSelected]="selected"
-              (clrDgSelectedChange)="selectionChanged($event)">
-    <-- ... -->
+<clr-datagrid [clrDgSelected]="selected" (clrDgSelectedChange)="selectionChanged($event)">
+  <-- ... -->
 </clr-datagrid>
 ```
 

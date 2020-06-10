@@ -4,8 +4,8 @@ title: Overview
 
 # Dropdowns
 
-* [Design Guidelines](/documentation/dropdowns#top)
-* [Code & Examples](/documentation/dropdowns#examples)
+- [Design Guidelines](/documentation/dropdowns#top)
+- [Code & Examples](/documentation/dropdowns#examples)
 
 ##### A dropdown menu allows the user to choose an option or action from a contextual list. The source of the dropdown is usually a button.
 
@@ -13,10 +13,10 @@ title: Overview
 
 ### Description
 
-* Default line height is 30 px; 36 px for x-small breakpoint (<544px) touch targets
-* Headers and or dividers may be used to organize a longer list of items
-* Menu width: Minimum 168 px; Maximum 336 px
-* Items in the list have hover and click states
+- Default line height is 30 px; 36 px for x-small breakpoint (<544px) touch targets
+- Headers and or dividers may be used to organize a longer list of items
+- Menu width: Minimum 168 px; Maximum 336 px
+- Items in the list have hover and click states
 
 Departments ArtBusinessScienceMathematics
 
@@ -30,8 +30,8 @@ New YorkSan FranciscoAustinParisSeattle
 
 ### Behavior
 
-* Clicking on the toggle opens the dropdown
-* By default, selecting a menu item or clicking outside the menu dismisses the menu. You can change this behavior to keep the menu open on item selection
+- Clicking on the toggle opens the dropdown
+- By default, selecting a menu item or clicking outside the menu dismisses the menu. You can change this behavior to keep the menu open on item selection
 
 ### Placement
 
@@ -41,16 +41,16 @@ By default, a dropdown opens from the bottom of the toggle, along the left side.
 
 ### Recommendations
 
-* Use a button for the toggle. The button can contain either text or an icon
-* Order menu items by usage, except for destructive actions, which belong at the bottom
-* Keep the text short and concise. Long menu items are truncated from the end and an ellipsis added
-* Nested menus may be used to organize long lists of items into categories
-* Limit menus to three levels: Root menu plus up to two levels of nested menus
-* Disable a menu item if:
+- Use a button for the toggle. The button can contain either text or an icon
+- Order menu items by usage, except for destructive actions, which belong at the bottom
+- Keep the text short and concise. Long menu items are truncated from the end and an ellipsis added
+- Nested menus may be used to organize long lists of items into categories
+- Limit menus to three levels: Root menu plus up to two levels of nested menus
+- Disable a menu item if:
 
-* It can apply in a different context
-* The user doesn’t have permissions for the action
-* An applicable object is not currently selected
+- It can apply in a different context
+- The user doesn’t have permissions for the action
+- An applicable object is not currently selected
 
 ## Nested Menu
 
@@ -58,15 +58,15 @@ Nested menus are an extension of dropdown menus. They save screen space by organ
 
 ### Description
 
-* Same visual style as standard dropdown menu with the exception of a darker border (#9A9A9A)
-* Slight overlap (4px) over root menu to emphasize stack order
-* Width: Minimum 168 px; Maximum 336 px
-* Default line height is 30 px; 36 px for x-small breakpoint (<544px)
+- Same visual style as standard dropdown menu with the exception of a darker border (#9A9A9A)
+- Slight overlap (4px) over root menu to emphasize stack order
+- Width: Minimum 168 px; Maximum 336 px
+- Default line height is 30 px; 36 px for x-small breakpoint (<544px)
 
 ### Interaction
 
-* With mouse: Click group name to reveal nested menus. Group name stays in selected state to serve as a breadcrumb
-* Clicking outside of the menu dismisses all menus
+- With mouse: Click group name to reveal nested menus. Group name stays in selected state to serve as a breadcrumb
+- Clicking outside of the menu dismisses all menus
 
 ![Dropdown nested menu](assets/images/documentation/dropdowns/img_nested_levels.png)
 
@@ -92,13 +92,13 @@ Clarity static (HTML/CSS) component does not come pre-baked with all the necessa
 
 Clarity Angular component follows these guidelines:
 
-* A dropdown menu should have an element with the role `button` that opens the menu.
-* The element with the `button` role should also have an `aria-expanded` attribute which is set to true when the dropdown menu is open.
-* The items should be inside an element with the role `menu`, and have the role `menuitem`.
-* If the menu uses headings, the heading should be used as an accessible description for each related item.
-* A visual element with role `separator` may be used between groups of items within a menu. The separator is not focusable or interactive.
-* An element that is not a menu item inside the menu should have the `aria-hidden` attribute set to `true`.
-* A menu item should not use the `disabled` attribute so [disabled items can be focusable](https://www.w3.org/TR/wai-aria-practices-1.1/#kbd_disabled_controls). Instead, use `[clrDisabled]` to add the disabled visual style and ARIA attribute when needed. It is up to the application to ensure that the [disabled item is not activatable](https://www.w3.org/TR/wai-aria-practices-1.1/#menu).
+- A dropdown menu should have an element with the role `button` that opens the menu.
+- The element with the `button` role should also have an `aria-expanded` attribute which is set to true when the dropdown menu is open.
+- The items should be inside an element with the role `menu`, and have the role `menuitem`.
+- If the menu uses headings, the heading should be used as an accessible description for each related item.
+- A visual element with role `separator` may be used between groups of items within a menu. The separator is not focusable or interactive.
+- An element that is not a menu item inside the menu should have the `aria-hidden` attribute set to `true`.
+- A menu item should not use the `disabled` attribute so [disabled items can be focusable](https://www.w3.org/TR/wai-aria-practices-1.1/#kbd_disabled_controls). Instead, use `[clrDisabled]` to add the disabled visual style and ARIA attribute when needed. It is up to the application to ensure that the [disabled item is not activatable](https://www.w3.org/TR/wai-aria-practices-1.1/#menu).
 
 #### Keyboard Interaction
 
@@ -154,31 +154,31 @@ Ipsum.
 
 ```html
 <div class="dropdown open">
-    <button class="dropdown-toggle btn btn-primary" type="button">
-        Dropdown
-        <clr-icon shape="caret down"></clr-icon>
-    </button>
-    <div class="dropdown-menu">
-        <h4 class="dropdown-header">Dropdown header</h4>
-        <div class="dropdown-item active">Action</div>
-        <div class="dropdown-item disabled">Disabled Link</div>
-        <div class="dropdown-divider" role="separator"></div>
-        <button class="dropdown-item">Lorem.</button>
-        <div class="dropdown open right-bottom">
-            <button class="dropdown-item active expandable">Lorem ipsum.</button>
-            <div class="dropdown-menu">
-                <div class="dropdown-item">Foo.</div>
-                <div class="dropdown open right-top">
-                    <button class="dropdown-item active expandable">Bar.</button>
-                    <div class="dropdown-menu">
-                        <div class="dropdown-item">Baz.</div>
-                    </div>
-                </div>
-                <div class="dropdown-item">Foo 2.</div>
-            </div>
+  <button class="dropdown-toggle btn btn-primary" type="button">
+    Dropdown
+    <clr-icon shape="caret down"></clr-icon>
+  </button>
+  <div class="dropdown-menu">
+    <h4 class="dropdown-header">Dropdown header</h4>
+    <div class="dropdown-item active">Action</div>
+    <div class="dropdown-item disabled">Disabled Link</div>
+    <div class="dropdown-divider" role="separator"></div>
+    <button class="dropdown-item">Lorem.</button>
+    <div class="dropdown open right-bottom">
+      <button class="dropdown-item active expandable">Lorem ipsum.</button>
+      <div class="dropdown-menu">
+        <div class="dropdown-item">Foo.</div>
+        <div class="dropdown open right-top">
+          <button class="dropdown-item active expandable">Bar.</button>
+          <div class="dropdown-menu">
+            <div class="dropdown-item">Baz.</div>
+          </div>
         </div>
-        <button class="dropdown-item">Ipsum.</button>
+        <div class="dropdown-item">Foo 2.</div>
+      </div>
     </div>
+    <button class="dropdown-item">Ipsum.</button>
+  </div>
 </div>
 ```
 
@@ -198,18 +198,18 @@ Link 2
 
 ```html
 <div class="dropdown bottom-right open">
-    <button class="dropdown-toggle btn btn-primary">
-        Dropdown
-        <clr-icon shape="caret down"></clr-icon>
-    </button>
-    <div class="dropdown-menu">
-        <h4 class="dropdown-header">Dropdown header</h4>
-        <div class="dropdown-item active">First Action</div>
-        <div class="dropdown-item disabled">Disabled Action</div>
-        <div class="dropdown-divider"></div>
-        <div class="dropdown-item">Link 1</div>
-        <div class="dropdown-item">Link 2</div>
-    </div>
+  <button class="dropdown-toggle btn btn-primary">
+    Dropdown
+    <clr-icon shape="caret down"></clr-icon>
+  </button>
+  <div class="dropdown-menu">
+    <h4 class="dropdown-header">Dropdown header</h4>
+    <div class="dropdown-item active">First Action</div>
+    <div class="dropdown-item disabled">Disabled Action</div>
+    <div class="dropdown-divider"></div>
+    <div class="dropdown-item">Link 1</div>
+    <div class="dropdown-item">Link 2</div>
+  </div>
 </div>
 ```
 
@@ -227,18 +227,18 @@ Action 1
 
 ```html
 <div class="dropdown bottom-left open">
-    <button class="dropdown-toggle">
-        <clr-icon shape="error" class="is-error" size="24"></clr-icon>
-        <clr-icon shape="caret down"></clr-icon>
-    </button>
-    <div class="dropdown-menu">
-        <h4 class="dropdown-header">Dropdown header</h4>
-        <div class="dropdown-item">Lorem.</div>
-        <div class="dropdown-item">Lorem ipsum.</div>
-        <div class="dropdown-item">Lorem ipsum dolor.</div>
-        <div class="dropdown-divider"></div>
-        <div class="dropdown-item">Action 1</div>
-    </div>
+  <button class="dropdown-toggle">
+    <clr-icon shape="error" class="is-error" size="24"></clr-icon>
+    <clr-icon shape="caret down"></clr-icon>
+  </button>
+  <div class="dropdown-menu">
+    <h4 class="dropdown-header">Dropdown header</h4>
+    <div class="dropdown-item">Lorem.</div>
+    <div class="dropdown-item">Lorem ipsum.</div>
+    <div class="dropdown-item">Lorem ipsum dolor.</div>
+    <div class="dropdown-divider"></div>
+    <div class="dropdown-item">Action 1</div>
+  </div>
 </div>
 ```
 
@@ -258,18 +258,18 @@ Link
 
 ```html
 <div class="dropdown open">
-    <button class="dropdown-toggle btn btn-link">
-        Dropdown Toggle
-        <clr-icon shape="caret down"></clr-icon>
-    </button>
-    <div class="dropdown-menu">
-        <h4 class="dropdown-header">Dropdown header</h4>
-        <div aria-label="Dropdown header Lorem" class="dropdown-item">Lorem.</div>
-        <div aria-label="Dropdown header Lorem ipsum" class="dropdown-item">Lorem ipsum.</div>
-        <div aria-label="Dropdown header Lorem ipsum dolor" class="dropdown-item">Lorem ipsum dolor.</div>
-        <div class="dropdown-divider"></div>
-        <div class="dropdown-item">Link</div>
-    </div>
+  <button class="dropdown-toggle btn btn-link">
+    Dropdown Toggle
+    <clr-icon shape="caret down"></clr-icon>
+  </button>
+  <div class="dropdown-menu">
+    <h4 class="dropdown-header">Dropdown header</h4>
+    <div aria-label="Dropdown header Lorem" class="dropdown-item">Lorem.</div>
+    <div aria-label="Dropdown header Lorem ipsum" class="dropdown-item">Lorem ipsum.</div>
+    <div aria-label="Dropdown header Lorem ipsum dolor" class="dropdown-item">Lorem ipsum dolor.</div>
+    <div class="dropdown-divider"></div>
+    <div class="dropdown-item">Link</div>
+  </div>
 </div>
 ```
 
@@ -293,21 +293,21 @@ A class to open the dropdown menu. Must be applied with `.dropdown`
 
 The following classes when extended along with `.dropdown` will open the menu in the respective directions:
 
-* .bottom-left
-* .bottom-right
-* .top-left
-* .top-right
-* .left-bottom
-* .left-top
-* .right-top
-* .right-bottom
+- .bottom-left
+- .bottom-right
+- .top-left
+- .top-right
+- .left-bottom
+- .left-top
+- .right-top
+- .right-bottom
 
 If used in one of the nested menus (that is, not the root level `.dropdown`), only the following classes are valid:
 
-* .bottom-left
-* .bottom-right
-* .top-left
-* .top-right
+- .bottom-left
+- .bottom-right
+- .top-left
+- .top-right
 
 ## Angular Component
 
@@ -392,29 +392,29 @@ Dropdown
 
 ```html
 <clr-dropdown>
-    <button class="btn btn-outline-primary" clrDropdownTrigger>
-        Dropdown
-        <clr-icon shape="caret down"></clr-icon>
-    </button>
-    <clr-dropdown-menu clrPosition="top-left" *clrIfOpen>
-        <label class="dropdown-header" aria-hidden="true">Dropdown header</label>
-        <div aria-label="Dropdown header Action 1" clrDropdownItem>Action 1</div>
-        <div aria-label="Dropdown header Disabled Action" [clrDisabled]="true" clrDropdownItem>Disabled Action</div>
-        <div class="dropdown-divider" role="separator" aria-hidden="true"></div>
+  <button class="btn btn-outline-primary" clrDropdownTrigger>
+    Dropdown
+    <clr-icon shape="caret down"></clr-icon>
+  </button>
+  <clr-dropdown-menu clrPosition="top-left" *clrIfOpen>
+    <label class="dropdown-header" aria-hidden="true">Dropdown header</label>
+    <div aria-label="Dropdown header Action 1" clrDropdownItem>Action 1</div>
+    <div aria-label="Dropdown header Disabled Action" [clrDisabled]="true" clrDropdownItem>Disabled Action</div>
+    <div class="dropdown-divider" role="separator" aria-hidden="true"></div>
+    <clr-dropdown>
+      <button clrDropdownTrigger>Link 1</button>
+      <clr-dropdown-menu>
+        <button clrDropdownItem>Foo</button>
         <clr-dropdown>
-            <button clrDropdownTrigger>Link 1</button>
-            <clr-dropdown-menu>
-                <button clrDropdownItem>Foo</button>
-                <clr-dropdown>
-                    <button clrDropdownTrigger>Bar</button>
-                    <clr-dropdown-menu clrPosition="left-top">
-                        <button clrDropdownItem>Baz</button>
-                    </clr-dropdown-menu>
-                </clr-dropdown>
-            </clr-dropdown-menu>
+          <button clrDropdownTrigger>Bar</button>
+          <clr-dropdown-menu clrPosition="left-top">
+            <button clrDropdownItem>Baz</button>
+          </clr-dropdown-menu>
         </clr-dropdown>
-        <div clrDropdownItem>Link 2</div>
-    </clr-dropdown-menu>
+      </clr-dropdown-menu>
+    </clr-dropdown>
+    <div clrDropdownItem>Link 2</div>
+  </clr-dropdown-menu>
 </clr-dropdown>
 ```
 
@@ -422,17 +422,17 @@ Dropdown
 
 ```html
 <clr-dropdown [clrCloseMenuOnItemClick]="false">
-        <button clrDropdownTrigger aria-label="Dropdown demo button">
-            <clr-icon shape="error" class="is-error" size="24"></clr-icon>
-            <clr-icon shape="caret down"></clr-icon>
-        </button>
-        <clr-dropdown-menu *clrIfOpen>
-            <label class="dropdown-header" aria-hidden="true">Dropdown header</label>
-            <div aria-label="Dropdown header Action 1" clrDropdownItem>Action 1</div>
-            <div aria-label="Dropdown header Action 2"  clrDropdownItem>Action 2</div>
-            <div class="dropdown-divider" role="separator" aria-hidden="true"></div>
-            <div clrDropdownItem>Link 1</div>
-            <div clrDropdownItem>Link 2</div>
-        </clr-dropdown-menu>
-    </clr-dropdown>
+  <button clrDropdownTrigger aria-label="Dropdown demo button">
+    <clr-icon shape="error" class="is-error" size="24"></clr-icon>
+    <clr-icon shape="caret down"></clr-icon>
+  </button>
+  <clr-dropdown-menu *clrIfOpen>
+    <label class="dropdown-header" aria-hidden="true">Dropdown header</label>
+    <div aria-label="Dropdown header Action 1" clrDropdownItem>Action 1</div>
+    <div aria-label="Dropdown header Action 2" clrDropdownItem>Action 2</div>
+    <div class="dropdown-divider" role="separator" aria-hidden="true"></div>
+    <div clrDropdownItem>Link 1</div>
+    <div clrDropdownItem>Link 2</div>
+  </clr-dropdown-menu>
+</clr-dropdown>
 ```

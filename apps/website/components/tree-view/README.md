@@ -4,8 +4,8 @@ title: Overview
 
 # Tree View
 
-* [Design Guidelines](/documentation/tree-view#top)
-* [Code & Examples](/documentation/tree-view#examples)
+- [Design Guidelines](/documentation/tree-view#top)
+- [Code & Examples](/documentation/tree-view#examples)
 
 ##### A tree is a hierarchical component that shows the visual representation of the parent-child relationship between nodes.
 
@@ -193,17 +193,17 @@ A general goal to keep in mind is that you want to minimize the time a user need
 
 ### Code & Examples
 
-* [Basic tree](/documentation/tree-view#basic-tree)
-* [Keeping track of expanded nodes](/documentation/tree-view#expanded-nodes)
-* [Routing using a tree](/documentation/tree-view#routing-tree)
-* [Generating A tree dynamically](/documentation/tree-view#dynamically-generated)
-* [Checkbox tree](/documentation/tree-view#checkbox-tree)
-* [Binding selection to a boolean](/documentation/tree-view#boolean-selection)
-* [Recursive tree](/documentation/tree-view#recursive-tree)
-* [Lazy loading children](/documentation/tree-view#lazy-loading)
-* [Lazy loading and selection](/documentation/tree-view#lazy-loading-selection)
-* [Lazy-loading recursive trees](/documentation/tree-view#lazy-loading-recursive)
-* [Summary of options](/documentation/tree-view#api-tables)
+- [Basic tree](/documentation/tree-view#basic-tree)
+- [Keeping track of expanded nodes](/documentation/tree-view#expanded-nodes)
+- [Routing using a tree](/documentation/tree-view#routing-tree)
+- [Generating A tree dynamically](/documentation/tree-view#dynamically-generated)
+- [Checkbox tree](/documentation/tree-view#checkbox-tree)
+- [Binding selection to a boolean](/documentation/tree-view#boolean-selection)
+- [Recursive tree](/documentation/tree-view#recursive-tree)
+- [Lazy loading children](/documentation/tree-view#lazy-loading)
+- [Lazy loading and selection](/documentation/tree-view#lazy-loading-selection)
+- [Lazy-loading recursive trees](/documentation/tree-view#lazy-loading-recursive)
+- [Summary of options](/documentation/tree-view#api-tables)
 
 ### Basic Tree
 
@@ -249,53 +249,53 @@ Darryl Philbin (Warehouse)
 
 ```html
 <clr-tree>
+  <clr-tree-node [clrExpanded]="true">
+    David Wallace (CFO)
     <clr-tree-node [clrExpanded]="true">
-        David Wallace (CFO)
-        <clr-tree-node [clrExpanded]="true">
-            Michael Scott (Regional Manager)
+      Michael Scott (Regional Manager)
 
-            <clr-tree-node>Dwight K. Schrute (Assistant to the Regional Manager)</clr-tree-node>
+      <clr-tree-node>Dwight K. Schrute (Assistant to the Regional Manager)</clr-tree-node>
 
-            <clr-tree-node>
-                Jim Halpert (Head of Sales)
-                <clr-tree-node>Andy Bernard</clr-tree-node>
-                <clr-tree-node>Stanley Hudson</clr-tree-node>
-                <clr-tree-node>Phyllis Vance</clr-tree-node>
-                <clr-tree-node>Todd Packer</clr-tree-node>
-            </clr-tree-node>
+      <clr-tree-node>
+        Jim Halpert (Head of Sales)
+        <clr-tree-node>Andy Bernard</clr-tree-node>
+        <clr-tree-node>Stanley Hudson</clr-tree-node>
+        <clr-tree-node>Phyllis Vance</clr-tree-node>
+        <clr-tree-node>Todd Packer</clr-tree-node>
+      </clr-tree-node>
 
-            <clr-tree-node>
-                Angela Martin (Head of Accounting)
-                <clr-tree-node>Kevin Malone</clr-tree-node>
-                <clr-tree-node>Oscar Martinez</clr-tree-node>
-            </clr-tree-node>
+      <clr-tree-node>
+        Angela Martin (Head of Accounting)
+        <clr-tree-node>Kevin Malone</clr-tree-node>
+        <clr-tree-node>Oscar Martinez</clr-tree-node>
+      </clr-tree-node>
 
-            <clr-tree-node>
-                Kelly Kapoor (Head of Customer Service)
-                <clr-tree-node>Ryan Howard (Temp)</clr-tree-node>
-            </clr-tree-node>
+      <clr-tree-node>
+        Kelly Kapoor (Head of Customer Service)
+        <clr-tree-node>Ryan Howard (Temp)</clr-tree-node>
+      </clr-tree-node>
 
-            <clr-tree-node>
-                Creed Bratton (Quality Assurance)
-            </clr-tree-node>
+      <clr-tree-node>
+        Creed Bratton (Quality Assurance)
+      </clr-tree-node>
 
-            <clr-tree-node>
-                Meredith Palmer (Supplier Relations)
-            </clr-tree-node>
+      <clr-tree-node>
+        Meredith Palmer (Supplier Relations)
+      </clr-tree-node>
 
-            <clr-tree-node>
-                Toby Flenderson (Human Resources)
-            </clr-tree-node>
+      <clr-tree-node>
+        Toby Flenderson (Human Resources)
+      </clr-tree-node>
 
-            <clr-tree-node>
-                Pam Beesly (Reception)
-            </clr-tree-node>
+      <clr-tree-node>
+        Pam Beesly (Reception)
+      </clr-tree-node>
 
-            <clr-tree-node>
-                Darryl Philbin (Warehouse)
-            </clr-tree-node>
-        </clr-tree-node>
+      <clr-tree-node>
+        Darryl Philbin (Warehouse)
+      </clr-tree-node>
     </clr-tree-node>
+  </clr-tree-node>
 </clr-tree>
 ```
 
@@ -312,10 +312,10 @@ Child Tree Node
 ```html
 <clr-tree>
   <clr-tree-node [(clrExpanded)]="expanded">
-      {{expanded ? "I am expanded" : "I am collapsed"}}
-      <clr-tree-node>
-          Child Tree Node
-      </clr-tree-node>
+    {{expanded ? "I am expanded" : "I am collapsed"}}
+    <clr-tree-node>
+      Child Tree Node
+    </clr-tree-node>
   </clr-tree-node>
 </clr-tree>
 ```
@@ -349,19 +349,13 @@ Abbey Road is the eleventh studio album by the English rock band the Beatles, re
   <clr-tree-node [clrExpanded]="true">
     The Beatles
     <clr-tree-node>
-        <a [routerLink]="['./album1']"
-          class="clr-treenode-link"
-          routerLinkActive="active">Abbey Road</a>
+      <a [routerLink]="['./album1']" class="clr-treenode-link" routerLinkActive="active">Abbey Road</a>
     </clr-tree-node>
     <clr-tree-node>
-        <a [routerLink]="['./album2']"
-          class="clr-treenode-link"
-          routerLinkActive="active">Revolver</a>
+      <a [routerLink]="['./album2']" class="clr-treenode-link" routerLinkActive="active">Revolver</a>
     </clr-tree-node>
     <clr-tree-node>
-        <a [routerLink]="['./album3']"
-          class="clr-treenode-link"
-          routerLinkActive="active">Rubber Soul</a>
+      <a [routerLink]="['./album3']" class="clr-treenode-link" routerLinkActive="active">Rubber Soul</a>
     </clr-tree-node>
   </clr-tree-node>
 </clr-tree>
@@ -411,17 +405,14 @@ Portfolio.jpg
 ```html
 <clr-tree>
   <clr-tree-node *ngFor="let directory of rootDirectory" [(clrExpanded)]="directory.expanded">
-      <clr-icon [attr.shape]="directory.icon"></clr-icon>
-      {{directory.name}}
-      <clr-tree-node *ngFor="let file of directory.files">
-          <button
-                  (click)="openFile(directory.name, file.name)"
-                  class="clr-treenode-link"
-                  [class.active]="file.active">
-              <clr-icon [attr.shape]="file.icon"></clr-icon>
-              {{file.name}}
-          </button>
-      </clr-tree-node>
+    <clr-icon [attr.shape]="directory.icon"></clr-icon>
+    {{directory.name}}
+    <clr-tree-node *ngFor="let file of directory.files">
+      <button (click)="openFile(directory.name, file.name)" class="clr-treenode-link" [class.active]="file.active">
+        <clr-icon [attr.shape]="file.icon"></clr-icon>
+        {{file.name}}
+      </button>
+    </clr-tree-node>
   </clr-tree-node>
 </clr-tree>
 ```
@@ -565,14 +556,12 @@ Select all vegetables
 
 ```html
 <clr-tree>
-    <clr-tree-node *ngFor="let group of groceries"
-                   [(clrSelected)]="group.selected"
-                   [clrExpanded]="true">
-        {{group.name}}
-        <clr-tree-node *ngFor="let item of group.items" [(clrSelected)]="item.selected">
-            {{item.name}}
-        </clr-tree-node>
+  <clr-tree-node *ngFor="let group of groceries" [(clrSelected)]="group.selected" [clrExpanded]="true">
+    {{group.name}}
+    <clr-tree-node *ngFor="let item of group.items" [(clrSelected)]="item.selected">
+      {{item.name}}
     </clr-tree-node>
+  </clr-tree-node>
 </clr-tree>
 
 <button class="btn btn-sm" type="button" (click)="selectVegetables()">Select all vegetables</button>
@@ -758,14 +747,17 @@ unselected
 ```html
 <clr-tree>
   <clr-tree-node [clrExpanded]="true">
-      Permissions
-      <clr-tree-node *ngFor="let permission of permissions" [clrExpanded]="true">
-          {{permission.type}}
-          <clr-tree-node *ngFor="let right of permission.rights"
-                        [clrSelected]="right.enable" (clrSelectedChange)="right.enable = !!$event">
-              {{right.name}}
-          </clr-tree-node>
+    Permissions
+    <clr-tree-node *ngFor="let permission of permissions" [clrExpanded]="true">
+      {{permission.type}}
+      <clr-tree-node
+        *ngFor="let right of permission.rights"
+        [clrSelected]="right.enable"
+        (clrSelectedChange)="right.enable = !!$event"
+      >
+        {{right.name}}
       </clr-tree-node>
+    </clr-tree-node>
   </clr-tree-node>
 </clr-tree>
 ```
@@ -883,10 +875,9 @@ unselected
 
 ```html
 <clr-tree>
-    <clr-tree-node *clrRecursiveFor="let file of root; getChildren: getChildren"
-                   [(clrSelected)]="file.selected">
-        {{file.name}}
-    </clr-tree-node>
+  <clr-tree-node *clrRecursiveFor="let file of root; getChildren: getChildren" [(clrSelected)]="file.selected">
+    {{file.name}}
+  </clr-tree-node>
 </clr-tree>
 ```
 
@@ -963,24 +954,24 @@ export class RecursiveSelection {
 
 If your tree is too large to be fully build on initialization or getting the children of a node is an expensive operation like an HTTP request, you might want to lazy-load tree nodes, only loading the ones that are currently displayed. To lazy-load children for a simple tree component, you need to combine several features as follows:
 
-* use our `<clr-tree>` root component, giving it a `[clrLazy]="true"` input,
-* leverage our `*clrIfExpanded` structural directive to only instantiate children when they are displayed,
-* listen to the `(clrIfExpandedChange)` output to fetch the children's data,
-* add a `[clrLoading]` boolean input to the node if fetching children is asynchronous, to display a spinner while waiting for the data to be loaded.
+- use our `<clr-tree>` root component, giving it a `[clrLazy]="true"` input,
+- leverage our `*clrIfExpanded` structural directive to only instantiate children when they are displayed,
+- listen to the `(clrIfExpandedChange)` output to fetch the children's data,
+- add a `[clrLoading]` boolean input to the node if fetching children is asynchronous, to display a spinner while waiting for the data to be loaded.
 
 Office Locations
 
 ```html
 <clr-tree [clrLazy]="true">
-    <clr-tree-node [clrLoading]="loading">
-        <clr-icon shape="building"></clr-icon>
-        Office Locations
-        <ng-template clrIfExpanded (clrIfExpandedChange)="$event ? fetchLocations() : null">
-            <clr-tree-node *ngFor="let location of locations$ | async">
-                {{location}}
-            </clr-tree-node>
-        </ng-template>
-    </clr-tree-node>
+  <clr-tree-node [clrLoading]="loading">
+    <clr-icon shape="building"></clr-icon>
+    Office Locations
+    <ng-template clrIfExpanded (clrIfExpandedChange)="$event ? fetchLocations() : null">
+      <clr-tree-node *ngFor="let location of locations$ | async">
+        {{location}}
+      </clr-tree-node>
+    </ng-template>
+  </clr-tree-node>
 </clr-tree>
 ```
 
@@ -1015,12 +1006,12 @@ unselected
 
 ```html
 <clr-tree [clrLazy]="true">
-    <clr-tree-node *ngFor="let group of groceries$ | async" [(clrSelected)]="group.selected">
-        {{group.name}}
-        <ng-template clrIfExpanded>
-            <my-grocery-items [group]="group"></my-grocery-items>
-        </ng-template>
-    </clr-tree-node>
+  <clr-tree-node *ngFor="let group of groceries$ | async" [(clrSelected)]="group.selected">
+    {{group.name}}
+    <ng-template clrIfExpanded>
+      <my-grocery-items [group]="group"></my-grocery-items>
+    </ng-template>
+  </clr-tree-node>
 </clr-tree>
 ```
 
@@ -1028,12 +1019,12 @@ unselected
 @Component({
   selector: 'my-grocery-items',
   template: `
-        <ng-container [clrLoading]="loading">
-            <clr-tree-node *ngFor="let item of items$ | async" [(clrSelected)]="item.selected">
-                {{item.name}}
-            </clr-tree-node>
-        </ng-container>
-    `,
+    <ng-container [clrLoading]="loading">
+      <clr-tree-node *ngFor="let item of items$ | async" [(clrSelected)]="item.selected">
+        {{ item.name }}
+      </clr-tree-node>
+    </ng-container>
+  `,
 })
 export class GroceryItemsComponent implements OnInit {
   constructor(private itemsService: ItemsService) {}
@@ -1065,11 +1056,10 @@ tsconfig.json
 
 ```html
 <clr-tree [clrLazy]="true">
-    <clr-tree-node *clrRecursiveFor="let file of root$ | async; getChildren: getChildren"
-                   [clrExpandable]="file.isFolder">
-        <clr-icon [attr.shape]="file.isFolder ? 'folder' : 'file'"></clr-icon>
-        {{file.name}}
-    </clr-tree-node>
+  <clr-tree-node *clrRecursiveFor="let file of root$ | async; getChildren: getChildren" [clrExpandable]="file.isFolder">
+    <clr-icon [attr.shape]="file.isFolder ? 'folder' : 'file'"></clr-icon>
+    {{file.name}}
+  </clr-tree-node>
 </clr-tree>
 ```
 

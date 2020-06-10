@@ -4,8 +4,8 @@ title: Overview
 
 # Range Input
 
-* [Design Guidelines](/documentation/range#top)
-* [Code & Examples](/documentation/range#examples)
+- [Design Guidelines](/documentation/range#top)
+- [Code & Examples](/documentation/range#examples)
 
 ##### The HTML5 range input element is used when a user can choose between a min and a max value but the precise value chosed is not considered important.
 
@@ -91,9 +91,9 @@ When true, shows the percentage of the range below the current value as a colore
 
 ```html
 <form clrForm>
-    <clr-range-container>
-        <input type="range" clrRange name="two" [(ngModel)]="input.one" />
-    </clr-range-container>
+  <clr-range-container>
+    <input type="range" clrRange name="two" [(ngModel)]="input.one" />
+  </clr-range-container>
 </form>
 ```
 
@@ -105,11 +105,11 @@ Helper text
 
 ```html
 <form clrForm>
-    <clr-range-container [clrRangeHasProgress]="true">
-        <label>Full example</label>
-        <input type="range" clrRange [(ngModel)]="input.two" name="three" />
-        <clr-control-helper>Helper text</clr-control-helper>
-    </clr-range-container>
+  <clr-range-container [clrRangeHasProgress]="true">
+    <label>Full example</label>
+    <input type="range" clrRange [(ngModel)]="input.two" name="three" />
+    <clr-control-helper>Helper text</clr-control-helper>
+  </clr-range-container>
 </form>
 ```
 
@@ -121,11 +121,11 @@ Helper text
 
 ```html
 <form clrForm>
-    <clr-range-container [clrRangeHasProgress]="true">
-        <label>Disabled</label>
-        <input type="range" clrRange [(ngModel)]="input.three" name="four" [disabled]="disabled" />
-        <clr-control-helper>Helper text</clr-control-helper>
-    </clr-range-container>
+  <clr-range-container [clrRangeHasProgress]="true">
+    <label>Disabled</label>
+    <input type="range" clrRange [(ngModel)]="input.three" name="four" [disabled]="disabled" />
+    <clr-control-helper>Helper text</clr-control-helper>
+  </clr-range-container>
 </form>
 ```
 
@@ -137,15 +137,15 @@ Value change example
 
 Helper text
 
-* Tab1
-* Tab2
+- Tab1
+- Tab2
 
 ```html
 <form clrForm>
-    <clr-range-container [clrRangeHasProgress]="true">
-        <label>Value change example</label>
-        <input type="range" clrRange [(ngModel)]="input.two" name="three" (change)="rangeChange($event)"/>
-        <clr-control-helper>Helper text</clr-control-helper>
-    </clr-range-container>
+  <clr-range-container [clrRangeHasProgress]="true">
+    <label>Value change example</label>
+    <input type="range" clrRange [(ngModel)]="input.two" name="three" (change)="rangeChange($event)" />
+    <clr-control-helper>Helper text</clr-control-helper>
+  </clr-range-container>
 </form>
 ```

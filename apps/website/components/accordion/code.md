@@ -43,24 +43,21 @@ Using the optional `*clrIfExpanded` structural directive, you can conditionally 
 
 #### Inputs
 
-* `clrAccordionMultiPanel: boolean` - Allows multiple panels to be open at the same time. Default: `false`.
+- `clrAccordionMultiPanel: boolean` - Allows multiple panels to be open at the same time. Default: `false`.
 
 ### `ClrAccordionPanel` Component
 
 ```html
-<clr-accordion-panel
-    [clrAccordionPanelDisabled]="false"
-    [(clrAccordionPanelOpen)]="panelState">
-</clr-accordion-panel>
+<clr-accordion-panel [clrAccordionPanelDisabled]="false" [(clrAccordionPanelOpen)]="panelState"> </clr-accordion-panel>
 ```
 
 #### Inputs
 
-* `clrAccordionPanelDisabled: boolean` - Disable the panel from changing its open state, will be locked opened or closed. Default: `false`.
+- `clrAccordionPanelDisabled: boolean` - Disable the panel from changing its open state, will be locked opened or closed. Default: `false`.
 
 #### Two-way Bindings
 
-* `clrAccordionPanelOpen: boolean` - Change the open state of the panel. Default: `false`.
+- `clrAccordionPanelOpen: boolean` - Change the open state of the panel. Default: `false`.
 
 ### `ClrIfExpanded` Directive
 
@@ -70,4 +67,4 @@ Using the optional `*clrIfExpanded` structural directive, you can conditionally 
 
 #### Inputs
 
-* `clrIfExpanded: boolean` - Allows setting the open state of the panel, and will create on open and destroy the contents on close. Default: `false`.
+- `clrIfExpanded: boolean` - Allows setting the open state of the panel, and will create on open and destroy the contents on close. Default: `false`.

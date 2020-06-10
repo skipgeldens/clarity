@@ -20,10 +20,10 @@ yarn add @clr/ui @clr/icons @webcomponents/webcomponentsjs
 
 Depending on your framework and build tooling, this step may be done in many different ways. Essentially, you need to include several CSS and JavaScript files to your application. The files below are what you'll need to include.
 
-* Clarity CSS: `node_modules/@clr/ui/clr-ui.min.css` or `node_modules/@clr/ui/clr-ui-dark.min.css`
-* Clarity Icons CSS: `node_modules/@clr/icons/clr-icons.min.css`
-* Clarity Icons JS: `node_modules/@clr/icons/clr-icons.min.js`
-* Custom Elements Polyfill: `node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js` and `node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js`
+- Clarity CSS: `node_modules/@clr/ui/clr-ui.min.css` or `node_modules/@clr/ui/clr-ui-dark.min.css`
+- Clarity Icons CSS: `node_modules/@clr/icons/clr-icons.min.css`
+- Clarity Icons JS: `node_modules/@clr/icons/clr-icons.min.js`
+- Custom Elements Polyfill: `node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js` and `node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js`
 
 You can also load this CSS file from a CDN like you see below. See [unpkg.com](https://unpkg.com/#/) for more details.
 

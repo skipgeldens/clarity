@@ -10,17 +10,21 @@ When you need to create a collection of similar action buttons, use a button gro
 ### ClrButtonGroup
 
 #### Selector & Basic Usage
+
 ```html
 <clr-button-group></clr-button-group>
 ```
 
 #### Properties
+
 <DocComponentApi component="ClrButtonGroup" item="bindings" />
 
 #### Methods
+
 <DocComponentApi component="ClrButtonGroup" item="methods" />
 
 ### ClrButton
+
 Angular button component used only with [ClrButtonGroup](./api.md#clrbuttongroup).
 
 #### Bindings
@@ -28,10 +32,9 @@ Angular button component used only with [ClrButtonGroup](./api.md#clrbuttongroup
 #### Methods
 
 #### Selector & Basic Usage
+
 ```html
 <clr-button></clr-button>
 ```
 
-
 ## Directives
-

@@ -6,16 +6,16 @@ Clarity’s designs stem from continuous exploration and research. These designs
 
 ## How to get started
 
-* [Getting started with Clarity for designers](./design.md)
-* [Getting started with Clarity for Angular](./angular.md)
+- [Getting started with Clarity for designers](./design.md)
+- [Getting started with Clarity for Angular](./angular.md)
 
 ## Device and Browser Support
 
 ![Device and Browser Support](assets/images/get-started/device_support.png)
 
-* Internet Explorer 11
-* MS Edge
-* Latest versions of Chrome, Safari, and Firefox
+- Internet Explorer 11
+- MS Edge
+- Latest versions of Chrome, Safari, and Firefox
 
 _\* - Note that Clarity only supports the latest two versions of the listed browsers, with the exception of Internet Explorer._
 
@@ -23,8 +23,8 @@ _\* - Note that Clarity only supports the latest two versions of the listed brow
 
 Clarity is tested across several sets of screen reader and browser combinations against the WCAG 2.1 spec. The testing has identified the two combinations that enable us to provide support when fixing issues related to the various assistive technologies available to users. The following are the primary combinations that we focus on when addressing issues on the Windows and macOS platforms:
 
-* NVDA + Firefox (Windows)
-* VoiceOver + Safari (Apple)
+- NVDA + Firefox (Windows)
+- VoiceOver + Safari (Apple)
 
 _The latest version of both screen reader and browser is used when testing issues and WCAG 2.1 compliance._
 
