@@ -3,7 +3,7 @@ title: API
 toc: true
 ---
 
-## Classes
+## Components
 
 {.section-header}
 

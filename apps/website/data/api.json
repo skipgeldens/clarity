@@ -316,12 +316,12 @@
   "ClrCheckbox": {
     "bindings": [
       {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
+        "name": "clrInline",
+        "accepts": "string",
+        "type": "input",
+        "options": "horizontal, vertical",
+        "description": "Set the the (checkboxes or radios) orientation.",
+        "default": "horizontal"
       }
     ],
     "methods": [
@@ -1277,12 +1277,72 @@
   "ClrForm": {
     "bindings": [
       {
+        "name": "clrLabelSize",
+        "accepts": "number",
+        "type": "input",
+        "options": "1,2,3,4...",
+        "description": "Sets the label size in rem for an input. If they are set it must be minLabelSize <= clrLabelSize <= maxLabelSize.",
+        "default": 2
+      }
+    ],
+    "methods": [
+      {
         "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
+        "parameters": [],
         "description": "",
+        "returns": ""
+      }
+    ],
+    "css": [
+      {
+        "name": ".alert-text",
+        "description": "Defines the text that is placed into the alert",
+        "host": "div, span",
+        "required": true
+      }
+    ]
+  },
+  "ClrFormCommon": {
+    "bindings": [
+      {
+        "name": "ngModel",
+        "accepts": "model.property",
+        "type": "two-way",
+        "options": "model.property",
+        "description": "From the Angular forms API.",
         "default": 0
+      },
+      {
+        "name": "formControlName",
+        "accepts": "string",
+        "type": "input",
+        "options": "any",
+        "description": "From the Angular forms API.",
+        "default": "n/a"
+      },
+      {
+        "name": "disabled",
+        "accepts": "boolean",
+        "type": "input",
+        "options": "true, false",
+        "description": "From the Angular forms API.",
+        "default": "null"
+      },
+      {
+        "name": "name",
+        "accepts": "string",
+        "type": "input",
+        "options": "Valid HTML name",
+        "description": "From the Angular forms API.",
+        "default": "null"
+      },
+      {
+        "name": "validator",
+        "accepts": "ValidatorFn",
+        "type": "input",
+        "options": "ValidatorFn",
+        "description": "From the Angular forms API.",
+        "default": null
       }
     ],
     "methods": [
@@ -1429,12 +1489,12 @@
   "ClrLayout": {
     "bindings": [
       {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
+        "name": "clrLayout",
+        "accepts": "string",
+        "type": "input",
+        "options": "compact, horizontal, vertical",
+        "description": "Set the form layout.",
+        "default": "horizontal"
       }
     ],
     "methods": [
@@ -1583,6 +1643,94 @@
         "parameters": [],
         "description": "",
         "returns": ""
+      }
+    ],
+    "css": [
+      {
+        "name": ".alert-text",
+        "description": "Defines the text that is placed into the alert",
+        "host": "div, span",
+        "required": true
+      }
+    ]
+  },
+  "ClrRadio": {
+    "bindings": [
+      {
+        "name": "clrInline",
+        "accepts": "string",
+        "type": "input",
+        "options": "horizontal, vertical",
+        "description": "Set the the (checkboxes or radios) orientation.",
+        "default": "horizontal"
+      }
+    ],
+    "Methods": [
+      {
+        "name": "togglePanel",
+        "parameters": [],
+        "description": "Opens and close the panel.",
+        "returns": "void"
+      }
+    ],
+    "css": [
+      {
+        "name": ".alert-text",
+        "description": "Defines the text that is placed into the alert",
+        "host": "div, span",
+        "required": true
+      }
+    ]
+  },
+  "ClrRange": {
+    "bindings": [
+      {
+        "name": "min",
+        "accepts": "number",
+        "type": "input",
+        "options": "-50, 0, 50",
+        "description": "The maximum value of the range.",
+        "default": 0
+      },
+      {
+        "name": "max",
+        "accepts": "number",
+        "type": "input",
+        "options": "100, 200, 500",
+        "description": "The minimum value of the range..",
+        "default": "100"
+      },
+      {
+        "name": "step",
+        "accepts": "number",
+        "type": "input",
+        "options": "1, 2, 5, 10 ...",
+        "description": "Specify the granularity of the range..",
+        "default": ""
+      },
+      {
+        "name": "value",
+        "accepts": "number",
+        "type": "input",
+        "options": "0,1,2,3,4...",
+        "description": "The current value of the range.",
+        "default": "0 or the min value set for the range."
+      },
+      {
+        "name": "clrRangeHasProgress",
+        "accepts": "boolean",
+        "type": "input",
+        "options": "true, false",
+        "description": "Show the percentage of the range below thecurrent value..",
+        "default": "false"
+      }
+    ],
+    "methods": [
+      {
+        "name": "togglePanel",
+        "parameters": [],
+        "description": "Opens and close the panel.",
+        "returns": "void"
       }
     ],
     "css": [

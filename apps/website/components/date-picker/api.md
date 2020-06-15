@@ -3,6 +3,20 @@ title: API
 toc: true
 ---
 
-# API
+Use checkboxes when users need to select multiple options in a list of related options.
 
-### Code & Examples
+## Components
+
+### ClrDateInput
+
+#### Selector & Basic Usage
+
+```html
+<form clrForm>
+  <!-- form controls -->
+</form>
+```
+
+#### Bindings
+
+<DocComponentApi component="ClrForm" item="bindings" />
