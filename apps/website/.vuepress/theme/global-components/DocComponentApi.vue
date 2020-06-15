@@ -1,5 +1,19 @@
 <template>
   <div>
+    <table class="table" v-if="item === 'interface'">
+      <tr>
+        <th class="left">Property</th>
+        <th class="left">Type</th>
+        <th class="left">Description</th>
+      </tr>
+
+      <tr v-for="item in items">
+        <td class="left">{{ item.property }}</td>
+        <td class="left">{{ item.propertyType }}</td>
+        <td class="left">{{ item.description }}</td>
+      </tr>
+    </table>
+
     <table class="table" v-if="item === 'bindings'">
       <tr>
         <th class="left">Binding</th>
@@ -20,14 +34,14 @@
     <section v-if="item === 'methods'">
       <div class="card" v-for="item in items">
         <div class="card-block">
-          <h4 class="card-title">{{ item.name }}</h4>
+          <h4 class="card-title">{{ item.name }}({{ getParams(item.parameters) }}):{{ item.returns }}</h4>
           <p class="card-text">
-            {{ item.name }}( {{ getParams(item.parameters) }} ):{{ item.returns }}
+            {{ item.description }}
           </p>
         </div>
         <ul class="list-group" v-if="item.parameters.length > 0">
           <li class="list-group-item">
-            <table class="table table-noborder" style="margin-top: 0">
+            <table class="table table-noborder" style="margin-top: 0;">
               <tr>
                 <th class="left">Name</th>
                 <th class="left">Type</th>
@@ -41,9 +55,7 @@
             </table>
           </li>
         </ul>
-        <div class="card-footer">
-          <strong>Returns</strong> {{ item.returns }}
-        </div>
+        <div class="card-footer"><strong>Returns</strong> {{ item.returns }}</div>
       </div>
     </section>
 
@@ -104,10 +116,12 @@ export default {
     },
 
     getParams: function (params) {
-      return params.map(function(param) {
-        return `${param.name}: ${param.type}`
-      }).join('; ');
-    }
+      return params
+        .map(function (param) {
+          return `${param.name}: ${param.type}`;
+        })
+        .join('; ');
+    },
   },
 };
 </script>

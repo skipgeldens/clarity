@@ -17,31 +17,11 @@ toc: true
 
 #### Properties
 
-| Name                           | Type                                                  | Description                                                                                                                                                                         |
-| ------------------------------ | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| clrDgLoading                   | @Input: boolean                                       | When this is true the datagrid will have an overlay that blocks user interaction and shows a \<clr-spinner\> that indicates activity associated with retrieving data from a server. |
-| clrDgRefresh                   | @Output: EventEmitter\<ClrDatagridStateInterface\<T>> | The state object reflecting the page metadata (to, from size & current) and current sorting and filters applied to the data models.                                                 |
-| clrDgSelected                  | @Input: value: T[]                                    | Used for the multi-select datagrid. An input accepting the array of all items that should be selected when data is rendered.                                                        |
-| clrDgSelectedChange            | @Output: T[]                                          | Used for the multi-select datagrid. An array of all items that are currently selected. This output is fired after a user selects an item.                                           |
-| clrDgSingleSelected            | @Input: value: T                                      | Used for the single-select datagrid. The item that should be selected when the data is rendered.                                                                                    |
-| clrDgSingleSelected            | @Output                                               | Used for the single-select datagrid. The item that is currently selected. Fired when user selects an item from the datagrid rows.                                                   |
-| clrDgSingleSelectionAriaLabel  | @Input: string                                        | Customized aria-label for the single select checkbox in the row when single row select is declared for the datagrid.                                                                |
-| clrDgSingleActionableAriaLabel | @Input: string                                        | Customized aria-label for the row-action button when there are row actions declared for the datagrid.                                                                               |
-| clrDetailExpandableAriaLabel   | @Input: string                                        |                                                                                                                                                                                     |
-| clrDgPreserveSelection         | @Input" boolean                                       | Set this to true to preserve datagrid selections after filtering has occurred on the dataset.                                                                                       |
-
-{.table .left-cell}
+<DocComponentApi component="ClrDatagrid" item="bindings" />
 
 #### Methods
 
-| Method Name | Arguments: Type | Return Type | Description                                                                              |
-| ----------- | --------------- | ----------- | ---------------------------------------------------------------------------------------- |
-| dataChanged | none            | void        | Re-trigger the computation of displayed items manually. (cell width and datagrid height) |
-| allSelected | none            | boolean     | Use to determine if all displayed items are selected.                                    |
-| allSelected | value: boolean  | void        | In a multi-select datagrid use this to select all items.                                 |
-| resize      | none            | void        | Re-render the datagrid content. E.g recalculate columns widths for projected content.    |
-
-{.table .left-cell}
+<DocComponentApi component="ClrDatagrid" item="methods" />
 
 ### ClrDatagridActionBar
 
@@ -62,17 +42,23 @@ operate on a single row item.
 #### Selector & Basic Usage
 
 ```html
-Next Selector
+<clr-datagrid>
+  ...
+  <clr-dg-row *clrDgItems="let item of items" [clrDgItem]="item">
+    <clr-dg-action-overflow (clrDgActionOverflowOpenChange)="openChangeFn($event)">
+      <button class="action-item">
+        <clr-icon shape="note"></clr-icon>
+        Action
+      </button>
+    </clr-dg-action-overflow>
+  </clr-dg-row>
+  ...
+</clr-datagrid>
 ```
 
-#### Properties
+#### Bindings
 
-| Name                          | Type             | Description                                                       |
-| ----------------------------- | ---------------- | ----------------------------------------------------------------- |
-| clrDgActionOverflowOpen       | @Input: boolean  | An input that sets the open/closed state of the menu.             |
-| clrDgActionOverflowOpenChange | @Output: boolean | An output emitted after the open/close state of the menu changes. |
-
-{.table .left-cell}
+<DocComponentApi component="ClrDatagridActionOverflow" item="bindings" />
 
 ### ClrDatagridColumn
 
@@ -85,33 +71,9 @@ Next Selector
 The ClrDgatagridColumn is used to project column header content, declare the property on the model that relates to a
 column and declare filters, sorting as well as if it can be hidden by the user.
 
-#### Properties
+#### Bindings
 
-| Name                 | Type                                       | Description                                                                                           |
-| -------------------- | ------------------------------------------ | ----------------------------------------------------------------------------------------------------- |
-| clrDgColType         | @Input: string                             | number                                                                                                | Input that sets the item type for the column when a default filter is used. |
-| clrDgField           | @Input: string                             | Used to set the model field (e.g: item.field) for sorting and filters on non server driven datagrids. |
-| clrDgSortBy          | @Input: ClrDatagridComparatorInterface\<T> | Used to pass a custom sorting comparator to the column.                                               |
-| clrDgSortOrder       | @Input: ClrDatagridSortOrder               | Used to set the initial sorted state of a column.                                                     |
-| clrDgSortOrderChange | @Output: ClrDatagridSortOrder              | Emits the ClrDatagridSortOrder on a column after it has been changed.                                 |
-| clrFilterValue       | @Input: string                             | \[number, number]                                                                                     | Use this to preset the initial filter value for a column. |
-| clrFilterValueChange | @Output: string                            | \[number, number]                                                                                     | An output event that emits the the value used to filter a column after it changes. |
-| clrDgColumnResize\*  | @Output: number                            | Output that emits the updated width (in px) of a column width after it has changed.                   |
-
-{.table .left-cell}
-
-##### Note: Marked items **\*** are special directives that overload the clr-dg-column selector and provide additional properties or methods.
-
-#### Methods
-
-TODO: Decide how many of the public methods we want to docuemnt here (e.g header-renderer has several public methods
-related to column width and column state)
-| Method Name | Arguments: Type | Return Type | Description |
-| ---- | ---- | ---- | ---- |
-| getColumnWidthState | none | Partial\<ColumnState\> | Returns an object that partially describes the current state of
-a column. It will describe the width of a column and if there is a strict width set on the column. |
-| setColumnState | index: number | void | Used to update the order of columns with the column in the index position. |
-{.table .left-cell}
+<DocComponentApi component='ClrDatagridColumn' item='bindings' />
 
 ### ClrDatagridFilter
 
@@ -122,10 +84,44 @@ TODO: Add in docs for clr-dg-string-filter and clr-dg-numeric-filter
 
 #### Selector & Basic Usage
 
+##### Inline View
+
+```html
+<-- In the columns declaration -->
+<clr-dg-column>
+  My column
+  <clr-dg-filter [clrDgFilter]="myFilter">
+    <-- The HTML from your custom filter: inputs, checkboxes, ... -->
+  </clr-dg-filter>
+</clr-dg-column>
+```
+
+```typescript
+import { ClrDatagridFilterInterface } from '@clr/angular';
+
+class MyFilter implements ClrDatagridFilterInterface<User> {
+  changes = new Subject<any>();
+  isActive(): boolean {
+    /* ... */
+  }
+  accepts(user: User) {
+    /* ... */
+  }
+}
+
+@Component({
+  /* ... */
+})
+class MyComponent {
+  public myFilter = new MyFilter();
+}
+```
+
+##### Encapsulated View
+
 ```html
 <clr-dg-filter [clrDgFilter]="myFilter">
   <my-reusable-filter></my-reusable-filter>
-  <!-- encapsulated view -->
 </clr-dg-filter>
 
 <clr-dg-filter [clrDgFilter]="myFilter">
@@ -133,45 +129,50 @@ TODO: Add in docs for clr-dg-string-filter and clr-dg-numeric-filter
 </clr-dg-filter>
 ```
 
+```typescript
+import { ClrDatagridFilterInterface, ClrDatagridFilter } from '@clr/angular';
+
+@Component({
+  selector: 'my-filter',
+})
+class MyFilter implements ClrDatagridFilterInterface<User> {
+  constructor(private filterContainer: ClrDatagridFilter) {
+    filterContainer.setFilter(this);
+  }
+  changes = new Subject<any>();
+  isActive(): boolean {
+    /* ... */
+  }
+  accepts(user: User) {
+    /* ... */
+  }
+}
+```
+
 #### Properties
 
-| Name                  | Type                                   | Description                                                                                       |
-| --------------------- | -------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| clrDgFilter           | @Input: ClrDatagridFilterInterface\<T> | This input takes a filter that implements the ClrDatagridFilterInterface (for the row item Type). |
-| clrDgFilterOpen       | @Input: boolean                        | Input that takes a boolean to set the open of closed state of the filter.                         |
-| clrDgFilterOpenChange | @Output: boolean                       | An output that emits the open/closed state of a filter after it changes.                          |
-
-{.table .left-cell}
+<DocComponentApi component="ClrDatagridFilter" item="bindings" />
 
 #### Methods
 
-| Method Name | Arguments: Type | Return Type | Description                                  |
-| ----------- | --------------- | ----------- | -------------------------------------------- |
-| active      | none            | boolean     | Indicates if the filter is currently active. |
-
-{.table .left-cell}
+<DocComponentApi component="ClrDatagridFilter" item="methods" />
 
 ### ClrDatagridRow
 
 #### Selector & Basic Usage
 
 ```html
-<clr-dg-row></clr-dg-row>
+<clr-datagrid>
+  <clr-dg-column>User ID</clr-dg-column>
+  <clr-dg-row *clrDgItems="let user of users">
+    <clr-dg-cell>{{user.id}}</clr-dg-cell>
+  </clr-dg-row>
+</clr-datagrid>
 ```
 
-#### Properties
+#### Bindings
 
-| Name                  | Type             | Description                                                                                                                           |
-| --------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| clrDgItem             | @Input: T        | This is the model for the row to display. It (implicitly) sets the type (T) of the datagrid and all childe components and directives. |
-| clrDgSelected         | @Input: boolean  | Use this to set the selected state of a row item.                                                                                     |
-| clrDgSelectable       | @Input: booean   | Use this to set the selectable state of a row.                                                                                        |
-| clrDgSelectedChange   | @Output: boolean | Change event that emits after an item is selected or unselected.                                                                      |
-| clrDgDetailOpenLabel  | @Input: string   | Set this if the applied common string for open needs to be different on each row.                                                     |
-| clrDgDetailCloseLabel | @Input: string   | Set this if the applied common string for close needs to be different on each row.                                                    |
-|                       |                  |                                                                                                                                       |
-
-{.table .left-cell}
+<DocComponentApi component="ClrDatagridRow" item="bondings" />
 
 ### ClrDatagridCell
 
@@ -180,7 +181,12 @@ This class is used to project cell content into. Content can be simple textual c
 #### Selector & Basic Usage
 
 ```html
-<clr-dg-cell></clr-dg-cell>
+<clr-datagrid>
+  <clr-dg-column>User ID</clr-dg-column>
+  <clr-dg-row *ngFor="let user of users">
+    <clr-dg-cell>{{user.id}}</clr-dg-cell>
+  </clr-dg-row>
+</clr-datagrid>
 ```
 
 ### ClrDgFooter
@@ -192,7 +198,15 @@ component. Any other projected content will be displayed in the description slot
 #### Selector & Basic Usage
 
 ```html
-<clr-dg-footer></clr-dg-footer>
+<clr-datagrid>
+  <clr-dg-column>User ID</clr-dg-column>
+  <clr-dg-row *clrDgItems="let user of users">
+    <clr-dg-cell>{{user.id}}</clr-dg-cell>
+  </clr-dg-row>
+  <clr-dg-footer>
+    {{ users.length }} Users
+  </clr-dg-footer>
+</clr-datagrid>
 ```
 
 ### ClrDatagridPagination
@@ -200,21 +214,22 @@ component. Any other projected content will be displayed in the description slot
 #### Selector & Basic Usage
 
 ```html
-<clr-dg-pagination></clr-dg-pagination>
+<clr-datagrid>
+  <clr-dg-column>User ID</clr-dg-column>
+  <clr-dg-row *clrDgItems="let user of users">
+    <clr-dg-cell>{{user.id}}</clr-dg-cell>
+  </clr-dg-row>
+  <clr-dg-footer>
+    <clr-dg-pagination #pagination [clrDgPageSize]="10">
+      {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}} of {{pagination.totalItems}} users
+    </clr-dg-pagination>
+  </clr-dg-footer>
+</clr-datagrid>
 ```
 
-#### Properties
+#### Bindings
 
-| Name                   | Type            | Description                                                                             |
-| ---------------------- | --------------- | --------------------------------------------------------------------------------------- |
-| clrDgPageInputDisabled | @Input: boolean | Use this to enable or disable the pagination control from user input.                   |
-| clrDgPageSize          | @Input: number  | Use this to pass a number that determines the max number of items to display on a page. |
-| clrDgTotalItems        | @Input: number  | Use this to tell the datagrid the total number of items in the item set.                |
-| clrDgLastPage          | @Input: number  | Use this to set the number of the last page (e.g back)                                  |
-| clrDgPage              | @Input: number  | Use this to set the current page for the dataset.                                       |
-| clrDgPageChange        | @Output: number | Output that emits the crrent page when it gets changed.                                 |
-
-{.table .left-cell}
+<DocComponentApi component="ClrDatagridPagination" item="bindings" />
 
 ### ClrDatagridPageSize
 
@@ -223,17 +238,23 @@ Child component of pagination. Used to set the page size for pagination calculat
 #### Selector & Basic Usage
 
 ```html
-<clr-dg-page-size></clr-dg-page-size>
+<clr-datagrid>
+  <clr-dg-column>User ID</clr-dg-column>
+  <clr-dg-row *clrDgItems="let user of users">
+    <clr-dg-cell>{{user.id}}</clr-dg-cell>
+  </clr-dg-row>
+  <clr-dg-footer>
+    <clr-dg-pagination #pagination [clrDgPageSize]="10">
+      <clr-dg-page-size [clrPageSizeOptions]="[10,20,50,100]">Users per page</clr-dg-page-size>
+      {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}} of {{pagination.totalItems}} users
+    </clr-dg-pagination>
+  </clr-dg-footer>
+</clr-datagrid>
 ```
 
-#### Properties
+#### Bindings
 
-| Name               | Type             | Description                                     |
-| ------------------ | ---------------- | ----------------------------------------------- |
-| clrPageSizeOptions | @Input: number[] | Sets the size of items visible on a given page. |
-|                    |                  |                                                 |
-
-{.table .left-cell}
+<DocComponentApi component="ClrDatagridPageSize" item="bindings" />
 
 ### ClrDatagridPlaceholder
 
@@ -242,7 +263,10 @@ Content projected into this component appears only when the datagrid is empty.
 #### Selector & Basic Usage
 
 ```html
-<clr-dg-placeholder></clr-dg-placeholder>
+<clr-datagrid>
+  <!-- columns, rows, footer, etc declared -->
+  <clr-dg-placeholder></clr-dg-placeholder>
+</clr-datagrid>
 ```
 
 ### ClrDatagridDetail
@@ -252,7 +276,15 @@ Use this to project the details view when a row has master/detail enabled.
 #### Selector & Basic Usage
 
 ```html
-<clr-dg-detail></clr-dg-detail>
+<clr-datagrid>
+  <!-- columns, rows, footer, etc declared -->
+  <clr-dg-detail *clrIfDetail="let detail">
+    <clr-dg-detail-header>{{detail.name}}</clr-dg-detail-header>
+    <clr-dg-detail-body>
+      <-- ... -->
+    </clr-dg-detail-body>
+  </clr-dg-detail>
+</clr-datagrid>
 ```
 
 ## Directives
@@ -267,39 +299,42 @@ datagrid displays UI controls to hide and show the columns that have this direct
 
 #### Selector & Basic Usage
 
+Note, the object passed to the directive was a design decision to make it explicit what was being set. This separates the declaration of the feature from the (hidden) state of the feature.
+
 ```html
-<clr-dg-column clrDgHideableColumn></clr-dg-column> <clr-dg-column clrDgHideableColumn="{hidden: true}"></clr-dg-column>
+<clr-datagrid>
+  <clr-dg-column>
+    <ng-container *clrDgHideableColumn="{hidden: false}">
+      User ID
+    </ng-container>
+  </clr-dg-column>
+  <!-- placeholder, rows, footer, etc declared -->
+</clr-datagrid>
 ```
 
-#### Properties
+#### Bindings
 
-| Name                | Type                        | Description                                                            |
-| ------------------- | --------------------------- | ---------------------------------------------------------------------- |
-| clrDgHideableColumn | @Input: { hidden: boolean } | The hidden state of a column with the directive on it.                 |
-| clrDgHidden         | @Input: boolean             | An alternaitve input for setting the hidden boolean value of a column. |
-| clrDgHiddenChange   | @Output: boolean            | An output that emits the hidden state after it has changed.            |
-
-{.table .left-cell}
+<DocComponentApi component="ClrDatagridHideableColumn" item="bindings" />
 
 ### ClrDatagridItems
 
 For datagrids that can supply all of the items on page load there is a structural directive that lets us handle all
-of the data processing needed for filters, sorting and pagination.
+of the data processing needed for filters, sorting and pagination. The TrackByFunction is optional.
 
 #### Selector & Basic Usage
 
 ```html
-<clr-dg-row *clrDgItems="let item of items"></clr-dg-row>
-<clr-dg-row *clrDgItems="let item of items; trackBy: myTrackByFunction"></clr-dg-row>
+<clr-datagrid>
+    <clr-dg-row *clrDgItems="let user of users; trackBy: myTrackByFunction"">
+        <clr-dg-cell>{{user.id}}</clr-dg-cell>
+    </clr-dg-row>
+    <!-- placeholder, rows, footer, etc declared -->å
+</clr-datagrid>
 ```
 
-#### Properties
+#### Bindings
 
-| Name              | Type                        | Description                                                                                                                                |
-| ----------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| clrDgItemsTrackBy | @Input: TrackByFunction\<T> | Optional function passed in that defines how to make track changes for the iterable. The function takes an iteration index and an item ID. |
-
-{.table .left-cell}
+<DocComponentApi component="ClrDatagridItems" item="bindings" />
 
 ### ClrIfDetail
 
@@ -309,18 +344,20 @@ Use it on the clr-dg-detail element and use the let keyword to declare a templat
 #### Selector & Basic Usage
 
 ```html
-<clr-dg-detail *clrIfDetail="let detail"></clr-dg-detail>
+<clr-datagrid>
+  <!-- columns, rows, footer, etc declared -->
+  <clr-dg-detail *clrIfDetail="let detail">
+    <clr-dg-detail-header>{{detail.name}}</clr-dg-detail-header>
+    <clr-dg-detail-body>
+      <-- ... -->
+    </clr-dg-detail-body>
+  </clr-dg-detail>
+</clr-datagrid>
 ```
 
 #### Properties
 
-| Name              | Type         | Description                                                   |
-| ----------------- | ------------ | ------------------------------------------------------------- |
-| clrIfDetail       | @Input: any  | The model mapped to the template variable for this directive. |
-| clrIfDetailChange | @Output: any | The model mapped to the template variable for this directive  |
-|                   |              |                                                               |
-
-{.table .left-cell}
+<DocComponentApi component="ClrIfDetail" item="bindings" />
 
 ## Interfaces
 
@@ -332,30 +369,36 @@ The meta information about the datagrid model that is passed to the server in or
 It contains a page object for paging state, a filters array with the filter object and a object that describes how
 the data gets sorted.
 
-| InterfaceProperty | InterfacePropertyType                        | InterfacePropertyDescription                                             |
-| ----------------- | -------------------------------------------- | ------------------------------------------------------------------------ |
-| page?.from?       | number                                       | The (optional) starting page number for the slice of data.               |
-| page?.to?         | number                                       | The (optional) ending page number for the slice of data.                 |
-| page?.size?       | number                                       | The (optional) number of records for a single slice of data.             |
-| page?.current?    | number                                       | The page number for the current slice of model data.                     |
-| sort?.by          | string \| ClrDatagridComparatorInterface\<T> | DESC, ASC, None or the comparator used to sort.                          |
-| sort?.reverse     | boolean                                      | The opposite of the sorting applied to the model data.                   |
-| filters           | any[]                                        | An array of filters that are applied to the data passed to the datagrid. |
+#### Basic Usage
 
-{.table .left-cell}
+```typescript
+interface ClrDatagridStateInterface<T = any> {
+  page?: {
+    from?: number;
+    to?: number;
+    size?: number;
+    current?: number;
+  };
+  sort?: {
+    by: string | ClrDatagridComparatorInterface<T>;
+    reverse: boolean;
+  };
+  filters?: any[];
+}
+```
+
+#### Properties
+
+<DocComponentApi component="ClrDatagridStateInterface" item="interface" />
 
 ### ClrDatagridComparatorInterface
 
-An interfaced used when creating a custom comparator used to sort a one of the models columns. It must implement the
+An interfaced used when creating a custom comparator. Use it to implement custom sorting for a columns. It must implement the
 compare method described below.
 
 #### Methods
 
-| Method Name | Arguments: Type | Return Type | Description |
-| ----------- | --------------- | ----------- | ----------- |
-| compare     | a: T, b: T      | number      |             | the (T)ype is the model provded for a datagrid row item. |
-
-{.table .left-cell}
+<DocComponentApi component="ClrDatagridComparatorInterface" item="interface" />
 
 ##### ClrDatagridComparatorInterface Notes
 

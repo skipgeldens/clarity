@@ -9,27 +9,22 @@ When you need to create a collection of similar action buttons, use a button gro
 
 ### ClrButtonGroup
 
+ClrButton group is a component made up of multiple [ClrButton](./api.md#clrbutton) elements. Button elements can
+optionally be designated for an overflow menu.
+
 #### Selector & Basic Usage
 
 ```html
 <clr-button-group></clr-button-group>
 ```
 
-#### Properties
+#### Bindings
 
 <DocComponentApi component="ClrButtonGroup" item="bindings" />
-
-#### Methods
-
-<DocComponentApi component="ClrButtonGroup" item="methods" />
 
 ### ClrButton
 
 Angular button component used only with [ClrButtonGroup](./api.md#clrbuttongroup).
-
-#### Bindings
-
-#### Methods
 
 #### Selector & Basic Usage
 
@@ -37,4 +32,6 @@ Angular button component used only with [ClrButtonGroup](./api.md#clrbuttongroup
 <clr-button></clr-button>
 ```
 
-## Directives
+#### Bindings
+
+<DocComponentApi component="ClrButton" item="bindings" />

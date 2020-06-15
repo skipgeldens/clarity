@@ -244,7 +244,7 @@ The footer can contain two actions. For more actions, use a [dropdown](/document
         <div class="dropdown top-left open">
           <button class="dropdown-toggle btn btn-sm btn-link">
             Dropdown 1
-            <clr-icon shape="caret down"></clr-icon>
+            <cds-icon shape="caret down"></cds-icon>
           </button>
           <div class="dropdown-menu">
             <a href="#" class="dropdown-item">Item 1</a>
@@ -416,7 +416,7 @@ Cards can contain [alerts](/documentation/alerts).
   <div class="card-block">
     <div class="alert alert-warning alert-sm">
       <button type="button" class="close" aria-label="Close">
-        <clr-icon aria-hidden="true" shape="close"></clr-icon>
+        <cds-icon aria-hidden="true" shape="close"></cds-icon>
       </button>
       <div class="alert-item static">
         <span class="alert-text">

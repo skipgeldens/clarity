@@ -1,4 +1,8 @@
-## title: Accessibility
+---
+title: Accessibility
+---
+
+## Accessibility
 
 All of the WCAG guidelines apply for the Datagrid (When is a good time to rename this to data-table and deprecate the
 datagrid name? I've wanted to do this for a long time b/c it is a bit misleading and not standard)
