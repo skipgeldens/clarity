@@ -1165,12 +1165,12 @@
   "ClrDropdown": {
     "bindings": [
       {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
+        "name": "clrCloseMenuOnItemClick",
+        "accepts": "boolean",
+        "type": "input",
+        "options": "true, false",
+        "description": "When false the drop down is not closed if user clicks on menu items.",
+        "default": true
       }
     ],
     "methods": [
@@ -1193,12 +1193,20 @@
   "ClrDropdownItem": {
     "bindings": [
       {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
+        "name": "clrDisabled",
+        "accepts": "boolean",
+        "type": "input",
+        "options": "true, false",
+        "description": "Set the disabled attribute on the host element.",
+        "default": "null"
+      },
+      {
+        "name": "id",
+        "accepts": "string",
+        "type": "input",
+        "options": "any string",
+        "description": "Allows a consumer supplied id to be set for the dropdown item host.",
+        "default": "Clarity adds an auto-incremented id"
       }
     ],
     "methods": [
@@ -1209,24 +1217,17 @@
         "returns": ""
       }
     ],
-    "css": [
-      {
-        "name": ".alert-text",
-        "description": "Defines the text that is placed into the alert",
-        "host": "div, span",
-        "required": true
-      }
-    ]
+    "css": []
   },
   "ClrDropdownMenu": {
     "bindings": [
       {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
+        "name": "clrPosition",
+        "accepts": "string",
+        "type": "input",
+        "options": "top-left, top-right, right-top, right-bottom, bottom-right, bottom-left, left-bottom, left-top",
+        "description": "Set the position orientation to the trigger anchor.",
+        "default": "bottom-left"
       }
     ],
     "methods": [
@@ -1239,10 +1240,16 @@
     ],
     "css": [
       {
-        "name": ".alert-text",
-        "description": "Defines the text that is placed into the alert",
-        "host": "div, span",
-        "required": true
+        "name": ".dropdown-divider",
+        "description": "Styles the div as a divider element in the menu.",
+        "host": "div",
+        "required": false
+      },
+      {
+        "name": ".dropdown-header",
+        "description": "Styles the header element in the menu",
+        "host": "label",
+        "required": false
       }
     ]
   },
@@ -1455,6 +1462,34 @@
         "options": "",
         "description": "",
         "default": 0
+      }
+    ]
+  },
+  "ClrIfOpen": {
+    "bindings": [
+      {
+        "name": "clrIfOpen",
+        "accepts": "boolean",
+        "type": "two-way",
+        "options": "true, false",
+        "description": "Set the open / close state of element it is applied to.",
+        "default": false
+      }
+    ],
+    "Methods": [
+      {
+        "name": "togglePanel",
+        "parameters": [],
+        "description": "Opens and close the panel.",
+        "returns": "void"
+      }
+    ],
+    "css": [
+      {
+        "name": ".alert-text",
+        "description": "Defines the text that is placed into the alert",
+        "host": "div, span",
+        "required": true
       }
     ]
   },
