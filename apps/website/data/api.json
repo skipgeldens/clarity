@@ -1844,50 +1844,27 @@
     ]
   },
   "ClrSignpost": {
-    "bindings": [
-      {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
-      }
-    ],
-    "methods": [
-      {
-        "name": "",
-        "parameters": [],
-        "description": "",
-        "returns": ""
-      }
-    ],
-    "css": [
-      {
-        "name": ".alert-text",
-        "description": "Defines the text that is placed into the alert",
-        "host": "div, span",
-        "required": true
-      }
-    ]
+    "bindings": [],
+    "methods": [],
+    "css": []
   },
   "ClrSignpostContent": {
     "bindings": [
       {
-        "name": "",
-        "accepts": "",
-        "type": "",
+        "name": "clrPosition",
+        "accepts": "string",
+        "type": "input",
         "options": "",
-        "description": "",
-        "default": 0
+        "description": "top-left, top-middle, top-right, right-top, right-middle, right-bottom, bottom-right, bottom-middle, bottom-left, left-bottom, left-middle, left-top",
+        "default": "right-middle"
       }
     ],
     "methods": [
       {
-        "name": "",
+        "name": "close",
         "parameters": [],
-        "description": "",
-        "returns": ""
+        "description": "A method call that will close the popover content.",
+        "returns": "void"
       }
     ],
     "css": [
@@ -1930,12 +1907,36 @@
   "ClrSpinner": {
     "bindings": [
       {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
+        "name": "clrInline",
+        "accepts": "boolean",
+        "type": "input",
+        "options": "true, false",
+        "description": "Align the spinner vertically in the line-height",
+        "default": "false"
+      },
+      {
+        "name": "clrInverse",
+        "accepts": "boolean",
+        "type": "input",
+        "options": "true, false",
+        "description": "User the inverse spinner background color for the theme ($clr-spinner-inverse-bg-color).",
+        "default": "false"
+      },
+      {
+        "name": "clrSmall",
+        "accepts": "boolean",
+        "type": "input",
+        "options": "true, false",
+        "description": "Use the small (18px x 18px) size.",
+        "default": "false"
+      },
+      {
+        "name": "clrMedium",
+        "accepts": "boolean",
+        "type": "input",
+        "options": "true, false",
+        "description": "Use the medium (36px x 36px) size.",
+        "default": "false"
       }
     ],
     "methods": [
@@ -2012,88 +2013,59 @@
     ]
   },
   "ClrStackHeader": {
-    "bindings": [
-      {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
-      }
-    ],
-    "methods": [
-      {
-        "name": "",
-        "parameters": [],
-        "description": "",
-        "returns": ""
-      }
-    ],
-    "css": [
-      {
-        "name": ".alert-text",
-        "description": "Defines the text that is placed into the alert",
-        "host": "div, span",
-        "required": true
-      }
-    ]
+    "bindings": [],
+    "methods": [],
+    "css": []
   },
   "ClrStackViewCustomTags": {
-    "bindings": [
-      {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
-      }
-    ],
-    "methods": [
-      {
-        "name": "",
-        "parameters": [],
-        "description": "",
-        "returns": ""
-      }
-    ],
-    "css": [
-      {
-        "name": ".alert-text",
-        "description": "Defines the text that is placed into the alert",
-        "host": "div, span",
-        "required": true
-      }
-    ]
+    "bindings": [],
+    "methods": [],
+    "css": []
   },
   "ClrStackView": {
+    "bindings": [],
+    "methods": [],
+    "css": []
+  },
+  "ClrStepper": {
     "bindings": [
       {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
+        "name": "clrInitialStep",
+        "accepts": "string",
+        "type": "input",
+        "options": "Valid string to designate the starting formGroupName or ngModelGroup.",
+        "description": "Set the initial ClrStepperPanel to initialize the stepper with. ",
+        "default": "null"
       }
     ],
+    "methods": [],
+    "css": []
+  },
+  "ClrStepButton": {
+    "bindings": [
+      {
+        "name": "clrStepButton",
+        "accepts": "string",
+        "type": "input",
+        "options": "next, submit",
+        "description": "Set the step button to advance panels (next) or submit the form.",
+        "default": "next"
+      }
+    ],
+    "methods": [],
+    "css": []
+  },
+  "ClrStepperPanel": {
+    "bindings": [],
     "methods": [
       {
-        "name": "",
+        "name": "togglePanel",
         "parameters": [],
-        "description": "",
-        "returns": ""
+        "description": "Opens and close the panel.",
+        "returns": "void"
       }
     ],
-    "css": [
-      {
-        "name": ".alert-text",
-        "description": "Defines the text that is placed into the alert",
-        "host": "div, span",
-        "required": true
-      }
-    ]
+    "css": []
   },
   "ClrTabContent": {
     "bindings": [
