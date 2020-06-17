@@ -1580,20 +1580,58 @@
   "ClrModal": {
     "bindings": [
       {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
+        "name": "clrModalOpen",
+        "accepts": "boolean",
+        "type": "two-way",
+        "options": "true, false",
+        "description": "A two-way binding to the open / close state of the modal.",
+        "default": "false"
+      },
+      {
+        "name": "clrModalClosable",
+        "accepts": "boolean",
+        "type": "input",
+        "options": "true, false",
+        "description": "When false there is no user control button to close the modal.",
+        "default": "true"
+      },
+      {
+        "name": "clrModalSize",
+        "accepts": "string",
+        "type": "input",
+        "options": "sm, <none>, lg, xl",
+        "description": "Set the size of the modal.",
+        "default": "<none> (medium size)"
+      },
+      {
+        "name": "clrModalStaticBackdrop",
+        "accepts": "boolean",
+        "type": "input",
+        "options": "true, false",
+        "description": "When true the modal will not close if user clicks outside of the modal.",
+        "default": "true"
+      },
+      {
+        "name": "clrModalSkipAnimation",
+        "accepts": "boolean",
+        "type": "input",
+        "options": "true, false",
+        "description": "WHen true the modal will not animate opening and closing.",
+        "default": "false"
       }
     ],
     "methods": [
       {
-        "name": "",
+        "name": "open",
         "parameters": [],
-        "description": "",
-        "returns": ""
+        "description": "Open the modal with this method call.",
+        "returns": "void"
+      },
+      {
+        "name": "close",
+        "parameters": [],
+        "description": "Close the modal with this method call.",
+        "returns": "void"
       }
     ],
     "css": [
