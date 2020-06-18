@@ -5,7 +5,7 @@ toc: true
 
 Use checkboxes when users need to select multiple options in a list of related options.
 
-## Components
+## Angular Components
 
 ### ClrInput
 

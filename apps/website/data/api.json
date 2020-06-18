@@ -1397,6 +1397,20 @@
       }
     ]
   },
+  "ClrIfActive": {
+    "bindings": [
+      {
+        "name": "clrIfActive",
+        "accepts": "boolean",
+        "type": "two-way",
+        "options": "true, false",
+        "description": "Structural directive that enables lazy-loading.",
+        "default": "false"
+      }
+    ],
+    "methods": [],
+    "css": []
+  },
   "ClrIfDetail": {
     "bindings": [
       {
@@ -2070,12 +2084,12 @@
   "ClrTabContent": {
     "bindings": [
       {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
+        "name": "id",
+        "accepts": "string",
+        "type": "input",
+        "options": "Valid html id attribute value.",
+        "description": "Set a specific id instead of the generated id.",
+        "default": "clr-tab-content-# (where number is incremented for each ClrTab instance)."
       }
     ],
     "methods": [
@@ -2126,12 +2140,12 @@
   "ClrTabs": {
     "bindings": [
       {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
+        "name": "clrLayout",
+        "accepts": "string",
+        "type": "input",
+        "options": "horizontal, vertical",
+        "description": "Change the tab orientation to vertical or horizontal.",
+        "default": "horizontal"
       }
     ],
     "methods": [
@@ -2154,40 +2168,20 @@
   "ClrTabLink": {
     "bindings": [
       {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
-      }
-    ],
-    "methods": [
+        "name": "clrTabLinkInOverflow",
+        "accepts": "boolean",
+        "type": "input",
+        "options": "true, false",
+        "description": "Puts the tab button into the overflow container when true.",
+        "default": "false"
+      },
       {
-        "name": "",
-        "parameters": [],
-        "description": "",
-        "returns": ""
-      }
-    ],
-    "css": [
-      {
-        "name": ".alert-text",
-        "description": "Defines the text that is placed into the alert",
-        "host": "div, span",
-        "required": true
-      }
-    ]
-  },
-  "ClrTabOverflowContent": {
-    "bindings": [
-      {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
+        "name": "id",
+        "accepts": "string",
+        "type": "input",
+        "options": "Valid html id",
+        "description": "Set this to a specific id that is also used for aria-controls/aria-labelledby.",
+        "default": "clr-tab-content-# (where number is incremented for each ClrTab instance)."
       }
     ],
     "methods": [

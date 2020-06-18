@@ -3,7 +3,7 @@ title: API
 toc: true
 ---
 
-## Components
+## Angular Components
 
 {.section-header}
 
@@ -47,7 +47,7 @@ When using ClrSignpost it can be optimized with the CLrIfOpen structural directi
 
 <DocComponentApi component="ClrSignpostContent" item="methods" />
 
-## Directives
+## Angular Directives
 
 {.section-header}
 

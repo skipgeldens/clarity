@@ -3,7 +3,7 @@ title: API
 toc: true
 ---
 
-## Components
+## Angular Components
 
 {.section-header}
 
@@ -287,7 +287,7 @@ Use this to project the details view when a row has master/detail enabled.
 </clr-datagrid>
 ```
 
-## Directives
+## Angular Directives
 
 {.section-header}
 

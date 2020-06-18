@@ -3,7 +3,7 @@ title: API
 toc: true
 ---
 
-## Components {.section-header}
+## Angular Components {.section-header}
 
 ### ClrAlert
 

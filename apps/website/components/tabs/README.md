@@ -359,7 +359,7 @@ auto-generated
 
 Used on `<clr-tab-content>`. If explicitly set, will assign the set id as the id for the element. If not set, the component will auto-generate the id.
 
-##### Directives used along with clr-tab-content
+##### Angular Directives used along with clr-tab-content
 
 Input/Output
 

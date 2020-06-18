@@ -5,7 +5,7 @@ toc: true
 
 When you need to create a collection of similar action buttons, use a button group.
 
-## Components
+## Angular Components
 
 ### ClrButtonGroup
 

@@ -3,7 +3,7 @@ title: API
 toc: true
 ---
 
-## Components
+## Angular Components
 
 {.section-header}
 
@@ -50,7 +50,7 @@ To use them, add an element with the appropriate class.
 
 <DocComponentApi component="ClrDropdownMenu" item="css" />
 
-## Directives
+## Angular Directives
 
 ### ClrDropdownTrigger
 
