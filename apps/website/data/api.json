@@ -1470,12 +1470,12 @@
   "ClrIfExpanded": {
     "bindings": [
       {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
+        "name": "clrIfExpanded",
+        "accepts": "boolean",
+        "type": "two-way",
+        "options": "true, false",
+        "description": "Two way binding for the expanded/collapsed state of a ClrTreeNode.",
+        "default": "false"
       }
     ]
   },
@@ -1792,15 +1792,23 @@
       }
     ]
   },
-  "ClrRecursiveForOf": {
+  "ClrRecursiveFor": {
     "bindings": [
       {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
+        "name": "clrRecursiveFor",
+        "accepts": "T | T[]",
+        "type": "input",
+        "options": "The Type or array of Type representing ClrTreeNode's.",
+        "description": "Two way binding of the ",
+        "default": ""
+      },
+      {
+        "name": "clrRecursiveForGetChildren",
+        "accepts": "T => T[] | Promise<T[]> | Observable<T[]>",
+        "type": "input",
+        "options": "n/a",
+        "description": "The function called used to iterate over the children of a node. Can return async results (Promise or Observable).",
+        "default": ""
       }
     ],
     "methods": [
@@ -2370,12 +2378,12 @@
   "ClrTree": {
     "bindings": [
       {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
+        "name": "clrLazy",
+        "accepts": "boolean",
+        "type": "input",
+        "options": "true, false",
+        "description": "Turn lazy loading on and only load the currently displayed nodes.",
+        "default": "false"
       }
     ],
     "methods": [
@@ -2398,12 +2406,28 @@
   "ClrTreeNode": {
     "bindings": [
       {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
+        "name": "clrSelected",
+        "accepts": "ClrSelectedState",
+        "type": "two-way",
+        "options": "ClrSelectedState.UNSELECTED, ClrSelectedState.SELECTED, ClrSelectedState.INDETERMINATE",
+        "description": "Enable selection for the tree and its nodes.",
+        "default": "null"
+      },
+      {
+        "name": "clrExpandable",
+        "accepts": "boolean",
+        "type": "input",
+        "options": "true, false",
+        "description": "When true, allow an app to prevent pre-loading of nodes that are not expanded..",
+        "default": "false"
+      },
+      {
+        "name": "clrExpanded",
+        "accepts": "boolean",
+        "type": "two-way",
+        "options": "true, false",
+        "description": "When true a node is expanded.",
+        "default": "false"
       }
     ],
     "methods": [

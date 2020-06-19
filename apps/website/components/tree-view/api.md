@@ -3,6 +3,63 @@ title: API
 toc: true
 ---
 
-# API
+## Angular Components
 
-### Code & Examples
+{.section-header}
+
+### ClrTree
+
+#### Selector & Basic Usage
+
+```html
+<clr-tree>
+  <!-- clr-tree-node children components -->
+</clr-tree>
+```
+
+### ClrTreeNode
+
+#### Selector & Basic Usage
+
+```html
+<clr-tree>
+  <clr-tree-node>
+    There is tree node content inside.
+  </clr-tree-node>
+  <!-- more sibling nodes as needed -->
+</clr-tree>
+```
+
+#### Properties
+
+<DocComponentApi component="ClrTreeNode" item="bindings" />
+
+## Angular Directives
+
+### ClrIfExpanded
+
+#### Selector & Basic Usage
+
+```html
+
+```
+
+#### Properties
+
+<DocComponentApi component="ClrIfExpanded" item="bindings" />
+
+### clrRecursiveFor
+
+#### Selector & Basic Usage
+
+```html
+<clr-tree>
+  <clr-tree-node *clrRecursiveFor="let node of nodes; getChildren: getChildren">
+    {{node}}
+  </clr-tree-node>
+</clr-tree>
+```
+
+#### Properties
+
+<DocComponentApi component="ClrRecursiveFor" item="bindings" />
