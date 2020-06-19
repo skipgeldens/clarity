@@ -3,13 +3,6 @@ title: API
 toc: true
 ---
 
----
-
-title: API
-toc: true
-
----
-
 ## Angular Components
 
 {.section-header}

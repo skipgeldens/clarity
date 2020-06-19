@@ -1490,50 +1490,13 @@
         "default": false
       }
     ],
-    "Methods": [
-      {
-        "name": "togglePanel",
-        "parameters": [],
-        "description": "Opens and close the panel.",
-        "returns": "void"
-      }
-    ],
-    "css": [
-      {
-        "name": ".alert-text",
-        "description": "Defines the text that is placed into the alert",
-        "host": "div, span",
-        "required": true
-      }
-    ]
+    "methods": [],
+    "css": []
   },
   "ClrLabel": {
-    "bindings": [
-      {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
-      }
-    ],
-    "methods": [
-      {
-        "name": "",
-        "parameters": [],
-        "description": "",
-        "returns": ""
-      }
-    ],
-    "css": [
-      {
-        "name": ".alert-text",
-        "description": "Defines the text that is placed into the alert",
-        "host": "div, span",
-        "required": true
-      }
-    ]
+    "bindings": [],
+    "methods": [],
+    "css": []
   },
   "ClrLayout": {
     "bindings": [
@@ -2204,22 +2167,15 @@
   "ClrTimeline": {
     "bindings": [
       {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
+        "name": "clrLayout",
+        "accepts": "string",
+        "type": "input",
+        "options": "horizontal, vertical",
+        "description": "Set the orientation of the timeline.",
+        "default": "horizontal"
       }
     ],
-    "methods": [
-      {
-        "name": "",
-        "parameters": [],
-        "description": "",
-        "returns": ""
-      }
-    ],
+    "methods": [],
     "css": [
       {
         "name": ".alert-text",
@@ -2232,12 +2188,12 @@
   "ClrTimelineStep": {
     "bindings": [
       {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
+        "name": "clrState",
+        "accepts": "string",
+        "type": "input",
+        "options": "not-started, current, processing, success, error",
+        "description": "Sets the current state for a step (as reflected in the icon displayed.",
+        "default": "not-started"
       }
     ],
     "methods": [
@@ -2342,52 +2298,38 @@
     ]
   },
   "ClrTooltip": {
-    "bindings": [
-      {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
-      }
-    ],
-    "methods": [
-      {
-        "name": "",
-        "parameters": [],
-        "description": "",
-        "returns": ""
-      }
-    ],
-    "css": [
-      {
-        "name": ".alert-text",
-        "description": "Defines the text that is placed into the alert",
-        "host": "div, span",
-        "required": true
-      }
-    ]
+    "bindings": [],
+    "methods": [],
+    "css": []
   },
   "ClrTooltipContent": {
     "bindings": [
       {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
-      }
-    ],
-    "methods": [
+        "name": "id",
+        "accepts": "string",
+        "type": "input",
+        "options": "any valid string",
+        "description": "Set the id of a tooltip.",
+        "default": ""
+      },
       {
-        "name": "",
-        "parameters": [],
-        "description": "",
-        "returns": ""
+        "name": "clrPosition",
+        "accepts": "string",
+        "type": "input",
+        "options": "right, top-right, top-left, bottom-right, bottom-left, right, left",
+        "description": "Set the display position for the content related to the trigger element..",
+        "default": "right"
+      },
+      {
+        "name": "clrSize",
+        "accepts": "string",
+        "type": "input",
+        "options": "xs, sm, md, lg",
+        "description": "Set the size of the content element.",
+        "default": "md"
       }
     ],
+    "methods": [],
     "css": [
       {
         "name": ".alert-text",
