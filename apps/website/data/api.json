@@ -2450,12 +2450,20 @@
   "ClrVerticalNav": {
     "bindings": [
       {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
+        "name": "clrVerticalNavCollapsible",
+        "accepts": "boolean",
+        "type": "input",
+        "options": "true, false",
+        "description": "When true, the component provides a button to toggle expanded/collapsed states.",
+        "default": "false"
+      },
+      {
+        "name": "clrVerticalNavCollapsed",
+        "accepts": "boolean",
+        "type": "two-way",
+        "options": "true, false",
+        "description": "Two way binding to the collapsed/expanded state.",
+        "default": "false"
       }
     ],
     "methods": [
@@ -2590,12 +2598,36 @@
   "ClrWizardButton": {
     "bindings": [
       {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
+        "name": "clrType",
+        "accepts": "string",
+        "type": "input",
+        "options": "cancel, next, previous, finish, danger",
+        "description": "Set the type of button.",
         "default": 0
+      },
+      {
+        "name": "clrWizardButtonDisabled",
+        "accepts": "boolean",
+        "type": "input",
+        "options": "true, false",
+        "description": "Enable or disable the button.",
+        "default": "false"
+      },
+      {
+        "name": "clrWizardButtonHidden",
+        "accepts": "boolean",
+        "type": "input",
+        "options": "true, false",
+        "description": "Hide the button from users.",
+        "default": "false"
+      },
+      {
+        "name": "clrWizardButtonClicked",
+        "accepts": "n/a",
+        "type": "output",
+        "options": "n/a",
+        "description": "Output that emits when there is a button click event.",
+        "default": "n/a"
       }
     ],
     "methods": [
@@ -2646,12 +2678,36 @@
   "ClrWizardHeaderAction": {
     "bindings": [
       {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
+        "name": "id",
+        "accepts": "string",
+        "type": "input",
+        "options": "Any valid id string.",
+        "description": "Set a custom id string for the header action.",
+        "default": "wizardHeaderActionIndex: e.g 0, 1, 2..."
+      },
+      {
+        "name": "title",
+        "accepts": "string",
+        "type": "input",
+        "options": "any valid string.",
+        "description": "Set a custom title for the action button.",
+        "default": ""
+      },
+      {
+        "name": "clrWizardHeaderActionDisabled",
+        "accepts": "boolean",
+        "type": "input",
+        "options": "true, false",
+        "description": "Disable the header action button..",
+        "default": "false"
+      },
+      {
+        "name": "actionClicked",
+        "accepts": "n/a",
+        "type": "output",
+        "options": "n/a",
+        "description": "Out put that emits the id of the action button clicked.",
+        "default": ""
       }
     ],
     "methods": [
@@ -2674,20 +2730,208 @@
   "ClrWizard": {
     "bindings": [
       {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
+        "name": "clrWizardSize",
+        "accepts": "string",
+        "type": "input",
+        "options": "md, lg, xl",
+        "description": "Set the size for the wizard modal.",
+        "default": "xl"
+      },
+      {
+        "name": "clrWizardClosable",
+        "accepts": "boolean",
+        "type": "input",
+        "options": "true, false",
+        "description": "When true it allows the user to close the wizard.",
+        "default": "true"
+      },
+      {
+        "name": "clrWizardForceForwardNavigation",
+        "accepts": "boolean",
+        "type": "input",
+        "options": "true, false",
+        "description": "Reset the pages when navigating backwards when true.",
+        "default": "false"
+      },
+      {
+        "name": "clrWizardOpen",
+        "accepts": "boolean",
+        "type": "two-way",
+        "options": "true, false",
+        "description": "Two way binding for the open state of a wizard.",
+        "default": ""
+      },
+      {
+        "name": "clrWizardPreventDefaultNext",
+        "accepts": "boolean",
+        "type": "input",
+        "options": "true, false",
+        "description": "Prevents user from moving to next page or closing itself. .",
+        "default": ""
+      },
+      {
+        "name": "clrWizardPreventDefaultCancel",
+        "accepts": "boolean",
+        "type": "input",
+        "options": "true, false",
+        "description": "Prevents wizard from closing when cancel/close buttons are activated.",
+        "default": "false"
+      },
+      {
+        "name": "clrWizardPreventNavigation",
+        "accepts": "boolean",
+        "type": "input",
+        "options": "true, false",
+        "description": "When true it prevents wizard from any navigation.",
+        "default": "false"
+      },
+      {
+        "name": "clrWizardDisableStepnav",
+        "accepts": "boolean",
+        "type": "input",
+        "options": "true, false",
+        "description": "When true it prevents the stepnav buttons from working.",
+        "default": "false"
+      },
+      {
+        "name": "clrWizardOnCancel",
+        "accepts": "n/a",
+        "type": "output",
+        "options": "n/a",
+        "description": "Output that emits when wizard is canceled. Combine with clrWizardPreventDefaultCancel to add custom cancel routines for a wizard.",
+        "default": "n/a"
+      },
+      {
+        "name": "clrWizardOnFinish",
+        "accepts": "n/a",
+        "type": "output",
+        "options": "n/a",
+        "description": "Output that emits when wizard finishes. Combint with clrWizardPreventDefaultNext to add custom completion routines.",
+        "default": "n/a"
+      },
+      {
+        "name": "clrWizardOnReset",
+        "accepts": "n/a",
+        "type": "output",
+        "options": "n/a",
+        "description": "Output that emits when wizard resets.",
+        "default": ""
+      },
+      {
+        "name": "clrWizardCurrentPageChanged",
+        "accepts": "n/a",
+        "type": "output",
+        "options": "n/a",
+        "description": "Output that emits when wizard page changes. Use for non-blocking validation. .",
+        "default": "n/a"
+      },
+      {
+        "name": "clrWizardOnNext",
+        "accepts": "n/a",
+        "type": "output",
+        "options": "n/a",
+        "description": "Output that emits when wizard moves to next page. Combine with clrWizardPreventDefaultNext to create custom validation/navigation routines.",
+        "default": "n/a"
+      },
+      {
+        "name": "clrWizardOnPrevious",
+        "accepts": "n/a",
+        "type": "output",
+        "options": "n/a",
+        "description": "Output that emits when wizard moves to previous page.",
+        "default": ""
       }
     ],
     "methods": [
       {
-        "name": "",
+        "name": "finish",
+        "parameters": [
+          {
+            "name": "skipChecksAndEmits",
+            "type": "boolean",
+            "description": "When true, do not emit or run checks before closing the wizard."
+          }
+        ],
+        "description": "Marks wizard as finished.",
+        "returns": "void"
+      },
+      {
+        "name": "forceFinish",
         "parameters": [],
-        "description": "",
+        "description": "Mark wizard as finished then run checks and emit outputs.",
+        "returns": "void"
+      },
+      {
+        "name": "open",
+        "parameters": [],
+        "description": "Open the wizard.",
+        "returns": "void"
+      },
+      {
+        "name": "close",
+        "parameters": [],
+        "description": "Close the wizard",
         "returns": ""
+      },
+      {
+        "name": "toggle",
+        "parameters": [],
+        "description": "Toggle the wizard to the opposite open/closed state.",
+        "returns": "void"
+      },
+      {
+        "name": "previous",
+        "parameters": [],
+        "description": "Move the wizard to the previous page.",
+        "returns": "void"
+      },
+      {
+        "name": "next",
+        "parameters": [
+          {
+            "name": "skipChecksAndEmits",
+            "type": "boolean",
+            "description": "When true, do not emit or run checks before navigating to next page."
+          }
+        ],
+        "description": "Navigate wizard to the next page.",
+        "returns": "void"
+      },
+      {
+        "name": "forceNext",
+        "parameters": [],
+        "description": "Move wizard to the next page without checks or emiting outputs.",
+        "returns": "void"
+      },
+      {
+        "name": "cancel",
+        "parameters": [],
+        "description": "Cancel and close the wizard.",
+        "returns": "void"
+      },
+      {
+        "name": "checkAndCancel",
+        "parameters": [],
+        "description": "Check for alternate cancel flows on current page and perform cancel if there are none.",
+        "returns": "void"
+      },
+      {
+        "name": "goTo",
+        "parameters": [
+          {
+            "name": "pageId",
+            "type": "string",
+            "description": "Identifier of the page to navigate to."
+          }
+        ],
+        "description": "Navigate to a specific page.",
+        "returns": "void"
+      },
+      {
+        "name": "reset",
+        "parameters": [],
+        "description": "Reset all wizard pages to incompl= trueete. Navigates wizard to first page.",
+        "returns": "void"
       }
     ],
     "css": [
@@ -2702,20 +2946,182 @@
   "ClrWizardPage": {
     "bindings": [
       {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
+        "name": "clrWizardPageNextDisabled",
+        "accepts": "boolean",
+        "type": "two-way",
+        "options": "true, false",
+        "description": "Two way binding that emits when the next page disabled state is changed.",
+        "default": "false"
+      },
+      {
+        "name": "clrWizardPagePreviousDisabled",
+        "accepts": "boolean",
+        "type": "two-way",
+        "options": "true, false",
+        "description": "Two way binding that emits when the previous page disabled state is changed..",
+        "default": "false"
+      },
+      {
+        "name": "clrWizardPageHasError",
+        "accepts": "boolean",
+        "type": "input",
+        "options": "true, false",
+        "description": "True indicates the page (and associated nav button) have error state.",
+        "default": "false"
+      },
+      {
+        "name": "clrWizardPagePreventDefault",
+        "accepts": "boolean",
+        "type": "input",
+        "options": "true, false",
+        "description": "Override all actions from the page level. E.g when app needs to use alternative validation.",
+        "default": "false"
+      },
+      {
+        "name": "clrWizardPagePreventDefaultCancel",
+        "accepts": "boolean",
+        "type": "two-way",
+        "options": "true, false",
+        "description": "Override the cancel action at the page level.",
+        "default": "false"
+      },
+      {
+        "name": "clrWizardPagePreventDefaultNext",
+        "accepts": "boolean",
+        "type": "input",
+        "options": "true, false",
+        "description": "Override the forward navigation at the page level.",
+        "default": "false"
+      },
+      {
+        "name": "clrWizardPageOnCommit",
+        "accepts": "n/a",
+        "type": "output",
+        "options": "n/a",
+        "description": "Output for an event fired when next/finish buttons are clicked.",
+        "default": "n/a"
+      },
+      {
+        "name": "clrWizardPageOnLoad",
+        "accepts": "n/a",
+        "type": "output",
+        "options": "n/a",
+        "description": "Output event emitted when page becomes current page.",
+        "default": "n/a"
+      },
+      {
+        "name": "clrWizardPageOnCancel",
+        "accepts": "n/a",
+        "type": "output",
+        "options": "n/a",
+        "description": "Page level event that emits when wizard is canceled.",
+        "default": "n/a"
+      },
+      {
+        "name": "clrWizardPageFinish",
+        "accepts": "n/a",
+        "type": "output",
+        "options": "n/a",
+        "description": "Output that emits when the page finish button is clicked.",
+        "default": "n/a"
+      },
+      {
+        "name": "clrWizardPagePrevious",
+        "accepts": "n/a",
+        "type": "output",
+        "options": "n/a",
+        "description": "utput that emits an event when the previous button is clicked.",
+        "default": "n/a"
+      },
+      {
+        "name": "clrWizardPageNext",
+        "accepts": "n/a",
+        "type": "output",
+        "options": "n/a",
+        "description": "Output that emits an event when the next button is clicked.",
+        "default": ""
+      },
+      {
+        "name": "clrWizardPageDanger",
+        "accepts": "n/a",
+        "type": "output",
+        "options": "n/a",
+        "description": "Output that emits an event when the danger button is clicked.",
+        "default": "n/a"
+      },
+      {
+        "name": "clrWizardPagePrimary",
+        "accepts": "n/a",
+        "type": "output",
+        "options": "n/a",
+        "description": "Output that emits an event when the next, finsih or danger buttons are clicked.",
+        "default": "n/a"
+      },
+      {
+        "name": "clrWizardPageCustomButton",
+        "accepts": "n/a",
+        "type": "output",
+        "options": "n/a",
+        "description": "Output that emits an event when a custom button is clicked.",
+        "default": "n/a"
+      },
+      {
+        "name": "id",
+        "accepts": "string",
+        "type": "input",
+        "options": "Va;id string.",
+        "description": "Set a custom id for a wizard page.",
+        "default": "0, 1, 2..."
       }
     ],
     "methods": [
       {
-        "name": "",
+        "name": "readyToComplete",
         "parameters": [],
-        "description": "",
-        "returns": ""
+        "description": "A check to see if the next page is disabled",
+        "returns": "boolean"
+      },
+      {
+        "name": "completed",
+        "parameters": [],
+        "description": "A getter to check to see if the page is completed",
+        "returns": "boolean"
+      },
+      {
+        "name": "completed",
+        "parameters": [
+          {
+            "name": "value",
+            "type": "boolean",
+            "description": "Boolean for the true/false state."
+          }
+        ],
+        "description": "Set the page completed state to true/false",
+        "returns": "void"
+      },
+      {
+        "name": "current",
+        "parameters": [],
+        "description": "A check to see if this is the current page active in the wizard.",
+        "returns": "boolean"
+      },
+      {
+        "name": "disabled",
+        "parameters": [],
+        "description": "A check to see if this page is disabled",
+        "returns": "boolean"
+      },
+      {
+        "name": "enabled",
+        "parameters": [],
+        "description": "A check to see if the page is current, completed and that the previous step was completed.",
+        "returns": "boolean"
+      },
+      {
+        "name": "makeCurrent",
+        "parameters": [],
+        "description": "Makes the page instance the current page in the wizard.",
+        "returns": "void"
       }
     ],
     "css": [
@@ -2728,171 +3134,42 @@
     ]
   },
   "ClrWizardPageButtons": {
-    "bindings": [
-      {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
-      }
-    ],
-    "methods": [
-      {
-        "name": "",
-        "parameters": [],
-        "description": "",
-        "returns": ""
-      }
-    ],
-    "css": [
-      {
-        "name": ".alert-text",
-        "description": "Defines the text that is placed into the alert",
-        "host": "div, span",
-        "required": true
-      }
-    ]
+    "bindings": [],
+    "methods": [],
+    "css": []
   },
   "ClrWizardPageHeaderActions": {
-    "bindings": [
-      {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
-      }
-    ],
-    "methods": [
-      {
-        "name": "",
-        "parameters": [],
-        "description": "",
-        "returns": ""
-      }
-    ],
-    "css": [
-      {
-        "name": ".alert-text",
-        "description": "Defines the text that is placed into the alert",
-        "host": "div, span",
-        "required": true
-      }
-    ]
+    "bindings": [],
+    "methods": [],
+    "css": []
   },
   "ClrWizardPageNavTitle": {
-    "bindings": [
-      {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
-      }
-    ],
-    "methods": [
-      {
-        "name": "",
-        "parameters": [],
-        "description": "",
-        "returns": ""
-      }
-    ],
-    "css": [
-      {
-        "name": ".alert-text",
-        "description": "Defines the text that is placed into the alert",
-        "host": "div, span",
-        "required": true
-      }
-    ]
+    "bindings": [],
+    "methods": [],
+    "css": []
   },
   "ClrWizardPageTitle": {
-    "bindings": [
-      {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
-      }
-    ],
-    "methods": [
-      {
-        "name": "",
-        "parameters": [],
-        "description": "",
-        "returns": ""
-      }
-    ],
-    "css": [
-      {
-        "name": ".alert-text",
-        "description": "Defines the text that is placed into the alert",
-        "host": "div, span",
-        "required": true
-      }
-    ]
+    "bindings": [],
+    "methods": [],
+    "css": []
   },
   "ClrWizardStepnav": {
-    "bindings": [
-      {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
-      }
-    ],
-    "methods": [
-      {
-        "name": "",
-        "parameters": [],
-        "description": "",
-        "returns": ""
-      }
-    ],
-    "css": [
-      {
-        "name": ".alert-text",
-        "description": "Defines the text that is placed into the alert",
-        "host": "div, span",
-        "required": true
-      }
-    ]
+    "bindings": [],
+    "methods": [],
+    "css": []
   },
   "ClrWizardStepnavItem": {
     "bindings": [
       {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
+        "name": "page",
+        "accepts": "ClrWizardPage",
+        "type": "input",
+        "options": "ClrWizardPage",
+        "description": "Set the page to associate with the nav item..",
+        "default": "n/a"
       }
     ],
-    "methods": [
-      {
-        "name": "",
-        "parameters": [],
-        "description": "",
-        "returns": ""
-      }
-    ],
-    "css": [
-      {
-        "name": ".alert-text",
-        "description": "Defines the text that is placed into the alert",
-        "host": "div, span",
-        "required": true
-      }
-    ]
+    "methods": [],
+    "css": []
   }
 }
