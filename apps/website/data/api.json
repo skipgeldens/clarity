@@ -2087,6 +2087,33 @@
       }
     ]
   },
+  "ClrList": {
+    "bindings": [],
+    "methods": [],
+    "css": [
+      {
+        "name": ".list",
+        "description": "Container element for list items.",
+        "host": "ol, ul",
+        "required": "yes",
+        "type": "container"
+      },
+      {
+        "name": ".list-unstyled",
+        "description": "Remove all list style from list items.",
+        "host": "ol, ul",
+        "required": "yes",
+        "type": "container"
+      },
+      {
+        "name": ".compact",
+        "description": "Combine with .list or .list-unstyled to reduce line space.",
+        "host": "ol, ul",
+        "required": "no",
+        "type": "layout"
+      }
+    ]
+  },
   "ClrMainContainer": {
     "bindings": [
       {
