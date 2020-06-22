@@ -1,4 +1,4 @@
-name: Dev
+name: Website
 
 on: [push, pull_request]
 
@@ -12,8 +12,9 @@ jobs:
         with:
           node-version: '12.x'
       - run: yarn
+      - run: yarn build:libs
       - run: yarn website:build
-      - run: yarn website:deploy
+      - run: npm run website:deploy # Use NPM as a workaround for npx executing
 
     env:
       CI: true
