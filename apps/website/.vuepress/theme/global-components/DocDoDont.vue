@@ -1,19 +1,18 @@
 <template>
-  <div>
-    <ClrInset :height="demoHeight">
-      <slot name="demo"></slot>
-    </ClrInset>
-    <template v-if="dont"><p class="bar danger">Don't</p></template>
-    <template v-if="!dont"><p class="bar">Do</p></template>
-    <slot name="summary"></slot>
+  <div class="clr-row">
+    <div class="clr-col">
+      <slot></slot>
+    </div>
+    <div class="clr-col">
+      <slot name="dont"></slot>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'ClrDoDont',
+  name: 'DocDoDont',
   props: {
-    dont: Boolean,
     demoHeight: [Number, String],
   },
 };

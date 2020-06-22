@@ -1,5 +1,5 @@
 <template>
-  <div class="inset" :style="{height: getHeight()}">
+  <div class="inset" :style="{ height: getHeight() }">
     <slot></slot>
   </div>
 </template>
@@ -8,7 +8,7 @@
 export default {
   name: 'ClrInset',
   methods: {
-    getHeight: function() {
+    getHeight: function () {
       return this.height + 'px';
     },
   },
@@ -21,7 +21,7 @@ export default {
   background: #e8e8e8;
   border-radius: 3px;
   text-align: center;
-  padding: 1rem;
+  padding: 2rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,5 +1,6 @@
 const markdownItAttrs = require('markdown-it-attrs');
 const sidebar = require('./sidebar');
+const blocks = require('./blocks');
 
 module.exports = {
   title: 'Clarity Design System',
@@ -28,27 +29,6 @@ module.exports = {
       // permalinkSymbol: '🔗',
     },
   },
-  extraWatchFiles: ['.vuepress/sidebar.js'],
-  plugins: [
-    'vuepress-plugin-table-of-contents',
-    '@vuepress/active-header-links',
-    '@vuepress/last-updated',
-    // SUMMARY BLOCK
-    [
-      'vuepress-plugin-container',
-      {
-        type: 'summary',
-        render: function (tokens, idx) {
-          const item = tokens[idx];
-          if (item.type === 'container_summary_open') {
-            return `<ClrSummary>`;
-          } else if (item.type === 'inline') {
-            return item.content;
-          } else if (item.type === 'container_summary_close') {
-            return `</ClrSummary>`;
-          }
-        },
-      },
-    ],
-  ],
+  extraWatchFiles: ['.vuepress/sidebar.js', '.vuepress/blocks.js'],
+  plugins: ['vuepress-plugin-table-of-contents', '@vuepress/active-header-links', '@vuepress/last-updated', ...blocks],
 };
