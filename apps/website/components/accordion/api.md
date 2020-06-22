@@ -5,7 +5,9 @@ toc: true
 
 An accordion allows generic content to be collapsed and allows users to expand to show more detail.
 
-## Angular Components {.section-header}
+## Angular Components
+
+{.section-header}
 
 ### ClrAccordion
 
@@ -78,7 +80,9 @@ ClrAccordionPanel is a child of [ClrAccordion](./api.md#clraccordion)
 <clr-accordion-title>Panel Title</clr-accordion-title>
 ```
 
-## Angular Directives {.section-header}
+## Angular Directives
+
+{.section-header}
 
 ### \*clrIfExpanded
 

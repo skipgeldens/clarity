@@ -29,5 +29,11 @@ module.exports = {
     },
   },
   extraWatchFiles: ['.vuepress/sidebar.js', '.vuepress/blocks.js'],
-  plugins: ['vuepress-plugin-table-of-contents', '@vuepress/active-header-links', '@vuepress/last-updated', ...blocks],
+  plugins: [
+    'vuepress-plugin-table-of-contents',
+    '@vuepress/active-header-links',
+    '@vuepress/last-updated',
+    'vuepress-plugin-smooth-scroll',
+    ...blocks,
+  ],
 };

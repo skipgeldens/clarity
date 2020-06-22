@@ -35,3 +35,7 @@ Angular button component used only with [ClrButtonGroup](./api.md#clrbuttongroup
 #### Bindings
 
 <DocComponentApi component="ClrButton" item="bindings" />
+
+## CSS
+
+Button group buttons have all of the same classes, states, types and sizes that stand alone [Buttons](../button/api.md) do.
