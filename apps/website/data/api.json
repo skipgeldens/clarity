@@ -1852,10 +1852,109 @@
     ],
     "css": [
       {
-        "name": ".class-name",
-        "description": "css class description",
-        "host": "div, span",
-        "required": true
+        "name": ".header-1",
+        "description": "Sets the background color option for a header container.",
+        "host": "div",
+        "required": "yes",
+        "type": "color+layout"
+      },
+      {
+        "name": ".header-2",
+        "description": "Sets the background color option for a header container.",
+        "host": "div",
+        "required": "yes",
+        "type": "color+layout"
+      },
+      {
+        "name": ".header-3",
+        "description": "Sets the background color option for a header container.",
+        "host": "div",
+        "required": "yes",
+        "type": "color+layout"
+      },
+      {
+        "name": ".header-4",
+        "description": "Sets the background color option for a header container.",
+        "host": "div",
+        "required": "yes",
+        "type": "color+layout"
+      },
+      {
+        "name": ".header-5",
+        "description": "Sets the background color option for a header container.",
+        "host": "div",
+        "required": "yes",
+        "type": "color+layout"
+      },
+      {
+        "name": ".header-6",
+        "description": "Sets the background color option for a header container.",
+        "host": "div",
+        "required": "yes",
+        "type": "color+layout"
+      },
+      {
+        "name": ".header-7",
+        "description": "Sets the background color option for a header container.",
+        "host": "div",
+        "required": "yes",
+        "type": "color+layout"
+      },
+      {
+        "name": ".branding",
+        "description": "Header child container element that containes application logo and title.",
+        "host": "div",
+        "required": "yes",
+        "type": "layout"
+      },
+      {
+        "name": ".header-nav",
+        "description": "Header child container that contains primary navigation links.",
+        "host": "div",
+        "required": "yes",
+        "type": "layout"
+      },
+      {
+        "name": ".search",
+        "description": "A form containing a search icon and search input field.",
+        "host": "div",
+        "required": "no",
+        "type": "layout"
+      },
+      {
+        "name": ".header-actions",
+        "description": "Header child container that contains secondary navigation links.",
+        "host": "",
+        "required": "",
+        "type": ""
+      },
+      {
+        "name": ".subnav",
+        "description": "A sibling element immediately following .header element. ",
+        "host": "nav",
+        "required": "no",
+        "type": "layout"
+      },
+      {
+        "name": ".nav",
+        "description": "Used on an un-ordered list it lays out tab like nave links horizontally.",
+        "host": "ul",
+        "required": "yes",
+        "type": "layout"
+      },
+      {
+        "name": "nav-item",
+        "description": "A list item that contains an anchor tag with the .nav-link class.",
+        "host": "li",
+        "required": "yes",
+        "type": "layout"
+      },
+      {
+        "name": ".nav-link",
+        "description": "A presentation class that styles anchor elements for display in a .subnav container.",
+        "host": "a",
+        "required": "yes",
+        "type": "content"
       }
     ]
   },
