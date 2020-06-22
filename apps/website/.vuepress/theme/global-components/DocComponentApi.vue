@@ -62,15 +62,17 @@
     <table class="table" v-if="item === 'css'">
       <tr>
         <th class="left">CSS Class</th>
-        <th class="left">Host Elements</th>
-        <th class="left">Required</th>
+        <th class="left">Host Element(s)</th>
+        <th class="left">Type</th>
         <th class="left">Description</th>
+        <th class="left">Required</th>
       </tr>
       <tr v-for="item in items">
         <td class="left">{{ item.name }}</td>
         <td class="left">{{ item.host }}</td>
-        <td class="left">{{ item.required }}</td>
+        <td class="left">{{ item.type }}</td>
         <td class="left">{{ item.description }}</td>
+        <td class="left">{{ item.required }}</td>
       </tr>
     </table>
   </div>

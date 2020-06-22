@@ -181,6 +181,112 @@
       }
     ]
   },
+  "ClrBadge": {
+    "comment": "THis is a placeholder for the badge css api data.",
+    "bindings": [],
+    "methods": [],
+    "css": [
+      {
+        "name": ".badge",
+        "description": "Set the base badge style.",
+        "host": "span",
+        "required": true,
+        "type": "base"
+      },
+      {
+        "name": ".badge-purple",
+        "description": "Add the Clarity purple color.",
+        "host": "span",
+        "required": "no",
+        "type": "color"
+      },
+      {
+        "name": ".badge-blue",
+        "description": "Add the Clarity blue color.",
+        "host": "span",
+        "required": "no",
+        "type": "color"
+      },
+      {
+        "name": ".badge-orange",
+        "description": "Add the Clarity orange color.",
+        "host": "span",
+        "required": "no",
+        "type": "color"
+      },
+
+      {
+        "name": ".badge-light-blue",
+        "description": "Add the Clarity light blue color.",
+        "host": "span",
+        "required": "no",
+        "type": "color"
+      },
+      {
+        "name": ".badge-1",
+        "description": "Add the Clarity gray color.",
+        "host": "span",
+        "required": "no",
+        "type": "color"
+      },
+      {
+        "name": ".badge-2",
+        "description": "Add the Clarity purple color.",
+        "host": "span",
+        "required": "no",
+        "type": "color"
+      },
+      {
+        "name": ".badge-3",
+        "description": "Add the Clarity blue color.",
+        "host": "span",
+        "required": "no",
+        "type": "color"
+      },
+      {
+        "name": ".badge-4",
+        "description": "Add the Clarity orange color.",
+        "host": "span",
+        "required": "no",
+        "type": "color"
+      },
+      {
+        "name": ".badge-5",
+        "description": "Add the Clarity light blue color.",
+        "host": "span",
+        "required": "no",
+        "type": "color"
+      },
+      {
+        "name": ".badge-info",
+        "description": "Add the Clarity info color.",
+        "host": "span",
+        "required": "no",
+        "type": "color"
+      },
+      {
+        "name": ".badge-success",
+        "description": "Add the Clarity success color.",
+        "host": "span",
+        "required": "no",
+        "type": "color"
+      },
+      {
+        "name": ".badge-warning",
+        "description": "Add the Clarity warning color.",
+        "host": "span",
+        "required": "no",
+        "type": "color"
+      },
+      {
+        "name": ".badge-danger",
+        "description": "Add the Clarity danger color.",
+        "host": "span",
+        "required": "no",
+        "type": "color"
+      }
+    ]
+  },
   "ClrButton": {
     "bindings": [
       {
@@ -241,7 +347,113 @@
       }
     ],
     "methods": [],
-    "css": []
+    "css": [
+      {
+        "name": ".btn",
+        "description": "Base button class, defaults to primary colored outline button.",
+        "host": "button",
+        "required": "yes",
+        "type": "base"
+      },
+      {
+        "name": ".btn-primary",
+        "description": "Solid button with primary color.",
+        "host": "button",
+        "required": "no",
+        "type": "color"
+      },
+      {
+        "name": ".btn-success",
+        "description": "Solid button with success color.",
+        "host": "button",
+        "required": "no",
+        "type": "color"
+      },
+      {
+        "name": ".btn-warning",
+        "description": "Solid button with warning color.",
+        "host": "button",
+        "required": "no",
+        "type": "color"
+      },
+      {
+        "name": ".btn-warning",
+        "description": "Solid button with danger color.",
+        "host": "button",
+        "required": "no",
+        "type": "color"
+      },
+      {
+        "name": ".btn-outline",
+        "description": "Outline button with primary color.",
+        "host": "button",
+        "required": "no",
+        "type": "color"
+      },
+      {
+        "name": ".btn-success-outline",
+        "description": "Outline button with success color.",
+        "host": "button",
+        "required": "no",
+        "type": "color"
+      },
+      {
+        "name": ".btn-info-outline",
+        "description": "Outline button with primary color.",
+        "host": "button",
+        "required": "no",
+        "type": "color"
+      },
+      {
+        "name": ".btn-warning-outline",
+        "description": "Outline button with warning color",
+        "host": "button",
+        "required": "no",
+        "type": "color"
+      },
+      {
+        "name": ".btn-danger-outline",
+        "description": "Outline button with danger color.",
+        "host": "button",
+        "required": "no",
+        "type": "color"
+      },
+      {
+        "name": ".btn-link",
+        "description": "Flat button with primary color.",
+        "host": "button",
+        "required": "no",
+        "type": "color"
+      },
+      {
+        "name": ".btn-sm",
+        "description": "Add to make a small button size.",
+        "host": "button",
+        "required": "no",
+        "type": "size"
+      },
+      {
+        "name": ".btn-block",
+        "description": "Add to make a block level button element.",
+        "host": "button",
+        "required": "no",
+        "type": "size"
+      },
+      {
+        "name": ".btn-inverse",
+        "description": "Add to make an inverse colored outline button.",
+        "host": "button",
+        "required": "no",
+        "type": "color"
+      },
+      {
+        "name": ".btn-icon",
+        "description": "Creates a button sized to fit an cds-icon element.",
+        "host": "button",
+        "required": "no",
+        "type": "size"
+      }
+    ]
   },
   "ClrButtonGroup": {
     "bindings": [
