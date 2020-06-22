@@ -648,14 +648,7 @@
         "returns": ""
       }
     ],
-    "css": [
-      {
-        "name": ".alert-text",
-        "description": "Defines the text that is placed into the alert",
-        "host": "div, span",
-        "required": true
-      }
-    ]
+    "css": []
   },
   "ClrControl": {
     "bindings": [
@@ -1682,6 +1675,159 @@
         "description": "Defines the text that is placed into the alert",
         "host": "div, span",
         "required": true
+      }
+    ]
+  },
+  "ClrGrid": {
+    "bindings": [],
+    "methods": [],
+    "css": [
+      {
+        "name": ".clr-col-{1..12}",
+        "description": "For viewport width < 576px an extra small column that can span from 1 to 12 columns wide.",
+        "host": "div",
+        "required": "no",
+        "type": "layout"
+      },
+      {
+        "name": ".clr-col-sm-{1..12}",
+        "description": "For viewport width >= 576px a small column that can span from 1 to 12 columns wide.",
+        "host": "div",
+        "required": "no",
+        "type": "layout"
+      },
+      {
+        "name": ".clr-col-md-{1..12}",
+        "description": "For viewport width >= 768px a medium column that can span from 1 to 12 columns wide.",
+        "host": "div",
+        "required": "no",
+        "type": "layout"
+      },
+      {
+        "name": ".clr-col-lg-{1..12}",
+        "description": "For viewport width >= 992px a large column that can span from 1 to 12 columns wide.",
+        "host": "div",
+        "required": "no",
+        "type": "layout"
+      },
+      {
+        "name": ".clr-col-xl-{1..12}",
+        "description": "For viewport width >= 1200px an extra-large column that can span from 1 to 12 columns wide.",
+        "host": "div",
+        "required": "no",
+        "type": "layout"
+      },
+      {
+        "name": ".clr-row",
+        "description": "A horizontal group of elements that add up to 12 columns.",
+        "host": "div",
+        "required": "no",
+        "type": "layout"
+      },
+      {
+        "name": ".clr-col",
+        "description": "Automatically divides elements into equal width columns. Can be combined with .clr-col-## for automatic re-sizing.",
+        "host": "div",
+        "required": "no",
+        "type": "layout"
+      },
+      {
+        "name": "..clr-col-{1..12}-auto",
+        "description": "Size the column based on the width of its content.",
+        "host": "div",
+        "required": "no",
+        "type": "layout"
+      },
+      {
+        "name": ".clr-row-break",
+        "description": "Use this after a column to break the following columns onto a new line.",
+        "host": "div",
+        "required": "no",
+        "type": "layout"
+      },
+      {
+        "name": ".clr-offset-{sm, md, lg, xl}-{1..11}",
+        "description": "Combine this with a column class (.clr-col-6) to increase the lolumns left margin by a specific number of columns.  ",
+        "host": "div",
+        "required": "no",
+        "type": "layout"
+      },
+      {
+        "name": ".clr-align-items-{1..12}-start",
+        "description": "Combine with .clr-row to vertically align columns at the start of the row.",
+        "host": "div",
+        "required": "no",
+        "type": "layout"
+      },
+      {
+        "name": ".clr-align-items-{1..12}-center",
+        "description": "Combine with .clr-row to vertically align columns at the center of the row.",
+        "host": "div",
+        "required": "no",
+        "type": "layout"
+      },
+      {
+        "name": ".clr-align-items-{1..12}-end",
+        "description": "Combine with .clr-row to vertically align columns at the end of the row.",
+        "host": "div",
+        "required": "no",
+        "type": "layout"
+      },
+      {
+        "name": ".clr-align-self-{1..12}-start",
+        "description": "Combine with any .clr-col-* class to vertically align the column at the start of the row.",
+        "host": "div",
+        "required": "no",
+        "type": "layout"
+      },
+      {
+        "name": ".clr-align-self-{1..12}-center",
+        "description": "Combine with any .clr-col-* class to vertically align the column in the center of the row.",
+        "host": "div",
+        "required": "no",
+        "type": "layout"
+      },
+      {
+        "name": ".clr-align-self-{1..12}-end",
+        "description": "Combine with any .clr-col-* class to vertically align the column at the end of the row.",
+        "host": "div",
+        "required": "no",
+        "type": "layout"
+      },
+      {
+        "name": ".clr-justify-content-start",
+        "description": "Combine with .clr-row to horizontally align columns at the start of the row.",
+        "host": "div",
+        "required": "no",
+        "type": "layout"
+      },
+      {
+        "name": ".clr-justify-content-center",
+        "description": "Combine with .clr-row to horizontally align columns in the center of the row.",
+        "host": "div",
+        "required": "no",
+        "type": "layout"
+      },
+      {
+        "name": ".clr-justify-content-enbd",
+        "description": "Combine with .clr-row to horizontally align columns at the end of the row.",
+        "host": "div",
+        "required": "no",
+        "type": "layout"
+      },
+      {
+        "name": ".clr-justify-content-around",
+        "description": "Combine with .clr-row to horizontally align columns with even space around all columns.",
+        "host": "div",
+        "required": "no",
+        "type": "layout"
+      },
+      {
+        "name": ".clr-justify-content-between",
+        "description": "Combine with .clr-row to horizontally align columns with space between all columns from row start to row end.",
+        "host": "div",
+        "required": "no",
+        "type": "layout"
       }
     ]
   },
