@@ -22,11 +22,6 @@ export default {
       state: false,
     };
   },
-  computed: {
-    sample: function () {
-      console.log(this);
-    },
-  },
 };
 </script>
 

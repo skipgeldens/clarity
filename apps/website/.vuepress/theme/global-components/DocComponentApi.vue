@@ -84,7 +84,11 @@ export default {
   props: ['component', 'item'],
   computed: {
     items: function () {
-      return Api[this.component][this.item];
+      if (Api && Api[this.component] && Api[this.component][this.item]) {
+        return Api[this.component][this.item];
+      } else {
+        return [];
+      }
     },
   },
   methods: {

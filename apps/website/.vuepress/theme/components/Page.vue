@@ -13,9 +13,9 @@
 </template>
 
 <script>
-import PageEdit from '@theme/components/PageEdit.vue';
-import PageNav from '@theme/components/PageNav.vue';
-import PageSubnav from '@theme/components/PageSubnav.vue';
+import PageEdit from '@theme/components/PageEdit';
+import PageNav from '@theme/components/PageNav';
+import PageSubnav from '@theme/components/PageSubnav';
 
 export default {
   components: { PageEdit, PageNav, PageSubnav },

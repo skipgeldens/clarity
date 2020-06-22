@@ -47,7 +47,7 @@ function resolveSubnav(page, items) {
   // Find the top level parent
   const topGroup = items.find(item => item.path.startsWith(`/${parts[0]}`));
   // Check if it has children
-  if (topGroup.children) {
+  if (topGroup && topGroup.children) {
     return topGroup.children.find(item => item.path.startsWith(`/${parts[0]}/${parts[1]}`));
   } else {
     return [];

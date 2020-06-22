@@ -24,7 +24,6 @@ module.exports = [
     {
       type: 'do',
       render: function (tokens, idx) {
-        console.log(tokens[idx]);
         const item = tokens[idx];
 
         if (item.type === 'container_do_open') {
@@ -43,7 +42,6 @@ module.exports = [
     {
       type: 'dont',
       render: function (tokens, idx) {
-        console.log(tokens[idx]);
         const item = tokens[idx];
 
         if (item.type === 'container_dont_open') {
@@ -62,7 +60,6 @@ module.exports = [
     {
       type: 'col',
       render: function (tokens, idx) {
-        console.log(tokens[idx]);
         const item = tokens[idx];
 
         if (item.type === 'container_col_open') {

@@ -29,8 +29,8 @@
 </template>
 
 <script>
-import IconInventory from '../../../data/icon-inventory.js';
-import TimerUtils from '../util/timer-utils.js';
+import IconInventory from '../../../data/icon-inventory';
+import TimerUtils from '../util/timer-utils';
 
 export default {
   name: 'DocIcons',
@@ -55,7 +55,9 @@ export default {
     };
   },
   mounted() {
-    window.addEventListener('resize', this.closeIconDetail);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', this.closeIconDetail);
+    }
   },
   methods: {
     openIconDetailAt: function (iconDetailData) {

@@ -29,8 +29,8 @@
 </template>
 
 <script>
-import ColorUtils from '../util/color-utils.js';
-import ClipboardCopy from '../util/clipboard-copy.js';
+import ColorUtils from '../util/color-utils';
+import ClipboardCopy from '../util/clipboard-copy';
 
 export default {
   name: 'ClrColorList',

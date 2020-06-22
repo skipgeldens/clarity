@@ -3,19 +3,13 @@
     <div class="branding">
       <RouterLink :to="$localePath" class="nav-link">
         <img class="logo" src="/images/clarity-logo.svg" :alt="$siteTitle" />
-        <span
-          v-if="$siteTitle"
-          ref="siteName"
-          class="title"
-          :class="{ 'can-hide': $site.themeConfig.logo }"
-          >{{ $siteTitle }}</span
-        >
+        <span v-if="$siteTitle" ref="siteName" class="title" :class="{ 'can-hide': $site.themeConfig.logo }">{{
+          $siteTitle
+        }}</span>
       </RouterLink>
     </div>
 
-    <div class="header-nav">
-
-    </div>
+    <div class="header-nav"></div>
 
     <template>
       <AlgoliaSearchBox v-if="isAlgoliaSearch" :options="algolia" />
@@ -53,20 +47,22 @@ export default {
   },
 
   mounted() {
-    const MOBILE_DESKTOP_BREAKPOINT = 719; // refer to config.styl
-    const NAVBAR_VERTICAL_PADDING = parseInt(css(this.$el, 'paddingLeft')) + parseInt(css(this.$el, 'paddingRight'));
-    const handleLinksWrapWidth = () => {
-      if (document.documentElement.clientWidth < MOBILE_DESKTOP_BREAKPOINT) {
-        this.linksWrapMaxWidth = null;
-      } else {
-        this.linksWrapMaxWidth =
-          this.$el.offsetWidth -
-          NAVBAR_VERTICAL_PADDING -
-          ((this.$refs.siteName && this.$refs.siteName.offsetWidth) || 0);
-      }
-    };
-    handleLinksWrapWidth();
-    window.addEventListener('resize', handleLinksWrapWidth, false);
+    if (typeof window !== 'undefined') {
+      const MOBILE_DESKTOP_BREAKPOINT = 719; // refer to config.styl
+      const NAVBAR_VERTICAL_PADDING = parseInt(css(this.$el, 'paddingLeft')) + parseInt(css(this.$el, 'paddingRight'));
+      const handleLinksWrapWidth = () => {
+        if (document.documentElement.clientWidth < MOBILE_DESKTOP_BREAKPOINT) {
+          this.linksWrapMaxWidth = null;
+        } else {
+          this.linksWrapMaxWidth =
+            this.$el.offsetWidth -
+            NAVBAR_VERTICAL_PADDING -
+            ((this.$refs.siteName && this.$refs.siteName.offsetWidth) || 0);
+        }
+      };
+      handleLinksWrapWidth();
+      window.addEventListener('resize', handleLinksWrapWidth, false);
+    }
   },
 };
 

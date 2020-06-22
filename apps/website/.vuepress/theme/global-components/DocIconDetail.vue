@@ -34,7 +34,7 @@
 
 <script>
 import Prism from 'prismjs';
-import IconInventory from '../../../data/icon-inventory.js';
+import IconInventory from '../../../data/icon-inventory';
 
 const VARIANTS = {
   OUTLINE: { classes: null },

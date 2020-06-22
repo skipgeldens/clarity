@@ -44,8 +44,6 @@
 </style>
 
 <script>
-import '@clr/core/icon';
-
 export default {
   name: 'Sidebar',
 

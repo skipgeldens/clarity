@@ -4,7 +4,7 @@
     <!-- <script src="http://localhost:8098"></script> -->
 
     <Navbar v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar" />
-    
+
     <div class="content-container">
       <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
         <template #top>
@@ -27,16 +27,13 @@
           </template>
         </Page>
 
-        <footer class="footer">
-          &copy; 2016-{{year}} VMware, Inc. All Rights Reserved.
-        </footer>
+        <footer class="footer">&copy; 2016-{{ year }} VMware, Inc. All Rights Reserved.</footer>
       </div>
 
       <nav class="nav-table-of-contents" v-if="shouldShowTOC">
         <b class="title">Content</b>
         <TOC />
       </nav>
-
     </div>
   </div>
 </template>
@@ -86,10 +83,10 @@
 </style>
 
 <script>
-import Home from '@theme/components/Home.vue';
-import Navbar from '@theme/components/Navbar.vue';
-import Page from '@theme/components/Page.vue';
-import Sidebar from '@theme/components/Sidebar.vue';
+import Home from '@theme/components/Home';
+import Navbar from '@theme/components/Navbar';
+import Page from '@theme/components/Page';
+import Sidebar from '@theme/components/Sidebar';
 import { resolveSidebarItems } from '../util';
 
 export default {

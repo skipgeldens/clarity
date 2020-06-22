@@ -1,24 +1,29 @@
 <template>
   <div>
     <hr />
-    <h2>{{version}} <a class="release-date" :href="commitLink" target="_blank">Released {{commitDate}} <cds-icon class="external-link" size="12" shape="pop-out"></cds-icon></a></h2>
+    <h2>
+      {{ version }}
+      <a class="release-date" :href="commitLink" target="_blank"
+        >Released {{ commitDate }} <cds-icon class="external-link" size="12" shape="pop-out"></cds-icon
+      ></a>
+    </h2>
     <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Release.vue',
+  name: 'Release',
   props: ['version', 'date', 'commit'],
   computed: {
-    commitLink: function() {
+    commitLink: function () {
       return `https://github.com/vmware/clarity/commit/${this.commit}`;
     },
-    commitDate: function() {
+    commitDate: function () {
       const date = new Date(this.date);
       return `${date.toDateString()}`;
     },
-    items: function() {
+    items: function () {
       const items = {};
       this.$slots.default.forEach(vnode => {
         if (!items[vnode.componentOptions.propsData.type]) {

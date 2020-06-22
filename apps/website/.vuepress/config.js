@@ -26,7 +26,6 @@ module.exports = {
       permalink: true,
       permalinkBefore: false,
       permalinkSymbol: '§',
-      // permalinkSymbol: '🔗',
     },
   },
   extraWatchFiles: ['.vuepress/sidebar.js', '.vuepress/blocks.js'],
