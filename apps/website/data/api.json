@@ -469,6 +469,110 @@
     "methods": [],
     "css": []
   },
+  "ClrCard": {
+    "bindings": [],
+    "methods": [],
+    "css": [
+      {
+        "name": ".card",
+        "description": "Parent container of card elements.",
+        "host": "div",
+        "required": "yes",
+        "type": "layout"
+      },
+      {
+        "name": ".card-header",
+        "description": "Child element of .card for header content",
+        "host": "div",
+        "required": "no",
+        "type": "layout"
+      },
+      {
+        "name": ".card-block",
+        "description": "Child element of .card for header content",
+        "host": "div",
+        "required": "no",
+        "type": "layout"
+      },
+      {
+        "name": ".card-footer",
+        "description": "Child element of .card for footer content",
+        "host": "div",
+        "required": "no",
+        "type": "layout"
+      },
+      {
+        "name": ".clickable",
+        "description": "Adds (css only) visual and mouse treatments that indicate clickability. Must be paired with .card class.",
+        "host": "div",
+        "required": "no",
+        "type": "feature"
+      },
+      {
+        "name": ".card-img",
+        "description": "Elements with .card-img can be places anywhere in the card or it can occupy the entire card.",
+        "host": "div",
+        "required": "no",
+        "type": "layout"
+      },
+      {
+        "name": ".card-media-block",
+        "description": "Container for a media block group of elements - image, description (title & text).",
+        "host": "div",
+        "required": "no",
+        "type": "layout"
+      },
+      {
+        "name": "wrap",
+        "description": "Paired with the .card-media-block class it moves the .card-media-description container below the image.",
+        "host": "div",
+        "required": "no",
+        "type": "layout"
+      },
+      {
+        "name": ".card-media-image",
+        "description": "Child element of .card-media-block for sizing and positioning images.",
+        "host": "div",
+        "required": "yes for .card-media-block containers",
+        "type": "layout"
+      },
+      {
+        "name": ".card-media-description",
+        "description": "Child element of .card-media-block containing title and text children elements.",
+        "host": "div",
+        "required": "yes for .card-media-block containers",
+        "type": "layout"
+      },
+      {
+        "name": ".card-media-title",
+        "description": "Child element of .card-media-description.",
+        "host": "div",
+        "required": "yes for .card-media-block containers",
+        "type": "content"
+      },
+      {
+        "name": ".card-media-text",
+        "description": "Child element of .card-media-description.",
+        "host": "div",
+        "required": "yes for .card-media-block containers",
+        "type": "content"
+      },
+      {
+        "name": ".card-text",
+        "description": "Child element of the .card-block.",
+        "host": "div",
+        "required": "no",
+        "type": "content"
+      },
+      {
+        "name": "",
+        "description": "",
+        "host": "",
+        "required": "",
+        "type": ""
+      }
+    ]
+  },
   "ClrCheckboxContainer": {
     "bindings": [
       {
