@@ -9,4 +9,4 @@ There are several header styles that change the background color of header conte
 
 ### Classes
 
-<DocComponentApi component="" item="css" />
+<DocComponentApi component="ClrHeader" item="css" />

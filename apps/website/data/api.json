@@ -1924,9 +1924,9 @@
       {
         "name": ".header-actions",
         "description": "Header child container that contains secondary navigation links.",
-        "host": "",
-        "required": "",
-        "type": ""
+        "host": "div",
+        "required": "no",
+        "type": "layout"
       },
       {
         "name": ".subnav",
@@ -2110,6 +2110,54 @@
         "description": "Combine with .list or .list-unstyled to reduce line space.",
         "host": "ol, ul",
         "required": "no",
+        "type": "layout"
+      }
+    ]
+  },
+  "ClrLogin": {
+    "bindings": [],
+    "methods": [],
+    "css": [
+      {
+        "name": ".login-wrapper",
+        "description": "Container class for a login form.",
+        "host": "div",
+        "required": "yes",
+        "type": "layout"
+      },
+      {
+        "name": ".login",
+        "description": "Style and layout class for the login form.",
+        "host": "form",
+        "required": "yes",
+        "type": "layout, style"
+      },
+      {
+        "name": ".title",
+        "description": "Child element of .login for grouping welcome and hint text.",
+        "host": "section",
+        "required": "yes",
+        "type": "content"
+      },
+      {
+        "name": ".welcome",
+        "description": "Child element of .title for welcome text.",
+        "host": "h3",
+        "required": "yes",
+        "type": "content"
+      },
+      {
+        "name": ".hint",
+        "description": "Child element of .title for sub-title text",
+        "host": "h5",
+        "required": "yes",
+        "type": "content"
+      },
+      {
+        "name": ".login-group",
+        "description": "Container element that organizes form controls.",
+        "host": "div",
+        "required": "yes",
         "type": "layout"
       }
     ]
