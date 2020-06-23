@@ -1,6 +1,7 @@
 const markdownItAttrs = require('markdown-it-attrs');
 const sidebar = require('./sidebar');
 const blocks = require('./blocks');
+const path = require('path');
 
 module.exports = {
   title: 'Clarity Design System',
@@ -36,4 +37,18 @@ module.exports = {
     'vuepress-plugin-smooth-scroll',
     ...blocks,
   ],
+  configureWebpack: {
+    resolve: {
+      alias: {
+        // Note: paths to dist/core/* are from website root, not .vuepress
+        '@clr/core': path.resolve('../../dist/core'),
+        '@clr/core/alert': path.resolve('../../dist/core/alert'),
+        '@clr/core/button': path.resolve('../../dist/core/button'),
+        '@clr/core/icon': path.resolve('../../dist/core/icon'),
+        '@clr/core/icon-shapes': path.resolve('../../dist/core/icon-shapes'),
+        '@clr/icons': path.resolve('../../dist/clr-icons.min.js'),
+        '@clr/icons/shapes/all-shapes': path.resolve('../../dist/clr-icons/shapes/all-shapes.js'),
+      },
+    },
+  },
 };
