@@ -181,6 +181,33 @@
       }
     ]
   },
+  "ClrAppLayout": {
+    "bindings": [],
+    "methods": [],
+    "css": [
+      {
+        "name": ".main-container",
+        "description": "A vertical flexbox that wraps app level alerts, a .header element, an optional .subnav element and a .content-container.",
+        "host": "div",
+        "required": "yes",
+        "type": "layout"
+      },
+      {
+        "name": ".content-container",
+        "description": "A layout container. It can container an optional .sidenav element and a required .content-area container.",
+        "host": "div",
+        "required": "yes",
+        "type": "layout"
+      },
+      {
+        "name": ".content-area",
+        "description": "A container for page specific application content.",
+        "host": "div",
+        "required": "yes",
+        "type": "layout"
+      }
+    ]
+  },
   "ClrBadge": {
     "comment": "THis is a placeholder for the badge css api data.",
     "bindings": [],
@@ -1832,24 +1859,8 @@
     ]
   },
   "ClrHeader": {
-    "bindings": [
-      {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
-      }
-    ],
-    "methods": [
-      {
-        "name": "",
-        "parameters": [],
-        "description": "",
-        "returns": ""
-      }
-    ],
+    "bindings": [],
+    "methods": [],
     "css": [
       {
         "name": ".header-1",
@@ -2059,34 +2070,6 @@
     "methods": [],
     "css": []
   },
-  "ClrLayout": {
-    "bindings": [
-      {
-        "name": "clrLayout",
-        "accepts": "string",
-        "type": "input",
-        "options": "compact, horizontal, vertical",
-        "description": "Set the form layout.",
-        "default": "horizontal"
-      }
-    ],
-    "methods": [
-      {
-        "name": "",
-        "parameters": [],
-        "description": "",
-        "returns": ""
-      }
-    ],
-    "css": [
-      {
-        "name": ".alert-text",
-        "description": "Defines the text that is placed into the alert",
-        "host": "div, span",
-        "required": true
-      }
-    ]
-  },
   "ClrList": {
     "bindings": [],
     "methods": [],
@@ -2284,15 +2267,42 @@
       }
     ]
   },
+  "ClrNavigation": {
+    "bindings": [],
+    "methods": [],
+    "css": [
+      {
+        "name": ".main-container",
+        "description": "Designate the root level application container. Automatically applied when using the clr-main-container directive.",
+        "host": "div",
+        "required": "yes",
+        "type": "layout"
+      },
+      {
+        "name": ".content-container",
+        "description": "Designate a container for content and side navigation",
+        "host": "div",
+        "required": "yes",
+        "type": "layout"
+      },
+      {
+        "name": ".content-area",
+        "description": "Designate a container for page level content.",
+        "host": "main",
+        "required": "yes",
+        "type": "layout"
+      }
+    ]
+  },
   "ClrNavLevel": {
     "bindings": [
       {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
+        "name": "clr-nav-level",
+        "accepts": "number",
+        "type": "input",
+        "options": "1, 2",
+        "description": "Designate the responsive nav level. When active, '1' is access from icon on laft ans 2 is accessed from the icon on the right.",
+        "default": ""
       }
     ],
     "methods": [
@@ -2315,12 +2325,52 @@
   "ClrProgressBar": {
     "bindings": [
       {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
+        "name": "id",
+        "accepts": "string",
+        "type": "input",
+        "options": "any string",
+        "description": "Set an HTML id",
+        "default": "null"
+      },
+      {
+        "name": "clrValue",
+        "accepts": "number",
+        "type": "input",
+        "options": "1,25, 50, 100 ...",
+        "description": "Specify how much of the progress has been completed.",
+        "default": "0"
+      },
+      {
+        "name": "clrMax",
+        "accepts": "number",
+        "type": "input",
+        "options": "50, 100, 200, ...",
+        "description": "Set the total amount of work to be done. it must have a value greater than 0.",
+        "default": "100"
+      },
+      {
+        "name": "clrDisplayVal",
+        "accepts": "any string",
+        "type": "input",
+        "options": "$, £, ¥, ...",
+        "description": "Overwrite the default value representation (%). Should be short, one or two characters at most.",
+        "default": ""
+      },
+      {
+        "name": "clrLabeled",
+        "accepts": "boolean | string",
+        "type": "input",
+        "options": "true, false | valid HTML label string",
+        "description": "When true creates an auto generated label for the progress element. String value creates a custom label.",
+        "default": "null"
+      },
+      {
+        "name": "clrFlash",
+        "accepts": "boolean | string",
+        "type": "input",
+        "options": "true, false, valid HTML string",
+        "description": "Set this to make it flash and disappear when clrMaxValue is reached.",
+        "default": "null"
       }
     ],
     "methods": [
@@ -2461,6 +2511,61 @@
         "description": "Defines the text that is placed into the alert",
         "host": "div, span",
         "required": true
+      }
+    ]
+  },
+  "ClrSidnav": {
+    "bindings": [],
+    "methods": [],
+    "css": [
+      {
+        "name": ".sidenav",
+        "description": "A navigation element for the sidenav content.",
+        "host": "nav",
+        "required": "yes",
+        "type": "layout"
+      },
+      {
+        "name": ".sidenav-content",
+        "description": "A container element for one or more .nav-group elements",
+        "host": "div",
+        "required": "yes",
+        "type": "layout"
+      },
+      {
+        "name": ".nav-group",
+        "description": "An element used to create a collapsible container of nav links.",
+        "host": "section",
+        "required": "yes",
+        "type": "layout"
+      },
+      {
+        "name": ".collapsible",
+        "description": "When composed with .nav-group it makes the section expand and collapse.",
+        "host": "section",
+        "required": "no",
+        "type": ""
+      },
+      {
+        "name": ".nav-list",
+        "description": "A list of navigation links. ",
+        "host": "ul",
+        "required": "yes",
+        "type": "layout"
+      },
+      {
+        "name": ".nav-link",
+        "description": "An element used to designate navigation for an application.",
+        "host": "li",
+        "required": "yes",
+        "type": "style"
+      },
+      {
+        "name": ".active",
+        "description": "When composed with .nav-link it visually indicates the active navigation element in the sidnav.",
+        "host": "li",
+        "required": "yes - only on one .nav-link at a time.",
+        "type": "style"
       }
     ]
   },
@@ -2805,6 +2910,47 @@
         "description": "Defines the text that is placed into the alert",
         "host": "div, span",
         "required": true
+      }
+    ]
+  },
+  "ClrTable": {
+    "bindings": [],
+    "methods": [],
+    "css": [
+      {
+        "name": ".table",
+        "description": "Add default Clarity table styles.",
+        "host": "table",
+        "required": "yes",
+        "type": "style"
+      },
+      {
+        "name": "left",
+        "description": "Left align content. Table header and row cells should have the same alignemnt.",
+        "host": "th, td",
+        "required": "no",
+        "type": "style"
+      },
+      {
+        "name": ".table-noborder",
+        "description": "Removes the default Clarity table border",
+        "host": "table",
+        "required": "no",
+        "type": "visual style"
+      },
+      {
+        "name": ".compact-table",
+        "description": "Reduces line height and compacts the table content.",
+        "host": "table",
+        "required": "no",
+        "type": "layout"
+      },
+      {
+        "name": ".table-vertical",
+        "description": "Orient a table vertically and use the left most (th or td) element to serve as table header.",
+        "host": "table",
+        "required": "no",
+        "type": "layout"
       }
     ]
   },

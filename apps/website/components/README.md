@@ -1,5 +1,1 @@
 # Component Overview
-
-Acccordion
-
-Alert

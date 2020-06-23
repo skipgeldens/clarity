@@ -3,6 +3,10 @@ title: API
 toc: true
 ---
 
-# API
+## CSS
 
-### Code & Examples
+Tables can have several different visual styles.
+
+### Classes
+
+<DocComponentApi component="ClrTable" item="css" />

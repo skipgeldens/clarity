@@ -55,25 +55,7 @@ module.exports = [
   {
     title: 'Foundation',
     path: '/foundation/',
-    children: [
-      {
-        title: 'Color',
-        path: '/foundation/color/',
-      },
-      {
-        title: 'Icons',
-        path: '/foundation/icons/',
-        children: [
-          '/foundation/icons/',
-          '/foundation/icons/usage',
-          '/foundation/icons/api',
-          '/foundation/icons/accessibility',
-        ],
-      },
-      '/foundation/internationalization/',
-      '/foundation/themes/',
-      '/foundation/typography/',
-    ],
+    children: getChildren('foundation'),
   },
   {
     title: 'Components',
