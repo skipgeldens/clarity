@@ -2,6 +2,9 @@ import * as Sentry from '@sentry/browser';
 import { Vue as VueIntegration } from '@sentry/integrations';
 import './styles/index.scss';
 
+import '@clr/icons';
+import '@clr/all-shapes';
+
 export default ({
   Vue, // the version of Vue being used in the VuePress app
   options, // the options for the root Vue instance
