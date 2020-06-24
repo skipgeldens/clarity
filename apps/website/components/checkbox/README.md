@@ -2,12 +2,26 @@
 title: Overview
 ---
 
-# Checkboxes
+With checkboxes, users can select one or more options from a list of options.
 
-![HTML5](assets/images/bugs/badge_html5.svg 'HTML5')![CSS3](assets/images/bugs/badge_css3.svg 'CSS3')![Angular](assets/images/bugs/badge_ng.svg 'Angular')
+## Usage
 
-- [Examples & Code](/documentation/checkboxes#top)
-- [Design Guidelines](/documentation/checkboxes#guidelines)
+Use a checkbox for yes or no choices, for example "Remember me" on the [login page](./login).
+
+- Checkboxes are best for seven or fewer options
+- For readability, keep the checkbox label to a single line
+
+For on and off options, use a [toggle switch](./toggles).
+
+<!-- [//]: # Types -->
+
+<!-- [//]: # Anatomy -->
+
+<!-- [//]: # Behavior -->
+
+<!-- [//]: # Placement - Checkboxes are often use in forms see: vertical, horizontal and compact form elements. -->
+
+<!-- [//]: # Content -->
 
 ##### With checkboxes, users can select multiple options in a list of options.
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="inset" :style="{ height: getHeight() }">
+  <div class="inset" :style="{ height: getHeight() }" :class="{ left: align === 'left' }">
     <slot></slot>
   </div>
 </template>
@@ -12,7 +12,7 @@ export default {
       return this.height + 'px';
     },
   },
-  props: ['height'],
+  props: ['height', 'align'],
 };
 </script>
 
@@ -20,10 +20,12 @@ export default {
 .inset {
   background: #e8e8e8;
   border-radius: 3px;
-  text-align: center;
-  padding: 2rem 1rem;
+  padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.inset.left {
+  justify-content: start;
 }
 </style>

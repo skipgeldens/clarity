@@ -23,3 +23,6 @@ loadSocialIconSet();
 loadTechnologyIconSet();
 loadTextEditIconSet();
 loadTravelIconSet();
+
+import '@clr/icons';
+import '@clr/all-shapes';

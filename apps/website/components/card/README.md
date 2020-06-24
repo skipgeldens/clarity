@@ -2,9 +2,7 @@
 title: Overview
 ---
 
-:::summary
 Cards are used to apply a container around a related grouping of information.
-:::
 
 ## Usage
 
@@ -24,44 +22,23 @@ Example use cases for cards include:
 
 Cards may use have dividers. Flat buttons should be used on cards to keep their prominence in harmony with the other information.
 
-Place the primary action and a single additional action, if required, in the card footer, left-aligned. This placement supports the F-pattern layout.
+Place the primary action and a single additional action, if required, in the card footer, left-aligned. This placement supports the F-pattern layout. For more than two actions, use a dropdown. Do not place more than eight items in the dropdown menu.
 
-Progress bars belong at the card top or above the footer, closest to the triggering action. Be consistent with progress bar placement within a card group.
-
-<!-- [//] (IMAGE - card wtih progress bar) -->
-
-![Cards with Progress Bars](./card_progress.png)
-
-<!-- [//] (IMAGE - Dos and Don’ts) -->
-
-<ClrRow>
-<ClrCell>
-<ClrDoDont>
-<template v-slot:demo>
+::: do This card correctly aligns actions to the left.
 
 ![Do align card actions to the left](./buttons_in_cards_2.png)
 
-</template>
-<template v-slot:summary>
-This card correctly aligns actions to the left.
-</template>
-</ClrDoDont>
-</ClrCell>
-<ClrCell>
-<ClrDoDont dont>
-<template v-slot:demo>
+:::
+
+::: dont Users might not scan to the bottom right of wide cards.
 
 ![Don't align buttons to right](./buttons_in_cards_1.png)
 
-</template>
-<template v-slot:summary>
-Users might not scan to the bottom right of wide cards.
-</template>
-</ClrDoDont>
-</ClrCell>
-</ClrRow>
+:::
 
-For more than two actions, use a dropdown. Do not place more than eight items in the dropdown menu.
+Progress bars belong at the card top or above the footer, closest to the triggering action. Be consistent with progress bar placement within a card group.
+
+![Cards with Progress Bars](./card_progress.png)
 
 ## Behavior
 
@@ -75,8 +52,6 @@ Toggles for switching between views go in the upper right of the card group. The
 
 Group cards by theme or element
 Homogeneous content facilitates scanning – users quickly find and compare information of interest. Content of varying type often shows “the bigger picture.” A grid places cards in fixed rows and columns: more content in less vertical space means less scrolling. It’s easy for users to scan content in this layout. If in doubt, use the grid.
-
-<!-- [//] (IMAGE - card in grid, currently in code section) -->
 
 <div class="clr-row">
   <div class="clr-col-lg-4 clr-col-12">
@@ -118,4 +93,4 @@ Homogeneous content facilitates scanning – users quickly find and compare info
 
 Cards can contain text, images, data visualizations, or multimedia. Ensure that the content serves your use case. Keep it simple and legible. Avoid using too much content, overloading the card with too many actions, and placing links within the content.
 
-A card consists of a title 18 px Clarity City LIGHT - content is Clarity City REGULAR 14px.
+A card consists of a title 18 px Clarity City Light - content is Clarity City Regular 14px.

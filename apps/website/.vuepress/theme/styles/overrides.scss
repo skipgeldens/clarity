@@ -6,6 +6,19 @@
   }
 }
 
+// HEADERS
+#header-types,
+#color-types {
+  header {
+    margin-bottom: 12px; // This spaces out some of the headers that are stacked in the demos
+  }
+}
+#subnav-types {
+  .main-container {
+    height: auto; // Allows a demo of the subnav not to be 100% height of page
+  }
+}
+
 // Fix APIs
 
 .main-container > .content-container {

@@ -2,9 +2,7 @@
 title: Overview
 ---
 
-# Badges
-
-_Badges provide a method to highlight a count of an element either next to it or inside the element itself._
+Badges provide a method to highlight a count of an element either next to it or inside the element itself.
 
 ## Usage
 

@@ -2,9 +2,7 @@
 title: Overview
 ---
 
-::: summary
 An accordion is a collection of vertically stacked sections with multiple content areas which may be expanded or minimized by the user to reveal their content.
-:::
 
 ## Usage
 

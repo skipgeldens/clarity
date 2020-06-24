@@ -2,96 +2,239 @@
 title: Overview
 ---
 
-# Header
+Headers provide branding, navigation, search, and access to global application actions such as settings and notifications.
 
-- [Design Guidelines](/documentation/header#top)
-- [Code & Examples](/documentation/header#examples)
+<clr-inset>
+<header class="header-6" style="min-width: 100%; flex: none">
+  <div class="branding">
+      <a class="logo-and-title">
+          <clr-icon shape="file"></clr-icon>
+          <span class="title">Note App</span>
+      </a>
+  </div>
+  <div class="header-nav">
+      <a href="javascript://" class="nav-link">
+          <span class="nav-text">Notes</span>
+      </a>
+      <a href="javascript://" class="active nav-link">
+          <span class="nav-text">Shared Notes</span>
+      </a>
+  </div>
+  <div class="header-actions">
+    <div class="dropdown">
+      <button class="nav-icon dropdown-toggle" aria-label="toggle settings menu">
+        <clr-icon shape="cog"></clr-icon>
+        <clr-icon shape="caret" direction="down"></clr-icon>
+      </button>
+      <div class="dropdown-menu">
+        <a href="javascript://">About</a>
+        <a href="javascript://">Preferences</a>
+        <a href="javascript://">Log out</a>
+      </div>
+    </div>
+  </div>
+</header>
+</clr-inset>
 
-##### Headers provide branding, navigation, search, and access to global application actions such as settings and notifications.
-
-Note App
-
-[Notes](javascript://)[Shared Notes](javascript://)
-
-[About](javascript://)[Preferences](javascript://)[Log out](javascript://)
-
-### Style
+## Usage
 
 The header is consistent across all pages of an application. This offers a recognizable unifying element to the application.
 
-##### Branding
+## Anatomy
+
+### Branding
 
 Include both your application’s name and logo if available. Clicking on the app’s name or logo should take you to the homepage of the application.
 
-![](assets/images/documentation/header/header_01.svg)
+<clr-inset>
+<header class="header-6" style="min-width: 100%; flex: none">
+  <div class="branding">
+      <a class="logo-and-title">
+          <clr-icon shape="file"></clr-icon>
+          <span class="title">Note App</span>
+      </a>
+  </div>
+</header>
+</clr-inset>
 
-##### Top Level Navigation
+### Top Level Navigation
 
 Include top level navigation items. These items should be persistent throughout your experience.
 
-Have a maximum of four items in top-level navigation. For more info, take a look at [Navigation](/documentation/navigation).
+Have a maximum of four items in top-level navigation. For more info, take a look at [Navigation](../foundation/navigation).
 
-##### Typography
+If you’re using icons on their own in the header, using tooltips will help users understand what an icon means. Use clear language for top level navigation items. Do not combine icons and text. Only use a combination of text and icons when the provided text gives additional context specific to the user, for example, the user's username.
 
-Use clear language for top level navigation items. Do not combine icons and text.
+::: do Use Text for navigational items.
 
-If you’re using icons on their own in the header, using tooltips will help users understand what an icon means.
+<header class="header-6" style="min-width: 100%; flex: none">
+  <div class="branding">
+      <a class="logo-and-title">
+          <clr-icon shape="file"></clr-icon>
+          <span class="title">Note App</span>
+      </a>
+  </div>
+  <div class="header-nav">
+      <a href="javascript://" class="nav-link">
+          <span class="nav-text">Notes</span>
+      </a>
+      <a href="javascript://" class="active nav-link">
+          <span class="nav-text">Shared Notes</span>
+      </a>
+  </div>
+</header>
 
-![](assets/images/documentation/header/header_04.svg)
+:::
 
-###### Do
+::: dont Use icons alone or mix icons and text for top level navigation items.
 
-Use Text for navigational items.
+<header class="header-6" style="min-width: 100%; flex: none">
+  <div class="branding">
+      <a class="logo-and-title">
+          <clr-icon shape="file"></clr-icon>
+          <span class="title">Note App</span>
+      </a>
+  </div>
+  <div class="header-nav">
+    <a href="javascript://" class="nav-link">
+      <clr-icon shape="pencil"></clr-icon> Composer
+    </a>
+    <a href="javascript://" class="active nav-link">
+      <clr-icon shape="folder"></clr-icon>
+    </a>
+  </div>
+</header>
 
-![](assets/images/documentation/header/header_02.svg)
+:::
 
-###### Not Recommended
+### Right Side Action Area
 
-Use icons alone for top level navigation items.
+The area to the right of the header serves as a location for global actions and top-level navigational items that are important yet visited less frequently. For example, this action area on the right side of the header could include application settings, user settings, help, about, and other similar items.
 
-![](assets/images/documentation/header/header_03.svg)
+<!-- [//]: ## Types -->
 
-###### Not Recommended
-
-Only use a combination of text and icons when the provided text gives additional context specific to the user, for example, the user's username.
+## Behavior
 
 ### Responsive Navigation
 
-Clarity includes functionality for displaying the navigation on smaller devices like tablets and phones with the _responsive navigation component_ in clarity-angular. Details on how to use [Clarity's responsive header can be found in our documentation on app navigation](/documentation/navigation#responsive_navigation).
+Clarity includes functionality for displaying the navigation on smaller devices like tablets and phones with the responsive navigation component in clarity-angular. Details on how to use Clarity's responsive header can be found in our documentation on app navigation.
 
 ### Search
 
 There are many different ways to include search in the header. Which way you choose depends on search's prominence and its utility within the application.
 
-Note App
-
-[About](javascript://)[Preferences](javascript://)[Log out](javascript://)
+<clr-inset>
+<header class="header-6" style="min-width: 100%; flex: none">
+  <div class="branding">
+    <a class="logo-and-title">
+      <clr-icon shape="file"></clr-icon>
+      <span class="title">Note App</span>
+    </a>
+  </div>
+  <form class="search">
+    <label for="search_input">
+      <input id="search_input-a" type="text" placeholder="Search all notes...">
+    </label>
+  </form>
+  <div class="header-actions">
+    <div class="dropdown">
+      <button class="nav-icon dropdown-toggle" aria-label="toggle settings menu">
+        <clr-icon shape="cog"></clr-icon>
+        <clr-icon shape="caret" direction="down"></clr-icon>
+      </button>
+      <div class="dropdown-menu">
+        <a href="javascript://">About</a>
+        <a href="javascript://">Preferences</a>
+        <a href="javascript://">Log out</a>
+      </div>
+    </div>
+  </div>
+</header>
+</clr-inset>
 
 Use search as a prominent navigation item in the header if you are building a search-based user experience.
 
-Note App
-
-[Notes](javascript://)[Shared Notes](javascript://)
-
-[About](javascript://)[Preferences](javascript://)[Log out](javascript://)
-
-Use search in addition to navigation items when you have 2 or 3 top-level navigational items and search continues to be core to your navigation experience.
-
-![](assets/images/documentation/header/header_05.svg)
+<clr-inset>
+<header class="header-6" style="min-width: 100%; flex: none">
+  <div class="branding">
+    <a class="logo-and-title">
+      <clr-icon shape="file"></clr-icon>
+      <span class="title">Note App</span>
+    </a>
+  </div>
+  <div class="header-nav">
+    <a href="javascript://" class="nav-link">
+      <span class="nav-text">Notes</span>
+    </a>
+    <a href="javascript://" class="active nav-link">
+      <span class="nav-text">Shared Notes</span>
+    </a>
+  </div>
+  <form class="search">
+    <label for="search_input">
+      <input id="search_input" type="text" placeholder="Search all notes...">
+    </label>
+  </form>
+  <div class="header-actions">
+    <div class="dropdown">
+      <button class="nav-icon dropdown-toggle" aria-label="toggle settings menu">
+        <clr-icon shape="cog"></clr-icon>
+        <clr-icon shape="caret" direction="down"></clr-icon>
+      </button>
+      <div class="dropdown-menu">
+        <a href="javascript://">About</a>
+        <a href="javascript://">Preferences</a>
+        <a href="javascript://">Log out</a>
+      </div>
+    </div>
+  </div>
+</header>
+</clr-inset>
 
 Use search as a secondary item to the right of the header if search is not core to your navigation experience or if you need to emphasize 3 or more top level navigation items.
 
-You can read more in about [search](https://github.com/vmware/clarity/issues/186) in the design spec. The search component itself is a work in progress.
+<clr-inset>
+<header class="header-6" style="min-width: 100%; flex: none">
+  <div class="branding">
+    <a class="logo-and-title">
+      <clr-icon shape="file"></clr-icon>
+      <span class="title">Note App</span>
+    </a>
+  </div>
+  <div class="header-nav">
+    <a href="javascript://" class="nav-link">
+      <span class="nav-text">Notes</span>
+    </a>
+    <a href="javascript://" class="active nav-link">
+      <span class="nav-text">Shared Notes</span>
+    </a>
+  </div>
+  <div class="header-actions">
+    <a href="#" class="nav-icon nav-icon-text">
+      <clr-icon shape="search" style="position: relative; top: 0.8rem; left: auto; transform: none; margin-left: 1rem"></clr-icon>
+    </a>
+    <div class="dropdown">
+      <button class="nav-icon dropdown-toggle" aria-label="toggle settings menu">
+        <clr-icon shape="cog"></clr-icon>
+        <clr-icon shape="caret" direction="down"></clr-icon>
+      </button>
+      <div class="dropdown-menu">
+        <a href="javascript://">About</a>
+        <a href="javascript://">Preferences</a>
+        <a href="javascript://">Log out</a>
+      </div>
+    </div>
+  </div>
+</header>
+</clr-inset>
 
-### Right Side Action Area
+You can read more in about search in the design spec. The search component itself is a work in progress.
 
-The area to the right of the header serves as a location for global actions and top-level navigational items that are important yet visited less frequently.
+<!-- [//]: ## Placement -->
 
-![](assets/images/documentation/header/header_06.svg)
+<!-- [//]: ## Content -->
 
-For example, this action area on the right side of the header could include application settings, user settings, help, about, and other similar items.
-
-### Code & Examples
+## Code & Examples
 
 The header and subnav support app-level information and navigation links.
 
@@ -112,26 +255,7 @@ The header and subnav support app-level information and navigation links.
 
 `.header-nav` contains the navigation links. Each navigation link extends the `.nav-link` class along with the `.nav-text` class for text links and the `.nav-icon` class icon links.
 
-[Project Clarity](javascript://)
-
-[Dashboard](javascript://)[Interactive Analytics](javascript://)
-
-```html
-<header class="header-6">
-  <div class="branding">
-    ...
-  </div>
-  <div class="header-nav">
-    <a href="javascript://" class="active nav-link nav-text">Dashboard</a>
-    <a href="javascript://" class="nav-link nav-text">Interactive Analytics</a>
-  </div>
-  <div class="header-actions">
-    <a href="javascript://" class="nav-link nav-icon" aria-label="settings">
-      <clr-icon shape="cog"></clr-icon>
-    </a>
-  </div>
-</header>
-```
+<doc-demo file="/demos/header/basic.html" />
 
 ###### .search
 
@@ -143,220 +267,18 @@ The header and subnav support app-level information and navigation links.
 
 Info
 
-For information about headers with responsive navigation, see [Responsive Navigation](/documentation/navigation#responsive_navigation).
+<!-- For information about headers with responsive navigation, see [Responsive Navigation](/documentation/navigation#responsive_navigation). -->
 
 #### Types
 
-[Project Clarity](javascript://)
-
-[Dashboard](javascript://)[Interactive Analytics](javascript://)
-
-[Project Clarity](javascript://)
-
-[Project Clarity](javascript://)
-
-[Project Clarity](javascript://)
-
-[Log Out](javascript://)
-
-[Project Clarity](javascript://)
-
-john.doe@vmware.com
-
-[Project Clarity](javascript://)
-
-[username](javascript://)
-
-```html
-<header class="header-6">
-  <div class="branding">
-    <a href="..." class="nav-link">
-      <clr-icon shape="vm-bug"></clr-icon>
-      <span class="title">Project Clarity</span>
-    </a>
-  </div>
-  <div class="header-nav">
-    <a href="..." class="active nav-link"><span class="nav-text">Dashboard</span></a>
-    <a href="..." class="nav-link"><span class="nav-text">Interactive Analytics</span></a>
-  </div>
-  <div class="header-actions">
-    <a href="..." class="nav-link nav-icon" aria-label="settings">
-      <clr-icon shape="cog"></clr-icon>
-    </a>
-  </div>
-</header>
-
-<header class="header-6">
-  <div class="branding">
-    <a href="..." class="nav-link">
-      <clr-icon shape="vm-bug"></clr-icon>
-      <span class="title">Project Clarity</span>
-    </a>
-  </div>
-  <form class="search">
-    <label for="search_input">
-      <input id="search_input" type="text" placeholder="Search for keywords..." />
-    </label>
-  </form>
-  <div class="header-actions">
-    <a href="..." class="nav-link nav-icon" aria-label="settings">
-      <clr-icon shape="cog"></clr-icon>
-    </a>
-  </div>
-</header>
-
-<header class="header-6">
-  <div class="branding">
-    <a href="..." class="nav-link">
-      <clr-icon shape="vm-bug"></clr-icon>
-      <span class="title">Project Clarity</span>
-    </a>
-  </div>
-  <div class="header-actions">
-    <clr-dropdown>
-      <button class="nav-icon" clrDropdownTrigger aria-label="toggle settings menu">
-        <clr-icon shape="cog"></clr-icon>
-        <clr-icon shape="caret down"></clr-icon>
-      </button>
-      <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
-        <a href="..." clrDropdownItem>About</a>
-        <a href="..." clrDropdownItem>Preferences</a>
-        <a href="..." clrDropdownItem>Log out</a>
-      </clr-dropdown-menu>
-    </clr-dropdown>
-  </div>
-</header>
-
-<header class="header-6">
-  <div class="branding">
-    <a href="..." class="nav-link">
-      <clr-icon shape="vm-bug"></clr-icon>
-      <span class="title">Project Clarity</span>
-    </a>
-  </div>
-  <div class="header-actions">
-    <a href="..." class="nav-link nav-text">
-      Log Out
-    </a>
-  </div>
-</header>
-
-<header class="header-6">
-  <div class="branding">
-    <a href="..." class="nav-link">
-      <clr-icon shape="vm-bug"></clr-icon>
-      <span class="title">Project Clarity</span>
-    </a>
-  </div>
-  <div class="header-actions">
-    <clr-dropdown>
-      <button class="nav-text" clrDropdownTrigger aria-label="open user profile">
-        john.doe@vmware.com
-        <clr-icon shape="caret down"></clr-icon>
-      </button>
-      <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
-        <a href="..." clrDropdownItem>Preferences</a>
-        <a href="..." clrDropdownItem>Log out</a>
-      </clr-dropdown-menu>
-    </clr-dropdown>
-  </div>
-</header>
-
-<header class="header-6">
-  <div class="branding">
-    <a href="javascript://" class="nav-link">
-      <clr-icon shape="vm-bug"></clr-icon>
-      <span class="title">Project Clarity</span>
-    </a>
-  </div>
-  <div class="header-actions">
-    <a href="javascript://" class="nav-link nav-icon-text">
-      <clr-icon shape="user"></clr-icon>
-      <span class="nav-text">username</span>
-    </a>
-  </div>
-</header>
-```
+<doc-demo file="/demos/header/types.html" id="header-types" />
 
 #### Color Options
 
-[Project Clarity](javascript://)
-
-[Project Clarity](javascript://)
-
-[Project Clarity](javascript://)
-
-[Project Clarity](javascript://)
-
-[Project Clarity](javascript://)
-
-[Project Clarity](javascript://)
-
-[Project Clarity](javascript://)
-
-```html
-<header class="header header-1">
-  ...
-</header>
-
-<header class="header header-2">
-  ...
-</header>
-
-<header class="header header-3">
-  ...
-</header>
-
-<header class="header header-4">
-  ...
-</header>
-
-<header class="header header-5">
-  ...
-</header>
-
-<header class="header header-6">
-  ...
-</header>
-
-<header class="header header-7">
-  ...
-</header>
-```
+<doc-demo file="/demos/header/colors.html" id="color-types" />
 
 ### Subnav
 
 `.subnav` immediately follows the `.header`. It wraps a [tab](/documentation/tabs) and an `aside` section.
 
-[Project Clarity](javascript://)
-
-- [Dashboard](javascript://)
-- [Management](javascript://)
-- [Cloud](javascript://)
-- [Tenants](javascript://)
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non enim praesent elementum facilisis leo vel fringilla. Euismod elementum nisi quis eleifend quam adipiscing vitae proin. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus mauris. Dolor magna eget est lorem ipsum dolor sit amet consectetur. Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Volutpat commodo sed egestas egestas. Pharetra sit amet aliquam id diam maecenas ultricies mi. Pulvinar etiam non quam lacus suspendisse faucibus interdum posuere. Viverra nibh cras pulvinar mattis nunc sed blandit libero volutpat. Enim nunc faucibus a pellentesque sit amet porttitor eget dolor. Quis viverra nibh cras pulvinar mattis nunc. Donec ac odio tempor orci. Tortor consequat id porta nibh. Risus ultricies tristique nulla aliquet enim tortor. A scelerisque purus semper eget duis at tellus at. Arcu non sodales neque sodales ut. Egestas integer eget aliquet nibh praesent tristique.
-
-Leo integer malesuada nunc vel risus commodo viverra. Lectus sit amet est placerat in egestas. Tincidunt vitae semper quis lectus nulla at volutpat diam. Blandit aliquam etiam erat velit scelerisque in dictum non consectetur. Purus sit amet volutpat consequat mauris. Enim blandit volutpat maecenas volutpat blandit aliquam etiam erat velit.
-
-```html
-<header>
-  ...
-</header>
-<nav class="subnav">
-  <ul class="nav">
-    <li class="nav-item">
-      <a class="nav-link active" href="#">Dashboard</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Management</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Cloud</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Tenants</a>
-    </li>
-  </ul>
-</nav>
-```
+<doc-demo file="/demos/header/subnav.html" id="subnav-types" />

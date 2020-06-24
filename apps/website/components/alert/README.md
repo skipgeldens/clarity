@@ -2,9 +2,7 @@
 title: Overview
 ---
 
-::: summary
 Alerts are banners that communicate a message with a severity attached to it.
-:::
 
 ## Usage
 
@@ -68,6 +66,7 @@ There are three different sub-types of app-level alerts info, warning, and error
 <!-- [//] IMAGE - purple pin on gray - Why no success app-level alert? - App-level alerts are global in nature. Reporting a success of an operation should either be communicated within context or as a notification message. -->
 
 **Why no success app-level alert?**
+
 App-level alerts are global in nature. Reporting a success of an operation should either be communicated within context or as a notification message.
 
 <!-- [//] ### Anatomy- An app-level alert consist of an icon, a message, and optional actions in a container. - All elements are centered-aligned.  -Add anatomy for inline alerts - Need to add pagination   -->

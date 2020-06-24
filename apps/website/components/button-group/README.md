@@ -2,11 +2,7 @@
 title: Overview
 ---
 
-# Button group
-
-::: summary
 Button groups are for creating collections of similar type action buttons.
-:::
 
 ## Usage
 

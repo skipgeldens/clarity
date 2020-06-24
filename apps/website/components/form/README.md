@@ -1,155 +1,113 @@
 ---
 title: Overview
+toc: true
 ---
 
-# Forms
+Forms are a grouping of input controls that allow a user to submit information to your application.
 
-- [Design Guidelines](/documentation/forms#top)
-- [Code & Examples](/documentation/forms#examples)
-
-##### Forms are a grouping of input controls that allow a user to submit information to your application.
-
-### Design Guidelines
+## Usage
 
 Forms are comprised of text and input components such as checkboxes, dropdowns, input fields, radio buttons, and toggle switches. The easier users can complete forms, the better your response rates will typically be. Forms should be clear, concise, and relevant to its context.
 
-#### Form Layouts
+## Types
+
+### Form Layouts
 
 Clarity offers three types of forms: horizontal (our recommended default), vertical and compact.
 
-Label
+!!!include(./components/form/\_demos/horizontal.html)!!!
 
-Label
+!!!include(./components/form/\_demos/vertical.html)!!!
 
-Option 1Option 2Option 3
+!!!include(./components/form/\_demos/compact.html)!!!
 
-Label
+### Form Length
 
-Label
+Forms should only be as long as absolutely necessary. We recommend reviewing each form input and asking whether you could obtain the information in another way, or at a later, more convenient time.
 
-Helper Text
+## Anatomy
 
-###### Horizontal - Default
-
-Horizontal formats are good for the quick scanning of labels, and can be used in cases of limited vertical space. The space between label and input however can slow users down.
-
-Label
-
-Label
-
-Option 1Option 2Option 3
-
-Label
-
-Label
-
-Helper Text
-
-###### Vertical
-
-This option is better for scanning, mobile experiences, accessibility, and localization. While it offers better completion rates, it is less ideal for longer forms.
-
-Label
-
-Label
-
-Option 1Option 2Option 3
-
-Label
-
-Label
-
-Helper Text
-
-###### Compact
-
-For cases with highly limited space, we provide a compact form layout.
-
-#### Form Architecture
-
-###### Columns
+### Columns
 
 Forms should help users complete their goal as quickly as possible. Column structure can help make it easier for users to complete your form.
 
-![](assets/images/documentation/forms/architecture-do.svg)
+::: do Put forms in one column. Multiple columns disrupt users’ vertical rhythm and completion.
 
-###### Do
+![do put forms into one column](./_images/architecture-do.svg)
 
-Put forms in one column. Multiple columns disrupt users’ vertical rhythm and completion.
+:::
 
-![](assets/images/documentation/forms/architecture-dont.svg)
+::: dont Create multiple columns of input fields per page, except for small, related inputs like name "first" and "last".
 
-###### Don't
+![don't put forms into multiple columns column](./_images/architecture-dont.svg)
 
-Create multiple columns of input fields per page, except for small, related inputs like name “first” and “last.”
+:::
 
-#### Input Grouping
+### Input Grouping
 
 Grouping will make scanning easier. A form with more than 6 inputs will likely have inputs that can be grouped together, like “address”: street, city, zip, county, country, etc.
 
 For the grouping of labels and their input fields, we recommend grouping labels closely with their respective input fields.
 
-![align inputs and labels](assets/images/documentation/forms/input-grouping-do.svg)
+::: do Put labels in close proximity to their input controls.
 
-###### Do
+![do Put labels in close proximity to their input controls](./_images/input-grouping-do.svg)
 
-![don't have inputs misaligned](assets/images/documentation/forms/input-grouping-do2.svg)
+:::
 
-###### Do
+::: dont Space labels out far from their input controls.
 
-![don't right align inputs](assets/images/documentation/forms/input-grouping-dont.svg)
+![Don't space labels out far from their inputs.](./_images/input-grouping-dont.svg)
 
-###### Don't
+:::
 
-#### Form Length
+### Form Elements
 
-Forms should only be as long as absolutely necessary. We recommend reviewing each form input and asking whether you could obtain the information in another way, or at a later, more convenient time.
-
-#### Form Elements
-
-###### Radios, Checkboxes, and Select Box
-
+**Radios, Checkboxes, and Select Box**
 For inputs with 3 or more options, you may use radios, checkboxes or select boxes. We recommend placing your options vertically in one column to make it easier to scan.
 
 Radios and checkboxes are used when it is helpful to compare options within the context of the form, as all selections will be visible at all times. Select boxes typically have more than 7 options that do not need to be compared with each other.
 
-#### Validation and Error Messaging
+**Error Message Styling**
+When showing error inputs, highlight the input field with red in some way, but also pair the red with another visual indicator, like an icon. This will help with accessibility.
+
+::: do Place icons outside the input field. This will also help avoid browser and third-party app collision conflicts.
+
+![do Place icons outside the input field. This will also help avoid browser and third-party app collision conflicts.](./_images/error-do.svg)
+
+:::
+
+::: dont Put icons inside the input field. If inside, account for changing form value space (increase characters).
+
+![Don't Put icons inside the input field. If inside, account for changing form value space (increase characters).](./_images/error-dont.svg)
+
+:::
+
+## Behavior
+
+### Validation and Error Messaging
 
 You also want to let users know when something is wrong with the information provided.
 
-###### Error Message Styling
-
-When showing error inputs, highlight the input field with red in some way, but also pair the red with another visual indicator, like an icon. This will help with accessibility.
-
-![](assets/images/documentation/forms/error-do.svg)
-
-###### Do
-
-Place icons outside the input field. This will also help avoid browser and third-party app collision conflicts.
-
-![](assets/images/documentation/forms/error-dont.svg)
-
-###### Don't
-
-Put icons inside the input field. If inside, account for changing form value space (increase characters).
-
-###### Error Message Content
-
-Humanize the error messaging as much as possible. The content should provide clear guidance on how to fix the error. Avoid unrecognizable system error messages like "code 500 error".
-
-You may also consider using more than one error message when helpful. For example, if an email address input field has an error, consider either showing “please enter an email address” for a blank field, or “email address needs an ’@’ symbol followed by a domain” for an invalid symbol.
-
-###### Error Message Location
-
-We recommend displaying error messages within the same area where the error occurs.
-
-###### Error Message Behavior
+### Error Message Behavior
 
 For most cases, validate when the user leaves the field (onblur). Invalidating fields while users are still typing can be frustrating.
 
 There are some cases where real-time validation can be helpful, such as inputs with sensitive field value lengths (like tweets), or when users return to an error field and successfully edit the error field, or for password fields with visible password strength criteria.
 
-The UX design guidelines documentation is currently a work in progress, and will be updated when they are ready.
+## Placement
+
+### Error Message Location
+
+We recommend displaying error messages within the same area where the error occurs.
+
+## Content
+
+### Error Message Content
+
+Humanize the error messaging as much as possible. The content should provide clear guidance on how to fix the error. Avoid unrecognizable system error messages like "code 500 error". You may also consider using more than one error message when helpful. For example, if an email address input field has an error, consider either showing “please enter an email address” for a blank field, or “email address needs an ’@’ symbol followed by a domain” for an invalid symbol.
+
+<!-- TODO: Move this content to accessibility tab when ready. -->
 
 ## Forms Accessibility
 
@@ -446,8 +404,8 @@ export class FormsGenericContainerDemo {
       <ng-option [value]="'custom'">Custom</ng-option>
     </ng-select>
     <clr-control-helper>Helper text</clr-control-helper>
-    <clr-control-error *clrIfError="'required'">This is a required field</clr-control-error>
-  </clr-control-container>
+    <clr-control-error *clrIfError="'required'">This is a required field</clr-control-error> </clr-control-container
+  >f
 
   <button class="btn btn-primary" type="submit">Submit</button>
 </form>
@@ -480,89 +438,3 @@ export class FormsGenericContainerDemo {
   <button class="btn btn-primary" type="submit">Submit</button>
 </form>
 ```
-
-## Forms with CSS
-
-If you want to use just the HTML/CSS for building your own form controls, this section describes how to use them. If you are interested in how to use it with Angular, please jump to the Angular section.
-
-#### Basic form
-
-A Clarity form first must include the `.clr-form` class, typically on the form element itself.
-
-```html
-<form class="clr-form">
-  ... form controls inside
-</form>
-```
-
-#### Layout options
-
-Forms support three layout options, horizontal, vertical (used if no classes are provided), and compact. You can change the layout by simply applying an additional class to the form.
-
-```html
-<form class="clr-form"></form>
-// Vertical, class not necessary
-<form class="clr-form clr-form-horizontal"></form>
-// Horizontal
-<form class="clr-form clr-form-compact"></form>
-// Compact
-```
-
-#### Basic structure
-
-Each control that you add inside has a similar structure, and they are each covered in their own documentation. However, the general structure is like this for a normal text input.
-
-```html
-<form class="clr-form">
-  <div class="clr-form-control">
-    <label for="example" class="clr-control-label">Label</label>
-    <div class="clr-control-container">
-      <div class="clr-input-wrapper">
-        <input type="text" id="example" placeholder="Example Input" class="clr-input" />
-        <clr-icon class="clr-validate-icon" shape="exclamation-circle"></clr-icon>
-      </div>
-      <span class="clr-subtext">Helper Text</span>
-    </div>
-  </div>
-</form>
-```
-
-#### Layouts with grid
-
-If you choose to use a layout other than vertical, you should also provide the corresponding grid classes to allow the form layout to dynamically switch to vertical for narrow width devices. Excluding this may cause experience issues with mobile or narrow widths.
-
-```html
-<form class="clr-form clr-form-compact">
-  <div class="clr-form-control clr-row">
-    <label for="example" class="clr-control-label clr-col-12 clr-col-md-2">Label</label>
-    <div class="clr-control-container clr-col-12 clr-col-md-10">
-      <div class="clr-input-wrapper">
-        <input type="text" id="example" placeholder="Example Input" class="clr-input" />
-        <clr-icon class="clr-validate-icon" shape="exclamation-circle"></clr-icon>
-      </div>
-      <span class="clr-subtext">Helper Text</span>
-    </div>
-  </div>
-</form>
-```
-
-#### Error state
-
-For error states, you simply need to add the `clr-error` class to the `clr-control-container` element. This will automatically display the error icon, turn the input outline to red, and change the color of the subtext to red. It is recommend that you change the content of the subtext for error messages, but that is up to the application to manage.
-
-```html
-<form class="clr-form clr-form-compact">
-  <div class="clr-form-control clr-row">
-    <label for="example" class="clr-control-label clr-col-12 clr-col-md-2">Label</label>
-    <div class="clr-control-container clr-col-12 clr-col-md-10">
-      <div class="clr-input-wrapper">
-        <input type="text" id="example" placeholder="Example Input" class="clr-input" />
-        <clr-icon class="clr-validate-icon" shape="exclamation-circle"></clr-icon>
-      </div>
-      <span class="clr-subtext">Helper Text</span>
-    </div>
-  </div>
-</form>
-```
-
-View documentation for each form control to get specifics on their HTML structure.

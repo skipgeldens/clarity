@@ -1,9 +1,8 @@
 import * as Sentry from '@sentry/browser';
 import { Vue as VueIntegration } from '@sentry/integrations';
-import './styles/index.scss';
+import VueResource from 'vue-resource';
 
-import '@clr/icons';
-import '@clr/all-shapes';
+import './styles/index.scss';
 
 export default ({
   Vue, // the version of Vue being used in the VuePress app
@@ -12,6 +11,8 @@ export default ({
   siteData, // site metadata,
   isServer,
 }) => {
+  Vue.use(VueResource);
+
   if (!isServer) {
     import('./core');
 

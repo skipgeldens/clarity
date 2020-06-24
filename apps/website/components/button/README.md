@@ -2,9 +2,7 @@
 title: Overview
 ---
 
-# Buttons
-
-> Buttons allow an application to communicate action and direct user intent.
+Buttons allow an application to communicate action and direct user intent.
 
 ## Three different types
 
