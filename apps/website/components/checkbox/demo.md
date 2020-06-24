@@ -2,4 +2,4 @@
 title: Demo
 ---
 
-<iframe style="border: 0; height: calc(100vh - 320px); width: 100%" src="//localhost:6006/?path=/story/checkbox-group--basic"></iframe>
+<iframe style="border: 0; height: calc(100vh - 320px); width: 100%" src="//localhost:6006/?path=/story/forms--checkbox-demo"></iframe>

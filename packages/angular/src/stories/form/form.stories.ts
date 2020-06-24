@@ -9,7 +9,7 @@ import { ClarityModule } from '@clr/angular';
 import { boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 
-// const fullTemplate = require('!!raw-loader!./full.html'); // eslint-disable-line
+const fullTemplate = require('!!raw-loader!./full.html'); // eslint-disable-line
 const checkboxTemplate = require('!!raw-loader!./checkbox.html'); // eslint-disable-line
 const datalistTemplate = require('!!raw-loader!./datalist.html'); // eslint-disable-line
 const inputTemplate = require('!!raw-loader!./input.html'); // eslint-disable-line
@@ -220,9 +220,37 @@ export const ToggleDemo = () => {
   };
 };
 
-// export const FullDemo = () => {
-//   return {
-//     name: 'Full Demo',
-//     template: fullTemplate.default,
-//   };
-// };
+export const FullDemo = () => {
+  const model = {
+    option1: false,
+    option2: false,
+    datalistOption: null,
+    name: '',
+    options: '',
+    radio: '',
+    role: '',
+  };
+  const required = boolean('Require form controls', true);
+  const disabled = boolean('Disable form controls', false);
+  const helper = boolean('Display helper text', true);
+  const error = boolean('Display error text', true);
+  const inline = boolean('Use inline controls', false);
+  const items = ['Item1', 'Item2', 'Item3'];
+  const rangeValue = 50;
+
+  return {
+    name: 'Full Demo',
+    template: fullTemplate.default,
+    props: {
+      model,
+      required,
+      disabled,
+      helper,
+      error,
+      inline,
+      items,
+      rangeValue,
+      onSubmit: formSubmit,
+    },
+  };
+};
