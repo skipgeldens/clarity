@@ -14,5 +14,5 @@ if [[$OSTYPE == "darwin"*]]; then
   sed -i '' -e 's/\/localhost:6006/storybook\/angular/g' dist/website/assets/js/*.js
 else
   sed -i -e 's/\/localhost:6006/storybook\/angular/g' dist/website/assets/js/*.js
-
+fi
 node -r dotenv/config -- ./node_modules/.bin/netlify deploy --dir=./dist/website --message="Website - $GITHUB_REF@$GITHUB_SHA"
