@@ -17,7 +17,6 @@
 
 # Redirect for storybook/angular demos
 [[redirects]]
-  from = "/storybook/angular/*"
   to = "/storybook/angular"
   status = 200
 
