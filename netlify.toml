@@ -9,10 +9,16 @@
 [context.deploy-preview]
   command = "yarn build:libs && yarn angular:dev:preview && yarn website:build && cp -R dist/dev dist/website/dev"
 
-# Redirect support for storybook demo
+# Redirect support for storybook/core demo
 [[redirects]]
   from = "/storybook/core/*"
   to = "/storybook/core"
+  status = 200
+
+# Redirect for storybook/angular demos
+[[redirects]]
+  from = "/storybook/angular/*"
+  to = "/storybook/angular"
   status = 200
 
 # Handle 404s in our app, SPA redirect config

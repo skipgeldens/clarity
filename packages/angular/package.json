@@ -32,7 +32,7 @@
     "prestorybook": "yarn scss && yarn clean:deps && shx cp -r ../../dist/core ../../dist/clr-icons ./dist",
     "storybook": "start-storybook -s .storybook/public -p 6006",
     "prebuild-storybook": "yarn scss && yarn clean:deps && shx cp -r ../../dist/core ../../dist/clr-icons ./dist",
-    "build-storybook": "build-storybook -s .storybook/public .storybook -o ../../dist/storybook/angular",
+    "build-storybook": "build-storybook -s .storybook/public .storybook -o ../../dist/website/storybook/angular",
     "watch:scss": "chokidar \"projects/clr-angular/src/**/*.scss\" -c \"yarn scss\"",
     "scss": "run-s scss:compile scss:prefix scss:optimize",
     "scss:compile": "sass --source-map --precision=8 ./projects/clr-angular/src/main.scss dist/clr-ui/clr-ui.css; sass --source-map --precision=8 projects/clr-angular/src/dark-theme.scss dist/clr-ui/clr-ui-dark.css",
