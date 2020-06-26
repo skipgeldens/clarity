@@ -5,6 +5,8 @@ curl -g https://us-central1-clarity-design-system.cloudfunctions.net/actions -o 
 # dotenv loads up the env variables into the shell, then deploys through Netlify
 
 # update website for production storybook
+echo 'replacing iframe src for production'
+pwd
 ls -al dist/website
 ls -al dist/website/assets
 ls -al dist/website/assets/js
