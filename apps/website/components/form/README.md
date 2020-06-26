@@ -15,11 +15,23 @@ Forms are comprised of text and input components such as checkboxes, dropdowns, 
 
 Clarity offers three types of forms: horizontal (our recommended default), vertical and compact.
 
-!!!include(./components/form/\_demos/horizontal.html)!!!
+### Horizontal
 
-!!!include(./components/form/\_demos/vertical.html)!!!
+Default Horizontal formats are good for the quick scanning of labels, and can be used in cases of limited vertical space. The space between label and input however can slow users down.
 
-!!!include(./components/form/\_demos/compact.html)!!!
+<doc-demo file="/demos/form/horizontal.html" />
+
+### Vertical
+
+This option is better for scanning, mobile experiences, accessibility, and localization. While it offers better completion rates, it is less ideal for longer forms.
+
+<doc-demo file="/demos/form/vertical.html" />
+
+### Compact
+
+For cases with highly limited space, we provide a compact form layout.
+
+<doc-demo file="/demos/form/compact.html" />
 
 ### Form Length
 
