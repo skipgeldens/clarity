@@ -6,7 +6,7 @@ curl -g https://us-central1-clarity-design-system.cloudfunctions.net/actions -o 
 
 # update website for production storybook urls
 # NOTE: this leave core untouched b/c vuepress code uses the //localhost:6006 url and we are
-// replacing the '/localhost:6006' part with 'storybook/angular'
+#       replacing the '/localhost:6006' part with 'storybook/angular'
 find . -type f -name "*.html" -print0 | xargs -0 perl -pi -e 's/\/localhost:6006/storybook\/angular/g'
 find . -type f -name "*.js" -print0 | xargs -0 perl -pi -e 's/\/localhost:6006/storybook\/angular/g'
 
