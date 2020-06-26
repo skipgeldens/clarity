@@ -72,4 +72,22 @@ module.exports = [
       },
     },
   ],
+  // INSET BLOCK
+  [
+    'vuepress-plugin-container',
+    {
+      type: 'inset',
+      render: function (tokens, idx) {
+        const item = tokens[idx];
+
+        if (item.type === 'container_inset_open') {
+          return `<DocInset align="${item.info.replace('inset ', '')}">`;
+        } else if (item.type === 'html_block') {
+          return item.content;
+        } else if (item.type === 'container_inset_close') {
+          return `</DocInset>`;
+        }
+      },
+    },
+  ],
 ];

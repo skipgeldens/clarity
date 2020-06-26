@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'ClrInset',
+  name: 'DocInset',
   methods: {
     getHeight: function () {
       return this.height + 'px';

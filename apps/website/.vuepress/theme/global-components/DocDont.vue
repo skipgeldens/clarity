@@ -1,8 +1,8 @@
 <template>
   <div class="docs-dont">
-    <ClrInset :height="demoHeight">
+    <DocInset :height="demoHeight">
       <slot></slot>
-    </ClrInset>
+    </DocInset>
     <p class="bar">Don't</p>
     <p class="summary">{{ summary }}</p>
   </div>

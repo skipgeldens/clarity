@@ -10,19 +10,19 @@ Clarity comes with three different types of buttons to use. They are provided to
 
 <ClrRow>
 <ClrCell>
-<ClrInset><button class="btn btn-primary">Solid Button</button></ClrInset>
+<DocInset><button class="btn btn-primary">Solid Button</button></DocInset>
 
 Solid buttons look heavy on purpose. They direct the user’s attention to the **primary action** the application is suggesting that the user take.
 
 </ClrCell>
 <ClrCell>
-<ClrInset><button class="btn">Outline Button</button></ClrInset>
+<DocInset><button class="btn">Outline Button</button></DocInset>
 
 Outline buttons provide a lighter weight button style. They are used to indicate a **secondary action** that compliments a primary action or to reduce visual noise when there are many action of **equal** importance on the page.
 
 </ClrCell>
 <ClrCell>
-<ClrInset><button class="btn btn-link">Flat Button</button></ClrInset>
+<DocInset><button class="btn btn-link">Flat Button</button></DocInset>
 
 Flat buttons are used in multiple scenarios. They are used as **tertiary buttons**. They can also be used inline because they are different from content in style and recognizable as buttons alongside content.
 
@@ -35,14 +35,14 @@ While buttons and links can both be given similar visual treatments, it is impor
 
 <ClrRow>
 <ClrCell>
-<ClrInset><button class="btn btn-link">Flat Button</button></ClrInset>
+<DocInset><button class="btn btn-link">Flat Button</button></DocInset>
 
 Use flat buttons when a user is expected to **take an action**.
 
 </ClrCell>
 
 <ClrCell>
-<ClrInset><a href="javascript://" class="btn btn-link">Anchor Link</a></ClrInset>
+<DocInset><a href="javascript://" class="btn btn-link">Anchor Link</a></DocInset>
 
 Use a link when a user is expected to be **taken to a different page**.
 
@@ -55,9 +55,9 @@ There are two distinct patterns when it comes to the placement of a button.
 
 <ClrRow>
 <ClrCell>
-<ClrInset height="300">
+<DocInset height="300">
 <ClrImage title="Z Pattern illustration" src="/images/components/button/z_pattern.svg" />
-</ClrInset>
+</DocInset>
 
 **Z Pattern**
 
@@ -68,9 +68,9 @@ The Z-pattern is a natural way for the user to go through content within a **con
 </ClrCell>
 
 <ClrCell>
-<ClrInset height="300">
+<DocInset height="300">
 <ClrImage title="F Pattern illustration" src="/images/components/button/f_pattern.svg" />
-</ClrInset>
+</DocInset>
 
 **F Pattern**
 

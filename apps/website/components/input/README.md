@@ -2,16 +2,87 @@
 title: Overview
 ---
 
-# Inputs
+Inputs enable the user to input text information.
 
-![HTML5](assets/images/bugs/badge_html5.svg 'HTML5')![CSS3](assets/images/bugs/badge_css3.svg 'CSS3')![Angular](assets/images/bugs/badge_ng.svg 'Angular')
+## Usage
 
-- [Examples & Code](/documentation/input#top)
-- [Design Guidelines](/documentation/input#guidelines)
+Use inputs in a form as a way to allow the user to enter a value associated with a key, such as entering their name in a field labeled **name**.
 
-##### Inputs are the most commonly used form control, and Clarity supports both a CSS only and Angular component. You may wish to review the general [forms](/documentation/forms) documentation about form controls.
+You may wish to review the general forms documentation about designing forms.
 
-## Angular Input Component
+## Behavior
+
+When the user focuses an input, the underline becomes thicker and colored to accentuate this state. When the user begins typing, the placeholder text is replaced with a blinking cursor indicating the input is ready to receive data. Clarity provides functions to validate the user input and return the corresponding state to your application.
+
+<!-- [//] (GIF to be created - input interaction) -->
+
+## States / Types
+
+There are 2 layouts for inputs, vertical and horizontal as well as a compact size.
+
+### Horizontal - Default
+
+Horizontal formats are good for the quick scanning of labels, and can be used in cases of limited vertical space. The space between label and input however can slow users down.
+
+::: inset left
+
+<form class="clr-form clr-form-horizontal">
+  <div class="clr-form-control">
+    <label for="demo7" class="clr-control-label">Horizontal Layout</label>
+    <div class="clr-control-container">
+      <div class="clr-input-wrapper">
+        <input type="text" id="demo7" placeholder="Enter value here" class="clr-input">
+        <clr-icon class="clr-validate-icon" shape="exclamation-circle"></clr-icon>
+      </div>
+      <span class="clr-subtext">Helper Text</span>
+    </div>
+  </div>
+</form>
+:::
+
+### Vertical
+
+This option is better for scanning, mobile experiences, accessibility, and localization. While it offers better completion rates, it is less ideal for longer forms.
+
+::: inset left
+
+<form class="clr-form">
+  <div class="clr-form-control">
+    <label for="demo6" class="clr-control-label">Vertical Layout</label>
+    <div class="clr-control-container">
+      <div class="clr-input-wrapper">
+        <input type="text" id="demo6" placeholder="Enter value here" class="clr-input">
+        <clr-icon class="clr-validate-icon" shape="exclamation-circle"></clr-icon>
+      </div>
+      <span class="clr-subtext">Helper Text</span>
+    </div>
+  </div>
+</form>
+:::
+
+### Compact
+
+For cases with highly limited space, we provide a compact form layout.
+
+::: inset
+
+<form class="clr-form clr-form-compact">
+  <div class="clr-form-control">
+    <label for="demo5" class="clr-control-label">Compact Layout</label>
+    <div class="clr-control-container">
+      <div class="clr-input-wrapper">
+        <input type="text" id="demo5" placeholder="Enter value here" class="clr-input">
+        <clr-icon class="clr-validate-icon" shape="exclamation-circle"></clr-icon>
+      </div>
+      <span class="clr-subtext">Helper Text</span>
+    </div>
+  </div>
+</form>
+:::
+
+<!-- [//]: # Anatomy - Inputs consist of the label text/input text, underlying line, helper message (optional), and an icon (optional).    -->
+
+## Code Examples
 
 If you are using Angular, the recommended approach is to always use the `ClrInput` directive on your inputs to help manage the form control. By using `ClrInput`, you'll automatically be able to leverage built in validation, helper text, and layout features in forms.
 
@@ -19,11 +90,7 @@ If you are using Angular, the recommended approach is to always use the `ClrInpu
 
 This is the most basic way to create an input inside of a form. This is only if you don't have a need for a label or validation. You need to add `clrInput` to your input to wire up the directive. Notice, it is not necessary to add `type="text"` as it is handled automatically. It will only work if you have the control wired up with either a template driven form or reactive form.
 
-```html
-<form clrForm>
-  <input clrInput placeholder="My input" name="input" [(ngModel)]="input" />
-</form>
-```
+<doc-demo src="/demos/input/basic-ng.html" demo="/demos/input/basic-css.html" toggle="false" />
 
 #### Labels
 
@@ -31,16 +98,7 @@ For anything beyond a standalone input field, you'll need to wrap your input wit
 
 Then you can add a `label` element and it will automatically get laid out correctly in the form.
 
-My name
-
-```html
-<form clrForm>
-  <clr-input-container>
-    <label>My name</label>
-    <input clrInput placeholder="Fill me in, scotty!" name="name" [(ngModel)]="name" />
-  </clr-input-container>
-</form>
-```
+<doc-demo src="/demos/input/label-ng.html" demo="/demos/input/label-css.html" toggle="false" />
 
 #### Helper and error messages
 
@@ -48,84 +106,7 @@ The input form control wires up with the validations placed on an input, such as
 
 Note: the validation only displays an error after the user has left focus on an input. This is for better UX where the user doesn't see an error while they are still typing.
 
-Full name
-
-Helper text
-
-```html
-<form clrForm>
-  <clr-input-container>
-    <label>Full name</label>
-    <input placeholder="Full name" clrInput [(ngModel)]="exampleThree" name="name" required />
-    <clr-control-helper>Helper text</clr-control-helper>
-    <clr-control-error>This field is required!</clr-control-error>
-  </clr-input-container>
-</form>
-```
-
-## CSS Input Component
-
-Inputs can be used without Angular, but without some of the automatic interactivity. If you intend to create your own components, here are the basic features you'll need to build out.
-
-#### Basic input
-
-It is possible to display the input by simply having the input as a standalone element not inside of a form. This may be useful in simple cases where you don't need a full form and just an inline input.
-
-```html
-<form class="clr-form">
-  <input type="text" id="basic" placeholder="Enter value here" class="clr-input" />
-</form>
-```
-
-#### Full input display
-
-Each form control has a `.clr-form-control` wrapper, as well as a specific DOM structure necessary to layout the form control as desired. This works with all layout options as well without needing to change the DOM structure in any way.
-
-Basic input
-
-Helper Text
-
-```html
-<form class="clr-form">
-  <div class="clr-form-control">
-    <label for="basic" class="clr-control-label">Basic input</label>
-    <div class="clr-control-container">
-      <div class="clr-input-wrapper">
-        <input type="text" id="basic" placeholder="Enter value here" class="clr-input" />
-        <clr-icon class="clr-validate-icon" shape="exclamation-circle"></clr-icon>
-      </div>
-      <span class="clr-subtext">Helper Text</span>
-    </div>
-  </div>
-</form>
-```
-
-#### Error state
-
-To signify an error state, you need to add the `.clr-error` class to the `.clr-control-container` element. This will show the `.clr-validate-icon` and turn the `.clr-subtext` message to red. If you have helper text that needs to change to error content, you'll have to handle the hiding and showing of that content inside of the `.clr-subtext` element.
-
-Label
-
-Helper Text
-
-```html
-<form class="clr-form">
-  <div class="clr-form-control">
-    <label for="example" class="clr-control-label">Label</label>
-    <div class="clr-control-container clr-error">
-      <div class="clr-input-wrapper">
-        <input type="text" id="example" placeholder="Example Input" class="clr-input" />
-        <clr-icon class="clr-validate-icon" shape="exclamation-circle"></clr-icon>
-      </div>
-      <span class="clr-subtext">Error message</span>
-    </div>
-  </div>
-</form>
-```
-
-### Design Guidelines
-
-The UX design guidelines documentation is currently a work in progress, and will be updated when they are ready.
+<doc-demo src="/demos/input/helper-ng.html" demo="/demos/input/helper-css.html" toggle="false" />
 
 ## Accessibility
 

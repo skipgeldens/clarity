@@ -1,12 +1,12 @@
 <template>
   <div class="demo-container" :id="id">
-    <span v-html="demo"></span>
-    <div class="toggle-bar">
+    <span v-html="demoHTML"></span>
+    <div class="toggle-bar" v-if="showToggle">
       <button class="btn btn-primary btn-sm" v-if="!state" @click="state = !state">Show Code</button>
       <button class="btn btn-primary btn-sm" v-if="state" @click="state = !state">Hide Code</button>
     </div>
     <div class="code" :class="{ expanded: state }" v-bind:aria-expanded="state ? 'true' : 'false'">
-      <pre :class="'language' + lang"><code v-html="code"></code></pre>
+      <pre :class="'language' + lang"><code v-html="codeHTML"></code></pre>
       <div class="overlay"></div>
     </div>
   </div>
@@ -19,20 +19,40 @@ export default {
   name: 'DocDemo',
   props: {
     id: String,
-    file: String,
+    src: String,
+    demo: String,
+    toggle: { type: Boolean | String, default: true },
+    file: String | { file: String, lang: { type: String, default: 'html' } },
     lang: { type: String, default: 'html' },
   },
   mounted: function () {
-    this.$http.get(this.file).then(result => {
-      this.demo = result.body;
-      this.code = Prism.highlight(result.bodyText.trim(), Prism.languages[this.lang], this.lang);
-    });
+    if (this.file) {
+      this.$http.get(this.file).then(result => {
+        this.demoHTML = result.body;
+        this.codeHTML = Prism.highlight(result.bodyText.trim(), Prism.languages[this.lang], this.lang);
+      });
+    } else if (this.src && this.demo) {
+      this.$http.get(this.src).then(result => {
+        this.codeHTML = Prism.highlight(result.bodyText.trim(), Prism.languages[this.lang], this.lang);
+      });
+      this.$http.get(this.demo).then(result => {
+        this.demoHTML = result.bodyText.trim();
+      });
+    } else {
+      console.warn('doc-demo requires either a file property or both src and demo properties');
+    }
+
+    if (!this.toggle || (typeof this.toggle === 'string' && this.toggle.toLowerCase().trim() == 'false')) {
+      this.state = true;
+      this.showToggle = false;
+    }
   },
   data: function () {
     return {
+      showToggle: true,
       height: 0,
-      demo: '',
-      code: '',
+      demoHTML: '',
+      codeHTML: '',
       state: false,
     };
   },

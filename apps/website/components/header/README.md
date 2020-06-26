@@ -4,7 +4,8 @@ title: Overview
 
 Headers provide branding, navigation, search, and access to global application actions such as settings and notifications.
 
-<clr-inset>
+::: inset
+
 <header class="header-6" style="min-width: 100%; flex: none">
   <div class="branding">
       <a class="logo-and-title">
@@ -34,7 +35,7 @@ Headers provide branding, navigation, search, and access to global application a
     </div>
   </div>
 </header>
-</clr-inset>
+:::
 
 ## Usage
 
@@ -46,7 +47,8 @@ The header is consistent across all pages of an application. This offers a recog
 
 Include both your application’s name and logo if available. Clicking on the app’s name or logo should take you to the homepage of the application.
 
-<clr-inset>
+::: inset
+
 <header class="header-6" style="min-width: 100%; flex: none">
   <div class="branding">
       <a class="logo-and-title">
@@ -55,7 +57,7 @@ Include both your application’s name and logo if available. Clicking on the ap
       </a>
   </div>
 </header>
-</clr-inset>
+:::
 
 ### Top Level Navigation
 
@@ -123,7 +125,8 @@ Clarity includes functionality for displaying the navigation on smaller devices 
 
 There are many different ways to include search in the header. Which way you choose depends on search's prominence and its utility within the application.
 
-<clr-inset>
+::: inset
+
 <header class="header-6" style="min-width: 100%; flex: none">
   <div class="branding">
     <a class="logo-and-title">
@@ -150,11 +153,12 @@ There are many different ways to include search in the header. Which way you cho
     </div>
   </div>
 </header>
-</clr-inset>
+:::
 
 Use search as a prominent navigation item in the header if you are building a search-based user experience.
 
-<clr-inset>
+::: inset
+
 <header class="header-6" style="min-width: 100%; flex: none">
   <div class="branding">
     <a class="logo-and-title">
@@ -189,11 +193,12 @@ Use search as a prominent navigation item in the header if you are building a se
     </div>
   </div>
 </header>
-</clr-inset>
+:::
 
 Use search as a secondary item to the right of the header if search is not core to your navigation experience or if you need to emphasize 3 or more top level navigation items.
 
-<clr-inset>
+::: inset
+
 <header class="header-6" style="min-width: 100%; flex: none">
   <div class="branding">
     <a class="logo-and-title">
@@ -226,7 +231,7 @@ Use search as a secondary item to the right of the header if search is not core 
     </div>
   </div>
 </header>
-</clr-inset>
+:::
 
 You can read more in about search in the design spec. The search component itself is a work in progress.
 

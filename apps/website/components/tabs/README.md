@@ -1,117 +1,46 @@
 ---
 title: Overview
+toc: true
 ---
 
-# Tabs
+Tabs divide content into separate views which users navigate between.
 
-![HTML5](assets/images/bugs/badge_html5.svg 'HTML5')![CSS3](assets/images/bugs/badge_css3.svg 'CSS3')![Angular](assets/images/bugs/badge_ng.svg 'Angular')
+## Usage
 
-- [Examples & Code](/documentation/tabs#top)
-- [Design Guidelines](/documentation/tabs#guidelines)
+Use tabs for alternate views within the [sidenav](./sidenav) or main content area.
 
-##### Tabs divide content into separate views which users navigate between.
+Don’t use tabs to break user interactions into a series of steps. Serial workflows are best presented in a [wizard](./wizard).
 
-#### Static
+<!-- [//]: # Types -->
 
-The following is a static example of tabs with their associated sections. You cannot switch between tabs in this static demo because it does not contain the JavaScript to handle this behavior.
+## Anatomy
 
-The active tab should have the additional class `active`. The stylesheet will hide all the section elements where attribute `aria-hidden` is set to `true`.
+While the content within tabs is flexible, follow these guidelines for organization and presentation:
+-Ensure that the content in each view is independent of the content in other views.
+-Don’t force users to navigate back and forth to compare data–keep such content in the same view.
+-Avoid cross-linking between tabs.
+-If the content within a view is broad, divide it into subsections.
 
-- Dashboard
-- Management
-- Cloud
+<!-- [//]: # Behavior -->
 
-You cannot switch between tabs in this static demo because it does not contain the JavaScript to handle this behavior. The demo is here to show the look of tabs and the DOM structure.
+## Placement
 
-Content 2
+Tabs appear in a single, non-scrollable row, above their content. The width of each tab is dependent on its label.
+To ensure that all tabs appear in the container, avoid using more than seven tabs and limit labels to one or two words.
 
-Content 3
+Avoid using tabs in cards and modals.
 
-```html
-<ul id="demoTabs" class="nav" role="tablist">
-  <li role="presentation" class="nav-item">
-    <button id="tab1" class="btn btn-link nav-link active" aria-controls="panel1" aria-selected="true" type="button">
-      Dashboard
-    </button>
-  </li>
-  <li role="presentation" class="nav-item">
-    <button id="tab2" class="btn btn-link nav-link" aria-controls="panel2" aria-selected="false" type="button">
-      Management
-    </button>
-  </li>
-  <li role="presentation" class="nav-item">
-    <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3" aria-selected="false" type="button">
-      Cloud
-    </button>
-  </li>
-</ul>
-<section id="panel1" role="tabpanel" aria-labelledby="tab1">
-  ...
-</section>
-<section id="panel2" role="tabpanel" aria-labelledby="tab2" aria-hidden="true">
-  ...
-</section>
-<section id="panel3" role="tabpanel" aria-labelledby="tab3" aria-hidden="true">
-  ...
-</section>
-```
+## Content
 
-###### Vertical Tabs
+- Ensure that the labels show a clear relationship between views.
+- Favor nouns over verbs, for example, Settings, Permissions, and Performance.
+- Avoid generic labels such as General or Advanced.
+- Use title-style caps.
+- Avoid using icons in labels.
 
-If you'd like to use vertical tabs add `tabs-vertical` class to the container.
+## Code Examples
 
-- Dashboard
-- Management
-- Cloud
-
-You cannot switch between tabs in this static demo because it does not contain the JavaScript to handle this behavior. The demo is here to show the look of tabs and the DOM structure.
-
-Content 2
-
-Content 3
-
-```html
-<div class="tabs-vertical">
-  <ul id="demoTabs" class="nav" role="tablist">
-    <li role="presentation" class="nav-item">
-      <button id="tab1" class="btn btn-link nav-link active" aria-controls="panel1" aria-selected="true" type="button">
-        Dashboard
-      </button>
-    </li>
-    <li role="presentation" class="nav-item">
-      <button id="tab2" class="btn btn-link nav-link" aria-controls="panel2" aria-selected="false" type="button">
-        Management
-      </button>
-    </li>
-    <li role="presentation" class="nav-item">
-      <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3" aria-selected="false" type="button">
-        Cloud
-      </button>
-    </li>
-  </ul>
-  <section id="panel1" role="tabpanel" aria-labelledby="tab1">
-    ...
-  </section>
-  <section id="panel2" role="tabpanel" aria-labelledby="tab2" aria-hidden="true">
-    ...
-  </section>
-  <section id="panel3" role="tabpanel" aria-labelledby="tab3" aria-hidden="true">
-    ...
-  </section>
-</div>
-```
-
-###### Accessibility
-
-The active tab should have the attribute `aria-selected` set to `true`, and the others to false.
-
-The active panel associated with the active tab should have the attribute `aria-hidden` set to `true`, and the others `to false`.
-
-In addition, each tab should have an aria-controls attribute set to the id of the matching panel and each panel should have an `aria-labelledby` attribute set to the id of the tab associated with the panel.
-
-#### Angular Component
-
-##### Simple Tabs
+### Simple Tabs
 
 The tabs component uses the `*clrIfActive` structural directive to lazy load the content of an active tab. For simple cases, using the microsyntax as shown below would suffice.
 
@@ -270,145 +199,3 @@ Content for Dashboard tab. Here is a [link](javascript://) that can be accessed 
   </clr-tab>
 </clr-tabs>
 ```
-
-###### Accessibility
-
-All attributes associated with accessibility (`aria-controls`, `aria-selected`, `aria-hidden`, `aria-labelledby`, `role`) are automatically created and managed by the angular component.
-
-#### Summary of Options
-
-##### Tabs Component (clrTabs)
-
-Input/Output
-
-Values
-
-Default
-
-Effect
-
-**\[clrLayout\]**
-
-Values:
-<'horizontal', 'vertical'>
-
-Default: 'horizontal'
-
-<'horizontal', 'vertical'>
-
-'horizontal'
-
-If set to 'vertical', will change tabs layout to vertical.
-
-##### Tab Link Directive (clrTabLink)
-
-Input/Output
-
-Values
-
-Default
-
-Effect
-
-**\[id\]**
-
-Values:
-any valid id for html element
-
-Default: auto-generated
-
-any valid id for html element
-
-auto-generated
-
-If explicitly set, will assign the set id as the id for the element. If not set, the component will auto-generate the id.
-
-##### Tab Content (clr-tab-content)
-
-Input/Output
-
-Values
-
-Default
-
-Effect
-
-**\[clrTabLinkInOverflow\]**
-
-Values:
-true, false
-
-Default: false
-
-<true, false>
-
-false
-
-If true, then this tab link will go into the overflow section of the tabs.
-
-**\[id\]**
-
-Values:
-any valid id for html element
-
-Default: auto-generated
-
-any valid id for html element
-
-auto-generated
-
-Used on `<clr-tab-content>`. If explicitly set, will assign the set id as the id for the element. If not set, the component will auto-generate the id.
-
-##### Angular Directives used along with clr-tab-content
-
-Input/Output
-
-Values
-
-Default
-
-Effect
-
-**\[(clrIfActive)\]**
-
-Values:
-true, false
-
-Default: false
-
-<true, false>
-
-false
-
-Two-way binding on the state of the tab content. The content of the active tab will lazily load when set to true, and destroy it when set to false.
-
-### Usage
-
-Use tabs for alternate views within the [sidenav](/documentation/sidenav) or main content area.
-
-Don’t use tabs to break user interactions into a series of steps. Serial workflows are best presented in a [wizard](/documentation/wizards).
-
-Avoid using tabs in cards and modals.
-
-### Presentation
-
-Tabs appear in a single, non-scrollable row, above their content. The width of each tab is dependent on its label.
-
-To ensure that all tabs appear in the container, avoid using more than seven tabs and limit labels to one or two words.
-
-### Content
-
-While the content within tabs is flexible, follow these guidelines for organization and presentation:
-
-- Ensure that the content in each view is independent of the content in other views.
-- Don’t force users to navigate back and forth to compare data–keep such content in the same view.
-- Avoid cross-linking between tabs.
-- If the content within a view is broad, divide it into subsections.
-
-### Labels
-
-- Ensure that the labels show a clear relationship between views.
-- Favor nouns over verbs, for example, Settings, Permissions, and Performance.
-- Avoid generic labels such as General or Advanced.
-- Use title-style caps.
-- Avoid using icons in labels.

@@ -1,8 +1,8 @@
 <template>
   <div class="docs-block clr-col">
-    <ClrInset :height="demoHeight">
+    <DocInset :height="demoHeight">
       <slot></slot>
-    </ClrInset>
+    </DocInset>
     <p class="summary" v-if="summary" v-html="summary"></p>
   </div>
 </template>
