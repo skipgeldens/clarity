@@ -15,12 +15,6 @@
   to = "/storybook/core"
   status = 200
 
-# Redirect for storybook/angular demos
-[[redirects]]
-  from = "/storybook/angular/*"
-  to = "/storybook/angular"
-  status = 200
-
 # Handle 404s in our app, SPA redirect config
 [[redirects]]
   from = "/*"
