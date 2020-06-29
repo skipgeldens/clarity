@@ -27,7 +27,7 @@
           </template>
         </Page>
 
-        <footer class="footer">&copy; 2016-{{ year }} VMware, Inc. All Rights Reserved.</footer>
+        <Footer></Footer>
       </div>
 
       <nav class="nav-table-of-contents" v-if="shouldShowTOC">
@@ -39,8 +39,9 @@
 </template>
 
 <style lang="scss">
-.footer {
-  text-align: center;
+.content-area {
+  display: flex;
+  flex-direction: column;
 }
 .nav-table-of-contents {
   margin-top: 3rem;
@@ -87,6 +88,7 @@ import Home from '@theme/components/Home';
 import Navbar from '@theme/components/Navbar';
 import Page from '@theme/components/Page';
 import Sidebar from '@theme/components/Sidebar';
+import Footer from '@theme/components/Footer';
 import { resolveSidebarItems } from '../util';
 
 export default {
@@ -97,6 +99,7 @@ export default {
     Page,
     Sidebar,
     Navbar,
+    Footer,
   },
 
   data() {
