@@ -50,6 +50,7 @@
     "publish:local": "yarn publish dist/core --registry http://localhost:4873 --tag local; yarn publish dist/clr-ui --registry http://localhost:4873 --tag local; yarn publish dist/clr-angular --registry http://localhost:4873 --tag local; yarn publish dist/clr-icons --registry http://localhost:4873 --tag local; yarn publish dist/react --registry http://localhost:4873 --tag local",
     "publish:local:npm": "npm publish dist/core --registry http://localhost:4873 --tag local; npm publish dist/clr-ui --registry http://localhost:4873 --tag local; npm publish dist/clr-angular --registry http://localhost:4873 --tag local; npm publish dist/clr-icons --registry http://localhost:4873 --tag local; npm publish dist/react --registry http://localhost:4873 --tag local",
     "website:deploy": "scripts/website.sh",
+    "website:preview": "lite-server --baseDir=dist/website",
     "angular:build": "yarn --cwd packages/angular run build",
     "angular:test": "yarn --cwd packages/angular run test",
     "angular:test:watch": "yarn --cwd packages/angular run test:watch",

@@ -31,7 +31,7 @@
     "golden:fix": "ts-api-guardian --out golden/clr-angular.d.ts --stripExportPattern '^Çlr' ./dist/clr-angular/index.d.ts",
     "prestorybook": "yarn scss && yarn clean:deps && shx cp -r ../../dist/core ../../dist/clr-icons ./dist",
     "storybook": "start-storybook -s .storybook/public -p 6006",
-    "prebuild-storybook": "yarn scss && yarn clean:deps && shx cp -r ../../dist/core ../../dist/clr-icons ./dist",
+    "prebuild-storybook": "yarn scss && yarn clean:deps && shx cp -r ../../dist/core ../../dist/clr-icons ./dist && yarn predev",
     "build-storybook": "build-storybook -s .storybook/public .storybook -o ../../dist/website/storybook/angular",
     "watch:scss": "chokidar \"projects/clr-angular/src/**/*.scss\" -c \"yarn scss\"",
     "scss": "run-s scss:compile scss:prefix scss:optimize",
