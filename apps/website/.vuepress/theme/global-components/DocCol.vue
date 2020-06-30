@@ -21,6 +21,7 @@ export default {
 .docs-block {
   padding-top: 1rem;
   display: inline-block;
+  flex-direction: column;
 }
 p.summary {
   margin-top: 0.4rem;

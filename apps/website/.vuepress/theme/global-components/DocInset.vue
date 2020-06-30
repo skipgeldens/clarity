@@ -24,8 +24,13 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .inset.left {
   justify-content: start;
+}
+.inset img {
+  max-width: 100%;
+  max-height: 8rem;
 }
 </style>
