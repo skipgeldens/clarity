@@ -31,6 +31,5 @@ export default {
 }
 .inset img {
   max-width: 100%;
-  max-height: 8rem;
 }
 </style>

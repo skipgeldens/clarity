@@ -1,498 +1,329 @@
 ---
 title: Overview
+toc: true
 ---
 
 # Vertical Nav
 
-- [Design Guidelines](/documentation/vertical-nav#top)
-- [Code & Examples](/documentation/vertical-nav#examples)
+A vertically-aligned list of the destinations in an application.
 
-##### This is a vertically-aligned navigational component.
-
-### Design Guidelines
+## Usage
 
 Vertical navigation is a familiar navigation pattern for users. It can fit as many navigation links as needed, scrolling when the content exceeds the viewport.
 
-[Project Pokémon](javascript://)
+Use the vertical navigation:
 
-[Snorlax](javascript://)[Jigglypuff](javascript://)[Ditto](javascript://)[Charizard](javascript://)[Arcanine](javascript://)[Blastoise](javascript://)[Gyrados](javascript://)[Jolteon](javascript://)[Raichu](javascript://)
+- when there are too many top navigation items to fit in the header
+- for hierarchical navigation or nested navigation. Up to two tiers of navigation is supported by vertical nav
+- when the user need to collapse and expand the navigation to free up space for the content area
 
-## Jigglypuff
+<ClrRow>
 
-Jigglypuff is a round, pink ball with pointed ears and large, blue eyes. It has rubbery, balloon-like skin and small, stubby arms and somewhat long feet. On top of its head is a curled tuft of fur. As seen in Pokémon Stadium, it is filled with air, as a defeated Jigglypuff, deflates until it is flat. By drawing extra air into its body, it is able to float as demonstrated in Super Smash Bros.
+![Jigglypuff is active nav](/images/components/vertical-nav/jigglypuff.png)
 
-#### Usage
+</ClrRow>
 
-Use the vertical navigation when you need:
+<ClrRow>
 
-- to collapse and expand the navigation to free up space for the content area
-- a hierarchical navigation or nested navigation
-- many links in the navigation across a top level of navigation
-- icons to describe navigation items which is helpful when the navigation is collapsed
+::: do Use vertical navigation with a header.
 
-[Project Pokémon](javascript://)
+![Do header](/images/components/vertical-nav/do-header.png)
 
-[Snorlax](javascript://)[Jigglypuff](javascript://)[Ditto](javascript://)[Charizard](javascript://)[Arcanine](javascript://)[Blastoise](javascript://)[Gyrados](javascript://)[Jolteon](javascript://)[Raichu](javascript://)
+:::
 
-###### Do
+::: dont Use vertical navigation with a header and subnav. Having too many places for navigation is confusing for users.
 
-Use vertical navigation with a header.
+![Dont subnav](/images/components/vertical-nav/dont-subnav.png)
 
-[Project Pokémon](javascript://)
+:::
 
-- [Pokédex](javascript://)
-- [Movies](javascript://)
-- [Games](javascript://)
-- [Events](javascript://)
+</ClrRow>
 
-[Snorlax](javascript://)[Jigglypuff](javascript://)[Ditto](javascript://)[Charizard](javascript://)[Arcanine](javascript://)[Blastoise](javascript://)[Gyrados](javascript://)[Jolteon](javascript://)[Raichu](javascript://)
-
-###### Don't
-
-Use vertical navigation with a header and subnav. Having too many places for navigation is confusing for users.
-
-### Layout
+## Anatomy
 
 Vertical navigation has a few layout options including dividers and section headers. Active links are displayed with a white background. Touch targets are larger for easier interaction and span the entire width of the navigation, similar to the space of the active link indicator.
 
-[Snorlax](javascript://)[Jigglypuff](javascript://)[Ditto](javascript://)[Charizard](javascript://)[Arcanine](javascript://)[Blastoise](javascript://)[Gyrados](javascript://)[Jolteon](javascript://)[Raichu](javascript://)
+### Layout
 
-###### Basic
+<ClrRow>
 
-No dividers or section headers.
+<div class="clr-col-12 clr-col-md-4">
 
-[Snorlax](javascript://)[Jigglypuff](javascript://)[Ditto](javascript://)
+::: inset Basic
+![Basic Vertical Navigation](/images/components/vertical-nav/basic.png)
+:::
+**Basic**
 
-[Charizard](javascript://)[Arcanine](javascript://)
+</div>
+<div class="clr-col-12 clr-col-md-4">
 
-[Blastoise](javascript://)[Gyrados](javascript://)[Jolteon](javascript://)
+::: inset Dividers
+![Dividers](/images/components/vertical-nav/divider.png)
+:::
+**Dividers**
 
-###### Dividers
+</div>
+<div class="clr-col-12 clr-col-md-4">
 
-Used to separate logical clusters of navigation items. Best used when you have two or more links in a cluster.
+::: inset Dividers & Headers
+![Headers](/images/components/vertical-nav/header.png)
+:::
+**Dividers & Headers**
 
-Normal [Snorlax](javascript://)[Jigglypuff](javascript://)[Ditto](javascript://)
-
-Fire [Charizard](javascript://)[Arcanine](javascript://)
-
-###### Dividers & Headers
-
-Used to separate logical clusters of navigation items. Best used when you have two or more links in a cluster.
+</div>
+</ClrRow>
 
 ### Icons
 
 Icons should be placed to the left of the link label. Active links will display a blue icon. Make sure your icons are distinctive and easily recognizable. Touch targets include the entire width of the navigation including the icon.
+Use icons across all links if you choose to use them. Add icons to some links and not to other links. This becomes difficult to scan and read.
 
-[Normal](javascript://) [Fire](javascript://) [Water](javascript://) [Electric](javascript://) [Grass](javascript://) [Ice](javascript://) [Fighting](javascript://) [Poison](javascript://) [Ground](javascript://)
+<ClrRow>
 
-###### Do
+::: do Use use icons on all nav links
 
-Use icons across all links if you choose to use them.
+![Do header](/images/components/vertical-nav/icons-do.png)
 
-[Normal](javascript://) [Fire](javascript://) [Water](javascript://) [Electric](javascript://) [Grass](javascript://) [Ice](javascript://) [Fighting](javascript://) [Poison](javascript://) [Ground](javascript://)
+:::
 
-###### Don't
+::: dont Use icons on some nav links and not other nav links
 
-Add icons to some links and not to other links. This becomes difficult to scan and read.
+![Dont subnav](/images/components/vertical-nav/icons-dont.png)
+
+:::
+
+</ClrRow>
 
 ### Hierarchy
 
 Hierarchy is used to show parent-child relationship between links. If a child link is active and the parent item is collapsed, the parent will display as active. When expanded, the active indicator will display on the child link. Clicking on text, carets or icons will expand and collapse the parent item.
 
-Normal
+<ClrRow>
 
-Expand
+<div class="clr-col-12 clr-col-md-4">
 
-[Pidgey](javascript://) [Rattata](javascript://) [Spearow](javascript://)
-
-Fire
-
-Expand
-
-[Charmander](javascript://) [Charmeleon](javascript://) [Charizard](javascript://)
-
-Water
-
-Expand
-
-[Blastoise](javascript://) [Squirtle](javascript://) [Wartortle](javascript://)
-
-Electric
-
-Expand
-
-[Magnemite](javascript://) [Pikachu](javascript://) [Raichu](javascript://)
-
-Grass
-
-Expand
-
-[Bulbasaur](javascript://) [Ivysaur](javascript://) [Venusaur](javascript://)
-
-Ice
-
-Expand
-
-[Articuno](javascript://) [Dewgong](javascript://) [Jynx](javascript://)
-
-###### Basic
+::: inset Basic
+![Basic Hierarchy](/images/components/vertical-nav/basic-hierarchy.png)
+:::
+**Basic**
 
 Top level hierarchy items are semibold font weight and have a caret to the right. Child links are normal font weight.
 
-Normal
+</div>
+<div class="clr-col-12 clr-col-md-4">
 
-Expand
-
-[Pidgey](javascript://) [Rattata](javascript://) [Spearow](javascript://)
-
-Fire
-
-Collapse
-
-[Charmander](javascript://) [Charmeleon](javascript://) [Charizard](javascript://)
-
-Water
-
-Expand
-
-[Blastoise](javascript://) [Squirtle](javascript://) [Wartortle](javascript://)
-
-Electric
-
-Expand
-
-[Magnemite](javascript://) [Pikachu](javascript://) [Raichu](javascript://)
-
-Grass
-
-Expand
-
-[Bulbasaur](javascript://) [Ivysaur](javascript://) [Venusaur](javascript://)
-
-Ice
-
-Expand
-
-[Articuno](javascript://) [Dewgong](javascript://) [Jynx](javascript://)
-
-###### Icons
+::: inset Hierarchy with icons
+![Hierarchy with icons](/images/components/vertical-nav/icons-hierarchy.png)
+:::
+**Icons**
 
 Icons are only applied to the top level navigation items. They are not applied to child links.
 
-Normal
+</div>
+<div class="clr-col-12 clr-col-md-4">
 
-Expand
-
-[Pidgey](javascript://) [Rattata](javascript://) [Spearow](javascript://)
-
-Fire
-
-Expand
-
-[Charmander](javascript://) [Charmeleon](javascript://) [Charizard](javascript://)
-
-[Ice](javascript://)
-
-Water
-
-Expand
-
-[Blastoise](javascript://) [Squirtle](javascript://) [Wartortle](javascript://)
-
-Electric
-
-Expand
-
-[Magnemite](javascript://) [Pikachu](javascript://) [Raichu](javascript://)
-
-[Poison](javascript://)
-
-Grass
-
-Expand
-
-[Bulbasaur](javascript://) [Ivysaur](javascript://) [Venusaur](javascript://)
-
-Ice
-
-Expand
-
-[Articuno](javascript://) [Dewgong](javascript://) [Jynx](javascript://)
-
-###### Mixed
+::: inset Mixed Hierarchy
+![Mixed Hierarchy](/images/components/vertical-nav/mixed-hierarchy.png)
+:::
+**Mixed**
 
 Top level hierarchy items without child links are semibold. Clicking on one will navigate a user to a page.
 
-Info
+<cds-alert status="info" closable="false">
+<cds-alert-content>
+<div>If you need a summary or overview-type landing page for a link group, we recommend you make it as your first child link.</div>
+</cds-alert-content>
+</cds-alert>
 
-If you need a summary or overview-type landing page for a link group, we recommend you make it as your first child link.
+</div>
+</ClrRow>
+
+## Behavior
 
 ### Collapse & Expand Navigation
 
 Collapsing and expanding navigation is used to create more space in content areas or to bring greater focus to content. The double caret in the upper right corner will collapse and expand the navigation.
 
-##### Basic
+#### Basic
 
-Collapse
+<ClrRow>
 
-[Normal](javascript://) [Fire](javascript://) [Water](javascript://) [Electric](javascript://) [Grass](javascript://) [Ice](javascript://) [Fighting](javascript://) [Poison](javascript://) [Ground](javascript://)
+<div class="clr-col-12 clr-col-md-6">
 
-###### No Icons
+::: inset Basic
+![Basic Vertical Navigation](/images/components/vertical-nav/basic-expanded.png)
+:::
+**Basic Expanded**
+
+</div>
+<div class="clr-col-12 clr-col-md-6">
+
+::: inset Dividers
+![Dividers](/images/components/vertical-nav/basic-collapsed.png)
+:::
+**Basic Collapsed**
 
 When no icons are present, collapsing the navigation will show a basic bar. The entire bar is a click target that can expand the navigation.
 
-Expand
+</div>
+</ClrRow>
 
-[Normal](javascript://) [Fire](javascript://) [Water](javascript://) [Electric](javascript://) [Grass](javascript://) [Ice](javascript://) [Fighting](javascript://) [Poison](javascript://) [Ground](javascript://)
+#### Basic Icons
 
-###### Icons
+<ClrRow>
+
+<div class="clr-col-12 clr-col-md-6">
+
+::: inset Basic
+![Basic Vertical Navigation](/images/components/vertical-nav/icons-expanded.png)
+:::
+**Icons Expanded**
+
+</div>
+<div class="clr-col-12 clr-col-md-6">
+
+::: inset Dividers
+![Dividers](/images/components/vertical-nav/icons-collapsed.png)
+:::
+**Icons Collapsed**
 
 When collapsed, text will disappear and only icons will show. Clicking on an icon will navigate the user. An active link will also show as an active icon when collapsed.
 
-##### Hierarchy
+</div>
+</ClrRow>
 
-Collapse
+### Hierarchy
 
-Normal
+#### Basic
 
-Expand
+<ClrRow>
 
-[Pidgey](javascript://) [Rattata](javascript://) [Spearow](javascript://)
+<div class="clr-col-12 clr-col-md-6">
 
-Fire
+::: inset Hierarchy - no icons expanded
+![Hierarchy No Icons Expanded](/images/components/vertical-nav/hierarchy-no-icons-expanded.png)
+:::
+**No icons expanded**
 
-Expand
+</div>
+<div class="clr-col-12 clr-col-md-6">
 
-[Charmander](javascript://) [Charmeleon](javascript://) [Charizard](javascript://)
-
-Water
-
-Expand
-
-[Blastoise](javascript://) [Squirtle](javascript://) [Wartortle](javascript://)
-
-Electric
-
-Expand
-
-[Magnemite](javascript://) [Pikachu](javascript://) [Raichu](javascript://)
-
-Grass
-
-Expand
-
-[Bulbasaur](javascript://) [Ivysaur](javascript://) [Venusaur](javascript://)
-
-Ice
-
-Expand
-
-[Articuno](javascript://) [Dewgong](javascript://) [Jynx](javascript://)
-
-###### No Icons
+::: inset Hierarchy - no icons collapsed
+![Hierarchy No Icons Collapsed](/images/components/vertical-nav/hierarchy-no-icons-collapsed.png)
+:::
+**No icons collapsed**
 
 When no icons are present, collapsing the navigation will show a basic bar. The entire bar is a click target that can expand the navigation.
 
-Collapse
+</div>
+</ClrRow>
 
-Normal
-
-Expand
-
-[Pidgey](javascript://) [Rattata](javascript://) [Spearow](javascript://)
-
-Fire
-
-Expand
-
-[Charmander](javascript://) [Charmeleon](javascript://) [Charizard](javascript://)
-
-Water
-
-Expand
-
-[Blastoise](javascript://) [Squirtle](javascript://) [Wartortle](javascript://)
-
-Electric
-
-Expand
-
-[Magnemite](javascript://) [Pikachu](javascript://) [Raichu](javascript://)
-
-Grass
-
-Expand
-
-[Bulbasaur](javascript://) [Ivysaur](javascript://) [Venusaur](javascript://)
-
-Ice
-
-Expand
-
-[Articuno](javascript://) [Dewgong](javascript://) [Jynx](javascript://)
-
-###### Icons
+#### Icons
 
 Top level hierarchy items will show a caret next to its icon when the navigation is collapsed. Clicking one will expand the navigation its top level item.
 
-Collapse
+<ClrRow>
 
-Normal
+<div class="clr-col-12 clr-col-md-6">
 
-Expand
+::: inset Hierarchy - no icons expanded
+![Hierarchy Icons Expanded](/images/components/vertical-nav/hierarchy-icons-expanded.png)
+:::
+**No icons expanded**
 
-[Pidgey](javascript://) [Rattata](javascript://) [Spearow](javascript://)
+</div>
+<div class="clr-col-12 clr-col-md-6">
 
-Fire
+::: inset Hierarchy - no icons collapsed
+![Hierarchy Icons Collapsed](/images/components/vertical-nav/hierarchy-icons-collapsed.png)
+:::
+**No icons collapsed**
 
-Expand
+When collapsed, text will disappear and only icons will show. Clicking on an icon will navigate the user. An active link will also show as an active icon when collapsed.
 
-[Charmander](javascript://) [Charmeleon](javascript://) [Charizard](javascript://)
+</div>
+</ClrRow>
 
-[Ice](javascript://)
-
-Water
-
-Expand
-
-[Blastoise](javascript://) [Squirtle](javascript://) [Wartortle](javascript://)
-
-Electric
-
-Expand
-
-[Magnemite](javascript://) [Pikachu](javascript://) [Raichu](javascript://)
-
-[Poison](javascript://)
-
-Grass
-
-Expand
-
-[Bulbasaur](javascript://) [Ivysaur](javascript://) [Venusaur](javascript://)
-
-Ice
-
-Expand
-
-[Articuno](javascript://) [Dewgong](javascript://) [Jynx](javascript://)
-
-###### Mixed
+### Mixed
 
 Top level items without children will show no caret next to the icon. Clicking on an icon with no caret will navigate the user to a page.
 
-### Long Labels
+<ClrRow>
 
-When labels get too long they will be trimmed and followed by an ellipsis (…). We recommend that navigation labels remain short and concise to prevent an ellipsis from showing.
+<div class="clr-col-12 clr-col-md-6">
 
-[Snorlax](javascript://)[Jigglypuff](javascript://)[Ditto](javascript://)[Ultra Rare Mega Charizard EX (Secret Rare)](javascript://)[Arcanine](javascript://)[Blastoise](javascript://)[Gyrados](javascript://)[Jolteon](javascript://)[Raichu](javascript://)
+::: inset Hierarchy - Mixed
+![Hierarchy Mixed Expanded](/images/components/vertical-nav/hierarchy-mixed-expanded.png)
+:::
+**Mixed and expanded**
 
-[Normal](javascript://) [Fire](javascript://) [Water](javascript://) [Electric](javascript://) [Grass](javascript://) [Ice](javascript://) [Fighting, Psychic, Dragon, Fairy, Rock, Dark](javascript://) [Poison](javascript://) [Ground](javascript://)
+</div>
+<div class="clr-col-12 clr-col-md-6">
 
-Normal
+::: inset Hierarchy - mixed
+![Hierarchy Mixed Collapsed](/images/components/vertical-nav/hierarchy-mixed-collapsed.png)
+:::
+**Mixed and collapsed**
 
-Expand
+When collapsed, text will disappear and only icons will show. Clicking on an icon will navigate the user. An active link will also show as an active icon when collapsed.
 
-[Pidgey](javascript://) [Rattata](javascript://) [Spearow](javascript://)
-
-Fire
-
-Collapse
-
-[Charmander](javascript://) [Charmeleon](javascript://) [Ultra Rare Mega Charizard (Secret Rare)](javascript://)
-
-Water
-
-Expand
-
-[Blastoise](javascript://) [Squirtle](javascript://) [Wartortle](javascript://)
-
-Electric
-
-Expand
-
-[Magnemite](javascript://) [Pikachu](javascript://) [Raichu](javascript://)
-
-Grass, Fighting, Dragon, Steel, Psychic
-
-Expand
-
-[Bulbasaur](javascript://) [Ivysaur](javascript://) [Venusaur](javascript://)
-
-Ice
-
-Expand
-
-[Articuno](javascript://) [Dewgong](javascript://) [Jynx](javascript://)
+</div>
+</ClrRow>
 
 ### Smaller Screens - Responsive
 
-When screens drop below 768px wide, the navigation will hide completely and can be shown by clicking on one of the header icons. All normal vertical navigation designs and behaviors are the same in the responsive state. Read the Responsive section in Navigation for more information on how this works.
+When screens drop below 768px wide, the navigation will hide completely and can be shown by clicking on one of the header icons. All normal vertical navigation designs and behaviors are the same in the responsive state. Read about [Responsive Navigation](/foundation/navigation/#responsive-navigation) and the [directives](/foundation/navigation/api.html#clrheader-clrmaincontainer-clrnavlevel) to use for implementation.
 
-![Responsive Vertical Nav](assets/images/documentation/vertical-nav/responsive-left.png)
+<ClrRow>
 
-![Responsive Vertical Nav](assets/images/documentation/vertical-nav/responsive-right.png)
+<div class="clr-col-12 clr-col-md-6">
 
-### Accessibility
+::: inset Hierarchy - Responsive Level 1
+![Level 1 Responsive](/images/components/vertical-nav/responsive-level-1.png)
+:::
+**Level 1 Responsive**
 
-Applications need to inform users who rely on assistive technologies when a routing change loads new content. For this reason, we offer `clrFocusOnViewInit` along with the Vertical Nav component. The directive allows you to choose the element for assistive technologies to read first when the new content gets loaded. You will see it in action in the examples below.
-
-Warning
-
-We have introduced `clrFocusOnViewInit` in Clarity v2.1.2, thus make sure you are on that or later versions to use the directive.
-
-### Code & Examples
-
-We have 5 Vertical Nav demos. Starting with the basics, each demo shows you one or more of the advanced Vertical Nav features.
-
-- [Basic Structure](/documentation/vertical-nav/basic-structure)
-- [Icon Links](/documentation/vertical-nav/icon-links)
-- [Collapsible Navigation](/documentation/vertical-nav/collapsible-nav)
-- [Vertical Nav Groups](/documentation/vertical-nav/nav-groups)
-- [Lazy Loading Nav Links in Nav Groups](/documentation/vertical-nav/lazy-loading-nav-links)
-
-#### Basic Structure
-
-Use the `clr-vertical-nav` component to create the Vertical Nav. Add the `clrVerticalNavLink` directive on each Nav Link in the Vertical Nav. Use `<div class="nav-divider"></div>` to add a horizonal divider to separate logical groups.
-
-[Project Pokémon](/documentation/vertical-nav/basic-structure/project-pokemon)
-
-[Charmander](/documentation/vertical-nav/basic-structure/charmander)[Jigglypuff](/documentation/vertical-nav/basic-structure/jigglypuff)[Pikachu](/documentation/vertical-nav/basic-structure/pikachu)[Raichu](/documentation/vertical-nav/basic-structure/raichu)[Snorlax](/documentation/vertical-nav/basic-structure/snorlax)
-
-[Credit](/documentation/vertical-nav/basic-structure/credit)
-
-#### Charmander
-
-The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when Charmander is enjoying itself. If the Pokémon becomes enraged, the flame burns fiercely.
-
-_The template preview of the router component:_
-
-```html
-<h4 clrFocusOnViewInit>Charmander</h4>
-<p>
-  The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when Charmander is
-  enjoying itself. If the Pokémon becomes enraged, the flame burns fiercely.
-</p>
-```
-
-```html
-<div class="main-container">
-  <header class="header">
-    ...
-  </header>
-  <div class="content-container">
-    <clr-vertical-nav>
-      <a clrVerticalNavLink routerLink="./charmander" routerLinkActive="active">Charmander</a>
-      <a clrVerticalNavLink routerLink="./jigglypuff" routerLinkActive="active">Jigglypuff</a>
-      <a clrVerticalNavLink routerLink="./pikachu" routerLinkActive="active">Pikachu</a>
-      <a clrVerticalNavLink routerLink="./raichu" routerLinkActive="active">Raichu</a>
-      <a clrVerticalNavLink routerLink="./snorlax" routerLinkActive="active">Snorlax</a>
-      <div class="nav-divider"></div>
-      <a clrVerticalNavLink routerLink="./credit" routerLinkActive="active">Credit</a>
-    </clr-vertical-nav>
-    <div class="content-area">
-      <router-outlet></router-outlet>
-    </div>
-  </div>
 </div>
-```
+<div class="clr-col-12 clr-col-md-6">
+
+::: inset Hierarchy - Responsive Level 2
+![Level 2 Responsive](/images/components/vertical-nav/responsive-level-2.png)
+:::
+**Level 2 Responsive**
+
+</div>
+</ClrRow>
+
+## Content
+
+When labels get too long they will be trimmed and followed by an ellipsis (…). We recommend that navigation labels remain short and concise to prevent an ellipsis from showing.
+
+<ClrRow>
+
+<div class="clr-col-12 clr-col-md-4">
+
+::: inset Basic Long Labels
+![Basic Long Labels](/images/components/vertical-nav/basic-long-labels.png)
+:::
+**Basic**
+
+</div>
+<div class="clr-col-12 clr-col-md-4">
+
+::: inset Hierarchy with icons
+![Icon Long Labels](/images/components/vertical-nav/icon-long-labels.png)
+:::
+**Icons**
+
+</div>
+
+<div class="clr-col-12 clr-col-md-4">
+
+::: inset Mixed with icons
+![Mixed Long Labels](/images/components/vertical-nav/mixed-long-labels.png)
+:::
+**Mixed**
+
+</div>
+
+</ClrRow>
