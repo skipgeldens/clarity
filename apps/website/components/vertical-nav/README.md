@@ -98,6 +98,14 @@ Use icons across all links if you choose to use them. Add icons to some links an
 
 Hierarchy is used to show parent-child relationship between links. If a child link is active and the parent item is collapsed, the parent will display as active. When expanded, the active indicator will display on the child link. Clicking on text, carets or icons will expand and collapse the parent item.
 
+<div class="vertical-margin-6">
+<cds-alert status="info" closable="false" >
+<cds-alert-content>
+<div>If you need a summary or overview-type landing page for a link group, we recommend you make it as your first child link.</div>
+</cds-alert-content>
+</cds-alert>
+</div>
+
 <ClrRow>
 
 <div class="clr-col-12 clr-col-md-4">
@@ -127,13 +135,7 @@ Icons are only applied to the top level navigation items. They are not applied t
 :::
 **Mixed**
 
-Top level hierarchy items without child links are semibold. Clicking on one will navigate a user to a page.
-
-<cds-alert status="info" closable="false">
-<cds-alert-content>
-<div>If you need a summary or overview-type landing page for a link group, we recommend you make it as your first child link.</div>
-</cds-alert-content>
-</cds-alert>
+Navigation links can be mixed with hierarchy and non hierarchy links.
 
 </div>
 </ClrRow>
