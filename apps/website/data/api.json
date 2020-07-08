@@ -603,30 +603,16 @@
   "ClrCheckboxContainer": {
     "bindings": [
       {
-        "name": "",
-        "accepts": "",
-        "type": "",
-        "options": "",
-        "description": "",
-        "default": 0
+        "name": "clrInline",
+        "accepts": "boolean | string",
+        "type": "input",
+        "options": "true, false",
+        "description": "Place the controls inline with the ability to wrap when there is not enough space.",
+        "default": "false"
       }
     ],
-    "methods": [
-      {
-        "name": "",
-        "parameters": [],
-        "description": "",
-        "returns": ""
-      }
-    ],
-    "css": [
-      {
-        "name": ".alert-text",
-        "description": "Defines the text that is placed into the alert",
-        "host": "div, span",
-        "required": true
-      }
-    ]
+    "methods": [],
+    "css": []
   },
   "ClrCheckboxWrapper": {
     "bindings": [
