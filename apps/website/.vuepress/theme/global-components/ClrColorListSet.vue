@@ -13,9 +13,13 @@
         </div>
       </div>
     </div>
-    <ClrRow>
-      <ClrColorList v-for="colorListData in colorListSet" :colorCode="picked" :colorData="colorListData"></ClrColorList>
-    </ClrRow>
+    <div v-bind:class="{ 'in-dark-mode': colorListInMode === 'dark' }">
+      <ClrRow>
+        <ClrColorList v-for="colorListData in colorListSet" :colorCode="picked" :colorData="colorListData">
+          <h5 class="color-list-title">{{ colorListData.name }}</h5>
+        </ClrColorList>
+      </ClrRow>
+    </div>
   </div>
 </template>
 
@@ -24,6 +28,7 @@ export default {
   name: 'ClrColorListSet',
   props: {
     colorListSet: Object,
+    colorListInMode: String,
   },
   computed: {
     listSetId: function () {
@@ -44,6 +49,17 @@ export default {
   & > .clr-control-label {
     line-height: unset;
     margin-right: 0.5rem;
+  }
+}
+.in-dark-mode {
+  margin-top: 1.2rem;
+  background-color: #1b2a32;
+  .clr-row {
+    margin: 0;
+    padding-bottom: 1.2rem;
+  }
+  .color-list-title {
+    color: #fff;
   }
 }
 </style>

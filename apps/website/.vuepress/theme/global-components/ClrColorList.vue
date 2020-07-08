@@ -1,6 +1,7 @@
 <template>
   <div class="clr-col-md-6 clr-col-lg-4 clr-col-12">
-    <h5>{{ colorListName }}</h5>
+    <!-- SLOT FOR COLOR LIST TITLE -->
+    <slot></slot>
     <ul class="swatch-list">
       <li
         v-for="(color, index) in colors"
@@ -41,7 +42,6 @@ export default {
   data: function () {
     return {
       colors: this.colorData.colors,
-      colorListName: this.colorData.name,
     };
   },
   methods: {

@@ -1,5 +1,3 @@
-# Color Palette
-
 The Clarity color palette is a full spectrum of bold hues and neutrals to meet all your design needs.
 
 ### The Clarity Color Palette
@@ -18,7 +16,13 @@ The large color swatches represent Clarity primary colors, recommended for use a
 
 Clarity components use a set of colors to convey certain functions and meanings. These colors have been vetted and tested to meet the accessibility standard for low vision.
 
+#### Light Theme Functional Colors
+
 <ClrColorsFunctional></ClrColorsFunctional>
+
+#### Dark Theme Functional Colors
+
+<ClrColorsFunctional colorMode="dark"></ClrColorsFunctional>
 
 ### Color Usage
 
