@@ -42,6 +42,8 @@ const scopes = [
   'wizard',
   'icons',
   'range',
+  'website',
+  'docs',
 ];
 
 module.exports = {

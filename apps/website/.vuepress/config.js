@@ -35,6 +35,13 @@ module.exports = {
     '@vuepress/active-header-links',
     '@vuepress/last-updated',
     'vuepress-plugin-smooth-scroll',
+    [
+      'vuepress-plugin-sitemap',
+      {
+        hostname: 'https://clarity.design',
+        outFile: 'sitemap.xml',
+      },
+    ],
     ...blocks,
   ],
   configureWebpack: {
