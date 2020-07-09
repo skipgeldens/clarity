@@ -76,7 +76,7 @@
     "react:build": "yarn --cwd packages/react run build",
     "react:lint": "yarn --cwd packages/react run lint",
     "react:test": "yarn --cwd packages/react run test",
-    "website:build": "yarn --cwd packages/angular run build-storybook; yarn --cwd apps/website run build",
+    "website:build": "yarn --cwd apps/website build; yarn --cwd packages/angular run build-storybook; yarn --cwd packages/core dev:build",
     "website:start": "yarn --cwd apps/website start"
   },
   "devDependencies": {
@@ -113,7 +113,7 @@
     "stylelint-scss": "3.9.2",
     "superagent": "5.1.0",
     "ts-node": "8.2.0",
-    "typescript": "3.7.5"
+    "typescript": "3.9.5"
   },
   "engines": {
     "node": ">=12 <13",
