@@ -3,199 +3,103 @@ title: Overview
 toc: true
 ---
 
+# Tabs
+
 Tabs divide content into separate views which users navigate between.
 
 ## Usage
 
-Use tabs for alternate views within the [sidenav](./sidenav) or main content area.
+::: do Use tabs for alternate views
+<DocInset height="100">
+Use tabs in hte main content area or, alternatively use the [vertical nav](/components/vertical-nav) component to break up separate views.
 
-Don’t use tabs to break user interactions into a series of steps. Serial workflows are best presented in a [wizard](./wizard).
+</DocInset>
+:::
 
-<!-- [//]: # Types -->
+::: dont Use tabs to beak up user interactions
+<DocInset height="100">
+Use tabs to break user interactions into a series of steps. Serial workflows are best presented in a multistep workflow, like [wizard](/components/wizards), [stepper](/components/stepper), or a [timeline](/components/timeline).
+
+</DocInset>
+:::
+
+### Content
+
+Content projected within tabs is flexible. Follow these guidelines to organize and present content effectively:
+
+1. Place content in each view that is independent of the content in other views
+2. Don’t force users to navigate back and forth to compare data
+3. Avoid cross-linking between tabs
+4. When the content within a view is broad, divide it into subsections
+5. Avoid using tabs in [cards](/components/cards) and [modals](/components/modals)
+
+### Presentation
+
+Tabs appear in a single, non-scrollable row, above their content. The width of each tab is dependent on its label.
+
+When there are seven or fewer tabs, limit the labels to on or two words. This ensures that all tabs appear in the container. If the application is using Angular and there need to be more than seven tabs look into the overflow inputfor [ClrTabLink](/components/tabs/api.html#clrtablink).
+
+### Labels
+
+Use labels to organize the tabs and their content.
+
+1. Ensure that the labels show a clear relationship between views
+1. Favor nouns over verbs, for example, Settings, Permissions, and Performance
+1. Avoid generic labels such as General or Advanced
+1. Use title-style caps
+1. Avoid using icons in labels
+
+## Types
+
+There are four types of tabs that might be used. Go to the [demo](/components/tabs/demo.html) to see them in action.
+For optimization, tabs component uses the \*clrIfActive structural directive to lazy load the content of an active tab.
+If you need two-way binding on the active state of a tab, use the de-sugared syntax for the [ClrIfActive](/components/tabs/api.html#clrifactive) structural directive shown beloe in the two way binding example.
+
+### Horizontal
+
+<doc-demo src="/demos/tabs/horizontal-ng.html" demo="/demos/tabs/horizontal-css.html" />
+
+### Vertical
+
+<doc-demo src="/demos/tabs/vertical-ng.html" demo="/demos/tabs/vertical-css.html" />
+
+### Overflow
+
+When there are to many horizontal tabs to fit into the viewport, use overflow to hide less important tabs.
+<doc-demo src="/demos/tabs/overflow-ng.html" demo="/demos/tabs/overflow-css.html" />
+
+### Two-way Binding
+
+<doc-demo src="/demos/tabs/two-way-ng.html" demo="/demos/tabs/two-way-css.html" />
 
 ## Anatomy
 
-While the content within tabs is flexible, follow these guidelines for organization and presentation:
--Ensure that the content in each view is independent of the content in other views.
--Don’t force users to navigate back and forth to compare data–keep such content in the same view.
--Avoid cross-linking between tabs.
--If the content within a view is broad, divide it into subsections.
+Compose tabs with the following components and directives. ClrIfActive is optional but recommended.
 
-<!-- [//]: # Behavior -->
+### ClrTabs
 
-## Placement
+[ClrTabs](/components/tabs/api.html#clrtabs) is the parent container for all angualr children components. Its default layout is horizontal but it can also be set to vertical.
 
-Tabs appear in a single, non-scrollable row, above their content. The width of each tab is dependent on its label.
-To ensure that all tabs appear in the container, avoid using more than seven tabs and limit labels to one or two words.
+### ClrTab
 
-Avoid using tabs in cards and modals.
+[ClrTab](/compnents/tabs/api.html#clrtab) is a child of [ClrTabs](/components/tabs/api.html#clrtabs) that contains the tab link and the tab content which must be associated together.
 
-## Content
+### ClrTabContent
 
-- Ensure that the labels show a clear relationship between views.
-- Favor nouns over verbs, for example, Settings, Permissions, and Performance.
-- Avoid generic labels such as General or Advanced.
-- Use title-style caps.
-- Avoid using icons in labels.
+[ClrTabContent](/compnents/tabs/api.html#clrtabcontent) is a component where application content can be projected into for diusplay.
 
-## Code Examples
+### ClrTabLink
 
-### Simple Tabs
+[ClrTabLink](/compnents/tabs/api.html#clrtablink) is an attribute directive that designates button elements to be used as the displayed tab.
 
-The tabs component uses the `*clrIfActive` structural directive to lazy load the content of an active tab. For simple cases, using the microsyntax as shown below would suffice.
+### ClrIfActive
 
-- Dashboard
-- Management
-- Cloud
+[ClrIfActive](/compnents/tabs/api.html#clrifactive) is a structural directive used to lazy load the tab content.
 
-Content for Dashboard tab. Here is a [link](javascript://) that can be accessed via clicking or through keyboard via tabbing.
+## Accessibility
 
-```html
-<clr-tabs>
-  <clr-tab>
-    <button clrTabLink id="link1">Tab1</button>
-    <clr-tab-content id="content1" *clrIfActive>
-      ...
-    </clr-tab-content>
-  </clr-tab>
-  <clr-tab>
-    <button clrTabLink>Tab2</button>
-    <clr-tab-content *clrIfActive="true">
-      ...
-    </clr-tab-content>
-  </clr-tab>
-</clr-tabs>
-```
+The Clarity Angular components implement the following behaviors to make them accessible.
 
-##### Tabs with two-way binding
-
-If you'd like to use two-way binding on the active state of the tabs, we recommend that you use the de-sugared syntax of the structural directive by wrapping it in `ng-template` as shown below.
-
-- Dashboard
-- Management
-- Cloud
-- Infrastructure
-
-Content for Dashboard tab. Here is a [link](javascript://) that can be accessed via clicking or through keyboard via tabbing.
-
-```html
-<clr-tabs>
-  <clr-tab>
-    <button clrTabLink>Dashboard</button>
-    <ng-template [(clrIfActive)]="dashboardActive">
-      <clr-tab-content>
-        ...
-      </clr-tab-content>
-    </ng-template>
-  </clr-tab>
-
-  <clr-tab>
-    <button clrTabLink>Management</button>
-    <ng-template [(clrIfActive)]="managementActive">
-      <clr-tab-content>
-        ...
-      </clr-tab-content>
-    </ng-template>
-  </clr-tab>
-
-  <clr-tab>
-    <button clrTabLink>Cloud</button>
-    <ng-template [(clrIfActive)]="cloudActive">
-      <clr-tab-content>
-        ...
-      </clr-tab-content>
-    </ng-template>
-  </clr-tab>
-
-  <clr-tab>
-    <button clrTabLink>Infrastructure</button>
-    <ng-template [(clrIfActive)]="infrastructureActive">
-      <clr-tab-content>
-        ...
-      </clr-tab-content>
-    </ng-template>
-  </clr-tab>
-</clr-tabs>
-```
-
-##### Tab Overflow
-
-Tab overflow is used when the tab group is larger than its containing space, or used to preserve space. The overflow is configurable so you can assign tabs to the dropdown menu.
-
-Tab overflow is shown below as an ellipsis button in the tab group and is the last position to the right. Clicking on the ellipsis will show the overflow dropdown menu.
-
-We recommend that a overflow dropdown have at least two options in it. We also recommend that you test out scenarios with tab labels that may vary in length or when translated to another language to make sure there is enough room for them.
-
-- Dashboard
-- Management
-
-- More
-  CloudSettings
-
-Content for Dashboard tab. Here is a [link](javascript://) that can be accessed via clicking or through keyboard via tabbing.
-
-```html
-<clr-tabs>
-  <clr-tab>
-    <button clrTabLink>Dashboard</button>
-    <clr-tab-content *clrIfActive>
-      ...
-    </clr-tab-content>
-  </clr-tab>
-
-  <clr-tab>
-    <button clrTabLink>Management</button>
-    <clr-tab-content *clrIfActive>
-      ...
-    </clr-tab-content>
-  </clr-tab>
-
-  <clr-tab>
-    <button clrTabLink>Cloud</button>
-    <clr-tab-content *clrIfActive>
-      ...
-    </clr-tab-content>
-  </clr-tab>
-
-  <clr-tab>
-    <button clrTabLink [clrTabLinkInOverflow]="inOverflow">Settings</button>
-    <clr-tab-content *clrIfActive>
-      ...
-    </clr-tab-content>
-  </clr-tab>
-
-  <clr-tab>
-    <button clrTabLink [clrTabLinkInOverflow]="inOverflow">Alerts</button>
-    <clr-tab-content *clrIfActive>
-      ...
-    </clr-tab-content>
-  </clr-tab>
-</clr-tabs>
-```
-
-##### Vertical Tabs
-
-If you'd like to use vertical tabs add `clrLayout="vertical"` parameter to the `clr-tabs` component.
-
-- Dashboard
-- Management
-- Cloud
-
-Content for Dashboard tab. Here is a [link](javascript://) that can be accessed via clicking or through keyboard via tabbing.
-
-```html
-<clr-tabs clrLayout="vertical">
-  <clr-tab>
-    <button clrTabLink id="link1">Tab1</button>
-    <clr-tab-content id="content1" *clrIfActive>
-      ...
-    </clr-tab-content>
-  </clr-tab>
-  <clr-tab>
-    <button clrTabLink>Tab2</button>
-    <clr-tab-content *clrIfActive="true">
-      ...
-    </clr-tab-content>
-  </clr-tab>
-</clr-tabs>
-```
+1. The active tab has the attribute aria-selected set to true, and the others to false
+1. The active panel associated with the active tab has the attribute aria-hidden set to true, and the others panels to false
+1. ach tab should has an aria-controls attribute set to the id of the matching panel and each panel has an aria-labelledby attribute set to the id of the tab associated with the panel
