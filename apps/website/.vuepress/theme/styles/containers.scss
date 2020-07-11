@@ -40,3 +40,8 @@
 .section-header {
   border-bottom: 1px solid var(--clr-card-divider-color);
 }
+
+.inverse {
+  background-color: hsl(198, 0%, 27%);
+  padding: 0.5rem;
+}

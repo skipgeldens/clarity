@@ -11,7 +11,7 @@ Tabs divide content into separate views which users navigate between.
 
 ::: do Use tabs for alternate views
 <DocInset height="100">
-Use tabs in hte main content area or, alternatively use the [vertical nav](/components/vertical-nav) component to break up separate views.
+Use tabs in the main content area or, alternatively use the [vertical nav](/components/vertical-nav) component to break up separate views.
 
 </DocInset>
 :::
